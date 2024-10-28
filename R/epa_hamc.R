@@ -8,17 +8,17 @@
 #' @param method The MCMC approach to obtaining posterior draws of the random clusters. Options "aao" or "seq". "aao" is an "all-at-once" approach in that it evaluates the posterior probability of each possible partition. "seq" does a sequential allocation of clustering given the previous clustering draw. When there are a small number of subgroups "aao" may be prefered however as the number of subgroups increases the computation time increases dramatically.
 #' @param B Number of desired posterior estimates
 #' @param thin Thinning of MCMC draws, i.e. thin = 5, means every 5th draw will be returned.
-#' @param prior.alpha The value to be included in the prior for the Dirichlet on \alpha, will be uniform. Default is 0.5.
-#' @param g.a The prior shape parameter of the gamma distribution for the \gamma parameter. Default uses a mean of 20 and standard deviation of 18.
-#' @param g.b The prior rate parameter of the gamma distribution for the \gamma parameter. Default uses a mean of 20 and standard deviation of 18.
+#' @param prior.alpha The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 0.5.
+#' @param g.a The prior shape parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
+#' @param g.b The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param dist A KxK symmetric matrix that includes the prior information on the distance between subgroups. Defaults to each group is sequentially one from the next in line.
 #' @param MCMC.cores The number of cores desired to use to run, if greater than 1 parallel processing will be used. Default is 1 (no parallelization).
 #'
 #' @return A list with the following:
 #'  \itemize{
 #'    \item groups - The posterior draws of the clustering from each MCMC draw. (BxIxK)
-#'    \item alpha - Posterior draws of the \alpha parameter. (BxIxJ)
-#'    \item gamma - Posterior draws of the \gamma parameter. (BxI)
+#'    \item alpha - Posterior draws of the alpha parameter. (BxIxJ)
+#'    \item gamma - Posterior draws of the gamma parameter. (BxI)
 #'    \item theta - Posterior draws of the transition probabilities. (BxKxIxJ)
 #'  }
 #' @export
