@@ -1,0 +1,11 @@
+Package: amcModels
+Title: Absorbing Markov Chain Models
+Version: 0.0.0.9000
+Authors@R: 
+    person("Brigham", "Halverson", , "brighamhalverson@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The main functionality is to fit one of three absorbing Markov chain models. Using a nonhierarchical approach with no grouping. A hierarchical approach to gain inference on transition probabilities between subgroups. Finally to fit a hierarchical model with a random partioning step to combine groupings.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
