@@ -3,3 +3,4 @@
 export(epa_hamc)
 import(LaplacesDemon)
 import(parallel)
+import(salso)

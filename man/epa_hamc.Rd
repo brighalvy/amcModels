@@ -25,11 +25,11 @@ epa_hamc(
 
 \item{thin}{Thinning of MCMC draws, i.e. thin = 5, means every 5th draw will be returned.}
 
-\item{prior.alpha}{The value to be included in the prior for the Dirichlet on \alpha, will be uniform. Default is 0.5.}
+\item{prior.alpha}{The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 0.5.}
 
-\item{g.a}{The prior shape parameter of the gamma distribution for the \gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
+\item{g.a}{The prior shape parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
 
-\item{g.b}{The prior rate parameter of the gamma distribution for the \gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
+\item{g.b}{The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
 
 \item{dist}{A KxK symmetric matrix that includes the prior information on the distance between subgroups. Defaults to each group is sequentially one from the next in line.}
 
@@ -39,8 +39,8 @@ epa_hamc(
 A list with the following:
 \itemize{
 \item groups - The posterior draws of the clustering from each MCMC draw. (BxIxK)
-\item alpha - Posterior draws of the \alpha parameter. (BxIxJ)
-\item gamma - Posterior draws of the \gamma parameter. (BxI)
+\item alpha - Posterior draws of the alpha parameter. (BxIxJ)
+\item gamma - Posterior draws of the gamma parameter. (BxI)
 \item theta - Posterior draws of the transition probabilities. (BxKxIxJ)
 }
 }
