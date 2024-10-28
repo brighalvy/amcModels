@@ -47,7 +47,7 @@ log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b){
     n <- matrix(n, nrow = 1)
   }
   n_ag <- t(apply(n,1,\(x) x + ag))
-  ddirichlet((a), (pa), log = T) + (g.a - 1)*log(gamma) - g.b*gamma +
+  LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1)*log(gamma) - g.b*gamma +
     + nrow(n)*lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
                                     rowSums(t(apply(lgamma(n_ag), 1, \(x){x - lgamma(ag)}))))
 }
@@ -250,7 +250,7 @@ epa_mcmc <- function(N_i, B = 10000, thin = 1, method = "aao",
       delta_sav[b/thin] <- delta
       for(g in unique(groupings)){
         ind <- which(groupings == g)
-        theta_sav[b/thin,ind,] <- matrix(rep(rdirichlet(1, n_curr[g,] + alpha*gamma), length(ind)),
+        theta_sav[b/thin,ind,] <- matrix(rep(LaplacesDemon::rdirichlet(1, n_curr[g,] + alpha*gamma), length(ind)),
                                          nrow = length(ind), byrow = T)
       }
     }
