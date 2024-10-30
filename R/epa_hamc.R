@@ -119,10 +119,10 @@ epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
   gamma <- array(0, dim = c(B, I))
   theta <- array(0, dim = c(B, K, I, J))
   for(i in 1:I){
-    groupings[,i,] <- fit[[i]]$groups
-    alpha[,i,] <- fit[[i]]$alpha
-    gamma[,i] <- fit[[i]]$gamma
-    theta[,,i,] <- fit[[i]]$theta
+    groupings[,i,] <- fit[[i]][[1]]
+    alpha[,i,] <- fit[[i]][[2]]
+    gamma[,i] <- fit[[i]][[3]]
+    theta[,,i,] <- fit[[i]][[4]]
   }
   output <- list(groups = groupings, alpha = alpha, gamma = gamma, theta = theta)
 

@@ -456,5 +456,5 @@ epa_mcmc <- function(N_i, B = 10000, thin = 1, method = "aao",
   alpha[, non.na.ind] <- alpha_sav
   theta <- array(0, dim = c(B, K, J))
   theta[,,non.na.ind] <- theta_sav
-  return(list(groups = groupings_sav, alpha = alpha, gamma = gamma_sav, beta = beta_sav, delta = delta_sav, theta = theta))
+  return(list(groups = groupings_sav, alpha = alpha, gamma = gamma_sav, theta = theta, beta = beta_sav, delta = delta_sav))
 }
