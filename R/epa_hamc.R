@@ -38,7 +38,7 @@ epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
     stop(paste("N must be a three dimensional array."))
   }
   # Check method argument:
-  if(method != "aao" & method != "seq"){
+  if(!(method %in% c("aao", "seq"))){
     stop(paste("Invalid method argument"))
   }
   # Check B, thin, prior.alpha, g.a, g.b are numeric if input is supplied:
