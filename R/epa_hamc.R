@@ -61,21 +61,27 @@ epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
   if(prior.alpha <= 0){
     stop(paste("prior.alpha must be positive"))
   }
-  if(!is.null(g.a) & g.a <= 0){
-    stop(paste("g.a must be positive"))
+  if(!is.null(g.a)){
+    if(g.a <= 0){
+      stop(paste("g.a must be positive"))
+    }
   }
-  if(!is.null(g.b) & g.b <= 0){
-    stop(paste("g.b must be positive"))
+  if(!is.null(g.b)){
+    if(g.b <= 0){
+      stop(paste("g.b must be positive"))
+    }
   }
-  # Check distance matrix:
-  if(!is.null(dist) & !is.matrix(dist)){
-    stop("dist must be a matrix.")
+  # Check distance matrix and correct dimensions:
+  K <- dim(N)[1]
+  if(!is.null(dist)){
+    if(!is.matrix(dist)){
+      stop("dist must be a matrix.")
+    }
+    if(dim(dist)[1] != K){
+      stop("Wrong dimensions for distance matrix.")
+    }
   }
   # Check dimensions
-  K <- dim(N)[1]
-  if(!is.null(dist) & dim(dist)[1] != K){
-    stop("Wrong dimensions for distance matrix.")
-  }
   if(is.null(dist)){
     dist <- matrix(1, nrow = K, ncol = K)
     for(k in 1:K){
