@@ -109,7 +109,7 @@ epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
   }
 
   ## Fit model:
-  fit <- parallel::mclapply(count.list, \(x) epa_mcmc(x, 10000, 5, "aao", prior.alpha, g.a, g.b), mc.cores = MCMC.cores)
+  fit <- parallel::mclapply(count.list, \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist), mc.cores = MCMC.cores)
 
   ## Create output list options:
   I <- dim(N)[2]
