@@ -26,90 +26,97 @@
 #'
 
 # Write function:
-epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
-                     prior.alpha = .5, g.a = NULL, g.b = NULL,
+epa_hamc <- function(N,
+                     method = "aao",
+                     B = 10000,
+                     thin = 1,
+                     prior.alpha = .5,
+                     g.a = NULL,
+                     g.b = NULL,
                      dist = NULL,
-                     MCMC.cores = 1){
+                     MCMC.cores = 1) {
   # Check compatability of N:
-  if(!is.array(N)){
+  if (!is.array(N)) {
     stop(paste("N must be an array."))
   }
-  if(length(dim(N)) < 3){
+  if (length(dim(N)) < 3) {
     stop(paste("N must be a three dimensional array."))
   }
   # Check method argument:
-  if(!(method %in% c("aao", "seq"))){
+  if (!(method %in% c("aao", "seq"))) {
     stop(paste("Invalid method argument"))
   }
   # Check B, thin, prior.alpha, g.a, g.b are numeric if input is supplied:
-  if(!is.numeric(B)){
+  if (!is.numeric(B)) {
     stop(paste("B must be numeric"))
   }
-  if(!is.numeric(thin)){
+  if (!is.numeric(thin)) {
     stop(paste("thin must be numeric"))
   }
-  if(!is.numeric(prior.alpha)){
+  if (!is.numeric(prior.alpha)) {
     stop(paste("prior.alpha must be numeric"))
   }
-  if(!is.null(g.a) & !is.numeric(g.a)){
+  if (!is.null(g.a) & !is.numeric(g.a)) {
     stop(paste("g.a must be numeric"))
   }
-  if(!is.null(g.b) & !is.numeric(g.b)){
+  if (!is.null(g.b) & !is.numeric(g.b)) {
     stop(paste("g.b must be numeric"))
   }
   # Make sure prior parameters are positive:
-  if(prior.alpha <= 0){
+  if (prior.alpha <= 0) {
     stop(paste("prior.alpha must be positive"))
   }
-  if(!is.null(g.a)){
-    if(g.a <= 0){
+  if (!is.null(g.a)) {
+    if (g.a <= 0) {
       stop(paste("g.a must be positive"))
     }
   }
-  if(!is.null(g.b)){
-    if(g.b <= 0){
+  if (!is.null(g.b)) {
+    if (g.b <= 0) {
       stop(paste("g.b must be positive"))
     }
   }
   # Check distance matrix and correct dimensions:
   K <- dim(N)[1]
-  if(!is.null(dist)){
-    if(!is.matrix(dist)){
+  if (!is.null(dist)) {
+    if (!is.matrix(dist)) {
       stop("dist must be a matrix.")
     }
-    if(dim(dist)[1] != K){
+    if (dim(dist)[1] != K) {
       stop("Wrong dimensions for distance matrix.")
     }
   }
   # Check dimensions
-  if(is.null(dist)){
+  if (is.null(dist)) {
     dist <- matrix(1, nrow = K, ncol = K)
-    for(k in 1:K){
+    for (k in 1:K) {
       dist[c(1:K)[-k], k] <- abs(c(1:K)[-k] - k)
     }
-    dist[K,K] <- 1
+    dist[K, K] <- 1
     # Convert to similarity matrix for EPA model:
-    dist <- dist^(-.5)
+    dist <- dist ^ (-.5)
   } else {
     # Convert to similarity matrix for EPA model:
-    dist <- dist^(-.5)
+    dist <- dist ^ (-.5)
   }
   ## Populate g.a and g.b if missing:
-  if(is.null(g.a) | is.null(g.b)){
+  if (is.null(g.a) | is.null(g.b)) {
     mu <- 20
     sd <- 18
-    g.b <- mu/sd^2
-    g.a <- mu*g.b
+    g.b <- mu / sd ^ 2
+    g.a <- mu * g.b
   }
 
   # Make the data into a list:
   count.list <- list()
-  for(i in 1:dim(N)[2]){
-    count.list[[i]] <- N[,i,]
+  for (i in 1:dim(N)[2]) {
+    count.list[[i]] <- N[, i, ]
   }
 
   ## Fit model:
-  fit <- parallel::mclapply(count.list, \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist), mc.cores = MCMC.cores)
+  fit <- parallel::mclapply(count.list,
+                            \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist),
+                            mc.cores = MCMC.cores)
 
   ## Create output list options:
   I <- dim(N)[2]
@@ -118,13 +125,18 @@ epa_hamc <- function(N, method = "aao", B = 10000, thin = 1,
   alpha <- array(0, dim = c(B, I, J))
   gamma <- array(0, dim = c(B, I))
   theta <- array(0, dim = c(B, K, I, J))
-  for(i in 1:I){
-    groupings[,i,] <- fit[[i]][[1]]
-    alpha[,i,] <- fit[[i]][[2]]
-    gamma[,i] <- fit[[i]][[3]]
-    theta[,,i,] <- fit[[i]][[4]]
+  for (i in 1:I) {
+    groupings[, i, ] <- fit[[i]][[1]]
+    alpha[, i, ] <- fit[[i]][[2]]
+    gamma[, i] <- fit[[i]][[3]]
+    theta[, , i, ] <- fit[[i]][[4]]
   }
-  output <- list(groups = groupings, alpha = alpha, gamma = gamma, theta = theta)
+  output <- list(
+    groups = groupings,
+    alpha = alpha,
+    gamma = gamma,
+    theta = theta
+  )
 
 
   return(output)
