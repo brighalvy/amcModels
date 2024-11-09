@@ -1,7 +1,8 @@
 # calculates log(1 - exp(x))
 log1mexp <- function(x) {
   stopifnot(x < 0.0)
-  if (x > -0.693147) { # .693147 ~= log(2.0))
+  if (x > -0.693147) {
+    # .693147 ~= log(2.0))
     out <- log(-expm1(x))
   } else {
     out <- log1p(-exp(x))
@@ -11,17 +12,17 @@ log1mexp <- function(x) {
 
 ## Map log(alpha) to log(z)
 ## input a is on the log scale
-alpha_to_z <- function(a){
-  L <- length(a)-1
+alpha_to_z <- function(a) {
+  L <- length(a) - 1
   z <- c()
   #z_1m <- c()
-  for(l in 1:L){
-    if(l == 1){
+  for (l in 1:L) {
+    if (l == 1) {
       z[l] <- a[l]
     } else{
-      z[l] <- a[l]-log(1-sum(exp(a[1:(l-1)])))
+      z[l] <- a[l] - log(1 - sum(exp(a[1:(l - 1)])))
     }
-    if(z[l] > 0){
+    if (z[l] > 0) {
       z[l] <- -1e-300
     }
     #z_1m[l] <- log1mexp(z[l])
@@ -31,13 +32,15 @@ alpha_to_z <- function(a){
 
 ## Update draws of z:
 ## z is a vector of log(z)
-update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha){
+update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   C <- length(z)
-  if(sum(is.na(n_i[1,]))==0){
-    x <- (apply(n_i, 2, sum)+1)/sqrt(sum((apply(n_i, 2, sum)+1)^2))*4
+  if (sum(is.na(n_i[1, ])) == 0) {
+    x <- (apply(n_i, 2, sum) + 1) / sqrt(sum((apply(n_i, 2, sum) + 1) ^ 2)) *
+      4
   } else{
-    na.cols <- which(is.na(n_i[1,]))
-    x <- (apply(n_i[,-na.cols], 2, sum)+1)/sqrt(sum((apply(n_i[,-na.cols], 2, sum)+1)^2))*4
+    na.cols <- which(is.na(n_i[1, ]))
+    x <- (apply(n_i[, -na.cols], 2, sum) + 1) / sqrt(sum((apply(n_i[, -na.cols], 2, sum) +
+                                                            1) ^ 2)) * 4
   }
   z_new <- c()
   z_1m_new <- c()
@@ -77,7 +80,9 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha){
   psi_new <- runif(C)
   z_new <- log(qbeta(psi_new, a, b))
   z_1m_new <- sapply(z_new, log1mexp)
-  while(y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum((dbeta(exp(z_new), a, b, log = TRUE))))){
+  while (y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum((dbeta(
+    exp(z_new), a, b, log = TRUE
+  ))))) {
     # L[z_new < z] <- psi_new[z_new < z]
     # R[z_new >= z] <- psi_new[z_new >= z]
     L[psi_new < psi] <- psi_new[psi_new < psi]
@@ -91,14 +96,14 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha){
 
 ## map z values to a:
 ## All done on the log scale
-alpha_map <- function(z, z_1m){
-  L <- length(z)+1
+alpha_map <- function(z, z_1m) {
+  L <- length(z) + 1
   a <- c()
-  for(l in 1:L){
-    if(l == 1){
+  for (l in 1:L) {
+    if (l == 1) {
       a[l] <- z[l]
-    } else if(l != L){
-      a[l] <- z[l] + sum(z_1m[1:(l-1)])
+    } else if (l != L) {
+      a[l] <- z[l] + sum(z_1m[1:(l - 1)])
     } else {
       a[l] <- sum(z_1m)#log(1 - sum(exp(a[1:(l-1)])))
     }
@@ -108,7 +113,7 @@ alpha_map <- function(z, z_1m){
 
 # Gamma slice sampler:
 
-gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b){
+gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
   # y <- l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1))
   # g <- c()
   # L = 0
@@ -130,8 +135,8 @@ gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b){
   R <- 1
   u <- runif(1, L, R)
   g <- log(qgamma(u, g.a, g.b))
-  while(y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - pgamma(exp(ga), g.a, g.b)){
-    if(g < ga){
+  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - pgamma(exp(ga), g.a, g.b)) {
+    if (g < ga) {
       L = u
     } else{
       R = u
@@ -145,23 +150,24 @@ gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b){
 # Log Full-Conditional for alpha:
 ## n is the data for the ith row with dimensions (K, j)
 ## all inputs (except n and J/K) are log values
-l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha){
+l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   k_obj <- c()
   alpha <- alpha_map(z, z_1m)
-  for(k in 1:K){
-    k_obj[k] <- sum(lgamma(n_i[k,][!is.na(n_i[k,])]+exp(ga+alpha))-lgamma(exp(ga+alpha)))
+  for (k in 1:K) {
+    k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
+                                                                                        alpha)))
   }
   # uses z ~ beta priors
   ## Set up priors:
   b <- c()
-  if(prior.alpha == 0){
-    for(j in 1:(J-1)){
-      b[j] <- (1/J)*(J - j)
+  if (prior.alpha == 0) {
+    for (j in 1:(J - 1)) {
+      b[j] <- (1 / J) * (J - j)
     }
-    a <- 1/J
+    a <- 1 / J
   } else {
-    for(j in 1:(J-1)){
-      b[j] <- prior.alpha*(J - j)
+    for (j in 1:(J - 1)) {
+      b[j] <- prior.alpha * (J - j)
     }
     a <- prior.alpha
   }
@@ -175,41 +181,43 @@ l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha){
   # }
   # a <- x[1:C]
   # b <- rev(cumsum(rev(x)))[-1]
-  res <- sum((a-1)*(z)) + sum((b-1)*(z_1m)) + sum(k_obj) - log(100)
+  res <- sum((a - 1) * (z)) + sum((b - 1) * (z_1m)) + sum(k_obj) - log(100)
   return(res)
 }
 
 #Log Full-Conditional for gamma:
-l.gamma.f.cond <- function(z, z_1m, J, n_i, K, ga, g.a, g.b){
+l.gamma.f.cond <- function(z, z_1m, J, n_i, K, ga, g.a, g.b) {
   k_obj <- c()
   alpha <- alpha_map(z, z_1m)
-  for(k in 1:K){
-    k_obj[k] <- lgamma(exp(ga))+sum(lgamma(n_i[k,][!is.na(n_i[k,])]+exp(ga+alpha)))-lgamma(sum(n_i[k,], na.rm = T)+exp(ga))-sum(lgamma(exp(ga+alpha)))
+  for (k in 1:K) {
+    k_obj[k] <- lgamma(exp(ga)) + sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga +
+                                                                                alpha))) - lgamma(sum(n_i[k, ], na.rm = T) + exp(ga)) - sum(lgamma(exp(ga +
+                                                                                                                                                         alpha)))
   }
   # Set prior params here
   ## gamma priors are g.a, g.b
-  res <- (g.a - 1)*ga - exp(ga)*g.b +sum(k_obj)
+  res <- (g.a - 1) * ga - exp(ga) * g.b + sum(k_obj)
   # ## gamma priors are 5, 1
   # res <- (5 - 1)*ga - exp(ga)*1 +sum(k_obj)
   return(res)
 }
 
 ## Log EPA prior:
-log_epa_prior <- function(p, alpha, delta, dist, sigma){
-  if(alpha < -delta | delta < 0 | delta >= 1){ # Set constraints
-    -Inf
+log_epa_prior <- function(p, alpha, delta, dist, sigma) {
+  if (alpha < -delta | delta < 0 | delta >= 1) {
+    # Set constraints-Inf
   }
   else {
     p_tm1 <- p[sigma[1]]
     q_tm1 <- 1
     count <- 2
     log_p_t <- log(1)
-    for(i in sigma[2:length(p)]){
-      if(p[i] %in% p_tm1){
-        log_p_t[count] <- log(length(p_tm1) - delta * q_tm1)-log(alpha + length(p_tm1)) +
-          log(sum(dist[sigma[which(p_tm1 == p[i])],i])) - log(sum(dist[sigma[1:length(p_tm1)],i]))
+    for (i in sigma[2:length(p)]) {
+      if (p[i] %in% p_tm1) {
+        log_p_t[count] <- log(length(p_tm1) - delta * q_tm1) - log(alpha + length(p_tm1)) +
+          log(sum(dist[sigma[which(p_tm1 == p[i])], i])) - log(sum(dist[sigma[1:length(p_tm1)], i]))
       } else{
-        log_p_t[count] <- log(alpha + delta * q_tm1)-log(alpha + length(p_tm1))
+        log_p_t[count] <- log(alpha + delta * q_tm1) - log(alpha + length(p_tm1))
       }
       count <- count + 1
       p_tm1 <- c(p_tm1, p[i])
@@ -219,90 +227,141 @@ log_epa_prior <- function(p, alpha, delta, dist, sigma){
   }
 }
 
-log_delta_prior <- function(delta){
-  log(.4*dbeta(delta, .05, 20) + .6*dbeta(delta, 2,2.5))
+log_delta_prior <- function(delta) {
+  log(.4 * dbeta(delta, .05, 20) + .6 * dbeta(delta, 2, 2.5))
 }
 # Combine counts function:
-combine_counts <- function(grouping, n_i){
+combine_counts <- function(grouping, n_i) {
   ids <- (unique(grouping))
-  res <- lapply(ids, function(id) sort(c(1:length(grouping))[grouping == id]))
+  res <- lapply(ids, function(id)
+    sort(c(1:length(grouping))[grouping == id]))
   names(res) <- 1:length(res)
   counts.list <- lapply(res, \(x) {
-    if(length(x) == 1){
-      n_i[x,]
+    if (length(x) == 1) {
+      n_i[x, ]
     }
-    else{colSums(n_i[x,])}})
-  matrix(unlist(counts.list), ncol = ncol(n_i), byrow = T)
+    else{
+      colSums(n_i[x, ])
+    }
+  })
+  matrix(unlist(counts.list),
+         ncol = ncol(n_i),
+         byrow = T)
 }
 # Write full joint of gamma, alpha and counts
-log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b){
+log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b) {
   a <- matrix(alpha, nrow = 1)
   pa <- matrix(prior.alpha, nrow = 1)
-  ag <- alpha*gamma
-  if(is.null(dim(n))){
+  ag <- alpha * gamma
+  if (is.null(dim(n))) {
     n <- matrix(n, nrow = 1)
   }
-  n_ag <- t(apply(n,1,\(x) x + ag))
-  LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1)*log(gamma) - g.b*gamma +
-    + nrow(n)*lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
-                                    rowSums(t(apply(lgamma(n_ag), 1, \(x){x - lgamma(ag)}))))
+  n_ag <- t(apply(n, 1, \(x) x + ag))
+  LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1) * log(gamma) - g.b *
+    gamma++nrow(n) * lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
+                                           rowSums(t(apply(
+                                             lgamma(n_ag), 1, \(x) {
+                                               x - lgamma(ag)
+                                             }
+                                           ))))
 }
 # Function to get posterior prob with given partition:
-log_like_prob_group <- function(n_i, p, alpha, gamma, prior.alpha, g.a, g.b,
-                                K){
+log_like_prob_group <- function(n_i,
+                                p,
+                                alpha,
+                                gamma,
+                                prior.alpha,
+                                g.a,
+                                g.b,
+                                K) {
   ids <- (unique(p))
-  res <- lapply(ids, function(id) sort(c(1:K)[p == id]))
+  res <- lapply(ids, function(id)
+    sort(c(1:K)[p == id]))
   names(res) <- 1:length(res)
   counts.list <- lapply(res, \(x) {
-    if(length(x) == 1){
-      n_i[x,]
+    if (length(x) == 1) {
+      n_i[x, ]
     }
-    else{colSums(n_i[x,])}})
-  n_curr <- matrix(unlist(counts.list), ncol = ncol(n_i), byrow = T)
+    else{
+      colSums(n_i[x, ])
+    }
+  })
+  n_curr <- matrix(unlist(counts.list),
+                   ncol = ncol(n_i),
+                   byrow = T)
   log_full_joint(n_curr, alpha, gamma, prior.alpha, g.a, g.b)
 }
 # Function to update groupings using the all at once method:
-update_groupings_aao <- function(p, beta, delta, dist, sigma, alpha, gamma, n_i, prior.alpha, g.a, g.b, K){
-  log.prior.probs <- apply(p,1, \(x) log_epa_prior(x, beta, delta, dist, sigma))
+update_groupings_aao <- function(p,
+                                 beta,
+                                 delta,
+                                 dist,
+                                 sigma,
+                                 alpha,
+                                 gamma,
+                                 n_i,
+                                 prior.alpha,
+                                 g.a,
+                                 g.b,
+                                 K) {
+  log.prior.probs <- apply(p, 1, \(x) log_epa_prior(x, beta, delta, dist, sigma))
   log.prior.probs <- log.prior.probs - max(log.prior.probs)
   ## Update groupings:
-  log_probs <- apply(p, 1, \(x) log_like_prob_group(n_i, x,
-                                                    alpha, gamma, prior.alpha, g.a, g.b, K))
+  log_probs <- apply(p,
+                     1,
+                     \(x) log_like_prob_group(n_i, x, alpha, gamma, prior.alpha, g.a, g.b, K))
   log_probs <- log_probs - max(log_probs)
   log_post_probs <- log_probs + log.prior.probs
   log_post_probs <- log_post_probs - max(log_post_probs)
-  probs <- exp(log_post_probs)/sum(exp(log_post_probs))
-  p[sample(1:52, 1, prob = probs),]
+  probs <- exp(log_post_probs) / sum(exp(log_post_probs))
+  p[sample(1:52, 1, prob = probs), ]
 }
 
 # Function for sequential group update:
-update_groupings_seq <- function(n_i, groupings, alpha, gamma, beta, delta, sigma, dist, prior.alpha, g.a, g.b, K){
+update_groupings_seq <- function(n_i,
+                                 groupings,
+                                 alpha,
+                                 gamma,
+                                 beta,
+                                 delta,
+                                 sigma,
+                                 dist,
+                                 prior.alpha,
+                                 g.a,
+                                 g.b,
+                                 K) {
   count = 0
-  for(i in sample(1:K)){
+  for (i in sample(1:K)) {
     alloc <- groupings[-i]
     # Combine n's:
     ids <- (unique(alloc))
-    res <- lapply(ids, function(id) sort(c(1:K)[-i][alloc == id]))
+    res <- lapply(ids, function(id)
+      sort(c(1:K)[-i][alloc == id]))
     names(res) <- 1:length(res)
     counts.list <- lapply(res, \(x) {
-      if(length(x) == 1){
-        n_i[x,]
+      if (length(x) == 1) {
+        n_i[x, ]
       }
-      else{colSums(n_i[x,])}})
-    n_curr <- matrix(unlist(counts.list), nrow = length(res), byrow = T)
+      else{
+        colSums(n_i[x, ])
+      }
+    })
+    n_curr <- matrix(unlist(counts.list),
+                     nrow = length(res),
+                     byrow = T)
     # Get log_post probabilities.
     log_probs <- log_lik <- log_prior <- c()
-    for(j in 1:(length(ids) + 1)){
+    for (j in 1:(length(ids) + 1)) {
       n_use <- n_curr
       p_use <- numeric(K)
       p_use[i] <- j
-      for(g in 1:length(ids)){
+      for (g in 1:length(ids)) {
         p_use[res[[g]]] <- g
       }
-      if(j != length(ids) + 1){
-        n_use[j,] <- n_use[j,] + n_i[i,]
+      if (j != length(ids) + 1) {
+        n_use[j, ] <- n_use[j, ] + n_i[i, ]
       } else{
-        n_use <- rbind(n_use, n_i[i,])
+        n_use <- rbind(n_use, n_i[i, ])
       }
       log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
@@ -311,10 +370,10 @@ update_groupings_seq <- function(n_i, groupings, alpha, gamma, beta, delta, sigm
     log_prior <- log_prior - max(log_prior)
     log_probs <- log_lik + log_prior
     log_probs <- log_probs - max(log_probs)
-    probs <- exp(log_probs)/sum(exp(log_probs))
+    probs <- exp(log_probs) / sum(exp(log_probs))
     n_g <- sample(1:(length(ids) + 1), 1, prob = probs)
     alloc.new <- numeric(K)
-    for(j in 1:length(ids)){
+    for (j in 1:length(ids)) {
       alloc.new[res[[j]]] <- j
     }
     alloc.new[i] <- n_g
@@ -324,14 +383,14 @@ update_groupings_seq <- function(n_i, groupings, alpha, gamma, beta, delta, sigm
 }
 
 # Update permutation:
-update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist){
+update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist) {
   sigma_prop <- sigma
   ind <- sample(1:length(sigma), k_rep)
   sigma_prop[ind] <- sample(sigma_prop[ind])
   # accept/reject:
   a <- log_epa_prior(grouping, beta, delta, dist, sigma_prop) -
     log_epa_prior(grouping, beta, delta, dist, sigma)
-  if(a > log(runif(1))){
+  if (a > log(runif(1))) {
     prop <- sigma_prop
   } else{
     prop <- sigma
@@ -340,11 +399,11 @@ update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist){
 }
 
 # Update mass parameter (beta):
-update_beta <- function(beta, grouping, delta, dist, sigma){
+update_beta <- function(beta, grouping, delta, dist, sigma) {
   beta_prop <- beta + rnorm(1, mean = 0, sd = .5)
   a <- log_epa_prior(grouping, beta_prop, delta, dist, sigma) + dgamma(beta_prop, 3, 5, log = T) -
     log_epa_prior(grouping, beta, delta, dist, sigma) - dgamma(beta, 3, 5, log = T)
-  if(a > log(runif(1))){
+  if (a > log(runif(1))) {
     prop <- beta_prop
   } else{
     prop <- beta
@@ -353,15 +412,15 @@ update_beta <- function(beta, grouping, delta, dist, sigma){
 }
 
 # Update discount parameter (delta):
-update_delta <- function(grouping, beta, delta, dist, sigma){
+update_delta <- function(grouping, beta, delta, dist, sigma) {
   # Stepping in Slice Sampler:
   L <- 0
   U <- 1
   f_x <- exp(log_epa_prior(grouping, beta, delta, dist, sigma) + log_delta_prior(delta))
   y <- runif(1, 0, f_x)
   x <- runif(1, L, U)
-  while(log(y) > log_epa_prior(grouping, beta, x, dist, sigma) + log_delta_prior(x)){
-    if(x < delta){
+  while (log(y) > log_epa_prior(grouping, beta, x, dist, sigma) + log_delta_prior(x)) {
+    if (x < delta) {
       L = x
     } else{
       U = x
@@ -372,54 +431,80 @@ update_delta <- function(grouping, beta, delta, dist, sigma){
 }
 
 # Function to run MCMC:(methods = aao or seq)
-epa_mcmc <- function(N_i, B = 10000, thin = 1, method = "aao",
-                     prior.alpha, g.a, g.b, dist){
+epa_mcmc <- function(N_i,
+                     B = 10000,
+                     thin = 1,
+                     method = "aao",
+                     prior.alpha,
+                     g.a,
+                     g.b,
+                     dist) {
   # Fix n_i:
-  non.na.ind <- !is.na(N_i[1,])
+  non.na.ind <- !is.na(N_i[1, ])
   J <- ifelse(is.null(ncol(N_i)), length(N_i), ncol(N_i))
-  n_i <- N_i[,!is.na(N_i[1,])]
-  if(is.null(nrow(n_i))){n_i <- array(n_i, dim = c(1, length(n_i)))}
+  n_i <- N_i[, !is.na(N_i[1, ])]
+  if (is.null(nrow(n_i))) {
+    n_i <- array(n_i, dim = c(1, length(n_i)))
+  }
   K <- ifelse(is.null(nrow(n_i)), 1, nrow(n_i))
   # Set prior parameters:
   prior.alpha <- rep(prior.alpha, ncol(n_i))
   beta <- beta_sav <- .9
   delta <- delta_sav <- 0.01
   sigma <- 1:K
-  k_rep <- floor(K/2)
+  k_rep <- floor(K / 2)
 
   ## Get initial values for alpha and gamma
   alpha <- array(NA, dim = c(1, ncol(n_i)))
-  alpha[1,] <- rep(1/ncol(n_i), ncol(n_i))#rdirichlet(1, prior.alpha)
+  alpha[1, ] <- rep(1 / ncol(n_i), ncol(n_i))#rdirichlet(1, prior.alpha)
   z <- alpha_to_z(log(alpha))
   z_1m <- sapply(z, log1mexp)
   gamma <- gamma_sav <- 5#rgamma(1, g.a, g.b)
-  tables <- matrix(c(1,1), nrow = 2)
+  tables <- matrix(c(1, 1), nrow = 2)
   group_alloc <- 1
   groupings_sav <- array(NA, dim = c(B, nrow(n_i)))
   alpha_sav <- array(NA, dim = c(B, ncol(n_i)))
   theta_sav <- array(NA, dim = c(B, K, ncol(n_i)))
   # Possible partitions:
   p <- salso::enumerate.partitions(K)
-  groupings <- p[sample(1:nrow(p),1),]
+  groupings <- p[sample(1:nrow(p), 1), ]
   # Run MCMC:
   # prior probs of partitions:
   #log.prior.probs <- apply(p,1, \(x) log_epa_prior(x, beta[1], delta[1], dist, sigma[1,]))
 
   # Run MCMC:
-  for(b in 2:(B*thin)){
+  for (b in 2:(B * thin)) {
     ## Update groupings:
-    if(method == "aao"){
-      groupings <- update_groupings_aao(p, beta, delta, dist, sigma, alpha, gamma, n_i,
-                                        prior.alpha, g.a, g.b, K)
-    }else{
-      groupings <- update_groupings_seq(n_i, groupings, alpha, gamma,
-                                        beta, delta, sigma, dist,
-                                        prior.alpha, g.a, g.b, K)
+    if (method == "aao") {
+      groupings <- update_groupings_aao(p,
+                                        beta,
+                                        delta,
+                                        dist,
+                                        sigma,
+                                        alpha,
+                                        gamma,
+                                        n_i,
+                                        prior.alpha,
+                                        g.a,
+                                        g.b,
+                                        K)
+    } else{
+      groupings <- update_groupings_seq(n_i,
+                                        groupings,
+                                        alpha,
+                                        gamma,
+                                        beta,
+                                        delta,
+                                        sigma,
+                                        dist,
+                                        prior.alpha,
+                                        g.a,
+                                        g.b,
+                                        K)
     }
 
     ## Update permutation (sigma):
-    sigma <- update_sigma(sigma, k_rep, groupings, beta,
-                          delta, dist)
+    sigma <- update_sigma(sigma, k_rep, groupings, beta, delta, dist)
     ## Update mass parameter:
     beta <- update_beta(beta, groupings, delta, dist, sigma)
     ## Update discount parameter (delta):
@@ -428,26 +513,36 @@ epa_mcmc <- function(N_i, B = 10000, thin = 1, method = "aao",
     # Combine counts
     n_curr <- combine_counts(groupings, n_i)
     # Update gamma:
-    gamma <- exp(gamma_update(z, z_1m, ncol(n_i),  n_i = n_curr,
-                              nrow(n_curr) , log(gamma), g.a, g.b))
+    gamma <- exp(gamma_update(z, z_1m, ncol(n_i), n_i = n_curr, nrow(n_curr) , log(gamma), g.a, g.b))
 
     # Update z:
-    z <- update_z(z, z_1m, ncol(n_i),  n_i = n_curr,
-                  nrow(n_curr), log(gamma), unique(prior.alpha))
+    z <- update_z(z,
+                  z_1m,
+                  ncol(n_i),
+                  n_i = n_curr,
+                  nrow(n_curr),
+                  log(gamma),
+                  unique(prior.alpha))
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
     # Thin:
-    if(b %% thin == 0){
-      alpha_sav[b/thin,] <- alpha
-      groupings_sav[b/thin, ] <- groupings
-      gamma_sav[b/thin] <- gamma
-      beta_sav[b/thin] <- beta
-      delta_sav[b/thin] <- delta
-      for(g in unique(groupings)){
+    if (b %% thin == 0) {
+      alpha_sav[b / thin, ] <- alpha
+      groupings_sav[b / thin, ] <- groupings
+      gamma_sav[b / thin] <- gamma
+      beta_sav[b / thin] <- beta
+      delta_sav[b / thin] <- delta
+      for (g in unique(groupings)) {
         ind <- which(groupings == g)
-        theta_sav[b/thin,ind,] <- matrix(rep(LaplacesDemon::rdirichlet(1, n_curr[g,] + alpha*gamma), length(ind)),
-                                         nrow = length(ind), byrow = T)
+        theta_sav[b / thin, ind, ] <- matrix(
+          rep(
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma),
+            length(ind)
+          ),
+          nrow = length(ind),
+          byrow = T
+        )
       }
     }
   }
@@ -455,6 +550,15 @@ epa_mcmc <- function(N_i, B = 10000, thin = 1, method = "aao",
   alpha <- array(0, dim = c(B, J))
   alpha[, non.na.ind] <- alpha_sav
   theta <- array(0, dim = c(B, K, J))
-  theta[,,non.na.ind] <- theta_sav
-  return(list(groups = groupings_sav, alpha = alpha, gamma = gamma_sav, theta = theta, beta = beta_sav, delta = delta_sav))
+  theta[, , non.na.ind] <- theta_sav
+  return(
+    list(
+      groups = groupings_sav,
+      alpha = alpha,
+      gamma = gamma_sav,
+      theta = theta,
+      beta = beta_sav,
+      delta = delta_sav
+    )
+  )
 }
