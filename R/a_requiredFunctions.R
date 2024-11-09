@@ -10,7 +10,7 @@ log1mexp <- function(x) {
   out
 }
 
-## Map log(alpha) to log(z)
+## Map log(alpha) to log(z) using stick breaking methodology (Neal 2003)
 ## input a is on the log scale
 alpha_to_z <- function(a) {
   L <- length(a) - 1
@@ -30,7 +30,7 @@ alpha_to_z <- function(a) {
   return(z)
 }
 
-## Update draws of z:
+## Update draws of z using a pseudo-slice sampler:
 ## z is a vector of log(z)
 update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   C <- length(z)
@@ -46,30 +46,6 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   z_1m_new <- c()
   a <- x[1:C]
   b <- rev(cumsum(rev(x)))[-1]
-  ## Using priors as the proposal density:
-  # b <- c()
-  # if(prior.alpha == 0){
-  #   # for(j in 1:(J-1)){
-  #   #   b[j] <- (1/J)*(J - j)
-  #   # }
-  #   # a <- rep(1/J, J-1)
-  #   if(sum(is.na(n_i[1,]))==0){
-  #     x <- (apply(n_i, 2, sum)+1)/sqrt(sum((apply(n_i, 2, sum)+1)^2))*4
-  #   } else{
-  #     na.cols <- which(is.na(n_i[1,]))
-  #     x <- (apply(n_i[,-na.cols], 2, sum)+1)/sqrt(sum((apply(n_i[,-na.cols], 2, sum)+1)^2))*4
-  #   }
-  #   z_new <- c()
-  #   z_1m_new <- c()
-  #   a <- x[1:C]
-  #   b <- rev(cumsum(rev(x)))[-1]
-  # } else {
-  #   for(j in 1:(J-1)){
-  #     b[j] <-prior.alpha*(J - j)
-  #   }
-  #   a <- rep(prior.alpha, J-1)
-  # }
-
   psi <- pbeta(exp(z), a, b)
   # New proposal distribution:
   y <- l.alpha.f.cond(z, z_1m, J, n_i, K, ga, prior.alpha) - sum((dbeta(exp(z), a, b, log = TRUE))) + log(runif(1))
@@ -83,8 +59,6 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   while (y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum((dbeta(
     exp(z_new), a, b, log = TRUE
   ))))) {
-    # L[z_new < z] <- psi_new[z_new < z]
-    # R[z_new >= z] <- psi_new[z_new >= z]
     L[psi_new < psi] <- psi_new[psi_new < psi]
     R[psi_new > psi] <- psi_new[psi_new > psi]
     psi_new <- runif(C, L, R)
@@ -112,23 +86,7 @@ alpha_map <- function(z, z_1m) {
 }
 
 # Gamma slice sampler:
-
 gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
-  # y <- l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1))
-  # g <- c()
-  # L = 0
-  # R = 100#10e100
-  # g <- log(L + runif(1)*(R-L))
-  # while(y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b)){
-  #   if(g < ga){
-  #     L = exp(g)
-  #   } else{
-  #     R = exp(g)
-  #   }
-  #   g <- log(L + runif(1)*(R-L))
-  # }
-  # return(g)
-
   ## CDF Transformation:
   y <-  l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - pgamma(exp(ga), g.a, g.b)
   L <- 0
@@ -171,16 +129,6 @@ l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
     }
     a <- prior.alpha
   }
-  # C <- length(z)
-  # na.cols <- which(is.na(n_i[1,]))
-  # if(sum(is.na(n_i[1,]))==0){
-  #   x <- (apply(n_i, 2, sum)+1)/sqrt(sum((apply(n_i, 2, sum)+1)^2))*4
-  # } else{
-  #   na.cols <- which(is.na(n_i[1,]))
-  #   x <- (apply(n_i[,-na.cols], 2, sum)+1)/sqrt(sum((apply(n_i[,-na.cols], 2, sum)+1)^2))*4
-  # }
-  # a <- x[1:C]
-  # b <- rev(cumsum(rev(x)))[-1]
   res <- sum((a - 1) * (z)) + sum((b - 1) * (z_1m)) + sum(k_obj) - log(100)
   return(res)
 }
@@ -194,18 +142,16 @@ l.gamma.f.cond <- function(z, z_1m, J, n_i, K, ga, g.a, g.b) {
                                                                                 alpha))) - lgamma(sum(n_i[k, ], na.rm = T) + exp(ga)) - sum(lgamma(exp(ga +
                                                                                                                                                          alpha)))
   }
-  # Set prior params here
   ## gamma priors are g.a, g.b
   res <- (g.a - 1) * ga - exp(ga) * g.b + sum(k_obj)
-  # ## gamma priors are 5, 1
-  # res <- (5 - 1)*ga - exp(ga)*1 +sum(k_obj)
   return(res)
 }
 
 ## Log EPA prior:
 log_epa_prior <- function(p, alpha, delta, dist, sigma) {
   if (alpha < -delta | delta < 0 | delta >= 1) {
-    # Set constraints-Inf
+    # Set constraints
+    -Inf
   }
   else {
     p_tm1 <- p[sigma[1]]
@@ -291,6 +237,7 @@ log_like_prob_group <- function(n_i,
                    byrow = T)
   log_full_joint(n_curr, alpha, gamma, prior.alpha, g.a, g.b)
 }
+
 # Function to update groupings using the all at once method:
 update_groupings_aao <- function(p,
                                  beta,
