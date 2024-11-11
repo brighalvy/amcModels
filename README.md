@@ -8,7 +8,7 @@ The main functionality of this package is to fit one of the three absorbing Mark
 
 -   If `devtools` is not installed, install devtools.
 
--   Run the following line of code: `devtools::install_github("account_name/repository_name")`
+-   Run the following line of code: `devtools::install_github("brighalvy/amcModels")`
 
 ## What is left?
 
