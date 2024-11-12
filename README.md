@@ -12,4 +12,4 @@ The main functionality of this package is to fit one of the three absorbing Mark
 
 ## What is left?
 
-I still need to create the `amc` and `hamc` functions, these will be built on the required functions already created. Further I will need to optimize my function implementations to speed up the MCMC process.
+I still need to create the `amc` and `hamc` functions, these will be built on the required functions already created. Further I will need to optimize my function implementations to speed up the MCMC process. The creation of a vignette to demonstrate the application of the functions as well as some interpretation of results needs to be completed. Finally I will need to make sure that all of my sources are properly cited in the description and where appropriate.
