@@ -8,7 +8,7 @@
 #' @param method The MCMC approach to obtaining posterior draws of the random clusters. Options "aao" or "seq". "aao" is an "all-at-once" approach in that it evaluates the posterior probability of each possible partition. "seq" does a sequential allocation of clustering given the previous clustering draw. When there are a small number of subgroups "aao" may be prefered however as the number of subgroups increases the computation time increases dramatically.
 #' @param B Number of desired posterior estimates
 #' @param thin Thinning of MCMC draws, i.e. thin = 5, means every 5th draw will be returned.
-#' @param prior.alpha The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 0.5.
+#' @param prior.alpha The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 1/(# of possible transition for each row).
 #' @param g.a The prior shape parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param g.b The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param dist A KxK symmetric matrix that includes the prior information on the distance between subgroups. Defaults to each group is sequentially one from the next in line.
@@ -30,7 +30,7 @@ epa_hamc <- function(N,
                      method = "aao",
                      B = 10000,
                      thin = 1,
-                     prior.alpha = .5,
+                     prior.alpha = NULL,
                      g.a = NULL,
                      g.b = NULL,
                      dist = NULL,
@@ -63,8 +63,14 @@ epa_hamc <- function(N,
     stop(paste("g.b must be numeric"))
   }
   # Make sure prior parameters are positive:
-  if (prior.alpha <= 0) {
+  if (!is.null(prior.alpha) & prior.alpha <= 0) {
     stop(paste("prior.alpha must be positive"))
+  }
+  if(is.null(prior.alpha)){
+    prior.alpha <- c()
+    for(i in 1:dim(N)[2]){
+      prior.alpha[i] <- 1/sum(!is.na(N[1, i, ]))
+    }
   }
   if (!is.null(g.a)) {
     if (g.a <= 0) {
@@ -114,9 +120,21 @@ epa_hamc <- function(N,
   }
 
   ## Fit model:
-  fit <- parallel::mclapply(count.list,
-                            \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist),
-                            mc.cores = MCMC.cores)
+  ## Check configuration of prior.alpha if it varies from row to row:
+  if(length(unique(prior.alpha)) == 1){
+    prior.alpha <- unique(prior.alpha)
+    fit <- parallel::mclapply(count.list,
+                              \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist),
+                              mc.cores = MCMC.cores)
+  } else{
+    for(i in 1:dim(N)[2]){
+      count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
+    }
+    fit <- parallel::mclapply(count.list,
+                              \(x) epa_mcmc(x[, 1:(ncol(x) - 1)], B, thin, method, x[1, ncol(x)], g.a, g.b, dist),
+                              mc.cores = MCMC.cores)
+  }
+
 
   ## Create output list options:
   I <- dim(N)[2]
