@@ -60,8 +60,10 @@ epa_hamc <- function(N,
     stop(paste("g.b must be numeric"))
   }
   # Make sure prior parameters are positive:
-  if (!is.null(prior.alpha) & prior.alpha <= 0) {
-    stop(paste("prior.alpha must be positive"))
+  if (!is.null(prior.alpha)) {
+    if(prior.alpha <= 0){
+      stop(paste("prior.alpha must be positive"))
+    }
   }
   if(is.null(prior.alpha)){
     prior.alpha <- c()
