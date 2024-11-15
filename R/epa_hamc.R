@@ -53,9 +53,6 @@ epa_hamc <- function(N,
   if (!is.numeric(thin)) {
     stop(paste("thin must be numeric"))
   }
-  if (!is.numeric(prior.alpha)) {
-    stop(paste("prior.alpha must be numeric"))
-  }
   if (!is.null(g.a) & !is.numeric(g.a)) {
     stop(paste("g.a must be numeric"))
   }
