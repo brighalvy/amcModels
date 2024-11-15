@@ -9,7 +9,7 @@ epa_hamc(
   method = "aao",
   B = 10000,
   thin = 1,
-  prior.alpha = 0.5,
+  prior.alpha = NULL,
   g.a = NULL,
   g.b = NULL,
   dist = NULL,
@@ -25,7 +25,7 @@ epa_hamc(
 
 \item{thin}{Thinning of MCMC draws, i.e. thin = 5, means every 5th draw will be returned.}
 
-\item{prior.alpha}{The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 0.5.}
+\item{prior.alpha}{The value to be included in the prior for the Dirichlet on alpha, will be uniform. Default is 1/(# of possible transition for each row).}
 
 \item{g.a}{The prior shape parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
 
