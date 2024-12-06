@@ -98,7 +98,7 @@ hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.
       count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
     }
     fit <- parallel::mclapply(count.list,
-                              \(x) epa_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B),
+                              \(x) hamc_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B),
                               mc.cores = MCMC.cores)
   }
 

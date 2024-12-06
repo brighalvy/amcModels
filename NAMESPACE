@@ -3,6 +3,7 @@
 export(absmarkovchain)
 export(amc)
 export(epa_hamc)
+export(hamc)
 import(LaplacesDemon)
 import(parallel)
 import(salso)
