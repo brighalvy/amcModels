@@ -509,3 +509,52 @@ epa_mcmc <- function(N_i,
     )
   )
 }
+
+## Function for HAMC MCMC:
+mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B){
+  J <- sum(!is.na(n_i[1, ]))
+  # Fix dimension of n_i if only one group:
+  if(is.null(dim(n_i))){
+    n_i <- matrix(n_i, nrow = 1)
+  }
+  # initialize gamma and alpha (log scale)
+  g <- c(log(1))
+  alpha <- array(NA, dim = c(B, J))
+  theta <- array(0, dim = c(B,K, length(n_i[1, ])))
+  alpha[1,] <- log(rep(1/J, J))
+  for(k in 1:K){
+    theta[1,k, !is.na(n_i[k, ])] <- rdirichlet(1, exp(g[1] + alpha[1,]) + n_i[k,][!is.na(n_i[k, ])])
+  }
+  z <- z_1m <- psi <- array(NA, dim = c(B, J-1))
+  z[1, ] <- alpha_to_z(alpha[1, ])
+  psi[1, ] <- pbeta(exp(z[1, ]), .5, .5)
+  z_1m[1, ] <- sapply(z[1, ],log1mexp)
+  # Start MCMC:
+  for(iter in 2:(B + 500)){
+    # Update Gamma:
+    # Slice:
+    g[iter] <- gamma_update(z[iter-1,], z_1m[iter-1,], J, n_i
+                              , K, g[iter-1], g.a, g.b)
+
+    # Update alpha:
+    ## Map to z(beta) variables:
+    ## Update z values (does accept/reject with slice sampler):
+    z[iter, ] <- update_z(z[iter-1, ], z_1m[iter-1, ], J,  n_i = n_i
+                            , K, g[iter], prior.alpha)
+    psi[iter, ] <- pbeta(exp(z[iter,]), .5, .5)
+    z_1m[iter,] <- sapply(z[iter,], log1mexp)
+    alpha[iter,] <- alpha_map(z[iter,], z_1m[iter,])
+
+    for(k in 1:K){
+        theta[iter, k, !is.na(n_k[k, ])] <- rdirichlet(1, exp(g[iter] + alpha[iter,]) + n_i[k,][!is.na(n_i[k,])])
+      }
+    }
+    # Save row draws:
+    alpha_draws <- array(0, dim = (B, length(n_i)))
+    alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[-c(1:500), ])
+    gamma_draws <- exp(g[-c(1:500)])
+    theta_draws <- theta[-c(1:500), , ]
+    #print(i)
+
+  return(list(alpha = alpha_draws, gamma = gamma_draws, theta = theta_draws))
+}
