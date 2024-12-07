@@ -550,7 +550,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B){
       }
     }
     # Save row draws:
-    alpha_draws <- array(0, dim = c(B, length(n_i)))
+    alpha_draws <- array(0, dim = c(B, length(n_i[k, ])))
     alpha_draws[ , !is.na(n_i[1, ])] <- exp(alpha[-c(1:500), ])
     gamma_draws <- exp(g[-c(1:500)])
     theta_draws <- theta[-c(1:500), , ]
