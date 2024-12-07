@@ -127,9 +127,15 @@ for(i in 1:100){
 
 ## Step 4: Fit models
 
-First we fit the amc model which will return posterior draws for a combined transition matrix.
+First we fit the AMC model which will return posterior draws for a combined transition matrix.
 
 ```{r}
-# fit_amc <- amc(N, xsi = 1/5)
+fit_amc <- amc(N, xsi = 1/5)
+```
+
+Second we will fit the HAMC model.
+
+```{r}
+fit_hamc <- hamc(N, MCMC.cores = 3)
 ```
 
