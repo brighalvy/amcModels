@@ -32,7 +32,7 @@ amc <- function(N, B = 10000, xsi = NULL){
   }
 
   I <- nrow(N)
-  J <- ncol(J)
+  J <- ncol(N)
 
   if (!is.null(xsi)) {
     if(xsi <= 0){
