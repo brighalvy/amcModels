@@ -14,7 +14,7 @@
 #'
 
 
-amc <- function(N, B = 10000, xsi){
+amc <- function(N, B = 10000, xsi = NULL){
   # Check compatability of N:
   d <- dim(N)
   if (!is.array(N)) {
