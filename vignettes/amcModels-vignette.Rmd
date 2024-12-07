@@ -136,6 +136,14 @@ fit_amc <- amc(N, xsi = 1/5)
 Second we will fit the HAMC model.
 
 ```{r}
-# fit_hamc <- hamc(N, MCMC.cores = 3)
+fit_hamc <- hamc(N, MCMC.cores = 3)
 ```
+
+Lastly we will fit the EPA-HAMC model with the sequential updating of cluters and thinning by 5.
+
+```{r}
+fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 3)
+```
+
+## Step 5: Analyze results
 
