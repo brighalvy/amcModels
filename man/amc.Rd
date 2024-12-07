@@ -4,7 +4,7 @@
 \alias{amc}
 \title{AMC model}
 \usage{
-amc(N, B = 10000, xsi)
+amc(N, B = 10000, xsi = NULL)
 }
 \arguments{
 \item{N}{A two or three dimensional array (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.}

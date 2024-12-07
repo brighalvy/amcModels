@@ -136,6 +136,6 @@ fit_amc <- amc(N, xsi = 1/5)
 Second we will fit the HAMC model.
 
 ```{r}
-fit_hamc <- hamc(N, MCMC.cores = 3)
+# fit_hamc <- hamc(N, MCMC.cores = 3)
 ```
 
