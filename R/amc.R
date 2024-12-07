@@ -38,6 +38,9 @@ amc <- function(N, B = 10000, xsi = NULL){
     if(xsi <= 0){
       stop(paste("xsi must be positive"))
     }
+    if(length(xsi) == 1){
+      xsi <- rep(xsi, I)
+    }
   }
   if(is.null(xsi)){
     xsi <- c()
@@ -49,7 +52,7 @@ amc <- function(N, B = 10000, xsi = NULL){
   ## Get posterior draws:
   theta <- array(0, dim = c(B, I, J))
   for(i in 1:I){
-    theta[ , I, !is.na(N[i, ])] <- LaplacesDemon::rdirichlet(B, N[i, !is.na(N[i, ])] + rep(xsi[i], sum(!is.na(N[i, ]))))
+    theta[ , i, !is.na(N[i, ])] <- LaplacesDemon::rdirichlet(B, N[i, !is.na(N[i, ])] + rep(xsi[i], sum(!is.na(N[i, ]))))
   }
 
   return(theta)
