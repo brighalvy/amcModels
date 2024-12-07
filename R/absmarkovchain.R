@@ -21,7 +21,7 @@ absmarkovchain <- function(x0, P, n){
   ## Set up run:
   sequences <- list()
   for(j in 1:n){
-    abs_states <- I:J
+    abs_states <- (I + 1):J
     states <- 1:J
     trans <- 1:I
     chain <- x0
@@ -30,7 +30,7 @@ absmarkovchain <- function(x0, P, n){
       i = i + 1
       chain[i] <- sample(states, size = 1, prob = P[chain[i - 1],])
     }
-    sequences[[j]] <- chain[i]
+    sequences[[j]] <- chain
   }
 
   return(sequences)
