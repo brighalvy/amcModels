@@ -64,14 +64,6 @@ hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.
   }
   # Check distance matrix and correct dimensions:
   K <- dim(N)[1]
-  if (!is.null(dist)) {
-    if (!is.matrix(dist)) {
-      stop("dist must be a matrix.")
-    }
-    if (dim(dist)[1] != K) {
-      stop("Wrong dimensions for distance matrix.")
-    }
-  }
   ## Populate g.a and g.b if missing:
   if (is.null(g.a) | is.null(g.b)) {
     mu <- 20
