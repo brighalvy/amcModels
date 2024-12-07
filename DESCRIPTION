@@ -13,3 +13,7 @@ Imports:
     LaplacesDemon,
     parallel,
     salso
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
