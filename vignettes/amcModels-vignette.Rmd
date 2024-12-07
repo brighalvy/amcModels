@@ -80,6 +80,48 @@ data_6_3 <- absmarkovchain(3, P6, 100)
 ### Step 2: Create data array
 
 ```{r}
-N <- array(NA, dim = c(6, 3, 5))
+N <- array(0, dim = c(6, 3, 5))
+
+## Function to apply to each sequence:
+make_counts <- function(seq, N_group){
+  for(x in 2:length(seq)){
+    row.ref <- seq[x - 1]
+    col.ref <- seq[x]
+    N_group[row.ref, col.ref] <- N_group[row.ref, col.ref] + 1
+  }
+  return(N_group)
+}
+
+for(i in 1:100){
+  ## Group 1:
+  N[1, , ] <- make_counts(data_1_1[[i]], N[1, , ])
+  N[1, , ] <- make_counts(data_1_2[[i]], N[1, , ])
+  N[1, , ] <- make_counts(data_1_3[[i]], N[1, , ])
+  
+  ## Group 2:
+  N[2, , ] <- make_counts(data_2_1[[i]], N[2, , ])
+  N[2, , ] <- make_counts(data_2_2[[i]], N[2, , ])
+  N[2, , ] <- make_counts(data_2_3[[i]], N[2, , ])
+  
+  ## Group 3:
+  N[3, , ] <- make_counts(data_3_1[[i]], N[3, , ])
+  N[3, , ] <- make_counts(data_3_2[[i]], N[3, , ])
+  N[3, , ] <- make_counts(data_3_3[[i]], N[3, , ])
+  
+  ## Group 4:
+  N[4, , ] <- make_counts(data_4_1[[i]], N[4, , ])
+  N[4, , ] <- make_counts(data_4_2[[i]], N[4, , ])
+  N[4, , ] <- make_counts(data_4_3[[i]], N[4, , ])
+  
+  ## Group 5:
+  N[5, , ] <- make_counts(data_5_1[[i]], N[5, , ])
+  N[5, , ] <- make_counts(data_5_2[[i]], N[5, , ])
+  N[5, , ] <- make_counts(data_5_3[[i]], N[5, , ])
+  
+  ## Group 6:
+  N[6, , ] <- make_counts(data_6_1[[i]], N[6, , ])
+  N[6, , ] <- make_counts(data_6_2[[i]], N[6, , ])
+  N[6, , ] <- make_counts(data_6_3[[i]], N[6, , ])
+}
 ```
 
