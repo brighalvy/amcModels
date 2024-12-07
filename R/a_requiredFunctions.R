@@ -525,7 +525,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B){
   for(k in 1:K){
     theta[1,k, !is.na(n_i[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1,]) + n_i[k,][!is.na(n_i[k, ])])
   }
-  z <- z_1m <- psi <- array(NA, dim = c(B, J-1))
+  z <- z_1m <- psi <- array(NA, dim = c(B + 500, J-1))
   z[1, ] <- alpha_to_z(alpha[1, ])
   psi[1, ] <- pbeta(exp(z[1, ]), .5, .5)
   z_1m[1, ] <- sapply(z[1, ],log1mexp)
