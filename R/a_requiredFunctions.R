@@ -519,8 +519,8 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B){
   }
   # initialize gamma and alpha (log scale)
   g <- c(log(1))
-  alpha <- array(NA, dim = c(B, J))
-  theta <- array(0, dim = c(B,K, length(n_i[1, ])))
+  alpha <- array(NA, dim = c(B + 500, J))
+  theta <- array(0, dim = c(B + 500,K, length(n_i[1, ])))
   alpha[1,] <- log(rep(1/J, J))
   for(k in 1:K){
     theta[1,k, !is.na(n_i[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1,]) + n_i[k,][!is.na(n_i[k, ])])
@@ -546,7 +546,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B){
     alpha[iter,] <- alpha_map(z[iter,], z_1m[iter,])
 
     for(k in 1:K){
-        theta[iter, k, !is.na(n_k[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter,]) + n_i[k,][!is.na(n_i[k,])])
+        theta[iter, k, !is.na(n_i[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter,]) + n_i[k,][!is.na(n_i[k,])])
       }
     }
     # Save row draws:
