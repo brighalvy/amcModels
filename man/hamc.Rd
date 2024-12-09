@@ -7,7 +7,7 @@
 hamc(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.cores = 1)
 }
 \arguments{
-\item{N}{A two or three dimensional array (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.}
+\item{N}{A two or three dimensional array of counts (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states. Include NA's in matrix corresponding to impossible transitions.}
 
 \item{B}{Number of posterior draws to get (default is 10000)}
 
@@ -17,7 +17,7 @@ hamc(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.cores = 1)
 
 \item{g.b}{The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
 
-\item{MCMC.cores}{the number of cores to use for parralel processing, the default is 1.}
+\item{MCMC.cores}{the number of cores to use for parallel processing, the default is 1.}
 }
 \value{
 A list with the following:
@@ -28,5 +28,5 @@ A list with the following:
 }
 }
 \description{
-This function fits an indpendent HAMC model on each row of the transition matrix and outputs posterior draws of the two hyper parameters (alpha and gamma) and the transition probabilities.
+This function fits an independent HAMC model on each row of the transition matrix and outputs posterior draws of the two hyper parameters (alpha and gamma) and the transition probabilities.
 }

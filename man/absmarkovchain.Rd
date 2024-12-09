@@ -14,7 +14,7 @@ absmarkovchain(x0, P, n)
 \item{n}{the number of sequences.}
 }
 \value{
-A list where each element is a sequence of events from P.
+A list where each item is a sequence of events from P.
 }
 \description{
 This function returns n sequences of events from an absorbing Markov chain.

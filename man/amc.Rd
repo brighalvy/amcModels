@@ -7,14 +7,14 @@
 amc(N, B = 10000, xsi = NULL)
 }
 \arguments{
-\item{N}{A two or three dimensional array (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.}
+\item{N}{A two or three dimensional array of counts (KxIxJ) or (IxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.}
 
-\item{B}{Number of posterior draws to get (default is 10000)}
+\item{B}{Number of posterior draws to return (default is 10000)}
 
-\item{xsi}{the a vector of length I where xsi is the prior value for the uniform dirichlet prior.}
+\item{xsi}{the a vector of length I where xsi is the prior value for the uniform Dirichlet prior for the ith row. The higher xsi will lead to stronger priors towards uniform transition probabilities.}
 }
 \value{
-A three dimensional array
+A three dimensional array that is BxIxJ of the posterior draws of the transition matrices.
 }
 \description{
 This function fits an indpendent AMC model on each row of the transition matrix and outputs posterior draws of the transition probabilities.

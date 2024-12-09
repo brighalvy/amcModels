@@ -17,7 +17,7 @@ epa_hamc(
 )
 }
 \arguments{
-\item{N}{A three dimensional array (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.}
+\item{N}{A three dimensional array of counts (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states. Include NA's in matrix for impossible transitions.}
 
 \item{method}{The MCMC approach to obtaining posterior draws of the random clusters. Options "aao" or "seq". "aao" is an "all-at-once" approach in that it evaluates the posterior probability of each possible partition. "seq" does a sequential allocation of clustering given the previous clustering draw. When there are a small number of subgroups "aao" may be prefered however as the number of subgroups increases the computation time increases dramatically.}
 
