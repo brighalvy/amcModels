@@ -175,11 +175,11 @@ ggplot(data = data_full)+
 
 From the plots it appears that state 1 is the most likely to lead to both absorbing states.
 
-We can also answer this questions using either the EPA-HAMC model or the HAMC model. Because we do have separate groupings either of these models could be considered more appropriate for the data. So we will fit the HAMC model to answer this question. We will use the `hamc` function with the default inputs, which fits the same uniform prior as above on the alpha parameter. We also fit a "weak" prior on gamma. We will also use 3 cores to exemplify how this model can be run in parallel.
+We can also answer this questions using either the EPA-HAMC model or the HAMC model. Because we do have separate groupings either of these models could be considered more appropriate for the data. So we will fit the HAMC model to answer this question. We will use the `hamc` function with the default inputs, which fits the same uniform prior as above on the alpha parameter. We also fit a "weak" prior on gamma. 
 
 ```{r}
 # Fit HAMC model:
-fit_hamc <- hamc(N, MCMC.cores = 3)
+fit_hamc <- hamc(N, MCMC.cores = 1)
 ```
 
 In this model the alpha parameter can be viewed as an overall mean and thus to answer the question we can look into the posterior distributions of alpha just as we did the transition probabilities above.
@@ -211,7 +211,7 @@ Again this shows similar results to those above however now due to the spreading
 To answer this question it requires the use of the EPA-HAMC model which has outputs on posterior clustering. We will use the `epa_hamc` function with the sequential updating of grouping thinning every 5.
 
 ```{r}
-fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 3)
+fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 1)
 ```
 
 We will now explore how each or the first three rows of the transition matrix is clustered, i.e. which of the 6 groups is most similar given that each state is immediately performed. To make visuals of this we will be using the `lattice` package, please run `install.packages("lattice")` if you would like to make similar pictures.
