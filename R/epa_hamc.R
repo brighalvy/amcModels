@@ -4,7 +4,7 @@
 #' This function fits an indpendent HAMC-EPA model on each row of the transition matrix and outputs posterior draws of clustering, alpha, gamma, and the transition probabilities.
 #'
 #'
-#' @param N A three dimensional array (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states.
+#' @param N A three dimensional array of counts (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states. Include NA's in matrix for impossible transitions.
 #' @param method The MCMC approach to obtaining posterior draws of the random clusters. Options "aao" or "seq". "aao" is an "all-at-once" approach in that it evaluates the posterior probability of each possible partition. "seq" does a sequential allocation of clustering given the previous clustering draw. When there are a small number of subgroups "aao" may be prefered however as the number of subgroups increases the computation time increases dramatically.
 #' @param B Number of desired posterior estimates
 #' @param thin Thinning of MCMC draws, i.e. thin = 5, means every 5th draw will be returned.
