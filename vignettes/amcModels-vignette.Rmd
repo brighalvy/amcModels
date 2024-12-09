@@ -1,5 +1,5 @@
 ---
-title: "amcModels-vignette"
+title: "Simulating and Analyzing Sequence data using amcModels"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{amcModels-vignette}
@@ -10,13 +10,12 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  out.width = "75%"
 )
 ```
 
-
-
-Throughout this vignette we will demonstrate the uses of the `amcModels` package on a simple example using the following transition matrices across 6 groups with 3 transitory tactics and 2 absorbing states (5 total states).
+Throughout this vignette we will demonstrate the uses of the `amcModels` package on a simple example using the following transition matrices across 6 groups with 3 transitory tactics and 2 absorbing states (5 total states). If you need a refresher on absorbing Markov chains please see https://en.wikipedia.org/wiki/Absorbing_Markov_chain#
 
 ```{r}
 P1 <- P2 <- matrix(c(.3, .2, .25, .15, .1, 
@@ -49,7 +48,7 @@ library(amcModels)
 
 ### Step1: Simulate sequences:
 
-For each group we will simulate 100 sequences of events starting in each state beginning in each of the three transitory states for a total of 300 sequences.
+For each group we will simulate 100 sequences of events starting in each state beginning in each of the three transitory states for a total of 300 sequences. To do so we will use the `absmarkovchain` fucntion included in amcModels. 
 
 ```{r}
 n <- 100
@@ -80,6 +79,8 @@ data_6_3 <- absmarkovchain(3, P6, 100)
 ```
 
 ### Step 2: Create data array
+
+Now to apply the other functions withind `amcModels` they require a three dimensional array. We will organize our simulated sequences into an array of counts so that the different models can be fit to the data.
 
 ```{r}
 N <- array(0, dim = c(6, 3, 5))
@@ -127,58 +128,140 @@ for(i in 1:100){
 }
 ```
 
-## Step 4: Fit models
+## Step 4: Analyze data
 
-First we fit the AMC model which will return posterior draws for a combined transition matrix.
+\textbf{Note:} The plots within this section require the use of `ggplot2` if you do not have this package installed on your machine run the following code to be able to render the vignette: `install.packages("ggplot2")`. 
 
 ```{r}
-fit_amc <- amc(N, xsi = 1/5)
+library(ggplot2)
 ```
 
-Second we will fit the HAMC model.
+
+We we explore how we would find answers to the following questions:
+
+1. Which transitory state (1, 2, or 3) is most likely to lead to either of the absorbing states (4 or 5)?
+2. Which of the six groups are clustered most often together across all three transitory states?
+3. Which of the six groups differs the most from the average?
+
+Before answering these questions it is important to note that the costs of fitting a more complicated model on a simpler data set comes at low cost, and the costing of fitting a simpler model (AMC) is slightly higher. So in our simulated case the AMC model may note be considered the most appropriate however we will fit it regardless to show an example of how to analyze its output.
+
+### 1. 
+To answer the first question we note that there is no reference to groups so we can fit and AMC model. To do this we wil use the given `amc` function with a uniform parameter for `xsi` that will in essence add a count of one to each row of the matrix, thus being a "weak" prior.
 
 ```{r}
+# Fit AMC model:
+fit_amc <- amc(N, xsi = 1/5)
+
+## Look at posterior densities of going into an absorbing state:
+# Format data for ggplot:
+data4 <- data.frame(one = fit_amc[ , 1, 4], two = fit_amc[ , 2, 4],
+                    three = fit_amc[ , 3, 4], abs_state = "4")
+data5 <- data.frame(one = fit_amc[ , 1, 5], two = fit_amc[ , 2, 5],
+                    three = fit_amc[ , 3, 5], abs_state = "5")
+data_full <- rbind(data4, data5)
+# Make density plot of going into given absorbing state:
+ggplot(data = data_full)+
+  geom_density(mapping = aes(x = one, col = "one"))+
+  geom_density(mapping = aes(x = two, col = "two"))+
+  geom_density(mapping = aes(x = three, col = "three"))+
+  facet_wrap(~ abs_state)+
+  xlab("")+ 
+  theme(legend.position = "bottom")+
+  scale_color_manual(name='State',
+                     breaks=c('one', 'two', 'three'),
+                     values=c('one'='red', 'two'='blue', 'three'='black'))
+  
+```
+
+From the plots it appears that state 1 is the most likely to lead to both absorbing states.
+
+We can also answer this questions using either the EPA-HAMC model or the HAMC model. Because we do have separate groupings either of these models could be considered more appropriate for the data. So we will fit the HAMC model to answer this question. We will use the `hamc` function with the default inputs, which fits the same uniform prior as above on the alpha parameter. We also fit a "weak" prior on gamma. We will also use 3 cores to exemplify how this model can be run in parallel.
+
+```{r}
+# Fit HAMC model:
 fit_hamc <- hamc(N, MCMC.cores = 3)
 ```
 
-Lastly we will fit the EPA-HAMC model with the sequential updating of clusters and thinning by 5.
+In this model the alpha parameter can be viewed as an overall mean and thus to answer the question we can look into the posterior distributions of alpha just as we did the transition probabilities above.
+
+```{r}
+## Look at posterior densities of going into an absorbing state:
+# Format data for ggplot:
+data4 <- data.frame(one = fit_hamc$alpha[ , 1, 4], two = fit_hamc$alpha[ , 2, 4],
+                    three = fit_hamc$alpha[ , 3, 4], abs_state = "4")
+data5 <- data.frame(one = fit_hamc$alpha[ , 1, 5], two = fit_hamc$alpha[ , 2, 5],
+                    three = fit_hamc$alpha[ , 3, 5], abs_state = "5")
+data_full <- rbind(data4, data5)
+# Make density plot of going into given absorbing state:
+ggplot(data = data_full)+
+  geom_density(mapping = aes(x = one, col = "one"))+
+  geom_density(mapping = aes(x = two, col = "two"))+
+  geom_density(mapping = aes(x = three, col = "three"))+
+  facet_wrap(~ abs_state)+
+  xlab("")+ 
+  theme(legend.position = "bottom")+
+  scale_color_manual(name='State',
+                     breaks=c('one', 'two', 'three'),
+                     values=c('one'='red', 'two'='blue', 'three'='black'))
+```
+
+Again this shows similar results to those above however now due to the spreading of information accross groups we see that our intervals are wider. 
+
+### 2.  
+To answer this question it requires the use of the EPA-HAMC model which has outputs on posterior clustering. We will use the `epa_hamc` function with the sequential updating of grouping thinning every 5.
 
 ```{r}
 fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 3)
 ```
 
-## Step 5: Analyze results
+We will now explore how each or the first three rows of the transition matrix is clustered, i.e. which of the 6 groups is most similar given that each state is immediately performed. To make visuals of this we will be using the `lattice` package, please run `install.packages("lattice")` if you would like to make similar pictures.
 
-We we explore how we would find answers to the following questions:
-
-- Which transitory state (1, 2, or 3) is most likely to lead to either of the absorbing states (4 or 5)?
-- Which of the six groups are clustered most often together across all three transitory states?
-- Which of the six groups differs the most from the average?
-
-First lets suppose are main interest is which transitory state (1, 2, or 3) is the most likely to lead to either of the absorbing states we can examine the posterior densities of the transition matrices. We can use any of the three fited models to analyze this. First we will explore the results from the AMC model.
+First we will make proportion data on how often groups are clustered together pairwise.
 
 ```{r}
-## Look at posterior densities of going into an absorbing state:
-# Make density plot of going into state 4:
-plot(density(fit_amc[ , 1, 4]), col = "red",
-     main = "Probability of going into state 4",
-     xlim = c(0, .2),
-     ylim = c(0, 100), xlab = "")
-lines(density(fit_amc[ , 2, 4]), col = "blue")
-lines(density(fit_amc[ , 3, 4]), col = "black")
-legend("topleft", legend = c("1", "2", "3"), col = c("red", "blue", "black"),
-       lty = 1)
+group.prop <- array(NA, dim = c(3, 6, 6))
+for(k in 1:3){
+  for(i in 1:6){
+    for(j in 1:6){
+      group.prop[k, i, j] <- mean(fit_epa$groups[ , k, i] == fit_epa$groups[ , k, j])
+    }
+  }
+}
+```
 
-## Make density plot of going into state 5:
-plot(density(fit_amc[ , 1, 5]), col = "red",
-     main = "Probability of going into state 5",
-     xlim = c(0, .2),
-     ylim = c(0, 100))
-lines(density(fit_amc[ , 2, 5]), col = "blue")
-lines(density(fit_amc[ , 3, 5]), col = "black")
-legend("top", legend = c("1", "2", "3"), col = c("red", "blue", "black"),
-       lty = 1, horiz = TRUE)
+
+```{r}
+for(i in 1:3){
+  dat <- group.prop[i, , ]
+  print(lattice::levelplot(dat, main = paste("Given state", i, sep = " "),
+                     at=seq(0, 1, length=20), xlab = "", ylab = ""))
+
+}
+```
+
+Looking at the results we can see that groups one and two are almost always grouped together which is to be expected because they are simulated from the same transition matrix. Given state two you can see that groups 1, 2, and 3 are often together indicating that row of the transition matrix is very similar. Which looking at the truth we can see this coincides with what we would expect. You can find other patterns in these figures.
+
+### 3.
+To answer this final question we can look at the results from either the HAMC or EPA-HAMC model by comparing alpha (the overall mean estimate) to the individual estimators. Exploring the output from either model will be the same to answer this question. We will be exploring the EPA-HAMC model because we know the construction and this is the best fitting model (this is never the case with real world data and you can always analyze the output of both models and compare)
+
+```{r}
+## Compare alpha to the matrices:
+data_prob_greater_avg <- array(0, dim = c(6, 3, 5))
+for(k in 1:6){
+  for(i in 1:3){
+    for(j in 1:5){
+      data_prob_greater_avg[k, i, j] <- mean((fit_epa$theta[ , k, i, j] - fit_epa$alpha[ ,i, j]) > 0)
+    }
+  }
+}
+
+
+for(k in 1:6){
+  dat <- data_prob_greater_avg[k, , ]
+  print(lattice::levelplot(dat, main = paste("Group", k, sep = " "),
+                     at=seq(0, 1, length=20), xlab = "Current State (row)", ylab = "Next State (column)"))
+}
 
 ```
 
-Analyzing this we see that it shows that state 1 is most likely to lead to either of the absorbing states.
+The plots show the posterior probability that the estimated transition probability is greater than the posterior average estimate (alpha). This means that is it is < 0.5 then it suggests that specific transition probability is lower than the mean and vice-versa. We observe that in this model that the probability of attaining an absorbing state across all groups is above average however in group six it appears that the probability of going from state 3 to state 4 is lower than average, and that in group four the probability of going from state 3 to state 5 is lower than average as well. Mainly similar observations can be made. 
