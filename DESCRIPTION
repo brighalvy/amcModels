@@ -12,7 +12,9 @@ RoxygenNote: 7.3.2
 Imports: 
     LaplacesDemon,
     parallel,
-    salso
+    salso,
+    ggplot2,
+    lattice
 Suggests: 
     knitr,
     rmarkdown
