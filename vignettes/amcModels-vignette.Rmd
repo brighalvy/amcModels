@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
 Throughout this vignette we will demonstrate the uses of the `amcModels` package on a simple example using the following transition matrices across 6 groups with 3 transitory tactics and 2 absorbing states (5 total states).
 
 ```{r}
@@ -139,7 +141,7 @@ Second we will fit the HAMC model.
 fit_hamc <- hamc(N, MCMC.cores = 3)
 ```
 
-Lastly we will fit the EPA-HAMC model with the sequential updating of cluters and thinning by 5.
+Lastly we will fit the EPA-HAMC model with the sequential updating of clusters and thinning by 5.
 
 ```{r}
 fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 3)
@@ -147,3 +149,36 @@ fit_epa <- epa_hamc(N, method = "seq", thin = 5, MCMC.cores = 3)
 
 ## Step 5: Analyze results
 
+We we explore how we would find answers to the following questions:
+
+- Which transitory state (1, 2, or 3) is most likely to lead to either of the absorbing states (4 or 5)?
+- Which of the six groups are clustered most often together across all three transitory states?
+- Which of the six groups differs the most from the average?
+
+First lets suppose are main interest is which transitory state (1, 2, or 3) is the most likely to lead to either of the absorbing states we can examine the posterior densities of the transition matrices. We can use any of the three fited models to analyze this. First we will explore the results from the AMC model.
+
+```{r}
+## Look at posterior densities of going into an absorbing state:
+# Make density plot of going into state 4:
+plot(density(fit_amc[ , 1, 4]), col = "red",
+     main = "Probability of going into state 4",
+     xlim = c(0, .2),
+     ylim = c(0, 100), xlab = "")
+lines(density(fit_amc[ , 2, 4]), col = "blue")
+lines(density(fit_amc[ , 3, 4]), col = "black")
+legend("topleft", legend = c("1", "2", "3"), col = c("red", "blue", "black"),
+       lty = 1)
+
+## Make density plot of going into state 5:
+plot(density(fit_amc[ , 1, 5]), col = "red",
+     main = "Probability of going into state 5",
+     xlim = c(0, .2),
+     ylim = c(0, 100))
+lines(density(fit_amc[ , 2, 5]), col = "blue")
+lines(density(fit_amc[ , 3, 5]), col = "black")
+legend("top", legend = c("1", "2", "3"), col = c("red", "blue", "black"),
+       lty = 1, horiz = TRUE)
+
+```
+
+Analyzing this we see that it shows that state 1 is most likely to lead to either of the absorbing states.
