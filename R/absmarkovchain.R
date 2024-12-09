@@ -7,7 +7,7 @@
 #' @param P transition probability matrix (IxJ) where the absorbing states are the last J-I rows. I = number of transitory states, J = total number of states.
 #' @param n the number of sequences.
 #'
-#' @return A list where each element is a sequence of events from P.
+#' @return A list where each item is a sequence of events from P.
 #' @export
 #' @examples
 #'
