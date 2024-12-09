@@ -13,22 +13,22 @@
 #'
 
 
-absmarkovchain <- function(x0, P, n){
+absmarkovchain <- function(x0, P, n) {
   # Dimensions
   I <- nrow(P)
   J <- ncol(P)
 
   ## Set up run:
   sequences <- list()
-  for(j in 1:n){
+  for (j in 1:n) {
     abs_states <- (I + 1):J
     states <- 1:J
     trans <- 1:I
     chain <- x0
     i = 1
-    while((chain[i] %in% trans)){
+    while ((chain[i] %in% trans)) {
       i = i + 1
-      chain[i] <- sample(states, size = 1, prob = P[chain[i - 1],])
+      chain[i] <- sample(states, size = 1, prob = P[chain[i - 1], ])
     }
     sequences[[j]] <- chain
   }

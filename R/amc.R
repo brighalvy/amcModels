@@ -14,7 +14,7 @@
 #'
 
 
-amc <- function(N, B = 10000, xsi = NULL){
+amc <- function(N, B = 10000, xsi = NULL) {
   # Check compatability of N:
   d <- dim(N)
   if (!is.array(N)) {
@@ -23,10 +23,10 @@ amc <- function(N, B = 10000, xsi = NULL){
   if (length(d) < 2) {
     stop(paste("N must be a two orthree dimensional array."))
   }
-  if(length(d) == 3){
+  if (length(d) == 3) {
     N_new <- array(NA, dim = c(d[2], d[3]))
-    for(i in 1:d[2]){
-      N_new[i, ] <- colSums(N[ , i, ], na.rm = TRUE)
+    for (i in 1:d[2]) {
+      N_new[i, ] <- colSums(N[, i, ], na.rm = TRUE)
     }
     N <- N_new
   }
@@ -35,24 +35,24 @@ amc <- function(N, B = 10000, xsi = NULL){
   J <- ncol(N)
 
   if (!is.null(xsi)) {
-    if(xsi <= 0){
+    if (xsi <= 0) {
       stop(paste("xsi must be positive"))
     }
-    if(length(xsi) == 1){
+    if (length(xsi) == 1) {
       xsi <- rep(xsi, I)
     }
   }
-  if(is.null(xsi)){
+  if (is.null(xsi)) {
     xsi <- c()
-    for(i in 1:I){
-      xsi[i] <- 1/sum(!is.na(N[i, ]))
+    for (i in 1:I) {
+      xsi[i] <- 1 / sum(!is.na(N[i, ]))
     }
   }
 
   ## Get posterior draws:
   theta <- array(0, dim = c(B, I, J))
-  for(i in 1:I){
-    theta[ , i, !is.na(N[i, ])] <- LaplacesDemon::rdirichlet(B, N[i, !is.na(N[i, ])] + rep(xsi[i], sum(!is.na(N[i, ]))))
+  for (i in 1:I) {
+    theta[, i, !is.na(N[i, ])] <- LaplacesDemon::rdirichlet(B, N[i, !is.na(N[i, ])] + rep(xsi[i], sum(!is.na(N[i, ]))))
   }
 
   return(theta)

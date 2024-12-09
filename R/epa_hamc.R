@@ -61,14 +61,14 @@ epa_hamc <- function(N,
   }
   # Make sure prior parameters are positive:
   if (!is.null(prior.alpha)) {
-    if(prior.alpha <= 0){
+    if (prior.alpha <= 0) {
       stop(paste("prior.alpha must be positive"))
     }
   }
-  if(is.null(prior.alpha)){
+  if (is.null(prior.alpha)) {
     prior.alpha <- c()
-    for(i in 1:dim(N)[2]){
-      prior.alpha[i] <- 1/sum(!is.na(N[1, i, ]))
+    for (i in 1:dim(N)[2]) {
+      prior.alpha[i] <- 1 / sum(!is.na(N[1, i, ]))
     }
   }
   if (!is.null(g.a)) {
@@ -120,13 +120,13 @@ epa_hamc <- function(N,
 
   ## Fit model:
   ## Check configuration of prior.alpha if it varies from row to row:
-  if(length(unique(prior.alpha)) == 1){
+  if (length(unique(prior.alpha)) == 1) {
     prior.alpha <- unique(prior.alpha)
     fit <- parallel::mclapply(count.list,
                               \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist),
                               mc.cores = MCMC.cores)
   } else{
-    for(i in 1:dim(N)[2]){
+    for (i in 1:dim(N)[2]) {
       count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
     }
     fit <- parallel::mclapply(count.list,

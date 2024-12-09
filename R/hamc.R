@@ -22,7 +22,12 @@
 #'
 
 
-hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.cores = 1){
+hamc <- function(N,
+                 B = 10000,
+                 prior.alpha = NULL,
+                 g.a = NULL,
+                 g.b = NULL,
+                 MCMC.cores = 1) {
   # Check compatability of N:
   if (!is.array(N)) {
     stop(paste("N must be an array."))
@@ -42,14 +47,14 @@ hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.
   }
   # Make sure prior parameters are positive:
   if (!is.null(prior.alpha)) {
-    if(prior.alpha <= 0){
+    if (prior.alpha <= 0) {
       stop(paste("prior.alpha must be positive"))
     }
   }
-  if(is.null(prior.alpha)){
+  if (is.null(prior.alpha)) {
     prior.alpha <- c()
-    for(i in 1:dim(N)[2]){
-      prior.alpha[i] <- 1/sum(!is.na(N[1, i, ]))
+    for (i in 1:dim(N)[2]) {
+      prior.alpha[i] <- 1 / sum(!is.na(N[1, i, ]))
     }
   }
   if (!is.null(g.a)) {
@@ -80,18 +85,16 @@ hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.
 
   ## Fit model:
   ## Check configuration of prior.alpha if it varies from row to row:
-  if(length(unique(prior.alpha)) == 1){
+  if (length(unique(prior.alpha)) == 1) {
     prior.alpha <- unique(prior.alpha)
     fit <- parallel::mclapply(count.list,
                               \(x) hamc_mcmc(x, K, g.a, g.b, prior.alpha, B),
                               mc.cores = MCMC.cores) # n_i, K, g.a, g.b, prior.alpha, B
   } else{
-    for(i in 1:dim(N)[2]){
+    for (i in 1:dim(N)[2]) {
       count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
     }
-    fit <- parallel::mclapply(count.list,
-                              \(x) hamc_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B),
-                              mc.cores = MCMC.cores)
+    fit <- parallel::mclapply(count.list, \(x) hamc_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B), mc.cores = MCMC.cores)
   }
 
 
@@ -106,11 +109,9 @@ hamc <- function(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.
     gamma[, i] <- fit[[i]][[2]]
     theta[, , i, ] <- fit[[i]][[3]]
   }
-  output <- list(
-    alpha = alpha,
-    gamma = gamma,
-    theta = theta
-  )
+  output <- list(alpha = alpha,
+                 gamma = gamma,
+                 theta = theta)
 
 
   return(output)
