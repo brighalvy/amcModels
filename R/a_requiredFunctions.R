@@ -150,7 +150,8 @@ l.gamma.f.cond <- function(z, z_1m, J, n_i, K, ga, g.a, g.b) {
 ## Log EPA prior:
 log_epa_prior <- function(p, alpha, delta, dist, sigma) {
   if (alpha < -delta | delta < 0 | delta >= 1) {
-    # Set constraints-Inf
+    # Set constraints
+    -Inf
   }
   else {
     p_tm1 <- p[sigma[1]]
@@ -336,7 +337,7 @@ update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist) {
   # accept/reject:
   a <- log_epa_prior(grouping, beta, delta, dist, sigma_prop) -
     log_epa_prior(grouping, beta, delta, dist, sigma)
-  if (a > log(runif(1))) {
+  if (a > log(runif(1))){
     prop <- sigma_prop
   } else{
     prop <- sigma
@@ -416,7 +417,6 @@ epa_mcmc <- function(N_i,
   groupings <- p[sample(1:nrow(p), 1), ]
   # Run MCMC:
   # prior probs of partitions:
-  #log.prior.probs <- apply(p,1, \(x) log_epa_prior(x, beta[1], delta[1], dist, sigma[1,]))
 
   # Run MCMC:
   for (b in 2:(B * thin)) {
