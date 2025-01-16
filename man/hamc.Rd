@@ -4,7 +4,15 @@
 \alias{hamc}
 \title{HAMC model}
 \usage{
-hamc(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.cores = 1)
+hamc(
+  N,
+  B = 10000,
+  prior.alpha = NULL,
+  g.a = NULL,
+  g.b = NULL,
+  MCMC.cores = 1,
+  burnin = 500
+)
 }
 \arguments{
 \item{N}{A two or three dimensional array of counts (KxIxJ) where K is the number of subgroups, I is the number of transitory states, J is the total number of states. Include NA's in matrix corresponding to impossible transitions.}
@@ -18,6 +26,8 @@ hamc(N, B = 10000, prior.alpha = NULL, g.a = NULL, g.b = NULL, MCMC.cores = 1)
 \item{g.b}{The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.}
 
 \item{MCMC.cores}{the number of cores to use for parallel processing, the default is 1.}
+
+\item{burnin}{The number of iterations to be removed as burnin. Default is 500.}
 }
 \value{
 A list with the following:

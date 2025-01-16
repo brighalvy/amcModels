@@ -13,7 +13,8 @@ epa_hamc(
   g.a = NULL,
   g.b = NULL,
   dist = NULL,
-  MCMC.cores = 1
+  MCMC.cores = 1,
+  burnin = 500
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ epa_hamc(
 \item{dist}{A KxK symmetric matrix that includes the prior information on the distance between subgroups. Defaults to each group is sequentially one from the next in line.}
 
 \item{MCMC.cores}{The number of cores desired to use to run, if greater than 1 parallel processing will be used. Default is 1 (no parallelization).}
+
+\item{burnin}{The number of burn in iterations to be removed from the posterior draws. Default is 500.}
 }
 \value{
 A list with the following:
