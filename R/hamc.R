@@ -10,6 +10,7 @@
 #' @param g.a The prior shape parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param g.b The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param MCMC.cores the number of cores to use for parallel processing, the default is 1.
+#' @param burnin The number of iterations to be removed as burnin. Default is 500.
 #'
 #' @return A list with the following:
 #'  \itemize{
@@ -27,7 +28,8 @@ hamc <- function(N,
                  prior.alpha = NULL,
                  g.a = NULL,
                  g.b = NULL,
-                 MCMC.cores = 1) {
+                 MCMC.cores = 1,
+                 burnin = 500) {
   # Check compatability of N:
   if (!is.array(N)) {
     stop(paste("N must be an array."))
@@ -88,13 +90,13 @@ hamc <- function(N,
   if (length(unique(prior.alpha)) == 1) {
     prior.alpha <- unique(prior.alpha)
     fit <- parallel::mclapply(count.list,
-                              \(x) hamc_mcmc(x, K, g.a, g.b, prior.alpha, B),
+                              \(x) hamc_mcmc(x, K, g.a, g.b, prior.alpha, B + burnin),
                               mc.cores = MCMC.cores) # n_i, K, g.a, g.b, prior.alpha, B
   } else{
     for (i in 1:dim(N)[2]) {
       count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
     }
-    fit <- parallel::mclapply(count.list, \(x) hamc_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B), mc.cores = MCMC.cores)
+    fit <- parallel::mclapply(count.list, \(x) hamc_mcmc(x[, 1:(ncol(x) - 1)], K, g.a, g.b, x[1, ncol(x)], B + burnin), mc.cores = MCMC.cores)
   }
 
 
@@ -105,9 +107,9 @@ hamc <- function(N,
   gamma <- array(0, dim = c(B, I))
   theta <- array(0, dim = c(B, K, I, J))
   for (i in 1:I) {
-    alpha[, i, ] <- fit[[i]][[1]]
-    gamma[, i] <- fit[[i]][[2]]
-    theta[, , i, ] <- fit[[i]][[3]]
+    alpha[, i, ] <- fit[[i]][[1]][-c(1:burnin), ]
+    gamma[, i] <- fit[[i]][[2]][-c(1:burnin)]
+    theta[, , i, ] <- fit[[i]][[3]][-c(1:burnin), , ]
   }
   output <- list(alpha = alpha,
                  gamma = gamma,

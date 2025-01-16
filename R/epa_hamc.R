@@ -13,6 +13,7 @@
 #' @param g.b The prior rate parameter of the gamma distribution for the gamma parameter. Default uses a mean of 20 and standard deviation of 18.
 #' @param dist A KxK symmetric matrix that includes the prior information on the distance between subgroups. Defaults to each group is sequentially one from the next in line.
 #' @param MCMC.cores The number of cores desired to use to run, if greater than 1 parallel processing will be used. Default is 1 (no parallelization).
+#' @param burnin The number of burn in iterations to be removed from the posterior draws. Default is 500.
 #'
 #' @return A list with the following:
 #'  \itemize{
@@ -34,7 +35,8 @@ epa_hamc <- function(N,
                      g.a = NULL,
                      g.b = NULL,
                      dist = NULL,
-                     MCMC.cores = 1) {
+                     MCMC.cores = 1,
+                     burnin = 500) {
   # Check compatability of N:
   if (!is.array(N)) {
     stop(paste("N must be an array."))
@@ -123,14 +125,14 @@ epa_hamc <- function(N,
   if (length(unique(prior.alpha)) == 1) {
     prior.alpha <- unique(prior.alpha)
     fit <- parallel::mclapply(count.list,
-                              \(x) epa_mcmc(x, B, thin, method, prior.alpha, g.a, g.b, dist),
+                              \(x) epa_mcmc(x, B + burnin, thin, method, prior.alpha, g.a, g.b, dist),
                               mc.cores = MCMC.cores)
   } else{
     for (i in 1:dim(N)[2]) {
       count.list[[i]] <- cbind(count.list[[i]], prior.alpha[i])
     }
     fit <- parallel::mclapply(count.list,
-                              \(x) epa_mcmc(x[, 1:(ncol(x) - 1)], B, thin, method, x[1, ncol(x)], g.a, g.b, dist),
+                              \(x) epa_mcmc(x[, 1:(ncol(x) - 1)], B + burnin, thin, method, x[1, ncol(x)], g.a, g.b, dist),
                               mc.cores = MCMC.cores)
   }
 
@@ -143,10 +145,10 @@ epa_hamc <- function(N,
   gamma <- array(0, dim = c(B, I))
   theta <- array(0, dim = c(B, K, I, J))
   for (i in 1:I) {
-    groupings[, i, ] <- fit[[i]][[1]]
-    alpha[, i, ] <- fit[[i]][[2]]
-    gamma[, i] <- fit[[i]][[3]]
-    theta[, , i, ] <- fit[[i]][[4]]
+    groupings[, i, ] <- fit[[i]][[1]][-c(1:burnin), ]
+    alpha[, i, ] <- fit[[i]][[2]][-c(1:burnin), ]
+    gamma[, i] <- fit[[i]][[3]][-c(1:burnin)]
+    theta[, , i, ] <- fit[[i]][[4]][-c(1:burnin), , ]
   }
   output <- list(
     groups = groupings,
