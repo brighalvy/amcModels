@@ -94,7 +94,7 @@ epa_hamc <- function(N,
     }
   }
   # Check if method and number of groups match:
-  if(K > 13 & method = "aao"){
+  if(K > 13 & method == "aao"){
     stop("K is greater than 13 and method must be sequential.")
   }
   # Check dimensions
