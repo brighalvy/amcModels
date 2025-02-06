@@ -93,6 +93,10 @@ epa_hamc <- function(N,
       stop("Wrong dimensions for distance matrix.")
     }
   }
+  # Check if method and number of groups match:
+  if(K > 13 & method = "aao"){
+    stop("K is greater than 13 and method must be sequential.")
+  }
   # Check dimensions
   if (is.null(dist)) {
     dist <- matrix(1, nrow = K, ncol = K)

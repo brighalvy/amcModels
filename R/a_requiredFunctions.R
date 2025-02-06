@@ -413,8 +413,13 @@ epa_mcmc <- function(N_i,
   alpha_sav <- array(NA, dim = c(B, ncol(n_i)))
   theta_sav <- array(NA, dim = c(B, K, ncol(n_i)))
   # Possible partitions:
-  p <- salso::enumerate.partitions(K)
-  groupings <- p[sample(1:nrow(p), 1), ]
+  if(K <= 13){
+    p <- salso::enumerate.partitions(K)
+    groupings <- p[sample(1:nrow(p), 1), ]
+  } else {
+    num_groups <- sample(1:K, 1)
+    groupings <- sample(1:num_groups, K)
+  }
   # Run MCMC:
   # prior probs of partitions:
 
