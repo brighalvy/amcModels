@@ -418,7 +418,7 @@ epa_mcmc <- function(N_i,
     groupings <- p[sample(1:nrow(p), 1), ]
   } else {
     num_groups <- sample(1:K, 1)
-    groupings <- sample(1:num_groups, K)
+    groupings <- sample(1:num_groups, K, replace = TRUE)
   }
   # Run MCMC:
   # prior probs of partitions:
