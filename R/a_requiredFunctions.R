@@ -34,13 +34,22 @@ alpha_to_z <- function(a) {
 ## z is a vector of log(z)
 update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   C <- length(z)
+  ## Psuedo prior parameters
+  # if (sum(is.na(n_i[1, ])) == 0) {
+  #   x <- (apply(n_i, 2, sum) + 1) / sqrt(sum((apply(n_i, 2, sum) + 1) ^ 2)) *
+  #     4
+  # } else{
+  #   na.cols <- which(is.na(n_i[1, ]))
+  #   x <- (apply(n_i[, -na.cols], 2, sum) + 1) / sqrt(sum((apply(n_i[, -na.cols], 2, sum) +
+  #                                                           1) ^ 2)) * 4
+  # }
+
+  ## Psuedo prior paremters prior.alpha + sum(n_i) (accross k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- (apply(n_i, 2, sum) + 1) / sqrt(sum((apply(n_i, 2, sum) + 1) ^ 2)) *
-      4
+    x <- prior.alpha + apply(n_i, 2, sum)
   } else{
     na.cols <- which(is.na(n_i[1, ]))
-    x <- (apply(n_i[, -na.cols], 2, sum) + 1) / sqrt(sum((apply(n_i[, -na.cols], 2, sum) +
-                                                            1) ^ 2)) * 4
+    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)
   }
   z_new <- c()
   z_1m_new <- c()
