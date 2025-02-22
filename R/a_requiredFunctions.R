@@ -500,7 +500,7 @@ epa_mcmc <- function(N_i,
         ind <- which(groupings == g)
         theta_sav[b / thin, ind, ] <- matrix(
           rep(
-            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha[c(1:(max.col - 1), length(alpha), (max.col):(length(alpha) - 1))] * gamma),
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1, c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))],
             length(ind)
           ),
           nrow = length(ind),
