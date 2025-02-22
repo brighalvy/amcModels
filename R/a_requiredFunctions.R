@@ -270,7 +270,7 @@ update_groupings_aao <- function(p,
   log_post_probs <- log_probs + log.prior.probs
   log_post_probs <- log_post_probs - max(log_post_probs)
   probs <- exp(log_post_probs) / sum(exp(log_post_probs))
-  p[sample(1:52, 1, prob = probs), ]
+  p[sample(1:nrow(p), 1, prob = probs), ]
 }
 
 # Function for sequential group update:
