@@ -547,6 +547,12 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
   z[1, ] <- alpha_to_z(alpha[1, ])
   psi[1, ] <- pbeta(exp(z[1, ]), .5, .5)
   z_1m[1, ] <- sapply(z[1, ], log1mexp)
+  # Reorder by counts:
+  max.col <- which.max(apply(n_i, 2, sum))
+  n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
+  subset <- ifelse(max.col == 1, c(length(alpha), max.col:(length(alpha) - 1)),
+                   c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1)))
+
   # Start MCMC:
   for (iter in 2:(B + 500)) {
     # Update Gamma:
@@ -564,12 +570,12 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
     alpha[iter, ] <- alpha_map(z[iter, ], z_1m[iter, ])
 
     for (k in 1:K) {
-      theta[iter, k, !is.na(n_i[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter, ]) + n_i[k, ][!is.na(n_i[k, ])])
+      theta[iter, k, !is.na(n_i[k, subset])] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter, subset]) + n_i[k, subset][!is.na(n_i[k, subset])])
     }
   }
   # Save row draws:
   alpha_draws <- array(0, dim = c(B, length(n_i[k, ])))
-  alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[-c(1:500), ])
+  alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[-c(1:500), subset])
   gamma_draws <- exp(g[-c(1:500)])
   theta_draws <- theta[-c(1:500), , ]
   #print(i)
