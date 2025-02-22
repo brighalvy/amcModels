@@ -432,6 +432,8 @@ epa_mcmc <- function(N_i,
   # Reorder by counts:
   max.col <- which.max(apply(n_i, 2, sum))
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
+  subset <- ifelse(max.col == 1, c(length(alpha), max.col:(length(alpha) - 1)),
+                   c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1)))
   # Run MCMC:
   # prior probs of partitions:
 
@@ -491,7 +493,7 @@ epa_mcmc <- function(N_i,
     alpha <- exp(alpha_map(z, z_1m))
     # Thin:
     if (b %% thin == 0) {
-      alpha_sav[b / thin, ] <- alpha[c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))]
+      alpha_sav[b / thin, ] <- alpha[subset]
       groupings_sav[b / thin, ] <- groupings
       gamma_sav[b / thin] <- gamma
       beta_sav[b / thin] <- beta
@@ -500,7 +502,7 @@ epa_mcmc <- function(N_i,
         ind <- which(groupings == g)
         theta_sav[b / thin, ind, ] <- matrix(
           rep(
-            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1, c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))],
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1, subset],
             length(ind)
           ),
           nrow = length(ind),
