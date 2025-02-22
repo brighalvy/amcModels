@@ -432,8 +432,12 @@ epa_mcmc <- function(N_i,
   # Reorder by counts:
   max.col <- which.max(apply(n_i, 2, sum))
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
-  subset <- ifelse(max.col == 1, c(length(alpha), max.col:(length(alpha) - 1)),
-                   c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1)))
+  if(max.col == 1){
+    subset <- c(length(alpha), max.col:(length(alpha) - 1))
+  } else{
+    subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
+  }
+
   # Run MCMC:
   # prior probs of partitions:
 
@@ -550,8 +554,11 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
   # Reorder by counts:
   max.col <- which.max(apply(n_i, 2, sum))
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
-  subset <- ifelse(max.col == 1, c(length(alpha), max.col:(length(alpha) - 1)),
-                   c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1)))
+  if(max.col == 1){
+    subset <- c(length(alpha[1,]), max.col:(length(alpha[1,]) - 1))
+  } else{
+    subset <- c(1:(max.col - 1), length(alpha[1,]), max.col:(length(alpha[1,]) - 1))
+  }
 
   # Start MCMC:
   for (iter in 2:(B + 500)) {
