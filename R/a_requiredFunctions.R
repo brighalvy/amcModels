@@ -213,7 +213,7 @@ log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b) {
   }
   n_ag <- t(apply(n, 1, \(x) x + ag))
   LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1) * log(gamma) - g.b *
-    gamma++nrow(n) * lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
+    gamma +nrow(n) * lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
                                            rowSums(t(apply(
                                              lgamma(n_ag), 1, \(x) {
                                                x - lgamma(ag)
