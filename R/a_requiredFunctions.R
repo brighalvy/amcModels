@@ -1,11 +1,13 @@
 # calculates log(1 - exp(x))
 log1mexp <- function(x) {
-  stopifnot(x < 0.0)
+  stopifnot(x <= 0)
   if (x > -0.693147) {
     # .693147 ~= log(2.0))
     out <- log(-expm1(x))
-  } else {
+  } else if (x < 0.0) {
     out <- log1p(-exp(x))
+  } else{
+    out <- -Inf
   }
   out
 }
