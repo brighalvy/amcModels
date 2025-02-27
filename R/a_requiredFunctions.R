@@ -15,17 +15,17 @@ log1mexp <- function(x) {
 alpha_to_z <- function(a) {
   L <- length(a) - 1
   z <- c()
-  #z_1m <- c()
+  z_1m <- c()
   for (l in 1:L) {
     if (l == 1) {
       z[l] <- a[l]
     } else{
-      z[l] <- a[l] - sum(log1mexp(z[1:l])) #log(1 - sum(exp(a[1:(l - 1)])))
+      z[l] <- a[l] - sum(z_1m) #log(1 - sum(exp(a[1:(l - 1)])))
     }
     if (z[l] > 0) {
       z[l] <- -1e-30000
     }
-    #z_1m[l] <- log1mexp(z[l])
+    z_1m[l] <- log1mexp(z[l])
   }
   return(z)
 }
