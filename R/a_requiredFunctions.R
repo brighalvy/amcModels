@@ -4,10 +4,8 @@ log1mexp <- function(x) {
   if (x > -0.693147) {
     # .693147 ~= log(2.0))
     out <- log(-expm1(x))
-  } else if (x < 0.0) {
+  } else if (x <= 0.0) {
     out <- log1p(-exp(x))
-  } else{
-    out <- -Inf
   }
   out
 }
@@ -22,10 +20,10 @@ alpha_to_z <- function(a) {
     if (l == 1) {
       z[l] <- a[l]
     } else{
-      z[l] <- a[l] - log(1 - sum(exp(a[1:(l - 1)])))
+      z[l] <- a[l] - sum(log1mexp(z[1:l])) #log(1 - sum(exp(a[1:(l - 1)])))
     }
     if (z[l] > 0) {
-      z[l] <- -1e-300
+      z[l] <- -1e-30000
     }
     #z_1m[l] <- log1mexp(z[l])
   }
