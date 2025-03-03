@@ -30,11 +30,11 @@ alpha_to_z <- function(a) {
   return(z)
 }
 
-## Update draws of z using a pseudo-slice sampler:
+## Update draws of z using a pseudo-slice sampler (Heiner et. al. 2024):
 ## z is a vector of log(z)
 update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   C <- length(z)
-  ## Psuedo prior parameters
+  ## Pseudo prior parameters
   # if (sum(is.na(n_i[1, ])) == 0) {
   #   x <- (apply(n_i, 2, sum) + 1) / sqrt(sum((apply(n_i, 2, sum) + 1) ^ 2)) *
   #     4
@@ -44,7 +44,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   #                                                           1) ^ 2)) * 4
   # }
 
-  ## Psuedo prior paremters prior.alpha + sum(n_i) (accross k)
+  ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
     x <- prior.alpha + apply(n_i, 2, sum)*(1/sum(n_i, na.rm = T))
   } else{
@@ -58,16 +58,15 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   psi <- pbeta(exp(z), a, b)
   # New proposal distribution:
   y <- l.alpha.f.cond(z, z_1m, J, n_i, K, ga, prior.alpha) - sum((dbeta(exp(z), a, b, log = TRUE))) + log(runif(1))
-  # draw value of psi:
+  # draw value of psi from Pseudo prior:
   L <- rep(0, C)
   R <- rep(1, C)
   psi_new <- c()
   psi_new <- runif(C)
   z_new <- log(qbeta(psi_new, a, b))
   z_1m_new <- sapply(z_new, log1mexp)
-  while (y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum((dbeta(
-    exp(z_new), a, b, log = TRUE
-  ))))) {
+  while (y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
+    exp(z_new), a, b, log = TRUE)))) {
     L[psi_new < psi] <- psi_new[psi_new < psi]
     R[psi_new > psi] <- psi_new[psi_new > psi]
     psi_new <- runif(C, L, R)
@@ -138,7 +137,7 @@ l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
     }
     a <- prior.alpha
   }
-  res <- sum((a - 1) * (z)) + sum((b - 1) * (z_1m)) + sum(k_obj) - log(100)
+  res <- sum((a - 1) * (z)) + sum((b - 1) * (z_1m)) + sum(k_obj)
   return(res)
 }
 
