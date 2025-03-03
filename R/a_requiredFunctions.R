@@ -58,6 +58,9 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   psi <- pbeta(exp(z), a, b)
   # New proposal distribution:
   y <- l.alpha.f.cond(z, z_1m, J, n_i, K, ga, prior.alpha) - sum((dbeta(exp(z), a, b, log = TRUE))) + log(runif(1))
+  if(is.nan(y)){
+    y <- log(runif(0, 1))
+  }
   # draw value of psi from Pseudo prior:
   L <- rep(0, C)
   R <- rep(1, C)
@@ -65,13 +68,22 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   psi_new <- runif(C)
   z_new <- log(qbeta(psi_new, a, b))
   z_1m_new <- sapply(z_new, log1mexp)
-  while (y > (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
-    exp(z_new), a, b, log = TRUE)))) {
+  comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
+    exp(z_new), a, b, log = TRUE)))
+  if(is.nan(comp_val)){
+    comp_val = 0
+  }
+  while (y > comp_val) {
     L[psi_new < psi] <- psi_new[psi_new < psi]
     R[psi_new > psi] <- psi_new[psi_new > psi]
     psi_new <- runif(C, L, R)
     z_new <- log(qbeta(psi_new, a, b))
     z_1m_new <- sapply(z_new, log1mexp)
+    comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
+      exp(z_new), a, b, log = TRUE)))
+    if(is.nan(comp_val)){
+      comp_val = 0
+    }
   }
   return(z_new)
 }
@@ -120,8 +132,15 @@ l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   k_obj <- c()
   alpha <- alpha_map(z, z_1m)
   for (k in 1:K) {
-    k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
-                                                                                        alpha)))
+    if(any(alpha == -Inf)){
+      sum_obj <- lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
+                                                                                     alpha))
+      sum_obj[which(alpha == -Inf)] <- 0
+      k_obj[k] <- sum(sum_obj)
+    } else{
+      k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
+                                                                                          alpha)))
+    }
   }
   # uses z ~ beta priors
   ## Set up priors:
@@ -206,18 +225,19 @@ combine_counts <- function(grouping, n_i) {
 log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b) {
   a <- matrix(alpha, nrow = 1)
   pa <- matrix(prior.alpha, nrow = 1)
-  ag <- alpha * gamma
+  ag <- (alpha * gamma)
   if (is.null(dim(n))) {
     n <- matrix(n, nrow = 1)
   }
   n_ag <- t(apply(n, 1, \(x) x + ag))
-  LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1) * log(gamma) - g.b *
-    gamma +nrow(n) * lgamma(gamma) + sum(-lgamma(rowSums(n_ag)) +
+  res <- LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1) * log(gamma) - g.b *
+    gamma +nrow(n) * lgamma((gamma)) + sum(-lgamma(rowSums(n_ag)) +
                                            rowSums(t(apply(
                                              lgamma(n_ag), 1, \(x) {
                                                x - lgamma(ag)
                                              }
                                            ))))
+  res
 }
 # Function to get posterior prob with given partition:
 log_like_prob_group <- function(n_i,
@@ -396,7 +416,7 @@ epa_mcmc <- function(N_i,
                      dist) {
   # Fix n_i:
   non.na.ind <- !is.na(N_i[1, ])
-  J <- ifelse(is.null(ncol(N_i)), length(N_i), ncol(N_i))
+  J <- sum(non.na.ind)#ifelse(is.null(ncol(N_i)), length(N_i), ncol(N_i))
   n_i <- N_i[, !is.na(N_i[1, ])]
   if (is.null(nrow(n_i))) {
     n_i <- array(n_i, dim = c(1, length(n_i)))
