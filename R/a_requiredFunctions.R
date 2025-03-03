@@ -433,7 +433,9 @@ epa_mcmc <- function(N_i,
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
   if(max.col == 1){
     subset <- c(length(alpha), max.col:(length(alpha) - 1))
-  } else{
+  } else if(max.col == length(alpha)){
+    subset <- 1:length(alpha)
+  }else{
     subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
   }
 
