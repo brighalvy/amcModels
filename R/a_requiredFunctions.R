@@ -71,7 +71,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
   comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
     exp(z_new), a, b, log = TRUE)))
   if(is.nan(comp_val)){
-    comp_val = 0
+    comp_val <-  0
   }
   while (y > comp_val) {
     L[psi_new < psi] <- psi_new[psi_new < psi]
@@ -82,7 +82,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
     comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
       exp(z_new), a, b, log = TRUE)))
     if(is.nan(comp_val)){
-      comp_val = 0
+      comp_val <- 0
     }
   }
   return(z_new)
