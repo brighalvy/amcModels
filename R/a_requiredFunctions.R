@@ -536,7 +536,7 @@ epa_mcmc <- function(N_i,
       }
     }
   }
-
+  J <- ifelse(is.null(ncol(N_i)), length(N_i), ncol(N_i))
   alpha <- array(0, dim = c(B, J))
   alpha[, non.na.ind] <- alpha_sav
   theta <- array(0, dim = c(B, K, J))
