@@ -46,10 +46,10 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
 
   ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha + apply(n_i, 2, sum)#*(1/sum(n_i, na.rm = T))
+    x <- prior.alpha + apply(n_i, 2, sum)*1/35#*(1/sum(n_i, na.rm = T))
   } else{
     na.cols <- which(is.na(n_i[1, ]))
-    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)#*(1/sum(n_i, na.rm = T))
+    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*1/35#*(1/sum(n_i, na.rm = T))
   }
   z_new <- c()
   z_1m_new <- c()
