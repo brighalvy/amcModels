@@ -85,7 +85,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
       comp_val <- 0
     }
   }
-  return(c(z_new, psi_new))
+  return(list(z_new, psi_new))
 }
 
 ## map z values to a:
@@ -514,8 +514,8 @@ epa_mcmc <- function(N_i,
                   nrow(n_curr),
                   log(gamma),
                   unique(prior.alpha))
-    z <- test[1]
-    psi <- c(psi, test[2])
+    z <- test[[1][]
+    psi <- c(psi, test[[2][])
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
@@ -595,7 +595,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
     ## Map to z(beta) variables:
     ## Update z values (does accept/reject with slice sampler):
     z[iter, ] <- update_z(z[iter - 1, ], z_1m[iter - 1, ], J, n_i = n_i
-                          , K, g[iter], prior.alpha)[1]
+                          , K, g[iter], prior.alpha)[[1]]
     psi[iter, ] <- pbeta(exp(z[iter, ]), .5, .5)
     z_1m[iter, ] <- sapply(z[iter, ], log1mexp)
     alpha[iter, ] <- alpha_map(z[iter, ], z_1m[iter, ])
