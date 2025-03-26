@@ -85,7 +85,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
       comp_val <- 0
     }
   }
-  return(z_new, psi_new)
+  return(c(z_new, psi_new))
 }
 
 ## map z values to a:
