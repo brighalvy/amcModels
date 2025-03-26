@@ -85,7 +85,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
       comp_val <- 0
     }
   }
-  return(z_new)
+  return(z_new, psi_new)
 }
 
 ## map z values to a:
@@ -428,6 +428,7 @@ epa_mcmc <- function(N_i,
   delta <- delta_sav <- 0.01
   sigma <- 1:K
   k_rep <- floor(K / 2)
+  psi <- c()
 
   ## Get initial values for alpha and gamma
   alpha <- array(NA, dim = c(1, ncol(n_i)))
@@ -506,13 +507,15 @@ epa_mcmc <- function(N_i,
     gamma <- exp(gamma_update(z, z_1m, ncol(n_i), n_i = n_curr, nrow(n_curr) , log(gamma), g.a, g.b))
 
     # Update z:
-    z <- update_z(z,
+    test <- update_z(z,
                   z_1m,
                   ncol(n_i),
                   n_i = n_curr,
                   nrow(n_curr),
                   log(gamma),
                   unique(prior.alpha))
+    z <- test[1]
+    psi <- c(psi, test[2])
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
@@ -611,6 +614,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
   return(list(
     alpha = alpha_draws,
     gamma = gamma_draws,
-    theta = theta_draws
+    theta = theta_draws,
+    psi = psi
   ))
 }
