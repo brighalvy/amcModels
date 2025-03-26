@@ -514,8 +514,8 @@ epa_mcmc <- function(N_i,
                   nrow(n_curr),
                   log(gamma),
                   unique(prior.alpha))
-    z <- test[[1][]
-    psi <- c(psi, test[[2][])
+    z <- test[[1]
+    psi <- c(psi, test[[2])
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
