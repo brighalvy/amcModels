@@ -85,7 +85,8 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
       comp_val <- 0
     }
   }
-  return(list(z_new, psi_new))
+  psi_ret <- pbeta(exp(z_new), a, b)
+  return(list(z_new, psi_ret))
 }
 
 ## map z values to a:
@@ -428,7 +429,7 @@ epa_mcmc <- function(N_i,
   delta <- delta_sav <- 0.01
   sigma <- 1:K
   k_rep <- floor(K / 2)
-  psi <- c()
+  psi <- array(0, dim = c(B, ncol(n_i)-1))
 
   ## Get initial values for alpha and gamma
   alpha <- array(NA, dim = c(1, ncol(n_i)))
@@ -514,14 +515,14 @@ epa_mcmc <- function(N_i,
                   nrow(n_curr),
                   log(gamma),
                   unique(prior.alpha))
-    z <- test[[1]
-    psi <- c(psi, test[[2])
+    z <- test[[1]]
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
     # Thin:
     if (b %% thin == 0) {
       alpha_sav[b / thin, ] <- alpha[subset]
+      psi[b/thin, ] <- test[[2]]
       groupings_sav[b / thin, ] <- groupings
       gamma_sav[b / thin] <- gamma
       beta_sav[b / thin] <- beta
@@ -550,6 +551,7 @@ epa_mcmc <- function(N_i,
       alpha = alpha,
       gamma = gamma_sav,
       theta = theta,
+      psi = psi,
       beta = beta_sav,
       delta = delta_sav
     )
