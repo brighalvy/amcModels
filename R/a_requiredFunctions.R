@@ -46,10 +46,10 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
 
   ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha + apply(n_i, 2, sum)*(1/sum(n_i, na.rm = T))
+    x <- prior.alpha + apply(n_i, 2, sum)*prior.alpha/8#(1/(sum(n_i, na.rm = T)))
   } else{
     na.cols <- which(is.na(n_i[1, ]))
-    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*(1/sum(n_i, na.rm = T))
+    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*prior.alpha/8#(1/(sum(n_i, na.rm = T)))
   }
   z_new <- c()
   z_1m_new <- c()
@@ -238,7 +238,7 @@ log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b) {
                                                x - lgamma(ag)
                                              }
                                            ))))
-  res
+  ifelse(is.nan(res), 0, res)
 }
 # Function to get posterior prob with given partition:
 log_like_prob_group <- function(n_i,
