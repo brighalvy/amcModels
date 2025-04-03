@@ -557,37 +557,38 @@ epa_mcmc <- function(N_i,
 }
 
 ## Function for HAMC MCMC:
-hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
-  J <- sum(!is.na(n_i[1, ]))
+hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
+  J <- sum(!is.na(N_i[1, ]))
   # Fix dimension of n_i if only one group:
-  if (is.null(dim(n_i))) {
-    n_i <- matrix(n_i, nrow = 1)
+  if (is.null(dim(N_i))) {
+    N_i <- matrix(N_i, nrow = 1)
   }
   # initialize gamma and alpha (log scale)
   g <- c(log(1))
-  alpha <- array(NA, dim = c(B + 500, J))
-  theta <- array(0, dim = c(B + 500, K, length(n_i[1, ])))
+  alpha <- array(NA, dim = c(B, J))
+  theta <- array(0, dim = c(B, K, J))
   alpha[1, ] <- log(rep(1 / J, J))
   for (k in 1:K) {
-    theta[1, k, !is.na(n_i[k, ])] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1, ]) + n_i[k, ][!is.na(n_i[k, ])])
+    theta[1, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1, ]) + N_i[k, ][!is.na(N_i[k, ])])
   }
-  z <- z_1m <- psi <- array(NA, dim = c(B + 500, J - 1))
+  z <- z_1m <- psi <- array(NA, dim = c(B, J - 1))
   z[1, ] <- alpha_to_z(alpha[1, ])
   psi[1, ] <- pbeta(exp(z[1, ]), .5, .5)
   z_1m[1, ] <- sapply(z[1, ], log1mexp)
   # Reorder by counts:
+  n_i <- N_i[,!is.na(N_i[1, ])]
   max.col <- which.max(apply(n_i, 2, sum))
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
   if(max.col == 1){
-    subset <- c(length(alpha), max.col:(length(alpha) - 1))
-  } else if(max.col == length(alpha)){
-    subset <- 1:length(alpha)
+    subset <- c(length(alpha[1, ]), max.col:(length(alpha[1, ]) - 1))
+  } else if(max.col == length(alpha[1, ])){
+    subset <- 1:length(alpha[1, ])
   }else{
-    subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
+    subset <- c(1:(max.col - 1), length(alpha[1, ]), max.col:(length(alpha[1, ]) - 1))
   }
 
   # Start MCMC:
-  for (iter in 2:(B + 500)) {
+  for (iter in 2:(B)) {
     # Update Gamma:
     # Slice:
     g[iter] <- gamma_update(z[iter - 1, ], z_1m[iter - 1, ], J, n_i
@@ -603,14 +604,15 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
     alpha[iter, ] <- alpha_map(z[iter, ], z_1m[iter, ])
 
     for (k in 1:K) {
-      theta[iter, k, !is.na(n_i[k, subset])] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter, subset]) + n_i[k, subset][!is.na(n_i[k, subset])])
+      theta[iter, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter, subset]) + n_i[k, subset])
     }
   }
   # Save row draws:
-  alpha_draws <- array(0, dim = c(B, length(n_i[k, ])))
-  alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[-c(1:500), subset])
-  gamma_draws <- exp(g[-c(1:500)])
-  theta_draws <- theta[-c(1:500), , ]
+  alpha_draws <- array(0, dim = c(B, length(N_i[1, ])))
+  theta_draws <- array(0, dim = c(B, K, length(N_i[1, ])))
+  alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[, subset])
+  gamma_draws <- exp(g)
+  theta_draws[ , , !is.na(N_i[1, ])] <- theta[, , subset]
   #print(i)
 
   return(list(
