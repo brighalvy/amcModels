@@ -148,20 +148,20 @@ epa_hamc <- function(N,
   alpha <- array(0, dim = c(B, I, J))
   gamma <- array(0, dim = c(B, I))
   theta <- array(0, dim = c(B, K, I, J))
-  psi <- list()
+  #psi <- list()
   for (i in 1:I) {
     groupings[, i, ] <- fit[[i]][[1]][-c(1:burnin), ]
     alpha[, i, ] <- fit[[i]][[2]][-c(1:burnin), ]
     gamma[, i] <- fit[[i]][[3]][-c(1:burnin)]
     theta[, , i, ] <- fit[[i]][[4]][-c(1:burnin), , ]
-    psi[[i]] <- fit[[i]][[5]]
+    #psi[[i]] <- fit[[i]][[5]]
   }
   output <- list(
     groups = groupings,
     alpha = alpha,
     gamma = gamma,
-    theta = theta,
-    psi = psi
+    theta = theta#,
+    #psi = psi
   )
 
 

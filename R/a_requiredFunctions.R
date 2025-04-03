@@ -46,10 +46,10 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
 
   ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha + apply(n_i, 2, sum)*prior.alpha/8#(1/(sum(n_i, na.rm = T)))
+    x <- prior.alpha + apply(n_i, 2, sum)*prior.alpha/10#(1/(sum(n_i, na.rm = T)))
   } else{
     na.cols <- which(is.na(n_i[1, ]))
-    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*prior.alpha/8#(1/(sum(n_i, na.rm = T)))
+    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*prior.alpha/10#(1/(sum(n_i, na.rm = T)))
   }
   z_new <- c()
   z_1m_new <- c()
@@ -85,8 +85,8 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
       comp_val <- 0
     }
   }
-  psi_ret <- pbeta(exp(z_new), a, b)
-  return(list(z_new, psi_ret))
+  #psi_ret <- pbeta(exp(z_new), a, b)
+  return(z_new)
 }
 
 ## map z values to a:
@@ -508,21 +508,19 @@ epa_mcmc <- function(N_i,
     gamma <- exp(gamma_update(z, z_1m, ncol(n_i), n_i = n_curr, nrow(n_curr) , log(gamma), g.a, g.b))
 
     # Update z:
-    test <- update_z(z,
+    z <- update_z(z,
                   z_1m,
                   ncol(n_i),
                   n_i = n_curr,
                   nrow(n_curr),
                   log(gamma),
                   unique(prior.alpha))
-    z <- test[[1]]
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
     # Thin:
     if (b %% thin == 0) {
       alpha_sav[b / thin, ] <- alpha[subset]
-      psi[b/thin, ] <- test[[2]]
       groupings_sav[b / thin, ] <- groupings
       gamma_sav[b / thin] <- gamma
       beta_sav[b / thin] <- beta
@@ -581,9 +579,11 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
   max.col <- which.max(apply(n_i, 2, sum))
   n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
   if(max.col == 1){
-    subset <- c(length(alpha[1,]), max.col:(length(alpha[1,]) - 1))
-  } else{
-    subset <- c(1:(max.col - 1), length(alpha[1,]), max.col:(length(alpha[1,]) - 1))
+    subset <- c(length(alpha), max.col:(length(alpha) - 1))
+  } else if(max.col == length(alpha)){
+    subset <- 1:length(alpha)
+  }else{
+    subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
   }
 
   # Start MCMC:
@@ -597,7 +597,7 @@ hamc_mcmc <- function(n_i, K, g.a, g.b, prior.alpha, B) {
     ## Map to z(beta) variables:
     ## Update z values (does accept/reject with slice sampler):
     z[iter, ] <- update_z(z[iter - 1, ], z_1m[iter - 1, ], J, n_i = n_i
-                          , K, g[iter], prior.alpha)[[1]]
+                          , K, g[iter], prior.alpha)
     psi[iter, ] <- pbeta(exp(z[iter, ]), .5, .5)
     z_1m[iter, ] <- sapply(z[iter, ], log1mexp)
     alpha[iter, ] <- alpha_map(z[iter, ], z_1m[iter, ])
