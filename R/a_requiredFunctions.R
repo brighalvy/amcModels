@@ -612,7 +612,7 @@ hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   theta_draws <- array(0, dim = c(B, K, length(N_i[1, ])))
   alpha_draws[, !is.na(n_i[1, ])] <- exp(alpha[, subset])
   gamma_draws <- exp(g)
-  theta_draws[ , , !is.na(N_i[1, ])] <- theta[, , subset]
+  theta_draws[ , , !is.na(N_i[1, ])] <- theta[, , ]
   #print(i)
 
   return(list(
