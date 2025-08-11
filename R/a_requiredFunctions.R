@@ -529,7 +529,7 @@ epa_mcmc <- function(N_i,
         ind <- which(groupings == g)
         theta_sav[b / thin, ind, ] <- matrix(
           rep(
-            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,]#[1, subset],
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,],#[1, subset],
             length(ind)
           ),
           nrow = length(ind),
