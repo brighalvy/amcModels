@@ -451,15 +451,15 @@ epa_mcmc <- function(N_i,
     groupings <- sample(1:num_groups, K, replace = TRUE)
   }
   # Reorder by counts:
-  max.col <- which.max(apply(n_i, 2, sum))
-  n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
-  if(max.col == 1){
-    subset <- c(length(alpha), max.col:(length(alpha) - 1))
-  } else if(max.col == length(alpha)){
-    subset <- 1:length(alpha)
-  }else{
-    subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
-  }
+  # max.col <- which.max(apply(n_i, 2, sum))
+  # n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
+  # if(max.col == 1){
+  #   subset <- c(length(alpha), max.col:(length(alpha) - 1))
+  # } else if(max.col == length(alpha)){
+  #   subset <- 1:length(alpha)
+  # }else{
+  #   subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
+  # }
 
   # Run MCMC:
   # prior probs of partitions:
@@ -520,7 +520,7 @@ epa_mcmc <- function(N_i,
     alpha <- exp(alpha_map(z, z_1m))
     # Thin:
     if (b %% thin == 0) {
-      alpha_sav[b / thin, ] <- alpha[subset]
+      alpha_sav[b / thin, ] <- alpha#[subset]
       groupings_sav[b / thin, ] <- groupings
       gamma_sav[b / thin] <- gamma
       beta_sav[b / thin] <- beta
@@ -529,7 +529,7 @@ epa_mcmc <- function(N_i,
         ind <- which(groupings == g)
         theta_sav[b / thin, ind, ] <- matrix(
           rep(
-            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1, subset],
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,]#[1, subset],
             length(ind)
           ),
           nrow = length(ind),
