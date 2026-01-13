@@ -15,7 +15,6 @@ log1mexp <- function(x) {
 alpha_to_z <- function(a) {
   L <- length(a) - 1
   z <- c()
-  z_1m <- c()
   for (l in 1:L) {
     if (l == 1) {
       z[l] <- a[l]
@@ -25,7 +24,6 @@ alpha_to_z <- function(a) {
     if (z[l] > 0) {
       z[l] <- -1e-30000
     }
-    z_1m[l] <- log1mexp(z[l])
   }
   return(z)
 }
@@ -46,7 +44,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
 
   ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha + apply(n_i, 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10
+    x <- prior.alpha*sum(n_i, na.rm = T)/10 + apply(n_i, 2, sum)#(1/(sum(n_i, na.rm = T))) #prior.alpha/10
   } else{
     na.cols <- which(is.na(n_i[1, ]))
     x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10

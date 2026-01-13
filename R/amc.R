@@ -21,7 +21,7 @@ amc <- function(N, B = 10000, xsi = NULL) {
     stop(paste("N must be an array."))
   }
   if (length(d) < 2) {
-    stop(paste("N must be a two orthree dimensional array."))
+    stop(paste("N must be a two or three dimensional array."))
   }
   if (length(d) == 3) {
     N_new <- array(NA, dim = c(d[2], d[3]))
