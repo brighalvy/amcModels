@@ -112,7 +112,7 @@ gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
   R <- 1
   u <- runif(1, L, R)
   g <- log(qgamma(u, g.a, g.b))
-  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - pgamma(exp(ga), g.a, g.b)) {
+  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(ga), g.a, g.b))) {
     if (g < ga) {
       L = u
     } else{
