@@ -107,7 +107,7 @@ alpha_map <- function(z, z_1m) {
 # Gamma slice sampler:
 gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
   ## CDF Transformation:
-  y <-  l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - pgamma(exp(ga), g.a, g.b)
+  y <-  l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - log(pgamma(exp(ga), g.a, g.b))
   L <- 0
   R <- 1
   u <- runif(1, L, R)
