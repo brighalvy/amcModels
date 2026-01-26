@@ -9,6 +9,8 @@ log1mexp <- function(x) {
   }
   out
 }
+## Gets determinant for stick breaking transformation:
+
 
 ## Map log(alpha) to log(z) using stick breaking methodology (Neal 2003)
 ## input a is on the log scale
@@ -46,7 +48,7 @@ update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
 
   ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
   if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha*sum(n_i, na.rm = T) + apply(n_i, 2, sum)#(1/(sum(n_i, na.rm = T))) #prior.alpha/10
+    x <- prior.alpha + apply(n_i, 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10
   } else{
     na.cols <- which(is.na(n_i[1, ]))
     x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10
@@ -114,7 +116,7 @@ gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
   R <- 1
   u <- runif(1, L, R)
   g <- log(qgamma(u, g.a, g.b))
-  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(ga), g.a, g.b))) {
+  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(g), g.a, g.b))) {
     if (g < ga) {
       L = u
     } else{
