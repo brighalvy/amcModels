@@ -182,8 +182,7 @@ log_epa_prior <- function(p, alpha, delta, dist, sigma) {
   if (alpha < -delta | delta < 0 | delta >= 1) {
     # Set constraints
     -Inf
-  }
-  else {
+  } else {
     p_tm1 <- p[sigma[1]]
     q_tm1 <- 1
     count <- 2
