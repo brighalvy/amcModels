@@ -299,6 +299,7 @@ update_groupings_seq <- function(n_i,
                                  groupings,
                                  alpha,
                                  gamma,
+                                 theta,
                                  beta,
                                  delta,
                                  sigma,
@@ -342,7 +343,13 @@ update_groupings_seq <- function(n_i,
       # }
       #log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
-      #log_lik[j] <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
+      # This makes the marginalized version we found unusable:
+      if(j != length(ids + 1)){
+        log_lik[j] <- n_i[i, ] * log(theta[j,])
+      } else {
+        theta <- rdirichlet(1, alpha*gamma + n_i[i,])
+        log_lik[j] <- sum(n_i[i, ] * log(theta[1,]))
+      }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
     log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
@@ -454,6 +461,20 @@ epa_mcmc <- function(N_i,
     num_groups <- sample(1:K, 1)
     groupings <- sample(1:num_groups, K, replace = TRUE)
   }
+  # If method == seq then initiate theta:
+  if(method == "seq"){
+  for (g in unique(groupings)) {
+    ind <- which(groupings == g)
+    theta_sav[b / thin, ind, ] <- matrix(
+      rep(
+        LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,],#[1, subset],
+        length(ind)
+      ),
+      nrow = length(ind),
+      byrow = T
+    )
+  }
+  }
   # Reorder by counts:
   # max.col <- which.max(apply(n_i, 2, sum))
   # n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
@@ -489,6 +510,7 @@ epa_mcmc <- function(N_i,
                                         groupings,
                                         alpha,
                                         gamma,
+                                        theta,
                                         beta,
                                         delta,
                                         sigma,
@@ -522,6 +544,20 @@ epa_mcmc <- function(N_i,
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
+    ## Draw theta if seqential method is being used:
+    if(method == "seq"){
+      for (g in unique(groupings)) {
+        ind <- which(groupings == g)
+        theta_sav[b / thin, ind, ] <- matrix(
+          rep(
+            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,],#[1, subset],
+            length(ind)
+          ),
+          nrow = length(ind),
+          byrow = T
+        )
+      }
+    }
     # Thin:
     if (b %% thin == 0) {
       alpha_sav[b / thin, ] <- alpha#[subset]
