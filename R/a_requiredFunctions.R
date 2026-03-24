@@ -315,36 +315,39 @@ update_groupings_seq <- function(n_i,
     res <- lapply(ids, function(id)
       sort(c(1:K)[-i][alloc == id]))
     names(res) <- 1:length(res)
-    counts.list <- lapply(res, \(x) {
-      if (length(x) == 1) {
-        n_i[x, ]
-      }
-      else{
-        colSums(n_i[x, ])
-      }
-    })
-    n_curr <- matrix(unlist(counts.list),
-                     nrow = length(res),
-                     byrow = T)
+    # counts.list <- lapply(res, \(x) {
+    #   if (length(x) == 1) {
+    #     n_i[x, ]
+    #   }
+    #   else{
+    #     colSums(n_i[x, ])
+    #   }
+    # })
+    # n_curr <- matrix(unlist(counts.list),
+    #                  nrow = length(res),
+    #                  byrow = T)
     # Get log_post probabilities.
     log_probs <- log_lik <- log_prior <- c()
     for (j in 1:(length(ids) + 1)) {
-      n_use <- n_curr
+      #n_use <- n_curr
       p_use <- numeric(K)
       p_use[i] <- j
       for (g in 1:length(ids)) {
         p_use[res[[g]]] <- g
       }
-      if (j != length(ids) + 1) {
-        n_use[j, ] <- n_use[j, ] + n_i[i, ]
-      } else{
-        n_use <- rbind(n_use, n_i[i, ])
-      }
-      log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
+      # if (j != length(ids) + 1) {
+      #   n_use[j, ] <- n_use[j, ] + n_i[i, ]
+      # } else{
+      #   n_use <- rbind(n_use, n_i[i, ])
+      # }
+      #log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
+      ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
+      #log_lik[j] <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
-    log_lik <- log_lik - max(log_lik)
-    log_prior <- log_prior - max(log_prior)
+    log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
+    #log_lik <- log_lik - max(log_lik)
+    #log_prior <- log_prior - max(log_prior)
     log_probs <- log_lik + log_prior
     log_probs <- log_probs - max(log_probs)
     probs <- exp(log_probs) / sum(exp(log_probs))
