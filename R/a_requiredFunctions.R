@@ -348,7 +348,7 @@ update_groupings_seq <- function(n_i,
         log_lik[j] <- n_i[i, ] * log(theta[j,])
       } else {
         theta <- rdirichlet(1, alpha*gamma + n_i[i,])
-        log_lik[j] <- sum(n_i[i, ] * log(theta[1,]))
+        log_lik[j] <- sum((n_i[i, ] + alpha*gamma) * log(theta[1,]))
       }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
