@@ -345,9 +345,9 @@ update_groupings_seq <- function(n_i,
       ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
       # This makes the marginalized version we found unusable:
       if(j != length(ids + 1)){
-        log_lik[j] <- n_i[i, ] * log(theta[j,])
+        log_lik[j] <- sum(n_i[i, ] * log(theta[j,]))
       } else {
-        theta <- rdirichlet(1, alpha*gamma + n_i[i,])
+        theta <- LaplacesDemon::rdirichlet(1, alpha*gamma + n_i[i,])
         log_lik[j] <- sum((n_i[i, ] + alpha*gamma) * log(theta[1,]))
       }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
@@ -462,18 +462,19 @@ epa_mcmc <- function(N_i,
     groupings <- sample(1:num_groups, K, replace = TRUE)
   }
   # If method == seq then initiate theta:
+  theta <- array(NA, dim = c(K, J))
   if(method == "seq"){
-  for (g in unique(groupings)) {
-    ind <- which(groupings == g)
-    theta_sav[b / thin, ind, ] <- matrix(
-      rep(
-        LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,],#[1, subset],
-        length(ind)
-      ),
-      nrow = length(ind),
-      byrow = T
-    )
-  }
+    for (g in unique(groupings)) {
+      ind <- which(groupings == g)
+      theta[ind, ] <- matrix(
+        rep(
+          LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
+          length(ind)
+        ),
+        nrow = length(ind),
+        byrow = T
+      )
+    }
   }
   # Reorder by counts:
   # max.col <- which.max(apply(n_i, 2, sum))
@@ -548,9 +549,9 @@ epa_mcmc <- function(N_i,
     if(method == "seq"){
       for (g in unique(groupings)) {
         ind <- which(groupings == g)
-        theta_sav[b / thin, ind, ] <- matrix(
+        theta[ind, ] <- matrix(
           rep(
-            LaplacesDemon::rdirichlet(1, n_curr[g, ] + alpha * gamma)[1,],#[1, subset],
+            LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
             length(ind)
           ),
           nrow = length(ind),
