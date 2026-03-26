@@ -353,8 +353,8 @@ update_groupings_seq <- function(n_i,
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
     #log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
-    #log_lik <- log_lik - max(log_lik)
-    #log_prior <- log_prior - max(log_prior)
+    log_lik <- log_lik - max(log_lik)
+    log_prior <- log_prior - max(log_prior)
     log_probs <- log_lik + log_prior
     log_probs <- log_probs - max(log_probs)
     probs <- exp(log_probs) / sum(exp(log_probs))
