@@ -348,7 +348,7 @@ update_groupings_seq <- function(n_i,
         log_lik[j] <- sum(n_i[i, ] * log(theta[j,]))
       } else {
         theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
-        log_lik[j] <- sum((n_i[i, ]) * log(theta_use[1,]))
+        log_lik[j] <- sum((n_i[i, ] + alpha*gamma) * log(theta_use[1,]))
       }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
