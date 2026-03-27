@@ -345,10 +345,10 @@ update_groupings_seq <- function(n_i,
       ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
       # This makes the marginalized version we found unusable:
       if(j != length(ids + 1)){
-        log_lik[j] <- sum((n_i[i, ] + exp(alpha+gamma)) * log(theta[j,]))
+        log_lik[j] <- sum((n_i[i, ]) * log(theta[j,])) # + exp(alpha+gamma)
       } else {
-        theta_use <- LaplacesDemon::rdirichlet(1, n_i[i, ] + exp(alpha+gamma))
-        log_lik[j] <- sum((n_i[i, ] + exp(alpha+gamma)) * log(theta_use[1,]))
+        theta_use <- LaplacesDemon::rdirichlet(1, exp(alpha+gamma))
+        log_lik[j] <- sum((n_i[i, ]) * log(theta_use[1,]))
       }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
