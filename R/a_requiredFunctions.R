@@ -344,7 +344,7 @@ update_groupings_seq <- function(n_i,
       # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
       # # This makes the marginalized version we found unusable:
-      if(j != length(ids1) + 1){
+      if(j != length(ids) + 1){
         log_lik[j] <- sum((n_i[i, ]) * log(theta[res[[j]][1],])) # + exp(alpha+gamma)
       } else {
         theta_use <- LaplacesDemon::rdirichlet(1, exp(alpha+gamma))
