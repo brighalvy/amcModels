@@ -330,7 +330,7 @@ update_groupings_seq <- function(n_i,
     # Get log_post probabilities.
     log_probs <- log_lik <- log_prior <- c()
     for (j in 1:(length(ids) + 1)) {
-      n_use <- n_curr
+      #n_use <- n_curr
       p_use <- numeric(K)
       p_use[i] <- j
       for (g in 1:length(ids)) {
