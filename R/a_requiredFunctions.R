@@ -234,11 +234,11 @@ log_full_joint <- function(n, alpha, gamma, prior.alpha, g.a, g.b) {
   n_ag <- t(apply(n, 1, \(x) x + ag))
   res <- LaplacesDemon::ddirichlet((a), (pa), log = T) + (g.a - 1) * log(gamma) - g.b *
     gamma +nrow(n) * lgamma((gamma)) + sum(-lgamma(rowSums(n_ag)) +
-                                           rowSums(t(apply(
-                                             lgamma(n_ag), 1, \(x) {
-                                               x - lgamma(ag)
-                                             }
-                                           ))))
+                                             rowSums(t(apply(
+                                               lgamma(n_ag), 1, \(x) {
+                                                 x - lgamma(ag)
+                                               }
+                                             ))))
   ifelse(is.nan(res), 0, res)
 }
 # Function to get posterior prob with given partition:
@@ -347,7 +347,7 @@ update_groupings_seq <- function(n_i,
       if(j != length(ids) + 1){
         log_lik[j] <- sum((n_i[i, ]) * log(theta[res[[j]][1],])) # + exp(alpha+gamma)
       } else {
-        theta_use <- LaplacesDemon::rdirichlet(1, exp(alpha+gamma))
+        theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
         log_lik[j] <- sum((n_i[i, ] ) * log(theta_use[1,]))
       }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
