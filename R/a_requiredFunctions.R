@@ -350,6 +350,9 @@ update_groupings_seq <- function(n_i,
         theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
         log_lik[j] <- sum((n_i[i, ] ) * log(theta_use[1,]))
       }
+      if(is.na(log_lik[j]) | log_lik[j] == -Inf){
+        log_lik[j] <- -1e10
+      }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
     #log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
