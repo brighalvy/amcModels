@@ -346,7 +346,7 @@ update_groupings_seq <- function(n_i,
         n_use <- n_curr[j, ] + n_i[i, ]
         log_lik[j] <- partial_log_lik(n_use, alpha, gamma) - partial_log_lik(n_curr[j,], alpha, gamma)
       } else{
-        log_lik[j] <- partial_log_lik(n_i[i,], alpha, gamma)
+        log_lik[j] <- partial_log_lik(n_i[i,], alpha, gamma) + lgamma(gamma) - sum(lgamma(gama *alpha))
       }
       # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
