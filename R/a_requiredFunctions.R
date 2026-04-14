@@ -294,6 +294,13 @@ update_groupings_aao <- function(p,
   p[sample(1:nrow(p), 1, prob = probs), ]
 }
 
+## Function to run the proportional likelihood of one group given a row of counts,
+partial_log_lik <- function(n,
+                            alpha,
+                            gamma){
+  -lgamma(sum(n) + gamma) + sum(lgamma(n + gamma*alpha))
+}
+
 # Function for sequential group update:
 update_groupings_seq <- function(n_i,
                                  groupings,
@@ -316,43 +323,43 @@ update_groupings_seq <- function(n_i,
     res <- lapply(ids, function(id)
       sort(c(1:K)[-i][alloc == id]))
     names(res) <- 1:length(res)
-    # counts.list <- lapply(res, \(x) {
-    #   if (length(x) == 1) {
-    #     n_i[x, ]
-    #   }
-    #   else{
-    #     colSums(n_i[x, ])
-    #   }
-    # })
-    # n_curr <- matrix(unlist(counts.list),
-    #                  nrow = length(res),
-    #                  byrow = T)
+    counts.list <- lapply(res, \(x) {
+      if (length(x) == 1) {
+        n_i[x, ]
+      }
+      else{
+        colSums(n_i[x, ])
+      }
+    })
+    n_curr <- matrix(unlist(counts.list),
+                     nrow = length(res),
+                     byrow = T)
     # Get log_post probabilities.
     log_probs <- log_lik <- log_prior <- c()
     for (j in 1:(length(ids) + 1)) {
-      #n_use <- n_curr
       p_use <- numeric(K)
       p_use[i] <- j
       for (g in 1:length(ids)) {
         p_use[res[[g]]] <- g
       }
-      # if (j != length(ids) + 1) {
-      #   n_use[j, ] <- n_use[j, ] + n_i[i, ]
-      # } else{
-      #   n_use <- rbind(n_use, n_i[i, ])
-      # }
+      if (j != length(ids) + 1) {
+        n_use <- n_curr[j, ] + n_i[i, ]
+        log_lik[j] <- partial_log_lik(n_use, alpha, gamma) - partial_log_lik(n_curr[j,], alpha, gamma)
+      } else{
+        log_lik[j] <- partial_log_lik(n_i[i,], alpha, gamma)
+      }
       # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
       # # This makes the marginalized version we found unusable:
-      if(j != length(ids) + 1){
-        log_lik[j] <- sum((n_i[i, ]) * log(theta[res[[j]][1],])) # + exp(alpha+gamma)
-      } else {
-        theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
-        log_lik[j] <- sum((n_i[i, ] ) * log(theta_use[1,]))
-      }
-      if(is.na(log_lik[j]) | log_lik[j] == -Inf){
-        log_lik[j] <- -1e10
-      }
+      # if(j != length(ids) + 1){
+      #   log_lik[j] <- sum((n_i[i, ]) * log(theta[res[[j]][1],])) # + exp(alpha+gamma)
+      # } else {
+      #   theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
+      #   log_lik[j] <- sum((n_i[i, ] ) * log(theta_use[1,]))
+      # }
+      # if(is.na(log_lik[j]) | log_lik[j] == -Inf){
+      #   log_lik[j] <- -1e10
+      # }
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
     #log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
@@ -548,7 +555,7 @@ epa_mcmc <- function(N_i,
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
-    ## Draw theta if seqential method is being used:
+    ## Draw theta if sequential method is being used:
     if(method == "seq"){
       for (g in unique(groupings)) {
         ind <- which(groupings == g)
