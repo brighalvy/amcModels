@@ -551,20 +551,6 @@ epa_mcmc <- function(N_i,
     z_1m <- sapply(z, log1mexp)
     # Translate to alpha:
     alpha <- exp(alpha_map(z, z_1m))
-    ## Draw theta if sequential method is being used:
-    if(method == "seq"){
-      for (g in unique(groupings)) {
-        ind <- which(groupings == g)
-        theta[ind, ] <- matrix(
-          rep(
-            LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
-            length(ind)
-          ),
-          nrow = length(ind),
-          byrow = T
-        )
-      }
-    }
     # Thin:
     if (b %% thin == 0) {
       alpha_sav[b / thin, ] <- alpha#[subset]
