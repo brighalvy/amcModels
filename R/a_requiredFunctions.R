@@ -295,10 +295,19 @@ update_groupings_aao <- function(p,
 }
 
 ## Function to run the proportional likelihood of one group given a row of counts,
-partial_lik <- function(n,
-                            alpha,
-                            gamma){
-  prod(gamma(n + gamma*alpha))/gamma(sum(n) + gamma)
+# partial_lik <- function(n, n_old, alpha,
+#                             gamma){
+#   res <- sum(lgamma(n + gamma*alpha)) - lgamma(sum(n) + gamma) +  lgamma(gamma) - sum(lgamma(gamma *alpha))
+#   res_old <- sum(lgamma(n_old + gamma*alpha)) - lgamma(sum(n_old) + gamma) +  lgamma(gamma) - sum(lgamma(gamma *alpha))
+#   #m <- max(res, res_old)
+#   if(res < res_old){
+#     -10e9
+#   } else {
+#     res + log1mexp(res_old - res)
+#   }
+# }
+beta_log <- function(x){
+  sum(lgamma(x))-lgamma(sum(x))
 }
 
 # Function for sequential group update:
@@ -342,11 +351,11 @@ update_groupings_seq <- function(n_i,
       for (g in 1:length(ids)) {
         p_use[res[[g]]] <- g
       }
-      if (j != length(ids) + 1) {
+      if (j != (length(ids) + 1)) {
         n_use <- n_curr[j, ] + n_i[i, ]
-        log_lik[j] <- log(partial_lik(n_use, alpha, gamma) - partial_lik(n_curr[j,], alpha, gamma))
+        log_lik[j] <- beta_log(n_use + gamma*alpha) - beta_log(n_curr[j,] + gamma*alpha) #+  lgamma(gamma) - sum(lgamma(gamma *alpha))
       } else{
-        log_lik[j] <- log(partial_lik(n_i[i,], alpha, gamma)) + lgamma(gamma) - sum(lgamma(gamma *alpha))
+        log_lik[j] <- sum(lgamma(n_i[i,] + gamma*alpha)) - lgamma(sum(n_i[i,]) + gamma) + lgamma(gamma) - sum(lgamma(gamma *alpha))
       }
       # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
@@ -472,20 +481,20 @@ epa_mcmc <- function(N_i,
     groupings <- sample(1:num_groups, K, replace = TRUE)
   }
   # If method == seq then initiate theta:
-  theta <- array(NA, dim = c(K, J))
-  if(method == "seq"){
-    for (g in unique(groupings)) {
-      ind <- which(groupings == g)
-      theta[ind, ] <- matrix(
-        rep(
-          LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
-          length(ind)
-        ),
-        nrow = length(ind),
-        byrow = T
-      )
-    }
-  }
+  # theta <- array(NA, dim = c(K, J))
+  # if(method == "seq"){
+  #   for (g in unique(groupings)) {
+  #     ind <- which(groupings == g)
+  #     theta[ind, ] <- matrix(
+  #       rep(
+  #         LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
+  #         length(ind)
+  #       ),
+  #       nrow = length(ind),
+  #       byrow = T
+  #     )
+  #   }
+  # }
   # Reorder by counts:
   # max.col <- which.max(apply(n_i, 2, sum))
   # n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
