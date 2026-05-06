@@ -295,10 +295,10 @@ update_groupings_aao <- function(p,
 }
 
 ## Function to run the proportional likelihood of one group given a row of counts,
-partial_log_lik <- function(n,
+partial_lik <- function(n,
                             alpha,
                             gamma){
-  -lgamma(sum(n) + gamma) + sum(lgamma(n + gamma*alpha))
+  prod(gamma(n + gamma*alpha))/gamma(sum(n) + gamma)
 }
 
 # Function for sequential group update:
@@ -344,9 +344,9 @@ update_groupings_seq <- function(n_i,
       }
       if (j != length(ids) + 1) {
         n_use <- n_curr[j, ] + n_i[i, ]
-        log_lik[j] <- partial_log_lik(n_use, alpha, gamma) - partial_log_lik(n_curr[j,], alpha, gamma)
+        log_lik[j] <- log(partial_lik(n_use, alpha, gamma) - partial_lik(n_curr[j,], alpha, gamma))
       } else{
-        log_lik[j] <- partial_log_lik(n_i[i,], alpha, gamma) + lgamma(gamma) - sum(lgamma(gamma *alpha))
+        log_lik[j] <- log(partial_lik(n_i[i,], alpha, gamma)) + lgamma(gamma) - sum(lgamma(gamma *alpha))
       }
       # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
       # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
