@@ -315,7 +315,6 @@ update_groupings_seq <- function(n_i,
                                  groupings,
                                  alpha,
                                  gamma,
-                                 theta,
                                  beta,
                                  delta,
                                  sigma,
@@ -357,18 +356,7 @@ update_groupings_seq <- function(n_i,
       } else{
         log_lik[j] <- sum(lgamma(n_i[i,] + gamma*alpha)) - lgamma(sum(n_i[i,]) + gamma) + lgamma(gamma) - sum(lgamma(gamma *alpha))
       }
-      # log_lik[j] <- log_full_joint(n_use, alpha, gamma, prior.alpha, g.a, g.b)
-      # ## According to Dahl et al. 2017 we only do the likelihood of the group being chosen (parameters used don't depend on clusters)
-      # # This makes the marginalized version we found unusable:
-      # if(j != length(ids) + 1){
-      #   log_lik[j] <- sum((n_i[i, ]) * log(theta[res[[j]][1],])) # + exp(alpha+gamma)
-      # } else {
-      #   theta_use <- LaplacesDemon::rdirichlet(1, alpha*gamma)
-      #   log_lik[j] <- sum((n_i[i, ] ) * log(theta_use[1,]))
-      # }
-      # if(is.na(log_lik[j]) | log_lik[j] == -Inf){
-      #   log_lik[j] <- -1e10
-      # }
+
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
     }
     #log_lik <- log_full_joint(n_i[i,], alpha, gamma, prior.alpha, g.a, g.b)
@@ -530,7 +518,6 @@ epa_mcmc <- function(N_i,
                                         groupings,
                                         alpha,
                                         gamma,
-                                        theta,
                                         beta,
                                         delta,
                                         sigma,
