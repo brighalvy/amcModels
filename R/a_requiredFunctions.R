@@ -354,7 +354,7 @@ update_groupings_seq <- function(n_i,
         n_use <- n_curr[j, ] + n_i[i, ]
         log_lik[j] <- beta_log(n_use + gamma*alpha) - beta_log(n_curr[j,] + gamma*alpha) #+  lgamma(gamma) - sum(lgamma(gamma *alpha))
       } else{
-        log_lik[j] <- sum(lgamma(n_i[i,] + gamma*alpha)) - lgamma(sum(n_i[i,]) + gamma) + lgamma(gamma) - sum(lgamma(gamma *alpha))
+        log_lik[j] <- sum(lgamma(n_i[i,] + gamma*alpha)) - lgamma(sum(n_i[i,]) + gamma) #+ lgamma(gamma) - sum(lgamma(gamma *alpha))
       }
 
       log_prior[j] <- log_epa_prior(p_use, beta, delta, dist, sigma)
