@@ -446,7 +446,7 @@ epa_mcmc <- function(N_i,
   beta <- beta_sav <- .9
   delta <- delta_sav <- 0.01
   sigma <- 1:K
-  k_rep <- floor(K / 2)
+  k_rep <- K#floor(K / 2)
   psi <- array(0, dim = c(B, ncol(n_i)-1))
 
   ## Get initial values for alpha and gamma
