@@ -324,7 +324,7 @@ update_groupings_seq <- function(n_i,
                                  g.b,
                                  K) {
   count = 0
-  for (i in sigma) {
+  for (i in 1:K) {
     alloc <- groupings[-i]
     # Combine n's:
     ids <- (unique(alloc))
