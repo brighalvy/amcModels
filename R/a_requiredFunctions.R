@@ -11,112 +11,153 @@ log1mexp <- function(x) {
 }
 ## Gets determinant for stick breaking transformation:
 
-
-## Map log(alpha) to log(z) using stick breaking methodology (Neal 2003)
-## input a is on the log scale
-alpha_to_z <- function(a) {
-  L <- length(a) - 1
-  z <- c()
-  z_1m <- c()
-  for (l in 1:L) {
-    if (l == 1) {
-      z[l] <- a[l]
-    } else{
-      z[l] <- a[l] - sum(z_1m) #log(1 - sum(exp(a[1:(l - 1)])))
-    }
-    if (z[l] > 0) {
-      z[l] <- -1e-30000
-    }
-    z_1m[l] <- log1mexp(z[l])
-  }
-  return(z)
-}
-
-## Update draws of z using a pseudo-slice sampler (Heiner et. al. 2024):
-## z is a vector of log(z)
-update_z <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
-  C <- length(z)
-  ## Pseudo prior parameters
-  # if (sum(is.na(n_i[1, ])) == 0) {
-  #   x <- (apply(n_i, 2, sum) + 1) / sqrt(sum((apply(n_i, 2, sum) + 1) ^ 2)) *
-  #     4
-  # } else{
-  #   na.cols <- which(is.na(n_i[1, ]))
-  #   x <- (apply(n_i[, -na.cols], 2, sum) + 1) / sqrt(sum((apply(n_i[, -na.cols], 2, sum) +
-  #                                                           1) ^ 2)) * 4
-  # }
-
-  ## Pseudo prior parameters prior.alpha + sum(n_i) (across k)
-  if (sum(is.na(n_i[1, ])) == 0) {
-    x <- prior.alpha + apply(n_i, 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10
+l.alpha.f.cond <- function(alpha, n_i, ga, prior.alpha) {
+  k_obj <- c()
+  if(!is.null(dim(n_i))){
+    J <- ncol(n_i)
+    K <- nrow(n_i)
   } else{
-    na.cols <- which(is.na(n_i[1, ]))
-    x <- prior.alpha + apply(n_i[, -na.cols], 2, sum)*(1/(sum(n_i, na.rm = T))) #prior.alpha/10
+    J <- length(n_i)
+    K <- 1
   }
-  z_new <- c()
-  z_1m_new <- c()
-  a <- x[1:C]
-  b <- rev(cumsum(rev(x)))[-1]
-  psi <- pbeta(exp(z), a, b)
-  # New proposal distribution:
-  y <- l.alpha.f.cond(z, z_1m, J, n_i, K, ga, prior.alpha) - sum((dbeta(exp(z), a, b, log = TRUE))) + log(runif(1))
-  if(is.nan(y)){
-    y <- log(runif(0, 1))
-  }
-  # draw value of psi from Pseudo prior:
-  L <- rep(0, C)
-  R <- rep(1, C)
-  psi_new <- c()
-  psi_new <- runif(C)
-  z_new <- log(qbeta(psi_new, a, b))
-  z_1m_new <- sapply(z_new, log1mexp)
-  comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
-    exp(z_new), a, b, log = TRUE)))
-  if(is.nan(comp_val)){
-    comp_val <-  0
-  }
-  while (y > comp_val) {
-    L[psi_new < psi] <- psi_new[psi_new < psi]
-    R[psi_new > psi] <- psi_new[psi_new > psi]
-    psi_new <- runif(C, L, R)
-    z_new <- log(qbeta(psi_new, a, b))
-    z_1m_new <- sapply(z_new, log1mexp)
-    comp_val <- (l.alpha.f.cond(z_new, z_1m_new, J, n_i, K, ga, prior.alpha) - sum(dbeta(
-      exp(z_new), a, b, log = TRUE)))
-    if(is.nan(comp_val)){
-      comp_val <- 0
+  for (k in 1:K) {
+    if(any(alpha == -Inf)){
+      sum_obj <- lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga)*
+                                                                                alpha)
+      sum_obj[which(alpha == -Inf)] <- 0
+      k_obj[k] <- sum(sum_obj)
+    } else{
+      k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga) *
+                                                                                     alpha))
     }
   }
-  #psi_ret <- pbeta(exp(z_new), a, b)
-  return(z_new)
+
+  ## Set up priors:
+  log_prior <- sum((prior.alpha - 1) * log(alpha))
+  res <- log_prior + sum(k_obj)
+  return(res)
 }
 
-## map z values to a:
-## All done on the log scale
-alpha_map <- function(z, z_1m) {
-  L <- length(z) + 1
-  a <- c()
-  for (l in 1:L) {
-    if (l == 1) {
-      a[l] <- z[l]
-    } else if (l != L) {
-      a[l] <- z[l] + sum(z_1m[1:(l - 1)])
-    } else {
-      a[l] <- sum(z_1m)#log(1 - sum(exp(a[1:(l-1)])))
-    }
+#Log Full-Conditional for gamma:
+l.gamma.f.cond <- function(alpha, J, n_i, K, ga, g.a, g.b) {
+  k_obj <- c()
+  for (k in 1:K) {
+    k_obj[k] <- lgamma(exp(ga)) + sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)*
+                                               alpha)) - lgamma(sum(n_i[k, ], na.rm = T) + exp(ga)) - sum(lgamma(exp(ga)*
+                                                                                                                   alpha))
   }
-  return(a)
+  ## gamma priors are g.a, g.b
+  res <- (g.a - 1) * ga - exp(ga) * g.b + sum(k_obj)
+  return(res)
 }
+
+## Functions for alpha slice sampler:
+# Map z to alpha and alpha to z:
+alpha_to_logits <- function(alpha) { # returns length one LESS than argument
+  J <- length(alpha)
+  log(alpha[1:(J-1)]) - log(alpha[J])
+}
+
+logits_to_alpha <- function(logits) { # returns length one MORE than argument
+  elogits <- exp(logits)
+  sumelogits <- sum(elogits)
+  sump1 <- sumelogits + 1.0
+  c(elogits, 1.0) / sump1
+}
+
+## marginal target for logits = logit(theta)
+log_mtarg_logits <- function(logits, n_i, ga, prior.alpha) {
+  alpha <- logits_to_alpha(logits)
+  out0 <- l.alpha.f.cond(alpha, n_i, ga, prior.alpha)
+  ljacob <- sum(log(alpha))
+  out0 + ljacob
+}
+
+## Slice sampler functions:
+slice_elliptical_mv_spherical <- function (z, sig, log_target) {
+  nEvaluations <- 0
+  k <- length(z)
+  f <- function(z) {
+    nEvaluations <<- nEvaluations + 1
+    log_target(z)
+  }
+  fz <- f(z)$value
+  stopifnot(fz > -Inf)
+  y <- log(runif(1)) + fz
+  nu <- rnorm(k, 0, sd = sig)
+  twopi <- 2 * pi
+  theta <- runif(1, 0, twopi)
+  theta_min <- theta - twopi
+  theta_max <- theta
+  repeat {
+    z1 <- z * cos(theta) + nu * sin(theta)
+    fz1 <- f(z1)
+    if (y < fz1$value) {
+      return(list(z = z1, x = fz1$x, nEvaluations = nEvaluations))
+    }
+    if (theta < 0) {
+      theta_min <- theta
+    }
+    else {
+      theta_max <- theta
+    }
+    theta <- runif(1, theta_min, theta_max)
+  }
+}
+
+
+slice_genelliptical_mv_logits <- function (x = NULL, # logits (transformed alpha)
+                                           z = NULL, # transformed (standardized)
+                                           log_target_logits, n_i, prior.alpha, gamma,
+                                           mu, Sig, df, is_chol = FALSE,
+                                           static_pseudo = FALSE # could mu and Sig change from iteration to iteration? If not, we can build the chain on Z and save computation
+) {
+
+  if (isTRUE(is_chol)) {
+    SigL <- Sig
+  }
+  else {
+    SigL <- t(chol(Sig))
+  }
+
+  if (isTRUE(static_pseudo)) { # was given z
+    k <- length(z)
+  } else { # was given x
+    k <- length(x)
+    z <- drop(forwardsolve(SigL, (x - mu)))
+  }
+
+  stopifnot(length(mu) == k)
+  stopifnot(dim(Sig) == c(k, k))
+
+  a <- 0.5 * (df + k)
+  b <- 0.5 * (df + sum(z^2))
+  s <- 1.0 / rgamma(1, shape = a, rate = b)
+
+  lff <- function(zz) {
+
+    xx <- drop(SigL %*% zz + mu)
+    ssz <- sum(zz^2)
+    out <- log_target_logits(xx, n_i, gamma, prior.alpha) + a * log1p(ssz/df)
+
+    list(value = out, z = zz, x = xx)
+  }
+
+  out_ess <- slice_elliptical_mv_spherical(z = z, sig = sqrt(s), log_target = lff)
+
+  out_ess
+}
+
 
 # Gamma slice sampler:
-gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
+gamma_update <- function(alpha, J, n_i, k, ga, g.a, g.b) {
   ## CDF Transformation:
-  y <-  l.gamma.f.cond(z, z_1m, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - log(pgamma(exp(ga), g.a, g.b))
+  y <-  l.gamma.f.cond(alpha, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - log(pgamma(exp(ga), g.a, g.b))
   L <- 0
   R <- 1
   u <- runif(1, L, R)
   g <- log(qgamma(u, g.a, g.b))
-  while (y >= l.gamma.f.cond(z, z_1m, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(g), g.a, g.b))) {
+  while (y >= l.gamma.f.cond(alpha, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(g), g.a, g.b))) {
     if (g < ga) {
       L = u
     } else{
@@ -126,55 +167,6 @@ gamma_update <- function(z, z_1m, J, n_i, k, ga, g.a, g.b) {
     g <- log(qgamma(u, g.a, g.b))
   }
   return(g)
-}
-
-# Log Full-Conditional for alpha:
-## n is the data for the ith row with dimensions (K, j)
-## all inputs (except n and J/K) are log values
-l.alpha.f.cond <- function(z, z_1m, J, n_i, K, ga, prior.alpha) {
-  k_obj <- c()
-  alpha <- alpha_map(z, z_1m)
-  for (k in 1:K) {
-    if(any(alpha == -Inf)){
-      sum_obj <- lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
-                                                                                     alpha))
-      sum_obj[which(alpha == -Inf)] <- 0
-      k_obj[k] <- sum(sum_obj)
-    } else{
-      k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga + alpha)) - lgamma(exp(ga +
-                                                                                          alpha)))
-    }
-  }
-  # uses z ~ beta priors
-  ## Set up priors:
-  b <- c()
-  if (prior.alpha == 0) {
-    for (j in 1:(J - 1)) {
-      b[j] <- (1 / J) * (J - j)
-    }
-    a <- 1 / J
-  } else {
-    for (j in 1:(J - 1)) {
-      b[j] <- prior.alpha * (J - j)
-    }
-    a <- prior.alpha
-  }
-  res <- sum((a - 1) * (z)) + sum((b - 1) * (z_1m)) + sum(k_obj)
-  return(res)
-}
-
-#Log Full-Conditional for gamma:
-l.gamma.f.cond <- function(z, z_1m, J, n_i, K, ga, g.a, g.b) {
-  k_obj <- c()
-  alpha <- alpha_map(z, z_1m)
-  for (k in 1:K) {
-    k_obj[k] <- lgamma(exp(ga)) + sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga +
-                                                                                alpha))) - lgamma(sum(n_i[k, ], na.rm = T) + exp(ga)) - sum(lgamma(exp(ga +
-                                                                                                                                                         alpha)))
-  }
-  ## gamma priors are g.a, g.b
-  res <- (g.a - 1) * ga - exp(ga) * g.b + sum(k_obj)
-  return(res)
 }
 
 ## Log EPA prior:
@@ -447,13 +439,11 @@ epa_mcmc <- function(N_i,
   delta <- delta_sav <- 0.01
   sigma <- 1:K
   k_rep <- K#floor(K / 2)
-  psi <- array(0, dim = c(B, ncol(n_i)-1))
-
   ## Get initial values for alpha and gamma
   alpha <- array(NA, dim = c(1, ncol(n_i)))
   alpha[1, ] <- rep(1 / ncol(n_i), ncol(n_i))
-  z <- alpha_to_z(log(alpha))
-  z_1m <- sapply(z, log1mexp)
+  x <- alpha_to_logits(alpha[1, ])
+
   gamma <- gamma_sav <- 5#rgamma(1, g.a, g.b)
   tables <- matrix(c(1, 1), nrow = 2)
   group_alloc <- 1
@@ -468,31 +458,7 @@ epa_mcmc <- function(N_i,
     num_groups <- sample(1:K, 1)
     groupings <- sample(1:num_groups, K, replace = TRUE)
   }
-  # If method == seq then initiate theta:
-  # theta <- array(NA, dim = c(K, J))
-  # if(method == "seq"){
-  #   for (g in unique(groupings)) {
-  #     ind <- which(groupings == g)
-  #     theta[ind, ] <- matrix(
-  #       rep(
-  #         LaplacesDemon::rdirichlet(1, n_i[g, ] + alpha * gamma)[1,],#[1, subset],
-  #         length(ind)
-  #       ),
-  #       nrow = length(ind),
-  #       byrow = T
-  #     )
-  #   }
-  # }
-  # Reorder by counts:
-  # max.col <- which.max(apply(n_i, 2, sum))
-  # n_i <- n_i[ , c(c(1:length(n_i[1,]))[-max.col], max.col)]
-  # if(max.col == 1){
-  #   subset <- c(length(alpha), max.col:(length(alpha) - 1))
-  # } else if(max.col == length(alpha)){
-  #   subset <- 1:length(alpha)
-  # }else{
-  #   subset <- c(1:(max.col - 1), length(alpha), max.col:(length(alpha) - 1))
-  # }
+
 
   # Run MCMC:
   # prior probs of partitions:
@@ -537,20 +503,37 @@ epa_mcmc <- function(N_i,
     # Update gamma/alpha:
     # Combine counts
     n_curr <- combine_counts(groupings, n_i)
-    # Update gamma:
-    gamma <- exp(gamma_update(z, z_1m, ncol(n_i), n_i = n_curr, nrow(n_curr) , log(gamma), g.a, g.b))
+    k <- length(unique(groupings))
+    X <- n_curr
+    Phat <- X / rowSums(X)[row(X)] # rowSums(X) is also n_vec
+    phat_pool <- colSums(X) / sum(rowSums(X))
+    phat_indep <- colMeans(Phat)
+    nbar <- mean(rowSums(X))
+    # Update Gamma:
+    # Slice:
+    gamma <- exp(gamma_update(alpha, J, n_curr
+                            , k, log(gamma), g.a, g.b))
 
-    # Update z:
-    z <- update_z(z,
-                  z_1m,
-                  ncol(n_i),
-                  n_i = n_curr,
-                  nrow(n_curr),
-                  log(gamma),
-                  unique(prior.alpha))
-    z_1m <- sapply(z, log1mexp)
-    # Translate to alpha:
-    alpha <- exp(alpha_map(z, z_1m))
+    ## Update mu/Sigma:
+    ps_mix <- exp(gamma) * phat_pool + nbar * phat_indep + unique(prior.alpha)
+    pseudo_scale <- 0.9
+    pseudo_counts <- ps_mix * pseudo_scale # shape vector for Dirichlet pseudo-target
+
+    ## Aitchison 1986, p 127 K-L approx for pseudo on logits
+    mu <- digamma(pseudo_counts[-J]) - digamma(pseudo_counts[J])
+    Sig <- matrix(trigamma(pseudo_counts[J]), nrow = J-1, ncol = J-1) + diag(trigamma(pseudo_counts[-J]))
+    df <- K - 1
+    # Update alpha:
+    ## Map to z(beta) variables:
+    ## Update z values (does accept/reject with slice sampler):
+    tmp <- slice_genelliptical_mv_logits(x = x,
+                                         z = NULL,
+                                         log_target_logits = log_mtarg_logits, n_curr, prior.alpha, log(gamma),
+                                         mu = mu, Sig = Sig, df = df, is_chol = FALSE,
+                                         static_pseudo = FALSE # could mu and Sig change from iteration to iteration? If not, we can build the chain on Z and save computation
+    )
+    x <- tmp$x
+    alpha <- logits_to_alpha(tmp$x)
     # Thin:
     if (b %% thin == 0) {
       alpha_sav[b / thin, ] <- alpha#[subset]
@@ -582,7 +565,6 @@ epa_mcmc <- function(N_i,
       alpha = alpha,
       gamma = gamma_sav,
       theta = theta,
-      psi = psi,
       beta = beta_sav,
       delta = delta_sav
     )
@@ -592,6 +574,7 @@ epa_mcmc <- function(N_i,
 ## Function for HAMC MCMC:
 hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   J <- sum(!is.na(N_i[1, ]))
+
   # Fix dimension of n_i if only one group:
   if (is.null(dim(N_i))) {
     N_i <- matrix(N_i, nrow = 1)
@@ -600,41 +583,54 @@ hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   g <- c(log(1))
   alpha <- array(NA, dim = c(B, J))
   theta <- array(0, dim = c(B, K, J))
-  alpha[1, ] <- log(rep(1 / J, J))
+  alpha[1, ] <- (rep(1 / J, J))
   for (k in 1:K) {
     theta[1, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1, ]) + N_i[k, ][!is.na(N_i[k, ])])
   }
-  z <- z_1m <- psi <- array(NA, dim = c(B, J - 1))
-  z[1, ] <- alpha_to_z(alpha[1, ])
-  psi[1, ] <- pbeta(exp(z[1, ]), .5, .5)
-  z_1m[1, ] <- sapply(z[1, ], log1mexp)
+  x <- array(NA, dim = c(B, J - 1))
+  x[1, ] <- alpha_to_logits(alpha[1, ])
   # Reorder by counts:
   n_i <- N_i[,!is.na(N_i[1, ])]
-
+  X <- n_i
+  Phat <- X / rowSums(X)[row(X)] # rowSums(X) is also n_vec
+  phat_pool <- colSums(X) / sum(rowSums(X))
+  phat_indep <- colMeans(Phat)
+  nbar <- mean(rowSums(X))
   # Start MCMC:
   for (iter in 2:(B)) {
     # Update Gamma:
     # Slice:
-    g[iter] <- gamma_update(z[iter - 1, ], z_1m[iter - 1, ], J, n_i
+    g[iter] <- gamma_update(alpha[iter -1,], J, n_i
                             , K, g[iter - 1], g.a, g.b)
 
+    ## Update mu/Sigma:
+    ps_mix <- exp(g[iter]) * phat_pool + nbar * phat_indep + unique(prior.alpha)
+    pseudo_scale <- 0.9
+    pseudo_counts <- ps_mix * pseudo_scale # shape vector for Dirichlet pseudo-target
+
+    ## Aitchison 1986, p 127 K-L approx for pseudo on logits
+    mu <- digamma(pseudo_counts[-J]) - digamma(pseudo_counts[J])
+    Sig <- matrix(trigamma(pseudo_counts[J]), nrow = J-1, ncol = J-1) + diag(trigamma(pseudo_counts[-J]))
+    df <- K - 1
     # Update alpha:
     ## Map to z(beta) variables:
     ## Update z values (does accept/reject with slice sampler):
-    z[iter, ] <- update_z(z[iter - 1, ], z_1m[iter - 1, ], J, n_i = n_i
-                          , K, g[iter], prior.alpha)
-    psi[iter, ] <- pbeta(exp(z[iter, ]), .5, .5)
-    z_1m[iter, ] <- sapply(z[iter, ], log1mexp)
-    alpha[iter, ] <- alpha_map(z[iter, ], z_1m[iter, ])
-
+    tmp <- slice_genelliptical_mv_logits(x = x[iter - 1,],
+                                         z = NULL,
+                                         log_target_logits = log_mtarg_logits, n_i, prior.alpha, g[iter],
+                                         mu = mu, Sig = Sig, df = df, is_chol = FALSE,
+                                         static_pseudo = FALSE # could mu and Sig change from iteration to iteration? If not, we can build the chain on Z and save computation
+    )
+    x[iter,] <- tmp$x
+    alpha[iter,] <- logits_to_alpha(tmp$x)
     for (k in 1:K) {
-      theta[iter, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[iter] + alpha[iter, ]) + n_i[k, ])
+      theta[iter, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[iter])*alpha[iter, ] + n_i[k, ])
     }
   }
   # Save row draws:
   alpha_draws <- array(0, dim = c(B, length(N_i[1, ])))
   theta_draws <- array(0, dim = c(B, K, length(N_i[1, ])))
-  alpha_draws[, !is.na(N_i[1, ])] <- exp(alpha)
+  alpha_draws[, !is.na(N_i[1, ])] <- (alpha)
   gamma_draws <- exp(g)
   theta_draws[ , , !is.na(N_i[1, ])] <- theta[, , ]
   #print(i)
@@ -642,7 +638,6 @@ hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   return(list(
     alpha = alpha_draws,
     gamma = gamma_draws,
-    theta = theta_draws,
-    psi = psi
+    theta = theta_draws
   ))
 }
