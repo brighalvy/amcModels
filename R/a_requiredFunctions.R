@@ -515,8 +515,8 @@ epa_mcmc <- function(N_i,
                             , k, log(gamma), g.a, g.b))
 
     ## Update mu/Sigma:
-    ps_mix <- exp(gamma) * phat_pool + nbar * phat_indep + unique(prior.alpha)
-    pseudo_scale <- 0.9
+    ps_mix <- (gamma) * phat_pool + nbar * phat_indep + unique(prior.alpha)
+    pseudo_scale <- 0.8
     pseudo_counts <- ps_mix * pseudo_scale # shape vector for Dirichlet pseudo-target
 
     ## Aitchison 1986, p 127 K-L approx for pseudo on logits
