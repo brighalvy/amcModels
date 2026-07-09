@@ -522,7 +522,7 @@ epa_mcmc <- function(N_i,
     ## Aitchison 1986, p 127 K-L approx for pseudo on logits
     mu <- digamma(pseudo_counts[-J]) - digamma(pseudo_counts[J])
     Sig <- matrix(trigamma(pseudo_counts[J]), nrow = J-1, ncol = J-1) + diag(trigamma(pseudo_counts[-J]))
-    df <- K - 1
+    df <- k - 1
     # Update alpha:
     ## Map to z(beta) variables:
     ## Update z values (does accept/reject with slice sampler):
