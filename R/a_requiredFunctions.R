@@ -21,10 +21,10 @@ l.alpha.f.cond <- function(alpha, n_i, ga, prior.alpha) {
     K <- 1
   }
   for (k in 1:K) {
-    if(any(alpha == -Inf)){
+    if(any(alpha == 0)){
       sum_obj <- lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga)*
                                                                                 alpha)
-      sum_obj[which(alpha == -Inf)] <- 0
+      sum_obj[which(alpha == 0)] <- 0
       k_obj[k] <- sum(sum_obj)
     } else{
       k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga) *
