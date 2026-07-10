@@ -57,6 +57,7 @@ alpha_to_logits <- function(alpha) { # returns length one LESS than argument
 }
 
 logits_to_alpha <- function(logits) { # returns length one MORE than argument
+  elogits <- exp(logits)
   if(any(elogits == Inf)){
     alpha <- rep(0, length(elogits) + 1)
     alpha[which(elogits == Inf)] <- 1
