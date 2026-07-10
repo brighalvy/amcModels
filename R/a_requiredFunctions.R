@@ -57,10 +57,15 @@ alpha_to_logits <- function(alpha) { # returns length one LESS than argument
 }
 
 logits_to_alpha <- function(logits) { # returns length one MORE than argument
-  elogits <- exp(logits)
-  sumelogits <- sum(elogits)
-  sump1 <- sumelogits + 1.0
-  c(elogits, 1.0) / sump1
+  if(any(elogits == Inf)){
+    alpha <- rep(0, length(elogits) + 1)
+    alpha[which(elogits == Inf)] <- 1
+    alpha
+  } else{
+    sumelogits <- sum(elogits)
+    sump1 <- sumelogits + 1.0
+    c(elogits, 1.0) / sump1
+  }
 }
 
 ## marginal target for logits = logit(theta)
