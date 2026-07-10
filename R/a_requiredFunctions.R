@@ -20,22 +20,20 @@ l.alpha.f.cond <- function(alpha, n_i, ga, prior.alpha) {
     J <- length(n_i)
     K <- 1
   }
-  for (k in 1:K) {
-    if(any(alpha == 0)){
-      sum_obj <- lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga)*
-                                                                                alpha)
-      sum_obj[which(alpha == 0)] <- 0
-      k_obj[k] <- sum(sum_obj)
-    } else{
-      k_obj[k] <- sum(lgamma(n_i[k, ][!is.na(n_i[k, ])] + exp(ga)* alpha) - lgamma(exp(ga) *
-                                                                                     alpha))
-    }
-  }
 
-  ## Set up priors:
-  log_prior <- sum((prior.alpha - 1) * log(alpha))
-  res <- log_prior + sum(k_obj)
-  return(res)
+  if(any(alpha == 0)){
+    -100000000
+  } else{
+    a_star <- exp(ga)*alpha
+    lg_proddata <- sum(lgamma(n_i + a_star[col(n_i)]))
+    lg_prodalpha <- J * sum(lgamma(a_star))
+    like <- lg_proddata - lg_prodalpha
+
+    ## Set up priors:
+    log_prior <- sum((prior.alpha - 1) * log(alpha))
+    res <- log_prior + like
+    res
+  }
 }
 
 #Log Full-Conditional for gamma:
