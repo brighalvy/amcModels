@@ -26,7 +26,7 @@ l.alpha.f.cond <- function(alpha, n_i, ga, prior.alpha) {
   } else{
     a_star <- exp(ga)*alpha
     lg_proddata <- sum(lgamma(n_i + a_star[col(n_i)]))
-    lg_prodalpha <- J * sum(lgamma(a_star))
+    lg_prodalpha <- K * sum(lgamma(a_star))
     like <- lg_proddata - lg_prodalpha
 
     ## Set up priors:
@@ -391,6 +391,12 @@ update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist) {
 # Update mass parameter (beta):
 update_beta <- function(beta, grouping, delta, dist, sigma) {
   beta_prop <- beta + rnorm(1, mean = 0, sd = .5)
+  while (beta_prop <= -delta || beta_prop <= 0){
+    beta_prop <- beta + rnorm(1, mean = 0, sd = .5)
+
+  }
+
+
   a <- log_epa_prior(grouping, beta_prop, delta, dist, sigma) + dgamma(beta_prop, 3, 5, log = T) -
     log_epa_prior(grouping, beta, delta, dist, sigma) - dgamma(beta, 3, 5, log = T)
   if (a > log(runif(1))) {
