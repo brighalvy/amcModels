@@ -49,7 +49,7 @@ hamc <- function(N,
   }
   # Make sure prior parameters are positive:
   if (!is.null(prior.alpha)) {
-    if (prior.alpha <= 0) {
+    if (any(prior.alpha <= 0)) {
       stop(paste("prior.alpha must be positive"))
     }
   }

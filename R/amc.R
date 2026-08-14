@@ -35,7 +35,7 @@ amc <- function(N, B = 10000, xsi = NULL) {
   J <- ncol(N)
 
   if (!is.null(xsi)) {
-    if (xsi <= 0) {
+    if (any(xsi <= 0)) {
       stop(paste("xsi must be positive"))
     }
     if (length(xsi) == 1) {
