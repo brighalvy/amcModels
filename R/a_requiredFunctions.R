@@ -594,10 +594,10 @@ hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   }
   x <- array(NA, dim = c(B, J - 1))
   x[1, ] <- alpha_to_logits(alpha[1, ])
-  # Reorder by counts:
   n_i <- N_i[,!is.na(N_i[1, ])]
   X <- n_i
   Phat <- X / rowSums(X)[row(X)] # rowSums(X) is also n_vec
+  Phat[is.nan(Phat)] <- 0
   phat_pool <- colSums(X) / sum(rowSums(X))
   phat_indep <- colMeans(Phat)
   nbar <- mean(rowSums(X))
