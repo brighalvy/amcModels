@@ -156,12 +156,12 @@ slice_genelliptical_mv_logits <- function (x = NULL, # logits (transformed alpha
 # Gamma slice sampler:
 gamma_update <- function(alpha, J, n_i, k, ga, g.a, g.b) {
   ## CDF Transformation:
-  y <-  l.gamma.f.cond(alpha, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - log(pgamma(exp(ga), g.a, g.b))
+  y <-  l.gamma.f.cond(alpha, J, n_i, k, ga, g.a, g.b) + log(runif(1)) - log(dgamma(exp(ga), g.a, g.b))
   L <- 0
   R <- 1
   u <- runif(1, L, R)
   g <- log(qgamma(u, g.a, g.b))
-  while (y >= l.gamma.f.cond(alpha, J, n_i, k, g, g.a, g.b) - log(pgamma(exp(g), g.a, g.b))) {
+  while (y >= l.gamma.f.cond(alpha, J, n_i, k, g, g.a, g.b) - log(dgamma(exp(g), g.a, g.b))) {
     if (g < ga) {
       L = u
     } else{
@@ -391,11 +391,6 @@ update_sigma <- function(sigma, k_rep, grouping, beta, delta, dist) {
 # Update mass parameter (beta):
 update_beta <- function(beta, grouping, delta, dist, sigma) {
   beta_prop <- beta + rnorm(1, mean = 0, sd = .5)
-  while (beta_prop <= -delta || beta_prop <= 0){
-    beta_prop <- beta + rnorm(1, mean = 0, sd = .5)
-
-  }
-
 
   a <- log_epa_prior(grouping, beta_prop, delta, dist, sigma) + dgamma(beta_prop, 3, 5, log = T) -
     log_epa_prior(grouping, beta, delta, dist, sigma) - dgamma(beta, 3, 5, log = T)
@@ -595,7 +590,7 @@ hamc_mcmc <- function(N_i, K, g.a, g.b, prior.alpha, B) {
   theta <- array(0, dim = c(B, K, J))
   alpha[1, ] <- (rep(1 / J, J))
   for (k in 1:K) {
-    theta[1, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[1] + alpha[1, ]) + N_i[k, ][!is.na(N_i[k, ])])
+    theta[1, k, ] <- LaplacesDemon::rdirichlet(1, exp(g[1])*alpha[1, ] + N_i[k, ][!is.na(N_i[k, ])])
   }
   x <- array(NA, dim = c(B, J - 1))
   x[1, ] <- alpha_to_logits(alpha[1, ])
