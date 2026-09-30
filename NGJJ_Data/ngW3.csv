@@ -1,0 +1,3278 @@
+"Year","Category","Combat","Athlete","Time","Code","Result2","Point"
+2021,"66",1,"","19:54","CLI","Cont","0"
+2021,"66",1,"Kennedy Maciel","17:40","TKDA","Cont","0"
+2021,"66",1,"Kennedy Maciel","13:19","TKDA","Cont","0"
+2021,"66",1,"Kennedy Maciel","12:49","TKDA","Cont","0"
+2021,"66",1,"Kennedy Maciel","12:45","BTKA","Reset","0"
+2021,"66",1,"","12:24","CLI","Cont","0"
+2021,"66",1,"Augusto Mendes","8:55","SUBA","Cont","0"
+2021,"66",1,"Augusto Mendes","8:55","RST","Reset","0"
+2021,"66",1,"Augusto Mendes","7:33","TKDA","Cont","0"
+2021,"66",1,"Kennedy Maciel","5:27","TKDA","Cont","0"
+2021,"66",1,"Augusto Mendes","5:24","SUBA","Cont","0"
+2021,"66",1,"Augusto Mendes","5:16","SUBA","Reset","0"
+2021,"66",1,"Augusto Mendes","5:16","RST","Reset","0"
+2021,"66",1,"Kennedy Maciel","4:55","TKDA","Cont","0"
+2021,"66",1,"Augusto Mendes","1:58","BTK","Cont","3"
+2021,"66",1,"Kennedy Maciel","0:28","SUBA","Time end","0"
+2021,"66",2,"Paulo Miyao","9:59","PGD","Cont","0"
+2021,"66",2,"Paulo Miyao","7:12","SUBA","Cont","0"
+2021,"66",2,"Paulo Miyao","7:07","SWP","Cont","0"
+2021,"66",2,"Paulo Miyao","7:00","GPSA","Cont","0"
+2021,"66",2,"Paulo Miyao","6:39","GPS","Cont","0"
+2021,"66",2,"Paulo Miyao","6:21","GPS","Reset","0"
+2021,"66",2,"Paulo Miyao","6:21","RST","Reset","0"
+2021,"66",2,"Paulo Miyao","5:15","CLI","Cont","0"
+2021,"66",2,"Tye Ruotolo","4:56","CLI","Cont","0"
+2021,"66",2,"Paulo Miyao","4:49","PGD","Cont","Penalty -1"
+2021,"66",2,"Tye Ruotolo","3:36","GPSA","Cont","0"
+2021,"66",2,"Tye Ruotolo","3:00","SUBA","Cont","0"
+2021,"66",2,"Paulo Miyao","3:00","SWP","Point","2"
+2021,"66",2,"Tye Ruotolo","2:35","SWPA","Reset","0"
+2021,"66",2,"Tye Ruotolo","2:35","RST","Reset","0"
+2021,"66",2,"Tye Ruotolo","2:33","CLI","Cont","0"
+2021,"66",2,"Paulo Miyao","2:25","PGD","Cont","Penalty -1"
+2021,"66",2,"Tye Ruotolo","2:23","SUBA","Cont","0"
+2021,"66",2,"Tye Ruotolo","0:37","SUBA","Cont","0"
+2021,"66",2,"Paulo Miyao","0:36","SWPA","Cont","0"
+2021,"66",2,"Tye Ruotolo","0:15","SUBA","Time end","0"
+2021,"66",2,"Paulo Miyao","4:35","TKDA","Cont","0"
+2021,"66",2,"Paulo Miyao","1:46","SWP","Point","2"
+2021,"66",2,"Tye Ruotolo","0:40","SWPA","Reset","0"
+2021,"66",2,"Paulo Miyao","0:36","CLI","Cont","0"
+2021,"66",2,"Paulo Miyao","0:33","PGD","Cont","Penalty -1"
+2021,"66",2,"Tye Ruotolo","0:27","SUBA","Cont","0"
+2021,"66",2,"Tye Ruotolo","0:17","SUBA","Cont","0"
+2021,"66",2,"Tye Ruotolo","0:17","RST","Cont","0"
+2021,"66",2,"Tye Ruotolo","0:12","CLI","Time end","0"
+2021,"66",3,"Paulo Miyao","9:59","PGD","Cont","0"
+2021,"66",3,"Paulo Miyao","7:51","SWP","Reset","0"
+2021,"66",3,"Paulo Miyao","7:51","RST","Reset","0"
+2021,"66",3,"Augusto Mendes","7:29","CLI","Cont","0"
+2021,"66",3,"Paulo Miyao","7:28","PGD","Cont","0"
+2021,"66",3,"Paulo Miyao","6:15","SWPA","Cont","0"
+2021,"66",3,"Paulo Miyao","5:23","SWPA","Cont","0"
+2021,"66",3,"Augusto Mendes","5:08","PGD","Cont","0"
+2021,"66",3,"Paulo Miyao","4:49","SUBA","Cont","0"
+2021,"66",3,"Augusto Mendes","4:49","SUBA","Cont","0"
+2021,"66",3,"Paulo Miyao","4:45","PGD","Time end","0"
+2021,"66",4,"Kennedy Maciel","9:58","PGD","Cont","0"
+2021,"66",4,"Tye Ruotolo","7:41","GPSA","Cont","0"
+2021,"66",4,"Tye Ruotolo","7:33","GPSA","Cont","0"
+2021,"66",4,"Tye Ruotolo","7:28","PGD","Reset","0"
+2021,"66",4,"Tye Ruotolo","7:28","RST","Reset","0"
+2021,"66",4,"Tye Ruotolo","7:19","CLI","Cont","0"
+2021,"66",4,"Tye Ruotolo","6:33","GPSA","Cont","0"
+2021,"66",4,"Tye Ruotolo","5:05","PGD","Reset","0"
+2021,"66",4,"Tye Ruotolo","4:54","CLI","Cont","0"
+2021,"66",4,"Tye Ruotolo","4:07","GPSA","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:26","SWPA","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:26","RST","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:11","TKDA","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:10","GPSA","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:04","BTKA","Cont","0"
+2021,"66",4,"Kennedy Maciel","2:23","BTKA","Cont","0"
+2021,"66",4,"Tye Ruotolo","0:42","SUBA","Time end","0"
+2021,"66",4,"Tye Ruotolo","0:42","RST","Time end","0"
+2021,"66",4,"","4:48","CLI","Cont","0"
+2021,"66",4,"Kennedy Maciel","3:27","TKDA","Cont","0"
+2021,"66",4,"Tye Ruotolo","3:20","SUBA","Cont","0"
+2021,"66",4,"Kennedy Maciel","0:58","GPSA","Cont","0"
+2021,"66",4,"Kennedy Maciel","0:55","BTKA","Cont","0"
+2021,"66",4,"Kennedy Maciel","0:49","SUBA","Cont","0"
+2021,"66",4,"Kennedy Maciel","0:35","BTK","Cont","0"
+2021,"66",4,"Kennedy Maciel","0:35","SUB","Submission","0"
+2021,"66",93,"Paulo Miyao","9:58","PGD","Cont","0"
+2021,"66",93,"Nicky Ryan","5:03","PGD","Reset","0"
+2021,"66",93,"Nicky Ryan","5:03","RST","Reset","0"
+2021,"66",93,"Paulo Miyao","4:57","CLI","Cont","0"
+2021,"66",93,"Nicky Ryan","4:13","CLI","Cont","0"
+2021,"66",93,"Paulo Miyao","4:06","PGD","Cont","Penalty               -1"
+2021,"66",93,"Paulo Miyao","3:32","SWPA","Cont","0"
+2021,"66",93,"Paulo Miyao","3:26","TKDA","Cont","0"
+2021,"66",93,"Paulo Miyao","3:24","PGD","Cont","0"
+2021,"66",93,"Paulo Miyao","3:03","SWP","Reset","2"
+2021,"66",93,"Paulo Miyao","3:03","RST","Reset","2"
+2021,"66",93,"Nicky Ryan","2:27","CLI","Cont","0"
+2021,"66",93,"","2:23","CLI","Cont","0"
+2021,"66",93,"Paulo Miyao","1:32","TKDA","Cont","0"
+2021,"66",93,"Paulo Miyao","1:23","PGD","Time end","0"
+2021,"66",5,"Matheus Gabriel","9:52","PGD","Cont","0"
+2021,"66",5,"Matheus Gabriel","3:32","SWPA","Time end","0"
+2021,"66",5,"","4:40","CLI","Cont","0"
+2021,"66",5,"Augusto Mendes","4:37","TKDA","Cont","0"
+2021,"66",5,"Augusto Mendes","2:54","TKDA","Cont","0"
+2021,"66",5,"Augusto Mendes","2:51","BTKA","Cont","0"
+2021,"66",5,"Augusto Mendes","2:51","RST","Cont","0"
+2021,"66",5,"Matheus Gabriel","2:35","CLI","Cont","0"
+2021,"66",5,"Matheus Gabriel","1:38","TKDA","Time end","0"
+2021,"66",6,"Pablo Mantovani","9:56","PGD","Cont","0"
+2021,"66",6,"Pablo Mantovani","7:09","SWPA","Cont","0"
+2021,"66",6,"Pablo Mantovani","7:06","BTKA","Cont","0"
+2021,"66",6,"Pablo Mantovani","7:01","BTK","Cont","0"
+2021,"66",6,"Pablo Mantovani","4:35","GPSA","Reset","0"
+2021,"66",6,"Pablo Mantovani","4:35","RST","Reset","0"
+2021,"66",6,"Tye Ruotolo","4:12","CLI","Cont","0"
+2021,"66",6,"Pablo Mantovani","4:12","CLI","Cont","0"
+2021,"66",6,"Pablo Mantovani","3:51","TKDA","Cont","0"
+2021,"66",6,"Tye Ruotolo","3:34","TKDA","Cont","0"
+2021,"66",6,"Tye Ruotolo","3:32","BTKA","Cont","0"
+2021,"66",6,"Tye Ruotolo","1:56","GPSA","Time end","0"
+2021,"66",6,"","4:47","CLI","Cont","0"
+2021,"66",6,"Tye Ruotolo","4:25","TKDA","Cont","0"
+2021,"66",6,"Tye Ruotolo","4:22","BTKA","Cont","0"
+2021,"66",6,"Tye Ruotolo","4:12","SUBA","Reset","0"
+2021,"66",6,"Tye Ruotolo","4:12","RST","Reset","0"
+2021,"66",6,"Tye Ruotolo","4:06","TKDA","Cont","0"
+2021,"66",6,"Tye Ruotolo","2:22","BTKA","Cont","0"
+2021,"66",6,"Tye Ruotolo","2:19","GPSA","Cont","0"
+2021,"66",6,"Tye Ruotolo","2:11","SUBA","Cont","0"
+2021,"66",6,"Tye Ruotolo","2:01","GPSA","Time end","0"
+2021,"66",7,"Other Player1","1:00","PGD","Cont","0"
+2021,"66",7,"Kennedy Maciel","9:56","PGD","Cont","0"
+2021,"66",7,"Kennedy Maciel","8:09","SUBA","Cont","0"
+2021,"66",7,"Kennedy Maciel","4:13","SWPA","Cont","0"
+2021,"66",7,"Kennedy Maciel","3:16","SWP","Cont","2"
+2021,"66",7,"Kennedy Maciel","3:02","GPSA","Cont","0"
+2021,"66",7,"Kennedy Maciel","2:53","GPSA","Cont","0"
+2021,"66",7,"Kennedy Maciel","2:13","SUBA","Time end","0"
+2021,"66",8,"Kenta Iwamoto","9:56","PGD","Cont","0"
+2021,"66",8,"Kenta Iwamoto","9:36","SUBA","Cont","0"
+2021,"66",8,"Kenta Iwamoto","9:11","SUBA","Cont","0"
+2021,"66",8,"Paulo Miyao","8:08","BTKA","Cont","0"
+2021,"66",8,"Paulo Miyao","8:01","PGD","Cont","0"
+2021,"66",8,"Paulo Miyao","7:02","SUBA","Cont","0"
+2021,"66",8,"Paulo Miyao","5:15","GPSA","Cont","0"
+2021,"66",8,"Paulo Miyao","5:06","BTKA","Cont","0"
+2021,"66",8,"Paulo Miyao","4:28","BTK","Cont","3"
+2021,"66",8,"Paulo Miyao","1:29","SUBA","Cont","0"
+2021,"66",8,"Paulo Miyao","1:04","SWP","Cont","2"
+2021,"66",8,"Kenta Iwamoto","0:33","SWPA","Cont","0"
+2021,"66",8,"Kenta Iwamoto","0:33","RST","Cont","0"
+2021,"66",8,"Kenta Iwamoto","0:02","CLI","Cont","0"
+2021,"66",8,"Paulo Miyao","0:01","TKDA","Cont","0"
+2021,"66",9,"Nicky Ryan","9:57","PGD","Cont","0"
+2021,"66",9,"Nicky Ryan","7:42","SWP","Cont","0"
+2021,"66",9,"Shane Jamil Hill-Taylor","0:54","SWPA","Cont","0"
+2021,"66",9,"Nicky Ryan","0:49","SUBA","Cont","0"
+2021,"66",9,"Nicky Ryan","0:31","SWP","Cont","0"
+2021,"66",9,"Nicky Ryan","0:28","SWP","Cont","2"
+2021,"66",9,"Shane Jamil Hill-Taylor","0:25","SWPA","Cont","0"
+2021,"66",9,"Shane Jamil Hill-Taylor","0:25","RST","Cont","0"
+2021,"66",9,"Shane Jamil Hill-Taylor","0:02","CLI","Cont","0"
+2021,"66",9,"Nicky Ryan","0:01","SUBA","Time End","0"
+2021,"66",10,"","9:57","CLI","Cont","0"
+2021,"66",10,"Other Player2","9:50","TKDA","Cont","0"
+2021,"66",10,"Augusto Mendes","9:33","TKD","Cont","0"
+2021,"66",10,"Augusto Mendes","5:50","SUBA","Cont","0"
+2021,"66",10,"Augusto Mendes","3:32","GPSA","Cont","0"
+2021,"66",10,"Augusto Mendes","3:15","GPS","Cont","0"
+2021,"66",10,"Augusto Mendes","3:06","SUBA","Cont","0"
+2021,"66",10,"Augusto Mendes","2:45","SUBA","Cont","0"
+2021,"66",10,"Augusto Mendes","2:13","SUB","Submission","0"
+2021,"66",11,"GEo Martinez","9:14","PGD","Cont","0"
+2021,"66",11,"","8:36","CLI","Cont","0"
+2021,"66",11,"Matheus Gabriel","8:19","PGD","Reset","0"
+2021,"66",11,"Matheus Gabriel","7:49","SWPA","Cont","0"
+2021,"66",11,"Matheus Gabriel","7:49","RST","Cont","0"
+2021,"66",11,"GEo Martinez","7:46","CLI","Cont","0"
+2021,"66",11,"Matheus Gabriel","5:29","SWPA","Reset","0"
+2021,"66",11,"Matheus Gabriel","2:51","SWPA","Time end","0"
+2021,"66",11,"","4:30","CLI","Cont","0"
+2021,"66",11,"Matheus Gabriel","3:31","TKDA","Cont","0"
+2021,"66",11,"GEo Martinez","3:30","SUBA","Cont","0"
+2021,"66",11,"Matheus Gabriel","1:42","TKDA","Cont","0"
+2021,"66",11,"Matheus Gabriel","0:27","TKDA","Cont","0"
+2021,"66",11,"GEo Martinez","0:20","SWPA","Time end","0"
+2021,"66",12,"Pablo Mantovani","9:59","SUBA","Cont","0"
+2021,"66",12,"Pablo Mantovani","4:34","SWPA","Cont","0"
+2021,"66",12,"Thomas Halpin","4:31","SWPA","Cont","0"
+2021,"66",12,"Pablo Mantovani","3:41","SWP","Cont","2"
+2021,"66",12,"Pablo Mantovani","3:41","RST","Cont","2"
+2021,"66",12,"Thomas Halpin","2:21","CLI","Cont","0"
+2021,"66",12,"","2:09","CLI","Cont","0"
+2021,"66",12,"Thomas Halpin","2:03","TKDA","Cont","0"
+2021,"66",12,"Pablo Mantovani","1:38","SUBA","Cont","0"
+2021,"66",12,"Pablo Mantovani","1:25","BTKA","Cont","0"
+2021,"66",12,"Pablo Mantovani","1:01","BTK","Cont","3"
+2021,"66",12,"Pablo Mantovani","0:40","BTK","Cont","3"
+2021,"66",12,"Pablo Mantovani","0:24","BTK","Cont","3"
+2021,"66",12,"Pablo Mantovani","0:09","GPS","Time end","2"
+2021,"66",13,"Bruno Frazatto","9:58","PGD","Cont","0"
+2021,"66",13,"Tye Ruotolo","5:44","CLI","Cont","0"
+2021,"66",13,"Tye Ruotolo","5:09","PGD","Cont","0"
+2021,"66",13,"Tye Ruotolo","5:05","SUBA","Cont","0"
+2021,"66",13,"Bruno Frazatto","4:54","SWPA","Cont","0"
+2021,"66",13,"Tye Ruotolo","4:25","SWPA","Cont","0"
+2021,"66",13,"Tye Ruotolo","3:48","SWPA","Cont","0"
+2021,"66",13,"Tye Ruotolo","3:46","SWPA","Cont","0"
+2021,"66",13,"Tye Ruotolo","3:41","BTKA","Cont","0"
+2021,"66",13,"Tye Ruotolo","3:32","GPSA","Cont","0"
+2021,"66",13,"Bruno Frazatto","2:38","SUBA","Cont","0"
+2021,"66",13,"Tye Ruotolo","2:24","SWPA","Cont","0"
+2021,"66",13,"Tye Ruotolo","1:18","SWPA","Cont","0"
+2021,"66",13,"Bruno Frazatto","0:24","SWPA","Cont","0"
+2021,"66",13,"Bruno Frazatto","0:14","SUBA","Cont","0"
+2021,"66",13,"Tye Ruotolo","0:10","SWPA","Time end","0"
+2021,"66",13,"","4:39","CLI","Cont","0"
+2021,"66",13,"Tye Ruotolo","4:19","TKD","Reset","2"
+2021,"66",13,"Bruno Frazatto","4:13","CLI","Cont","0"
+2021,"66",13,"Bruno Frazatto","4:11","PGD","Cont","0"
+2021,"66",13,"Bruno Frazatto","0:59","CLI","Time end","0"
+2021,"66",14,"Gianni Grippo","9:55","PGD","Reset","0"
+2021,"66",14,"Gianni Grippo","2:16","SWP","Cont","2"
+2021,"66",14,"Gianni Grippo","2:07","SUBA","Cont","0"
+2021,"66",14,"Richard Alarcon","1:10","GPSA","Cont","2"
+2021,"66",14,"Richard Alarcon","0:56","BTKA","Cont","0"
+2021,"66",14,"Richard Alarcon","0:18","SWPA","Cont","0"
+2021,"66",14,"Richard Alarcon","0:14","GPSA","Time end","0"
+2021,"66",14,"","4:45","CLI","Cont","0"
+2021,"66",14,"Richard Alarcon","3:58","TKDA","Reset","0"
+2021,"66",14,"Richard Alarcon","3:54","BTKA","Cont","0"
+2021,"66",14,"Richard Alarcon","3:48","BTKA","Cont","0"
+2021,"66",14,"Richard Alarcon","3:17","SUBA","Cont","0"
+2021,"66",14,"Richard Alarcon","2:05","TKD","Cont","2"
+2021,"66",14,"Gianni Grippo","1:19","SWPA","Cont","0"
+2021,"66",14,"Gianni Grippo","0:54","SWPA","Cont","0"
+2021,"66",14,"Gianni Grippo","0:48","SUBA","Cont","0"
+2021,"66",14,"Gianni Grippo","0:30","SUBA","Time end","0"
+2021,"66",15,"","9:55","CLI","Cont","0"
+2021,"66",15,"Kennedy Maciel","9:38","PGD","Cont","0"
+2021,"66",15,"Ruan Alvarenga","9:35","GPSA","Cont","0"
+2021,"66",15,"Kennedy Maciel","5:38","SWP","Cont","0"
+2021,"66",15,"Ruan Alvarenga","4:59","SWPA","Cont","0"
+2021,"66",15,"Ruan Alvarenga","4:57","BTKA","Cont","0"
+2021,"66",15,"Ruan Alvarenga","4:54","BTK","Cont","3"
+2021,"66",15,"Ruan Alvarenga","2:19","CLI","Cont","0"
+2021,"66",15,"Kennedy Maciel","1:49","TKD","Reset","2"
+2021,"66",15,"Ruan Alvarenga","1:31","SWPA","Cont","0"
+2021,"66",15,"Kennedy Maciel","1:28","SUB","Submission","0"
+2021,"77",16,"","19:55","CLI","Cont","0"
+2021,"77",16,"Vagner Rocha","11:44","BTKA","Cont","0"
+2021,"77",16,"JT Torres","8:55","TKDA","Cont","0"
+2021,"77",16,"Vagner Rocha","4:55","TKDA","Cont","0"
+2021,"77",16,"JT Torres","4:54","SUBA","Cont","0"
+2021,"77",16,"JT Torres","4:54","RST","Cont","0"
+2021,"77",16,"JT Torres","4:47","CLI","Cont","0"
+2021,"77",16,"JT Torres","3:10","TKDA","Reset","0"
+2021,"77",16,"JT Torres","3:08","BTKA","Cont","0"
+2021,"77",16,"JT Torres","3:05","BTK","Cont","3"
+2021,"77",16,"JT Torres","0:01","SUB","Submission","0"
+2021,"77",17,"Dante Leon","9:58","PGD","Cont","0"
+2021,"77",17,"Garry Tonon","9:12","PGD","Cont","0"
+2021,"77",17,"Garry Tonon","9:03","SUBA","Cont","0"
+2021,"77",17,"Dante Leon","8:54","BTKA","Cont","0"
+2021,"77",17,"Dante Leon","8:12","SWP","Cont","0"
+2021,"77",17,"Dante Leon","8:12","RST","Cont","0"
+2021,"77",17,"Garry Tonon","7:55","CLI","Cont","0"
+2021,"77",17,"Dante Leon","7:53","CLI","Reset","0"
+2021,"77",17,"Garry Tonon","7:52","PGD","Cont","0"
+2021,"77",17,"Garry Tonon","7:50","CLI","Cont","0"
+2021,"77",17,"","7:49","CLI","Cont","0"
+2021,"77",17,"Garry Tonon","7:13","TKD","Cont","0"
+2021,"77",17,"Dante Leon","6:45","BTKA","Cont","0"
+2021,"77",17,"Dante Leon","6:11","SWPA","Cont","0"
+2021,"77",17,"Garry Tonon","5:55","SUBA","Cont","0"
+2021,"77",17,"Garry Tonon","5:30","PGD","Cont","0"
+2021,"77",17,"Garry Tonon","4:41","SUB","Submission","0"
+2021,"77",18,"","9:50","CLI","Cont","0"
+2021,"77",18,"Garry Tonon","9:22","PGD","Cont","0"
+2021,"77",18,"Garry Tonon","9:20","CLI","Cont","0"
+2021,"77",18,"JT Torres","8:56","TKD","Reset","0"
+2021,"77",18,"JT Torres","8:50","GPSA","Cont","0"
+2021,"77",18,"JT Torres","8:23","BTKA","Cont","0"
+2021,"77",18,"Garry Tonon","6:33","SUBA","Cont","0"
+2021,"77",18,"Garry Tonon","6:33","RST","Cont","0"
+2021,"77",18,"Garry Tonon","3:26","CLI","Cont","0"
+2021,"77",18,"Garry Tonon","1:03","SWPA","Reset","0"
+2021,"77",18,"Garry Tonon","0:55","SUBA","Cont","0"
+2021,"77",18,"Garry Tonon","0:55","RST","Cont","0"
+2021,"77",18,"Garry Tonon","0:26","CLI","Cont","0"
+2021,"77",18,"JT Torres","0:24","CLI","Reset","0"
+2021,"77",18,"","4:55","CLI","Cont","0"
+2021,"77",18,"JT Torres","4:11","BTKA","Cont","0"
+2021,"77",18,"JT Torres","4:11","RST","Cont","0"
+2021,"77",18,"JT Torres","2:30","TKDA","Cont","0"
+2021,"77",18,"JT Torres","2:27","BTKA","Cont","0"
+2021,"77",18,"JT Torres","1:49","GPS","Cont","2"
+2021,"77",18,"JT Torres","1:49","SUBA","Cont","0"
+2021,"77",18,"JT Torres","0:43","BTKA","Cont","0"
+2021,"77",18,"JT Torres","0:43","RST","Cont","0"
+2021,"77",18,"Garry Tonon","0:12","CLI","Cont","0"
+2021,"77",18,"Garry Tonon","0:09","SUBA","Time end","0"
+2021,"77",19,"","9:53","CLI","Cont","0"
+2021,"77",19,"Dante Leon","9:46","PGD","Cont","0"
+2021,"77",19,"Dante Leon","9:02","SWPA","Cont","0"
+2021,"77",19,"Dante Leon","8:39","SWP","Cont","0"
+2021,"77",19,"Vagner Rocha","2:35","GPSA","Cont","0"
+2021,"77",19,"Dante Leon","1:24","SWPA","Time end","0"
+2021,"77",19,"Dante Leon","1:24","RST","Time end","0"
+2021,"77",19,"","4:59","CLI","Cont","0"
+2021,"77",19,"Vagner Rocha","4:49","TKDA","Reset","0"
+2021,"77",19,"Dante Leon","4:47","SUBA","Cont","0"
+2021,"77",19,"Dante Leon","4:39","CLI","Cont","0"
+2021,"77",19,"Vagner Rocha","3:50","TKDA","Cont","0"
+2021,"77",19,"Vagner Rocha","2:51","SUBA","Cont","0"
+2021,"77",19,"Vagner Rocha","1:57","TKDA","Cont","0"
+2021,"77",19,"Dante Leon","1:56","SUBA","Cont","0"
+2021,"77",19,"Dante Leon","1:08","CLI","Time end","0"
+2021,"77",20,"","9:59","CLI","Cont","0"
+2021,"77",20,"Other Player3","9:55","TKDA","Cont","0"
+2021,"77",20,"JT Torres","5:22","TKD","Cont","0"
+2021,"77",20,"JT Torres","3:11","GPSA","Cont","0"
+2021,"77",20,"JT Torres","2:23","BTK","Time end","3"
+2021,"77",21,"","9:58","CLI","Cont","0"
+2021,"77",21,"Garry Tonon","9:55","BTKA","Cont","0"
+2021,"77",21,"Renato Canuto","9:43","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","9:41","CLI","Cont","0"
+2021,"77",21,"Renato Canuto","9:41","CLI","Reset","0"
+2021,"77",21,"Garry Tonon","9:05","BTKA","Cont","0"
+2021,"77",21,"Garry Tonon","7:21","SUBA","Cont","0"
+2021,"77",21,"Renato Canuto","7:15","GPSA","Cont","0"
+2021,"77",21,"Garry Tonon","6:59","CLI","Cont","0"
+2021,"77",21,"Renato Canuto","6:28","TKD","Reset","0"
+2021,"77",21,"Renato Canuto","6:27","GPSA","Cont","0"
+2021,"77",21,"Renato Canuto","6:27","RST","Cont","0"
+2021,"77",21,"Garry Tonon","5:24","CLI","Cont","0"
+2021,"77",21,"Renato Canuto","5:19","BTKA","Cont","0"
+2021,"77",21,"Garry Tonon","4:35","SWPA","Cont","0"
+2021,"77",21,"Garry Tonon","3:45","SWPA","Cont","0"
+2021,"77",21,"Garry Tonon","3:00","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","2:57","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","1:42","SUBA","Cont","0"
+2021,"77",21,"Garry Tonon","1:05","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","0:47","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","0:30","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","0:09","BTKA","Time end","0"
+2021,"77",21,"","4:59","CLI","Cont","0"
+2021,"77",21,"Renato Canuto","4:32","SUBA","Cont","0"
+2021,"77",21,"Garry Tonon","4:14","TKDA","Cont","0"
+2021,"77",21,"Garry Tonon","4:09","BTKA","Cont","0"
+2021,"77",21,"Renato Canuto","3:14","SUBA","Cont","0"
+2021,"77",21,"Garry Tonon","1:43","TKDA","Cont","0"
+2021,"77",21,"Renato Canuto","1:41","SUBA","Cont","0"
+2021,"77",21,"Garry Tonon","0:58","TKDA","Time end","0"
+2021,"77",22,"","","CLI","Cont","0"
+2021,"77",22,"Lucas Lepri","8:24","TKD","Cont","0"
+2021,"77",22,"Dante Leon","6:12","SWP","Cont","0"
+2021,"77",22,"Dante Leon","6:12","RST","Cont","0"
+2021,"77",22,"Lucas Lepri","6:05","CLI","Cont","0"
+2021,"77",22,"Dante Leon","5:03","PGD","Cont","0"
+2021,"77",22,"Dante Leon","3:57","SWPA","Cont","0"
+2021,"77",22,"Dante Leon","3:54","BTKA","Cont","0"
+2021,"77",22,"Dante Leon","2:15","BTK","Time end","3"
+2021,"77",23,"","9:53","CLI","Cont","0"
+2021,"77",23,"Vagner Rocha","6:29","TKDA","Cont","0"
+2021,"77",23,"Vagner Rocha","6:04","TKDA","Cont","0"
+2021,"77",23,"Celso Vinicius","6:02","SUBA","Cont","0"
+2021,"77",23,"Vagner Rocha","5:14","BTKA","Cont","0"
+2021,"77",23,"Vagner Rocha","5:14","RST","Cont","0"
+2021,"77",23,"Vagner Rocha","5:05","CLI","Cont","0"
+2021,"77",23,"Vagner Rocha","3:17","TKDA","Cont","0"
+2021,"77",23,"Celso Vinicius","0:53","TKDA","Time end","0"
+2021,"77",23,"","4:55","CLI","Cont","0"
+2021,"77",23,"Vagner Rocha","4:32","TKDA","Reset","0"
+2021,"77",23,"Vagner Rocha","3:27","TKDA","Cont","0"
+2021,"77",23,"Celso Vinicius","3:25","SUBA","Time end","0"
+2021,"77",24,"Ross Nicholls","9:57","PGD","Cont","0"
+2021,"77",24,"Ross Nicholls","7:50","SUBA","Cont","0"
+2021,"77",24,"Ross Nicholls","7:09","SUBA","Cont","0"
+2021,"77",24,"Ross Nicholls","4:48","SUBA","Cont","0"
+2021,"77",24,"JT Torres","3:24","GPSA","Cont","0"
+2021,"77",24,"Ross Nicholls","1:33","SUBA","Time end","0"
+2021,"77",24,"Ross Nicholls","4:57","PGD","Cont","Penalty               -1"
+2021,"77",24,"Ross Nicholls","3:34","SUBA","Cont","0"
+2021,"77",24,"Ross Nicholls","3:34","RST","Cont","0"
+2021,"77",24,"JT Torres","3:26","CLI","Cont","0"
+2021,"77",24,"JT Torres","0:09","GPSA","Reset","0"
+2021,"77",24,"JT Torres","0:04","SUBA","Time end","0"
+2021,"77",25,"","9:59","CLI","Cont","0"
+2021,"77",25,"John Combs","7:34","TKDA","Cont","0"
+2021,"77",25,"DJ Jackson","5:55","TKD","Cont","0"
+2021,"77",25,"John Combs","5:44","SUBA","Cont","0"
+2021,"77",25,"John Combs","5:44","RST","Cont","0"
+2021,"77",25,"John Combs","4:35","CLI","Cont","0"
+2021,"77",25,"DJ Jackson","4:06","SUBA","Reset","0"
+2021,"77",25,"DJ Jackson","2:19","SUBA","Cont","0"
+2021,"77",25,"DJ Jackson","1:51","GPSA","Cont","0"
+2021,"77",25,"DJ Jackson","0:52","GPS","Cont","2"
+2021,"77",25,"DJ Jackson","0:29","GPS","Time end","3"
+2021,"77",26,"","9:59","CLI","Cont","0"
+2021,"77",26,"Garry Tonon","8:03","PGD","Cont","0"
+2021,"77",26,"Mateusz Gamrot","6:54","SUBA","Cont","0"
+2021,"77",26,"Garry Tonon","6:50","CLI","Cont","0"
+2021,"77",26,"Garry Tonon","6:46","PGD","Cont","0"
+2021,"77",26,"Garry Tonon","6:46","RST","Cont","0"
+2021,"77",26,"Garry Tonon","6:05","CLI","Cont","0"
+2021,"77",26,"Garry Tonon","5:29","TKD","Cont","0"
+2021,"77",26,"Garry Tonon","5:28","BTKA","Cont","0"
+2021,"77",26,"Garry Tonon","4:49","BTK","Cont","3"
+2021,"77",26,"Garry Tonon","3:46","SUB","Submission","0"
+2021,"77",27,"","9:51","CLI","Cont","0"
+2021,"77",27,"Oliver Taza","9:47","PGD","Cont","0"
+2021,"77",27,"Renato Canuto","9:42","GPSA","Cont","0"
+2021,"77",27,"Renato Canuto","9:42","RST","Cont","0"
+2021,"77",27,"Oliver Taza","9:29","CLI","Cont","0"
+2021,"77",27,"Oliver Taza","9:14","PGD","Reset","0"
+2021,"77",27,"Oliver Taza","9:11","SWPA","Cont","0"
+2021,"77",27,"Renato Canuto","9:10","BTK","Cont","0"
+2021,"77",27,"Renato Canuto","9:02","SUBA","Cont","0"
+2021,"77",27,"Renato Canuto","6:12","GPS","Cont","0"
+2021,"77",27,"Oliver Taza","5:44","PGD","Cont","0"
+2021,"77",27,"Oliver Taza","5:38","SUBA","Cont","0"
+2021,"77",27,"Oliver Taza","5:28","SUBA","Cont","0"
+2021,"77",27,"Oliver Taza","2:50","SWPA","Cont","0"
+2021,"77",27,"Oliver Taza","2:10","TKDA","Cont","0"
+2021,"77",27,"Oliver Taza","1:41","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","1:34","TKDA","Cont","0"
+2021,"77",27,"Oliver Taza","1:17","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","1:13","TKDA","Cont","0"
+2021,"77",27,"Oliver Taza","0:59","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","0:55","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","0:50","TKDA","Cont","0"
+2021,"77",27,"Oliver Taza","0:29","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","0:11","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","0:09","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","0:05","BTKA","Time end","0"
+2021,"77",27,"","4:54","CLI","Cont","0"
+2021,"77",27,"Oliver Taza","4:30","PGD","Cont","Penalty               -1"
+2021,"77",27,"Oliver Taza","3:11","CLI","Cont","0"
+2021,"77",27,"Oliver Taza","2:51","TKDA","Cont","0"
+2021,"77",27,"Renato Canuto","2:49","TKDA","Cont","0"
+2021,"77",27,"Oliver Taza","2:37","TKD","Cont","0"
+2021,"77",27,"Renato Canuto","2:35","GPSA","Cont","0"
+2021,"77",27,"Renato Canuto","2:35","RST","Cont","0"
+2021,"77",27,"Oliver Taza","2:13","CLI","Cont","0"
+2021,"77",27,"Renato Canuto","2:10","TKDA","Cont","2"
+2021,"77",27,"Renato Canuto","1:13","SUBA","Cont","0"
+2021,"77",27,"Oliver Taza","1:00","PGD","Time End","Penalty               -1"
+2021,"77",28,"Lucas Lepri","9:57","PGD","Cont","0"
+2021,"77",28,"Lachlan Giles","6:49","SUBA","Cont","0"
+2021,"77",28,"Lachlan Giles","6:00","SUBA","Cont","0"
+2021,"77",28,"Lucas Lepri","4:52","SWPA","Cont","0"
+2021,"77",28,"Lucas Lepri","3:26","GPSA","Cont","0"
+2021,"77",28,"Lucas Lepri","2:36","GPSA","Cont","0"
+2021,"77",28,"Lucas Lepri","2:35","BTKA","Cont","0"
+2021,"77",28,"Lucas Lepri","2:35","BTK","Cont","3"
+2021,"77",28,"Lucas Lepri","0:01","SUBA","Time end","0"
+2021,"77",29,"","9:57","CLI","Cont","0"
+2021,"77",29,"Jon Satav","9:55","PGD","Cont","0"
+2021,"77",29,"Jon Satav","9:53","SWPA","Cont","0"
+2021,"77",29,"Jon Satav","9:53","RST","Cont","0"
+2021,"77",29,"Jon Satav","9:45","CLI","Cont","0"
+2021,"77",29,"Jon Satav","9:31","PGD","Cont","0"
+2021,"77",29,"Jon Satav","9:25","SWP","Reset","0"
+2021,"77",29,"Jon Satav","9:25","RST","Reset","0"
+2021,"77",29,"Dante Leon","8:08","CLI","Cont","0"
+2021,"77",29,"Dante Leon","8:04","PGD","Cont","0"
+2021,"77",29,"Dante Leon","7:58","SUBA","Cont","0"
+2021,"77",29,"Dante Leon","7:50","SUBA","Cont","0"
+2021,"77",29,"Dante Leon","8:58","SUBA","Cont","0"
+2021,"77",29,"Dante Leon","4:34","SWPA","Cont","0"
+2021,"77",29,"Dante Leon","2:16","SUBA","Cont","0"
+2021,"77",29,"Jon Satav","0:33","GPSA","Cont","0"
+2021,"77",29,"Jon Satav","0:03","BTKA","Time end","0"
+2021,"77",29,"","4:57","CLI","Cont","0"
+2021,"77",29,"Dante Leon","4:08","TKDA","Cont","0"
+2021,"77",29,"Jon Satav","1:42","SUBA","Cont","0"
+2021,"77",29,"Dante Leon","1:36","TKDA","Cont","0"
+2021,"77",29,"Dante Leon","1:28","BTKA","Cont","0"
+2021,"77",29,"Dante Leon","1:18","BTK","Time end","3"
+2021,"77",30,"","9:56","CLI","Cont","0"
+2021,"77",30,"Sérvio Tulio","6:26","PGD","Time end","0"
+2021,"77",30,"","4:53","CLI","Cont","0"
+2021,"77",30,"Vagner Rocha","4:37","TKDA","Cont","0"
+2021,"77",30,"Vagner Rocha","4:35","BTKA","Cont","0"
+2021,"77",30,"Vagner Rocha","4:08","SUBA","Cont","0"
+2021,"77",30,"Vagner Rocha","4:02","SUB","Submission","0"
+2021,"77",31,"","9:53","CLI","Cont","0"
+2021,"77",31,"Edwin Najmi","7:54","PGD","Cont","0"
+2021,"77",31,"Celso Vinicius","3:25","SUBA","Cont","0"
+2021,"77",31,"Edwin Najmi","3:18","SUBA","Cont","0"
+2021,"77",31,"Edwin Najmi","3:14","GPSA","Cont","0"
+2021,"77",31,"Edwin Najmi","3:09","SUBA","Cont","0"
+2021,"77",31,"Edwin Najmi","3:09","RST","Cont","0"
+2021,"77",31,"","2:51","CLI","Cont","0"
+2021,"77",31,"Celso Vinicius","0:35","TKDA","Cont","0"
+2021,"77",31,"Celso Vinicius","0:32","BTKA","Time end","0"
+2021,"77",31,"Celso Vinicius","0:32","RST","Time end","0"
+2021,"77",31,"","4:51","CLI","Cont","0"
+2021,"77",31,"Celso Vinicius","1:32","TKDA","Cont","0"
+2021,"77",31,"Edwin Najmi","1:18","SUBA","Cont","0"
+2021,"77",31,"Celso Vinicius","0:50","TKDA","Cont","0"
+2021,"77",31,"Celso Vinicius","0:45","BTKA","Time end","0"
+2021,"88",32,"","19:56","CLI","Cont","0"
+2021,"88",32,"Matheus Diniz","19:21","TKD","Cont","0"
+2021,"88",32,"Craig Jones","15:55","SWPA","Cont","0"
+2021,"88",32,"Matheus Diniz","15:21","BTKA","Cont","0"
+2021,"88",32,"Matheus Diniz","13:30","GPSA","Cont","0"
+2021,"88",32,"Craig Jones","10:19","SUBA","Cont","0"
+2021,"88",32,"Craig Jones","5:25","SUBA","Cont","0"
+2021,"88",32,"Craig Jones","5:25","RST","Cont","0"
+2021,"88",32,"Craig Jones","5:04","CLI","Time end","0"
+2021,"88",32,"","9:53","CLI","Cont","0"
+2021,"88",32,"Matheus Diniz","6:37","TKDA","Cont","0"
+2021,"88",32,"Craig Jones","6:28","SUBA","Cont","0"
+2021,"88",32,"Matheus Diniz","5:46","TKD","Cont","2"
+2021,"88",32,"Craig Jones","5:28","SUBA","Cont","0"
+2021,"88",32,"Craig Jones","5:28","RST","Cont","0"
+2021,"88",32,"Craig Jones","3:57","CLI","Cont","0"
+2021,"88",32,"Craig Jones","2:14","SUBA","Cont","0"
+2021,"88",32,"Matheus Diniz","1:26","TKDA","Cont","0"
+2021,"88",32,"Craig Jones","1:18","PGD","Time End","Penalty               -1"
+2021,"88",33,"Jon Blank","9:59","PGD","Cont","0"
+2021,"88",33,"Josh Hinger","9:16","GPSA","Cont","0"
+2021,"88",33,"Jon Blank","9:08","SUBA","Cont","0"
+2021,"88",33,"Jon Blank","9:08","RST","Cont","0"
+2021,"88",33,"Josh Hinger","8:56","CLI","Cont","0"
+2021,"88",33,"Jon Blank","8:09","SWPA","Cont","0"
+2021,"88",33,"Jon Blank","8:06","SWPA","Cont","0"
+2021,"88",33,"Josh Hinger","8:04","SUBA","Cont","0"
+2021,"88",33,"Josh Hinger","8:01","GPS","Cont","0"
+2021,"88",33,"Josh Hinger","5:01","SUBA","Cont","0"
+2021,"88",33,"Josh Hinger","5:00","GPS","Time End","3"
+2021,"88",34,"Craig Jones","9:58","PGD","Cont","0"
+2021,"88",34,"Craig Jones","9:42","SUBA","Cont","0"
+2021,"88",34,"Craig Jones","9:28","GPS","Cont","0"
+2021,"88",34,"Craig Jones","8:39","SUBA","Cont","0"
+2021,"88",34,"Jon Blank","8:12","SUBA","Cont","0"
+2021,"88",34,"Craig Jones","8:08","BTK","Cont","0"
+2021,"88",34,"Craig Jones","8:05","SUB","Submission","0"
+2021,"88",35,"","10:00","CLI","Cont","0"
+2021,"88",35,"Matheus Diniz","6:30","TKDA","Cont","0"
+2021,"88",35,"Josh Hinger","6:28","TKDA","Cont","0"
+2021,"88",35,"Matheus Diniz","0:46","GPSA","Cont","0"
+2021,"88",35,"Matheus Diniz","0:12","GPS","Time end","3"
+2021,"88",36,"Craig Jones","9:58","PGD","Cont","0"
+2021,"88",36,"Craig Jones","9:50","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","9:02","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","9:00","SWPA","Cont","0"
+2021,"88",36,"Mason Fowler","8:57","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","8:54","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","8:51","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","8:44","BTKA","Cont","0"
+2021,"88",36,"Craig Jones","8:23","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","8:17","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","8:11","BTKA","Cont","0"
+2021,"88",36,"Craig Jones","8:06","GPSA","Cont","0"
+2021,"88",36,"Craig Jones","8:06","RST","Cont","0"
+2021,"88",36,"Mason Fowler","7:35","CLI","Cont","0"
+2021,"88",36,"Craig Jones","6:45","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","6:42","SUBA","Cont","0"
+2021,"88",36,"Mason Fowler","6:31","BTKA","Cont","0"
+2021,"88",36,"Craig Jones","6:26","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","6:26","RST","Cont","0"
+2021,"88",36,"Mason Fowler","6:24","CLI","Cont","0"
+2021,"88",36,"Craig Jones","5:39","SWP","Cont","0"
+2021,"88",36,"Craig Jones","5:12","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","4:13","BTKA","Cont","0"
+2021,"88",36,"Craig Jones","4:13","RST","Cont","0"
+2021,"88",36,"Mason Fowler","4:11","CLI","Cont","0"
+2021,"88",36,"Mason Fowler","4:04","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","4:03","SUBA","Cont","0"
+2021,"88",36,"Mason Fowler","3:56","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","3:53","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","3:46","SUBA","Cont","0"
+2021,"88",36,"Craig Jones","3:45","SWPA","Cont","0"
+2021,"88",36,"Mason Fowler","3:12","SWPA","Cont","0"
+2021,"88",36,"Mason Fowler","3:12","RST","Cont","0"
+2021,"88",36,"Craig Jones","3:03","CLI","Cont","0"
+2021,"88",36,"Mason Fowler","2:54","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","2:43","SWPA","Cont","0"
+2021,"88",36,"Craig Jones","2:37","BTKA","Cont","0"
+2021,"88",36,"Craig Jones","2:37","RST","Cont","0"
+2021,"88",36,"Craig Jones","2:23","CLI","Cont","0"
+2021,"88",36,"Mason Fowler","0:45","TKDA","Cont","0"
+2021,"88",36,"Craig Jones","0:44","SUB","Submission","0"
+2021,"88",37,"","9:57","CLI","Cont","0"
+2021,"88",37,"Jon Blank","9:55","PGD","Cont","0"
+2021,"88",37,"Jon Blank","7:43","SWPA","Cont","0"
+2021,"88",37,"Jon Blank","7:33","PGD","Cont","0"
+2021,"88",37,"Jon Blank","6:58","SWPA","Cont","0"
+2021,"88",37,"Jon Blank","6:50","PGD","Cont","0"
+2021,"88",37,"Murilo Santana","6:11","GPSA","Cont","0"
+2021,"88",37,"Murilo Santana","6:11","RST","Cont","0"
+2021,"88",37,"Jon Blank","6:10","CLI","Cont","0"
+2021,"88",37,"Jon Blank","6:06","PGD","Cont","0"
+2021,"88",37,"Jon Blank","3:37","SUBA","Cont","0"
+2021,"88",37,"Jon Blank","0:51","SWPA","Time end","0"
+2021,"88",37,"","4:57","CLI","Cont","0"
+2021,"88",37,"Murilo Santana","0:25","TKDA","Cont","0"
+2021,"88",37,"Jon Blank","0:22","SUBA","Time end","0"
+2021,"88",38,"Adam Wardzinski","9:58","PGD","Cont","0"
+2021,"88",38,"Josh Hinger","9:08","GPSA","Cont","0"
+2021,"88",38,"Adam Wardzinski","6:40","CLI","Cont","0"
+2021,"88",38,"Adam Wardzinski","6:38","PGD","Cont","0"
+2021,"88",38,"Adam Wardzinski","6:27","SUBA","Cont","0"
+2021,"88",38,"Adam Wardzinski","5:55","SUBA","Cont","0"
+2021,"88",38,"Adam Wardzinski","5:10","SUBA","Cont","0"
+2021,"88",38,"Adam Wardzinski","4:33","SUBA","Cont","0"
+2021,"88",38,"Josh Hinger","3:48","GPS","Cont","3"
+2021,"88",38,"Adam Wardzinski","0:50","SWPA","Cont","0"
+2021,"88",38,"Josh Hinger","0:50","SUB","Submission","0"
+2021,"88",39,"","9:57","CLI","Cont","0"
+2021,"88",39,"Matheus Diniz","8:24","TKD","Reset","0"
+2021,"88",39,"Matheus Diniz","8:24","RST","Reset","0"
+2021,"88",39,"Gabriel Arges","7:20","CLI","Cont","0"
+2021,"88",39,"Gabriel Arges","6:35","PGD","Cont","0"
+2021,"88",39,"Gabriel Arges","3:44","SWPA","Cont","0"
+2021,"88",39,"Matheus Diniz","1:39","GPSA","Cont","0"
+2021,"88",39,"Gabriel Arges","1:38","SWPA","Time end","0"
+2021,"88",39,"","4:57","CLI","Cont","0"
+2021,"88",39,"Gabriel Arges","2:48","TKDA","Cont","0"
+2021,"88",39,"Matheus Diniz","2:22","TKDA","Cont","0"
+2021,"88",39,"Matheus Diniz","1:11","TKDA","Cont","0"
+2021,"88",39,"Matheus Diniz","1:08","BTKA","Cont","0"
+2021,"88",39,"Gabriel Arges","0:11","TKDA","Time end","0"
+2021,"88",40,"Craig Jones","9:56","PGD","Cont","0"
+2021,"88",40,"Craig Jones","9:27","SWPA","Cont","0"
+2021,"88",40,"Craig Jones","9:16","PGD","Cont","0"
+2021,"88",40,"Craig Jones","9:00","SUBA","Cont","0"
+2021,"88",40,"Craig Jones","8:24","PGD","Cont","0"
+2021,"88",40,"Craig Jones","7:29","SWP","Cont","0"
+2021,"88",40,"Ben Dyson","6:21","SWP","Cont","0"
+2021,"88",40,"Craig Jones","6:02","SUBA","Cont","0"
+2021,"88",40,"Craig Jones","5:15","SUBA","Cont","0"
+2021,"88",40,"Craig Jones","5:02","SUBA","Cont","0"
+2021,"88",40,"Craig Jones","4:58","SUBA","Cont","0"
+2021,"88",40,"Craig Jones","3:41","SUB","Submission","0"
+2021,"88",41,"Mason Fowler","6:35","SUBA","Cont","0"
+2021,"88",41,"Mason Fowler","4:13","SWPA","Cont","0"
+2021,"88",41,"Mason Fowler","4:11","BTKA","Cont","0"
+2021,"88",41,"Valdir Araújo","4:05","SUBA","Cont","0"
+2021,"88",41,"Mason Fowler","2:47","TKDA","Cont","0"
+2021,"88",41,"Valdir Araújo","2:46","SUBA","Cont","0"
+2021,"88",41,"Mason Fowler","1:53","GPSA","Cont","0"
+2021,"88",41,"Valdir Araújo","1:50","SWPA","Cont","0"
+2021,"88",41,"Mason Fowler","1:32","TKDA","Cont","0"
+2021,"88",41,"Valdir Araújo","1:24","BTKA","Cont","0"
+2021,"88",41,"Mason Fowler","1:10","TKDA","Cont","0"
+2021,"88",41,"Mason Fowler","0:52","SUBA","Time end","0"
+2021,"88",41,"","4:53","CLI","Cont","0"
+2021,"88",41,"Mason Fowler","2:29","SUBA","Reset","0"
+2021,"88",41,"Mason Fowler","1:43","TKDA","Cont","0"
+2021,"88",41,"Mason Fowler","1:40","BTKA","Cont","0"
+2021,"88",41,"Mason Fowler","0:06","SUBA","Time end","0"
+2021,"88",42,"","9:58","CLI","Cont","0"
+2021,"88",42,"Other Player4","9:55","PGD","Cont","0"
+2021,"88",42,"Jon Blank","9:43","PGD","Cont","0"
+2021,"88",42,"Jon Blank","8:12","SUBA","Cont","0"
+2021,"88",42,"Jon Blank","5:37","SUBA","Cont","0"
+2021,"88",42,"Jon Blank","3:31","SUB","Submission","0"
+2021,"88",43,"","9:55","CLI","Cont","0"
+2021,"88",43,"Keller Locke","8:13","TKD","Cont","0"
+2021,"88",43,"Murilo Santana","8:06","PGD","Cont","0"
+2021,"88",44,"","9:58","CLI","Cont","0"
+2021,"88",44,"Gabriel Almedia","8:31","SUBA","Cont","0"
+2021,"88",44,"Josh Hinger","7:06","TKDA","Cont","0"
+2021,"88",44,"Gabriel Almedia","7:05","SUBA","Cont","0"
+2021,"88",44,"Josh Hinger","7:02","SWPA","Cont","0"
+2021,"88",44,"Josh Hinger","6:34","GPS","Cont","0"
+2021,"88",44,"Josh Hinger","3:03","SUBA","Cont","0"
+2021,"88",44,"Gabriel Almedia","1:38","SWPA","Cont","0"
+2021,"88",44,"Josh Hinger","1:37","SUBA","Cont","0"
+2021,"88",44,"Josh Hinger","1:37","RST","Cont","0"
+2021,"88",44,"","1:31","CLI","Cont","0"
+2021,"88",44,"Josh Hinger","1:16","BTKA","Cont","0"
+2021,"88",44,"Josh Hinger","0:27","BTK","Cont","3"
+2021,"88",44,"Josh Hinger","0:25","SUB","Submission","0"
+2021,"88",45,"Adam Wardzinski","9:56","PGD","Cont","0"
+2021,"88",45,"Mike Perez","8:42","SUBA","Cont","0"
+2021,"88",45,"Mike Perez","7:38","GPSA","Cont","0"
+2021,"88",45,"Mike Perez","1:01","SUBA","Cont","0"
+2021,"88",45,"Mike Perez","0:40","SUBA","Cont","0"
+2021,"88",45,"Adam Wardzinski","0:05","SWPA","Cont","0"
+2021,"88",45,"Adam Wardzinski","0:04","BTKA","Time end","0"
+2021,"88",45,"Adam Wardzinski","0:04","RST","Time end","0"
+2021,"88",45,"","4:56","CLI","Cont","0"
+2021,"88",45,"Mike Perez","4:34","SUBA","Cont","0"
+2021,"88",45,"Adam Wardzinski","2:38","SUBA","Cont","0"
+2021,"88",45,"Mike Perez","2:30","BTKA","Cont","0"
+2021,"88",45,"Mike Perez","2:06","GPSA","Cont","0"
+2021,"88",45,"Mike Perez","2:02","BTKA","Cont","0"
+2021,"88",45,"Mike Perez","0:53","BTKA","Time end","0"
+2021,"88",46,"","9:57","CLI","Cont","0"
+2021,"88",46,"Pedro Marinho","7:35","TKDA","Cont","0"
+2021,"88",46,"Pedro Marinho","7:33","BTKA","Cont","0"
+2021,"88",46,"Matheus Diniz","2:43","TKD","Cont","2"
+2021,"88",46,"Pedro Marinho","2:06","SUBA","Cont","0"
+2021,"88",46,"Matheus Diniz","0:38","GPS","Time end","3"
+2021,"88",47,"","9:57","CLI","Cont","0"
+2021,"88",47,"Gabriel Arges","9:34","PGD","Cont","0"
+2021,"88",47,"Gabriel Arges","7:59","SWP","Cont","0"
+2021,"88",47,"Gabriel Arges","7:59","RST","Cont","0"
+2021,"88",47,"","7:45","CLI","Cont","0"
+2021,"88",47,"Gabriel Arges","7:14","PGD","Cont","0"
+2021,"88",47,"Alec Baulding","5:52","GPSA","Cont","0"
+2021,"88",47,"Gabriel Arges","2:21","SWP","Cont","2"
+2021,"88",47,"Gabriel Arges","1:51","BTK","Time end","3"
+2021,"99",48,"","19:48","CLI","Cont","0"
+2021,"99",48,"Vinicius Gazola","18:28","TKDA","Cont","0"
+2021,"99",48,"Gordon Ryan","16:11","TKD","Cont","0"
+2021,"99",48,"Vinicius Gazola","14:29","SWP","Cont","0"
+2021,"99",48,"Vinicius Gazola","14:29","RST","Cont","0"
+2021,"99",48,"Gordon Ryan","14:19","CLI","Cont","0"
+2021,"99",48,"Gordon Ryan","14:15","TKD","Cont","0"
+2021,"99",48,"Gordon Ryan","12:49","GPS","Cont","0"
+2021,"99",48,"Gordon Ryan","11:22","BTK","Cont","0"
+2021,"99",48,"Gordon Ryan","10:45","SUB","Submission","0"
+2021,"99",49,"","9:58","CLI","Cont","0"
+2021,"99",49,"Gordon Ryan","7:24","TKDA","Cont","0"
+2021,"99",49,"Lucas Barbosa","7:11","TKD","Cont","0"
+2021,"99",49,"Gordon Ryan","6:57","CLI","Cont","0"
+2021,"99",49,"Gordon Ryan","5:05","PGD","Time end","0"
+2021,"99",49,"","4:59","CLI","Cont","0"
+2021,"99",49,"Lucas Barbosa","4:32","TKDA","Cont","0"
+2021,"99",49,"Lucas Barbosa","4:29","TKDA","Cont","0"
+2021,"99",49,"Lucas Barbosa","4:18","BTKA","Cont","0"
+2021,"99",49,"Lucas Barbosa","3:51","TKDA","Cont","0"
+2021,"99",49,"Gordon Ryan","3:42","SUBA","Cont","0"
+2021,"99",49,"Lucas Barbosa","3:29","BTKA","Cont","0"
+2021,"99",49,"Lucas Barbosa","3:10","TKDA","Cont","0"
+2021,"99",49,"Gordon Ryan","3:05","SUBA","Cont","0"
+2021,"99",49,"Gordon Ryan","2:12","BTKA","Cont","0"
+2021,"99",49,"Gordon Ryan","1:27","BTKA","Cont","0"
+2021,"99",49,"Gordon Ryan","0:54","BTK","Time end","3"
+2021,"99",50,"Vinicius Gazola","9:59","PGD","Cont","0"
+2021,"99",50,"Vinicius Gazola","7:56","SUBA","Cont","0"
+2021,"99",50,"Vinicius Gazola","5:02","CLI","Cont","0"
+2021,"99",50,"","4:53","CLI","Cont","0"
+2021,"99",50,"Other Player5","9:00","TKDA","Cont","0"
+2021,"99",50,"Vinicius Gazola","2:12","TKDA","Cont","0"
+2021,"99",50,"Vinicius Gazola","0:13","TKD","Time end","2"
+2021,"99",51,"","9:56","CLI","Cont","0"
+2021,"99",51,"Other Player6","9:00","TKDA","Cont","0"
+2021,"99",51,"Gordon Ryan","9:52","PGD","Cont","0"
+2021,"99",51,"Gordon Ryan","9:46","SWPA","Cont","0"
+2021,"99",51,"Gordon Ryan","9:45","SUBA","Cont","0"
+2021,"99",51,"Gordon Ryan","9:37","PGD","Cont","0"
+2021,"99",51,"Gordon Ryan","8:07","SUBA","Cont","0"
+2021,"99",51,"Gordon Ryan","8:04","SWP","Cont","0"
+2021,"99",51,"Gordon Ryan","7:43","BTKA","Cont","0"
+2021,"99",51,"Gordon Ryan","7:34","BTK","Cont","3"
+2021,"99",51,"Gordon Ryan","2:59","SUB","Submission","0"
+2021,"99",52,"","9:59","CLI","Cont","0"
+2021,"99",52,"Patrick Gaudio","9:08","PGD","Cont","0"
+2021,"99",52,"Patrick Gaudio","8:06","CLI","Cont","0"
+2021,"99",52,"Patrick Gaudio","7:10","PGD","Cont","0"
+2021,"99",52,"Patrick Gaudio","6:19","CLI","Cont","0"
+2021,"99",52,"Lucas Barbosa","1:23","BTKA","Cont","0"
+2021,"99",52,"Lucas Barbosa","1:20","BTKA","Cont","0"
+2021,"99",52,"Lucas Barbosa","1:15","BTKA","Time end","0"
+2021,"99",52,"","5:00","CLI","Cont","0"
+2021,"99",52,"Patrick Gaudio","2:50","TKDA","Cont","0"
+2021,"99",52,"Patrick Gaudio","1:44","SUBA","Cont","0"
+2021,"99",52,"Patrick Gaudio","0:10","SUBA","Time end","0"
+2021,"99",53,"","9:58","CLI","Cont","0"
+2021,"99",53,"James Puopolo","9:37","PGD","Cont","0"
+2021,"99",53,"James Puopolo","9:16","SWP","Cont","0"
+2021,"99",53,"Vinny Magalhães","8:02","SWPA","Cont","0"
+2021,"99",53,"James Puopolo","7:48","SUBA","Cont","0"
+2021,"99",53,"Vinny Magalhães","6:07","SWP","Cont","0"
+2021,"99",53,"Vinny Magalhães","6:05","GPSA","Cont","0"
+2021,"99",53,"James Puopolo","5:12","SWP","Cont","0"
+2021,"99",53,"James Puopolo","5:12","RST","Cont","0"
+2021,"99",53,"Vinny Magalhães","4:05","CLI","Cont","0"
+2021,"99",53,"Vinny Magalhães","2:54","TKD","Cont","2"
+2021,"99",53,"James Puopolo","1:00","SWPA","Time End","0"
+2021,"99",54,"Vinicius Gazola","9:58","PGD","Cont","0"
+2021,"99",54,"Jackson Sousa","4:04","BTKA","Time end","0"
+2021,"99",54,"","4:54","CLI","Cont","0"
+2021,"99",54,"Jackson Sousa","1:52","TKDA","Cont","0"
+2021,"99",55,"Other Player","9:59","TKDA","Cont","0"
+2021,"99",55,"Gordon Ryan","9:57","PGD","Cont","0"
+2021,"99",55,"Gordon Ryan","9:38","SWP","Cont","0"
+2021,"99",55,"Gordon Ryan","9:13","BTK","Cont","0"
+2021,"99",55,"Gordon Ryan","8:16","SUB","Submission","0"
+2021,"99",56,"","9:55","CLI","Cont","0"
+2021,"99",56,"Other Player6","9:00","TKDA","Cont","0"
+2021,"99",56,"Tim Spriggs","8:17","SUB","Submission","0"
+2021,"99",57,"","9:54","CLI","Cont","0"
+2021,"99",57,"Perttu Tepponen","9:17","PGD","Cont","0"
+2021,"99",57,"Lucas Barbosa","8:43","GPS","Cont","0"
+2021,"99",57,"Lucas Barbosa","4:23","BTKA","Cont","0"
+2021,"99",57,"Lucas Barbosa","3:44","GPS","Cont","3"
+2021,"99",57,"Lucas Barbosa","3:06","BTKA","Cont","0"
+2021,"99",57,"Perttu Tepponen","2:48","SWPA","Cont","0"
+2021,"99",57,"Perttu Tepponen","1:35","PGD","Time end","Penalty               -1"
+2021,"99",58,"Mraz Avdoyan","9:59","PGD","Cont","0"
+2021,"99",58,"Mraz Avdoyan","9:45","CLI","Cont","0"
+2021,"99",58,"Mraz Avdoyan","9:38","PGD","Cont","0"
+2021,"99",58,"Patrick Gaudio","9:23","GPS","Cont","0"
+2021,"99",58,"Patrick Gaudio","8:57","SUBA","Cont","0"
+2021,"99",58,"Mraz Avdoyan","8:48","SWPA","Cont","0"
+2021,"99",58,"Patrick Gaudio","8:44","SUBA","Cont","0"
+2021,"99",58,"Patrick Gaudio","8:05","SUBA","Cont","0"
+2021,"99",58,"Patrick Gaudio","7:20","GPS","Cont","0"
+2021,"99",58,"Patrick Gaudio","7:20","RST","Cont","0"
+2021,"99",58,"Mraz Avdoyan","6:39","CLI","Cont","0"
+2021,"99",58,"Mraz Avdoyan","6:28","PGD","Cont","0"
+2021,"99",58,"Patrick Gaudio","5:49","SUBA","Cont","0"
+2021,"99",58,"Patrick Gaudio","4:46","GPS","Reset","3"
+2021,"99",58,"Patrick Gaudio","4:46","RST","Reset","3"
+2021,"99",58,"Mraz Avdoyan","3:56","CLI","Cont","0"
+2021,"99",58,"Mraz Avdoyan","3:41","SUBA","Reset","0"
+2021,"99",58,"Mraz Avdoyan","3:41","PGD","Cont","Penalty               -1"
+2021,"99",58,"Patrick Gaudio","3:28","GPS","Cont","2"
+2021,"99",58,"Patrick Gaudio","2:57","GPS","Cont","3"
+2021,"99",58,"Patrick Gaudio","2:57","RST","Cont","3"
+2021,"99",58,"Mraz Avdoyan","2:36","CLI","Cont","0"
+2021,"99",58,"Mraz Avdoyan","2:21","SUBA","Cont","0"
+2021,"99",58,"Patrick Gaudio","1:46","SUBA","Cont","0"
+2021,"99",58,"Patrick Gaudio","1:00","GPSA","Time end","0"
+2021,"99",59,"","9:58","CLI","Cont","0"
+2021,"99",59,"Dan Martinez","9:51","PGD","Cont","0"
+2021,"99",59,"Dan Martinez","9:21","SUBA","Reset","0"
+2021,"99",59,"Dan Martinez","9:21","RST","Reset","0"
+2021,"99",59,"Dan Martinez","9:16","CLI","Cont","0"
+2021,"99",59,"Dan Martinez","8:42","PGD","Cont","0"
+2021,"99",59,"Dan Martinez","8:28","SUBA","Cont","0"
+2021,"99",59,"Vinny Magalhães","8:20","SUBA","Cont","0"
+2021,"99",59,"Dan Martinez","8:07","SUBA","Cont","0"
+2021,"99",59,"Vinny Magalhães","7:32","SUBA","Cont","0"
+2021,"99",59,"Dan Martinez","7:32","SWP","Cont","0"
+2021,"99",59,"Dan Martinez","4:46","SUBA","Cont","0"
+2021,"99",59,"Vinny Magalhães","4:28","BTKA","Cont","0"
+2021,"99",59,"Vinny Magalhães","4:13","SWP","Cont","2"
+2021,"99",59,"Vinny Magalhães","2:55","SUBA","Cont","0"
+2021,"99",59,"Dan Martinez","2:55","SWPA","Cont","0"
+2021,"99",59,"Vinny Magalhães","2:16","SWP","Cont","2"
+2021,"99",59,"Dan Martinez","0:47","SUBA","Cont","0"
+2021,"99",59,"Dan Martinez","0:22","SUBA","Cont","0"
+2021,"99",59,"Vinny Magalhães","0:10","SUBA","Time end","0"
+2021,"99",60,"Aaron Johnson","10:00","PGD","Cont","0"
+2021,"99",60,"Aaron Johnson","9:34","SUBA","Cont","0"
+2021,"99",60,"Aaron Johnson","9:27","SUBA","Cont","0"
+2021,"99",60,"Aaron Johnson","8:55","SWP","Cont","0"
+2021,"99",60,"James Puopolo","8:20","SWP","Cont","0"
+2021,"99",60,"Aaron Johnson","2:36","SUBA","Cont","0"
+2021,"99",60,"James Puopolo","2:32","GPSA","Cont","0"
+2021,"99",60,"James Puopolo","0:20","SUBA","Cont","0"
+2021,"99",60,"James Puopolo","0:05","GPS","Time end","4"
+2021,"99",61,"Jackson Sousa","9:57","PGD","Cont","0"
+2021,"99",61,"Jackson Sousa","3:52","SWPA","Cont","0"
+2021,"99",61,"Jackson Sousa","3:49","BTKA","Cont","0"
+2021,"99",61,"Jackson Sousa","3:45","TKDA","Cont","0"
+2021,"99",61,"Other Player7","3:40","TKDA","Cont","0"
+2021,"99",61,"","3:26","CLI","Time end","0"
+2021,"99",61,"","5:00","CLI","Cont","0"
+2021,"99",62,"Vinicius Gazola","9:57","PGD","Cont","0"
+2021,"99",62,"Paul Ardila-Ibarra","5:06","GPSA","Cont","0"
+2021,"99",62,"Paul Ardila-Ibarra","3:41","GPSA","Reset","0"
+2021,"99",62,"Paul Ardila-Ibarra","3:41","RST","Reset","0"
+2021,"99",62,"","4:54","CLI","Cont","0"
+2021,"99",62,"Paul Ardila-Ibarra","0:17","TKDA","Cont","0"
+2021,"99",62,"Paul Ardila-Ibarra","0:11","TKDA","Cont","0"
+2021,"99",62,"Paul Ardila-Ibarra","0:07","BTKA","Time end","0"
+2021,"99plus",63,"","19:59","CLI","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","15:46","TKDA","Cont","0"
+2021,"99plus",63,"Nicky Rodriguez","14:05","TKDA","Cont","0"
+2021,"99plus",63,"Nicky Rodriguez","14:04","BTKA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","14:02","PGD","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","11:30","SWPA","Cont","0"
+2021,"99plus",63,"Nicky Rodriguez","8:50","GPSA","Cont","0"
+2021,"99plus",63,"Nicky Rodriguez","8:44","BTKA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","7:40","SWPA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","7:38","BTKA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","7:23","BTK","Cont","3"
+2021,"99plus",63,"Kaynan Duarte","6:53","SUBA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","6:03","SUBA","Cont","0"
+2021,"99plus",63,"Kaynan Duarte","5:34","SUBA","Cont","0"
+2021,"99plus",63,"Nicky Rodriguez","0:03","BTKA","Time end","0"
+2021,"99plus",64,"","9:58","CLI","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","6:37","PGD","Cont","0"
+2021,"99plus",64,"Marcus Buchecha","6:13","SUBA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","6:08","SWPA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","5:53","PGD","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","2:18","SWPA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","2:16","BTKA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","2:16","RST","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","0:11","CLI","Time end","0"
+2021,"99plus",64,"","4:54","CLI","Cont","0"
+2021,"99plus",64,"Marcus Buchecha","4:24","TKDA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","1:14","TKDA","Cont","0"
+2021,"99plus",64,"Kaynan Duarte","0:04","TKDA","Time end","0"
+2021,"99plus",65,"Roberto Abreu","9:58","PGD","Cont","0"
+2021,"99plus",65,"Nicky Rodriguez","2:01","GPSA","Cont","0"
+2021,"99plus",65,"Nicky Rodriguez","1:13","GPSA","Cont","0"
+2021,"99plus",65,"Roberto Abreu","1:05","SWPA","Cont","0"
+2021,"99plus",65,"Nicky Rodriguez","0:58","TKDA","Cont","0"
+2021,"99plus",65,"Nicky Rodriguez","0:55","BTKA","Cont","0"
+2021,"99plus",65,"Roberto Abreu","0:24","SWPA","Cont","0"
+2021,"99plus",65,"Roberto Abreu","0:23","BTKA","Cont","0"
+2021,"99plus",65,"Roberto Abreu","0:08","SUBA","Cont","0"
+2021,"99plus",65,"Nicky Rodriguez","0:01","BTKA","Time end","0"
+2021,"99plus",65,"","5:00","CLI","Cont","0"
+2021,"99plus",65,"Roberto Abreu","1:55","PGD","Cont","0"
+2021,"99plus",66,"","9:54","CLI","Cont","0"
+2021,"99plus",66,"Victor Hugo","9:46","PGD","Cont","0"
+2021,"99plus",66,"Victor Hugo","6:51","SUBA","Cont","0"
+2021,"99plus",66,"Marcus Buchecha","3:38","GPS","Cont","3"
+2021,"99plus",66,"Marcus Buchecha","3:22","BTKA","Cont","0"
+2021,"99plus",66,"Marcus Buchecha","3:00","GPSA","Cont","0"
+2021,"99plus",66,"Marcus Buchecha","1:53","BTKA","Cont","0"
+2021,"99plus",66,"Marcus Buchecha","0:31","SUBA","Time end","0"
+2021,"99plus",67,"","9:58","CLI","Cont","0"
+2021,"99plus",67,"Yuri Simões","9:10","TKDA","Cont","0"
+2021,"99plus",67,"Kaynan Duarte","8:05","PGD","Cont","0"
+2021,"99plus",67,"Yuri Simões","6:44","GPSA","Reset","0"
+2021,"99plus",67,"Yuri Simões","6:44","RST","Reset","0"
+2021,"99plus",67,"Kaynan Duarte","6:39","CLI","Cont","0"
+2021,"99plus",67,"Kaynan Duarte","6:17","PGD","Cont","0"
+2021,"99plus",67,"Yuri Simões","5:15","SUBA","Cont","0"
+2021,"99plus",67,"Kaynan Duarte","5:11","SWP","Reset","0"
+2021,"99plus",67,"Kaynan Duarte","5:11","RST","Reset","0"
+2021,"99plus",67,"Yuri Simões","4:11","CLI","Cont","0"
+2021,"99plus",67,"Kaynan Duarte","1:39","TKDA","Cont","0"
+2021,"99plus",67,"Kaynan Duarte","1:35","BTK","Cont","3"
+2021,"99plus",67,"Kaynan Duarte","0:30","SUBA","Time end","0"
+2021,"99plus",68,"","9:59","CLI","Cont","0"
+2021,"99plus",68,"Other Player8","9:40","TKDA","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","9:09","TKD","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","9:08","BTK","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","8:39","BTKA","Reset","0"
+2021,"99plus",68,"","8:32","CLI","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","0:59","GPSA","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","0:45","BTKA","Cont","0"
+2021,"99plus",68,"Nick Rodriguez","0:28","BTKA","Time end","0"
+2021,"99plus",69,"John Hansen","9:57","PGD","Cont","0"
+2021,"99plus",69,"Roberto Abreu","3:34","SUBA","Cont","0"
+2021,"99plus",69,"Roberto Abreu","3:28","BTKA","Cont","0"
+2021,"99plus",69,"Roberto Abreu","2:15","BTK","Cont","3"
+2021,"99plus",69,"Roberto Abreu","1:39","BTK","Cont","3"
+2021,"99plus",69,"Roberto Abreu","0:58","BTKA","Cont","0"
+2021,"99plus",69,"Roberto Abreu","0:53","GPSA","Time end","0"
+2021,"99plus",70,"","9:42","CLI","Cont","0"
+2021,"99plus",70,"Antônio Braga","8:55","TKD","Cont","0"
+2021,"99plus",70,"Marcus Buchecha","7:29","CLI","Cont","0"
+2021,"99plus",70,"Antônio Braga","0:46","BTKA","Cont","0"
+2021,"99plus",70,"Marcus Buchecha","0:11","SWP","Time end","2"
+2021,"99plus",71,"","9:56","CLI","Cont","0"
+2021,"99plus",71,"Victor Hugo","9:53","PGD","Cont","0"
+2021,"99plus",71,"Victor Hugo","8:22","SUBA","Cont","0"
+2021,"99plus",71,"Victor Hugo","8:14","SWP","Cont","0"
+2021,"99plus",71,"Victor Hugo","8:14","RST","Cont","0"
+2021,"99plus",71,"Jared Dopp","6:42","CLI","Cont","0"
+2021,"99plus",71,"Victor Hugo","6:42","PGD","Reset","0"
+2021,"99plus",71,"Victor Hugo","5:10","SWPA","Cont","0"
+2021,"99plus",71,"Victor Hugo","4:52","SWPA","Cont","0"
+2021,"99plus",71,"Victor Hugo","4:02","SUBA","Cont","0"
+2021,"99plus",71,"Victor Hugo","3:36","SWPA","Cont","0"
+2021,"99plus",71,"Victor Hugo","3:31","BTKA","Cont","0"
+2021,"99plus",71,"Victor Hugo","3:31","RST","Cont","0"
+2021,"99plus",71,"Jared Dopp","1:25","CLI","Cont","0"
+2021,"99plus",71,"Victor Hugo","0:43","TKD","Reset","2"
+2021,"99plus",71,"Victor Hugo","0:40","GPS","Cont","2"
+2021,"99plus",71,"Victor Hugo","0:31","SUBA","Cont","0"
+2021,"99plus",71,"Victor Hugo","0:27","SUBA","Time end","0"
+2021,"99plus",72,"Eliot Marshall","9:52","PGD","Cont","0"
+2021,"99plus",72,"Yuri Simões","9:51","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","9:20","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","8:50","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","8:41","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","8:06","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","7:30","GPSA","Cont","0"
+2021,"99plus",72,"Yuri Simões","7:13","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","4:52","GPS","Cont","4"
+2021,"99plus",72,"Yuri Simões","4:28","BTKA","Cont","0"
+2021,"99plus",72,"Yuri Simões","3:47","GPSA","Cont","0"
+2021,"99plus",72,"Yuri Simões","3:37","GPS","Cont","4"
+2021,"99plus",72,"Yuri Simões","3:17","BTKA","Cont","0"
+2021,"99plus",72,"Yuri Simões","3:02","GPS","Cont","0"
+2021,"99plus",72,"Yuri Simões","2:34","BTKA","Cont","0"
+2021,"99plus",72,"Yuri Simões","2:20","BTK","Cont","3"
+2021,"99plus",72,"Yuri Simões","1:56","SUB","Time end","0"
+2021,"99plus",73,"","9:58","CLI","Cont","0"
+2021,"99plus",73,"Other Player9","9:55","TKDA","Cont","0"
+2021,"99plus",73,"Kaynan Duarte","9:47","TKD","Cont","0"
+2021,"99plus",73,"Kaynan Duarte","8:54","GPSA","Cont","0"
+2021,"99plus",73,"Kaynan Duarte","8:45","BTK","Cont","0"
+2021,"99plus",73,"Kaynan Duarte","8:30","SUB","Submission","0"
+2021,"99plus",74,"","9:56","CLI","Cont","0"
+2021,"99plus",74,"Mateusz Juskowiak","9:06","PGD","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","5:14","BTKA","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","3:42","GPSA","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","2:44","BTKA","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","0:23","GPSA","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","0:18","BTKA","Time end","0"
+2021,"99plus",74,"","5:00","CLI","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","4:30","TKD","Reset","2"
+2021,"99plus",74,"Orlando Sanchez","1:08","GPSA","Cont","0"
+2021,"99plus",74,"Orlando Sanchez","0:28","BTKA","Time end","0"
+2021,"99plus",74,"Mateusz Juskowiak","0:20","CLI","Time end","0"
+2021,"99plus",75,"","9:59","CLI","Cont","0"
+2021,"99plus",75,"Nick Rodriguez","4:20","TKDA","Cont","0"
+2021,"99plus",75,"Mahamed Aly","4:16","TKDA","Cont","0"
+2021,"99plus",75,"Nick Rodriguez","2:19","TKDA","Cont","0"
+2021,"99plus",75,"Mahamed Aly","0:06","TKDA","Time end","0"
+2021,"99plus",75,"","5:00","CLI","Cont","0"
+2021,"99plus",75,"Nick Rodriguez","0:14","TKDA","Reset","0"
+2021,"99plus",75,"Nick Rodriguez","0:01","TKDA","Time end","0"
+2021,"99plus",76,"Roberto Abreu","9:57","PGD","Cont","0"
+2021,"99plus",76,"Roberto Abreu","7:53","SWP","Cont","0"
+2021,"99plus",76,"Roberto Abreu","7:44","BTKA","Cont","0"
+2021,"99plus",76,"Roberto Abreu","6:50","PGD","Cont","0"
+2021,"99plus",76,"Roberto Abreu","6:17","SWP","Cont","0"
+2021,"99plus",76,"Roberto Abreu","6:09","GPS","Cont","0"
+2021,"99plus",76,"Roberto Abreu","4:53","GPSA","Cont","0"
+2021,"99plus",76,"Roberto Abreu","4:26","GPS","Cont","2"
+2021,"99plus",76,"Roberto Abreu","3:57","BTKA","Cont","0"
+2021,"99plus",76,"Hudson Taylor","2:20","GPSA","Cont","0"
+2021,"99plus",76,"Hudson Taylor","1:17","GPSA","Cont","0"
+2021,"99plus",76,"Hudson Taylor","1:11","BTKA","Time end","0"
+2021,"99plus",77,"John Hansen","9:57","PGD","Cont","0"
+2021,"99plus",77,"John Hansen","3:12","SWPA","Cont","0"
+2021,"99plus",77,"John Hansen","3:10","BTKA","Cont","0"
+2021,"99plus",77,"John Hansen","1:52","SWPA","Time end","0"
+2021,"99plus",77,"","4:59","CLI","Cont","0"
+2021,"99plus",77,"Max Gimenis","4:52","TKDA","Reset","0"
+2021,"99plus",77,"John Hansen","4:35","BTKA","Cont","0"
+2021,"99plus",77,"Max Gimenis","4:24","BTKA","Cont","0"
+2021,"99plus",77,"John Hansen","0:08","SWPA","Time end","0"
+2021,"Absolute",78,"","19:59","CLI","Cont","0"
+2021,"Absolute",78,"Marcus Buchecha","19:22","SUBA","Cont","0"
+2021,"Absolute",78,"Gordon Ryan","17:47","SWP","Cont","0"
+2021,"Absolute",78,"Gordon Ryan","17:46","GPSA","Cont","0"
+2021,"Absolute",78,"Marcus Buchecha","17:02","CLI","Cont","0"
+2021,"Absolute",78,"Gordon Ryan","11:02","TKDA","Reset","0"
+2021,"Absolute",78,"Marcus Buchecha","10:57","BTKA","Time end","0"
+2021,"Absolute",78,"","9:58","CLI","Cont","0"
+2021,"Absolute",78,"Marcus Buchecha","2:14","SUBA","Reset","0"
+2021,"Absolute",79,"Other Player10","9:59","TKDA","Cont","0"
+2021,"Absolute",79,"Lachlan Giles","9:58","PGD","Cont","0"
+2021,"Absolute",79,"Lachlan Giles","9:02","SUB","Submission","0"
+2021,"Absolute",80,"","9:59","CLI","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","9:51","PGD","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","9:15","SUBA","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","9:15","RST","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","9:09","CLI","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","8:15","BTKA","Cont","0"
+2021,"Absolute",80,"Mahamed Aly","8:13","TKDA","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","3:23","BTKA","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","3:17","BTK","Cont","0"
+2021,"Absolute",80,"Marcus Buchecha","3:13","SUB","Submission","0"
+2021,"Absolute",81,"Lachlan Giles","9:58","PGD","Cont","0"
+2021,"Absolute",81,"Lachlan Giles","9:14","SUBA","Cont","0"
+2021,"Absolute",81,"Lachlan Giles","8:50","SUBA","Cont","0"
+2021,"Absolute",81,"Gordon Ryan","8:37","SUBA","Cont","0"
+2021,"Absolute",81,"Lachlan Giles","8:00","SUBA","Cont","0"
+2021,"Absolute",81,"Gordon Ryan","6:46","GPSA","Cont","0"
+2021,"Absolute",81,"Gordon Ryan","6:28","GPS","Cont","0"
+2021,"Absolute",81,"Gordon Ryan","6:02","GPS","Cont","0"
+2021,"Absolute",81,"Gordon Ryan","3:31","BTK","Cont","3"
+2021,"Absolute",81,"Gordon Ryan","2:19","SUB","Submission","0"
+2021,"Absolute",82,"Aaron Johnson","9:59","PGD","Cont","0"
+2021,"Absolute",82,"Aaron Johnson","9:40","SWPA","Cont","0"
+2021,"Absolute",82,"Aaron Johnson","9:39","SUBA","Cont","0"
+2021,"Absolute",82,"Aaron Johnson","7:10","SWPA","Cont","0"
+2021,"Absolute",82,"Marcus Buchecha","7:06","BTK","Cont","0"
+2021,"Absolute",82,"Marcus Buchecha","3:30","BTKA","Cont","0"
+2021,"Absolute",82,"Marcus Buchecha","3:19","GPS","Cont","3"
+2021,"Absolute",82,"Marcus Buchecha","1:50","BTKA","Cont","0"
+2021,"Absolute",82,"Aaron Johnson","0:04","SUBA","Time end","0"
+2021,"Absolute",83,"","9:56","CLI","Cont","0"
+2021,"Absolute",83,"Other Player11","9:54","TKDA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","9:53","SUBA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","9:17","TKDA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","8:21","SUBA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","4:00","TKDA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","3:17","CLI","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","2:41","TKDA","Reset","Penalty               -1"
+2021,"Absolute",83,"Tim Spriggs","1:42","CLI","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","1:33","TKDA","Cont","0"
+2021,"Absolute",83,"Tim Spriggs","1:28","BTKA","Time end","0"
+2021,"Absolute",84,"Garry Tonon","9:55","TKD","Cont","0"
+2021,"Absolute",84,"Gordon Ryan","9:47","BTKA","Cont","0"
+2021,"Absolute",84,"Gordon Ryan","9:34","BTK","Cont","0"
+2021,"Absolute",84,"Gordon Ryan","8:48","BTK","Cont","0"
+2021,"Absolute",84,"Gordon Ryan","7:10","SUB","Submission","0"
+2021,"Absolute",85,"Lachlan Giles","9:57","PGD","Cont","0"
+2021,"Absolute",85,"Lachlan Giles","9:33","SUBA","Cont","0"
+2021,"Absolute",85,"Lachlan Giles","8:22","SUBA","Cont","0"
+2021,"Absolute",85,"Patrick Gaudio","7:59","GPSA","Cont","0"
+2021,"Absolute",85,"Patrick Gaudio","6:40","SUB","Submission","0"
+2021,"Absolute",86,"","9:59","CLI","Cont","0"
+2021,"Absolute",86,"Keith Krikorian","9:56","PGD","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","8:32","GPS","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","7:35","GPS","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","6:50","GPSA","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","6:43","BTK","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","6:37","GPS","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","5:54","GPS","Cont","0"
+2021,"Absolute",86,"Marcus Buchecha","5:50","SUB","Submission","0"
+2021,"Absolute",87,"Other Player12","10:00","TKDA","Cont","0"
+2021,"Absolute",87,"Aaron Johnson","10:00","PGD","Cont","0"
+2021,"Absolute",87,"Aaron Johnson","9:38","SUB","Submission","0"
+2021,"Absolute",88,"","9:58","CLI","Cont","0"
+2021,"Absolute",88,"John Hansen","9:54","PGD","Cont","0"
+2021,"Absolute",88,"John Hansen","8:11","SWPA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","7:56","GPS","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","7:56","SUBA","Cont","0"
+2021,"Absolute",88,"John Hansen","5:12","SWPA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","4:43","GPSA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","4:42","BTKA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","4:00","GPSA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","3:20","GPSA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","2:48","GPSA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","2:42","BTKA","Cont","0"
+2021,"Absolute",88,"Mahamed Aly","2:14","BTK","Cont","3"
+2021,"Absolute",88,"Mahamed Aly","0:48","SUB","Submission","0"
+2021,"Absolute",89,"","9:59","CLI","Cont","0"
+2021,"Absolute",89,"Other Player13","9:49","TKDA","Cont","0"
+2021,"Absolute",89,"Tim Spriggs","9:39","SUBA","Cont","0"
+2021,"Absolute",89,"Tim Spriggs","5:26","SUB","Submission","0"
+2021,"Absolute",90,"","9:58","CLI","Cont","0"
+2021,"Absolute",90,"Gordon Ryan","9:52","PGD","Cont","0"
+2021,"Absolute",90,"Pedro Marinho","9:49","GPSA","Cont","0"
+2021,"Absolute",90,"Gordon Ryan","7:23","SUBA","Cont","0"
+2021,"Absolute",90,"Gordon Ryan","7:00","SUB","Submission","0"
+2021,"Absolute",91,"Lachlan Giles","9:58","PGD","Cont","0"
+2021,"Absolute",91,"Kaynan Duarte","9:49","BTKA","Cont","0"
+2021,"Absolute",91,"Lachlan Giles","6:58","SUB","Submission","0"
+2021,"Absolute",92,"","9:59","CLI","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","9:25","PGD","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","9:23","SWPA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","9:06","SWPA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","8:49","PGD","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","8:49","RST","Reset","8:49"
+2021,"Absolute",92,"Patrick Gaudio","8:33","CLI","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","8:07","PGD","Reset","0"
+2021,"Absolute",92,"Mike Perez","7:23","BTKA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","7:10","SWP","Cont","0"
+2021,"Absolute",92,"Mike Perez","5:26","SUBA","Cont","0"
+2021,"Absolute",92,"Mike Perez","4:54","SWPA","Cont","0"
+2021,"Absolute",92,"Mike Perez","3:11","SUBA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","3:02","TKD","Cont","2"
+2021,"Absolute",92,"Patrick Gaudio","2:39","GPSA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","2:23","GPSA","Cont","0"
+2021,"Absolute",92,"Mike Perez","1:40","SWPA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","1:30","SUBA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","1:17","TKDA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","1:04","BTKA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","8:49","RST","Cont","0"
+2021,"Absolute",92,"Mike Perez","0:53","CLI","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","0:40","TKDA","Reset","0"
+2021,"Absolute",92,"Patrick Gaudio","0:29","BTKA","Cont","0"
+2021,"Absolute",92,"Mike Perez","0:25","CLI","Cont","0"
+2021,"Absolute",92,"Mike Perez","0:17","TKDA","Cont","0"
+2021,"Absolute",92,"Patrick Gaudio","0:12","SUBA","Time end","0"
+2022,"66",1,"","00:26","CLI","",NA
+2022,"66",1,"mcnally","01:00","SUBA","",NA
+2022,"66",1,"tonon","01:02","TKDA","",NA
+2022,"66",1,"tonon","01:11","PGD","",NA
+2022,"66",1,"mcnally","02:31","GPSA","Reset",NA
+2022,"66",1,"mcnally","02:31","RST","Reset",NA
+2022,"66",1,"mcnally","03:09","PGD","",NA
+2022,"66",1,"mcnally","04:33","SUBA","",NA
+2022,"66",1,"mcnally","05:56","SWPA","",NA
+2022,"66",1,"mcnally","05:58","BTKA","Reset",NA
+2022,"66",1,"mcnally","05:58","RST","Reset",NA
+2022,"66",1,"","06:05","CLI","",NA
+2022,"66",1,"tonon","06:08","TKDA","",NA
+2022,"66",1,"tonon","06:23","TKDA","Reset",NA
+2022,"66",1,"tonon","06:23","RST","Reset",NA
+2022,"66",1,"","06:29","CLI","",NA
+2022,"66",1,"tonon","06:33","TKDA","",NA
+2022,"66",1,"tonon","06:35","SUBA","",NA
+2022,"66",1,"tonon","06:50","BTKA","",NA
+2022,"66",1,"mcnally","07:05","PGD","",NA
+2022,"66",1,"mcnally","08:31","SUBA","",NA
+2022,"66",1,"mcnally","08:39","SWPA","",NA
+2022,"66",1,"mcnally","08:41","BTKA","",NA
+2022,"66",1,"mcnally","09:02","BTK","","3"
+2022,"66",1,"mcnally","09:06","SUBA","",NA
+2022,"66",1,"mcnally","09:12","SUBA","",NA
+2022,"66",1,"mcnally","09:24","PGD","",NA
+2022,"66",1,"mcnally","09:41","SWPA","",NA
+2022,"66",1,"mcnally","09:44","PGD","",NA
+2022,"66",1,"tonon","09:56","SUBA","",NA
+2022,"66",2,"","00:19","CLI","",NA
+2022,"66",2,"crelisten","00:21","TKDA","",NA
+2022,"66",2,"crelisten","00:33","TKDA","",NA
+2022,"66",2,"cisneros","00:38","SUBA","",NA
+2022,"66",2,"cisneros","00:44","PGD","Reset",NA
+2022,"66",2,"cisneros","00:44","RST","Reset",NA
+2022,"66",2,"","00:53","CLI","",NA
+2022,"66",2,"crelisten","01:10","TKDA","",NA
+2022,"66",2,"cisneros","01:18","PGD","",NA
+2022,"66",2,"cisneros","02:32","SWPA","",NA
+2022,"66",2,"crelisten","02:45","GPSA","",NA
+2022,"66",2,"cisneros","02:47","SWP","",NA
+2022,"66",2,"crelisten","02:51","PGD","Reset",NA
+2022,"66",2,"crelisten","02:51","RST","Reset",NA
+2022,"66",2,"cisneros","03:16","GPSA","",NA
+2022,"66",2,"crelisten","04:20","SWPA","",NA
+2022,"66",2,"crelisten","04:29","SWPA","",NA
+2022,"66",2,"crelisten","04:34","PGD","",NA
+2022,"66",2,"cisneros","04:54","GPSA","",NA
+2022,"66",2,"cisneros","05:08","GPSA","",NA
+2022,"66",2,"crelisten","05:11","PGD","",NA
+2022,"66",2,"cisneros","05:23","SUBA","",NA
+2022,"66",2,"crelisten","05:30","SWPA","",NA
+2022,"66",2,"cisneros","05:31","GPSA","",NA
+2022,"66",2,"crelisten","05:54","BTKA","",NA
+2022,"66",2,"crelisten","06:29","PGD","",NA
+2022,"66",2,"cisneros","06:48","GPSA","",NA
+2022,"66",2,"crelisten","06:55","SWPA","Reset",NA
+2022,"66",2,"crelisten","06:55","RST","Reset",NA
+2022,"66",2,"","07:22","CLI","",NA
+2022,"66",2,"cisneros","07:25","TKDA","",NA
+2022,"66",2,"crelisten","07:51","TKDA","",NA
+2022,"66",2,"crelisten","07:55","TKDA","",NA
+2022,"66",2,"cisneros","08:07","TKDA","",NA
+2022,"66",2,"crelisten","08:17","TKDA","",NA
+2022,"66",2,"cisneros","08:23","TKDA","",NA
+2022,"66",2,"crelisten","08:41","BTKA","",NA
+2022,"66",2,"crelisten","10:14","PGD","Reset",NA
+2022,"66",2,"crelisten","10:14","RST","Reset",NA
+2022,"66",2,"","10:38","CLI","",NA
+2022,"66",2,"cisneros","11:02","TKDA","",NA
+2022,"66",2,"crelisten","11:17","TKDA","",NA
+2022,"66",2,"cisneros","11:19","BTKA","",NA
+2022,"66",2,"cisneros","11:25","SUBA","Reset",NA
+2022,"66",2,"cisneros","11:25","RST","Reset",NA
+2022,"66",2,"","11:50","SUBA","",NA
+2022,"66",2,"cisneros","12:06","TKDA","",NA
+2022,"66",2,"crelisten","12:13","TKDA","",NA
+2022,"66",2,"cisneros","12:29","TKD","","4"
+2022,"66",2,"cisneros","12:59","GPS","",NA
+2022,"66",2,"cisneros","14:21","SUB","",NA
+2022,"66",3,"abate","00:26","PGD","",NA
+2022,"66",3,"abate","01:14","SWPA","",NA
+2022,"66",3,"abate","01:15","PGD","",NA
+2022,"66",3,"abate","01:38","SWP","Reset",NA
+2022,"66",3,"abate","01:38","RST","Reset",NA
+2022,"66",3,"abate","01:45","PGD","",NA
+2022,"66",3,"abate","02:44","SWPA","",NA
+2022,"66",3,"andrey","02:46","GPSA","",NA
+2022,"66",3,"abate","03:08","SWPA","",NA
+2022,"66",3,"abate","03:09","PGD","Reset",NA
+2022,"66",3,"abate","03:09","RST","Reset",NA
+2022,"66",3,"abate","03:40","SWPA","",NA
+2022,"66",3,"abate","04:06","PGD","",NA
+2022,"66",3,"abate","04:18","SWPA","",NA
+2022,"66",3,"abate","04:20","PGD","",NA
+2022,"66",3,"andrey","05:22","GPSA","",NA
+2022,"66",3,"abate","05:38","SUBA","",NA
+2022,"66",3,"andrey","05:50","SUBA","",NA
+2022,"66",3,"abate","06:08","BTKA","",NA
+2022,"66",3,"abate","06:26","SUBA","",NA
+2022,"66",3,"abate","06:30","PGD","",NA
+2022,"66",3,"abate","06:36","SWPA","",NA
+2022,"66",3,"andrey","07:03","SUBA","",NA
+2022,"66",3,"abate","07:33","SWPA","",NA
+2022,"66",3,"andrey","08:29","SUBA","",NA
+2022,"66",3,"abate","09:53","SWPA","",NA
+2022,"66",3,"abate","09:55","SUBA","Reset",NA
+2022,"66",3,"abate","09:55","RST","Reset",NA
+2022,"66",3,"","10:42","CLI","",NA
+2022,"66",3,"abate","10:44","TKDA","",NA
+2022,"66",3,"andrey","10:49","TKDA","",NA
+2022,"66",3,"andrey","10:55","TKDA","",NA
+2022,"66",3,"abate","10:58","SUBA","",NA
+2022,"66",3,"abate","11:08","TKDA","",NA
+2022,"66",3,"abate","11:12","SUBA","",NA
+2022,"66",3,"abate","11:37","TKDA","",NA
+2022,"66",3,"andrey","12:25","TKDA","Reset",NA
+2022,"66",3,"andrey","12:25","RST","Reset",NA
+2022,"66",3,"","12:30","CLI","",NA
+2022,"66",3,"andrey","12:41","TKDA","Reset",NA
+2022,"66",3,"andrey","12:41","RST","Reset",NA
+2022,"66",3,"","12:49","CLI","",NA
+2022,"66",3,"andrey","13:13","TKDA","Reset",NA
+2022,"66",3,"andrey","13:13","RST","Reset",NA
+2022,"66",3,"","13:40","CLI","",NA
+2022,"66",3,"abate","14:15","TKDA","Reset",NA
+2022,"66",3,"abate","14:15","RST","Reset",NA
+2022,"66",3,"","14:23","CLI","",NA
+2022,"66",3,"andrey","14:39","TKDA","Reset",NA
+2022,"66",3,"andrey","14:39","RST","Reset",NA
+2022,"66",3,"","14:51","CLI","",NA
+2022,"66",3,"abate","14:52","TKDA","",NA
+2022,"66",3,"andrey","15:16","TKDA","",NA
+2022,"66",3,"abate","15:18","TKDA","",NA
+2022,"66",3,"andrey","15:30","TKDA","Reset",NA
+2022,"66",3,"andrey","15:30","RST","Reset",NA
+2022,"66",3,"","15:45","CLI","",NA
+2022,"66",3,"abate","15:34","TKDA","",NA
+2022,"66",3,"abate","16:01","TKDA","",NA
+2022,"66",3,"andrey","16:09","BTKA","",NA
+2022,"66",4,"","00:15","CLI","",NA
+2022,"66",4,"reis","00:28","TKDA","",NA
+2022,"66",4,"reis","00:51","TKDA","",NA
+2022,"66",4,"willians","00:53","TKDA","",NA
+2022,"66",4,"reis","01:01","TKDA","Reset",NA
+2022,"66",4,"reis","01:01","RST","Reset",NA
+2022,"66",4,"","01:14","CLI","",NA
+2022,"66",4,"willians","01:19","TKDA","",NA
+2022,"66",4,"willians","01:44","TKDA","",NA
+2022,"66",4,"reis","01:53","TKDA","",NA
+2022,"66",4,"willians","02:00","TKDA","",NA
+2022,"66",4,"reis","02:01","TKDA","Reset",NA
+2022,"66",4,"reis","02:01","RST","Reset",NA
+2022,"66",4,"","02:15","CLI","",NA
+2022,"66",4,"willians","02:27","TKDA","",NA
+2022,"66",4,"willians","02:28","PGD","",NA
+2022,"66",4,"reis","02:37","GPSA","Reset",NA
+2022,"66",4,"reis","02:37","RST","Reset",NA
+2022,"66",4,"willians","02:53","PGD","",NA
+2022,"66",4,"reis","02:55","GPSA","",NA
+2022,"66",4,"reis","03:43","GPSA","",NA
+2022,"66",4,"willians","03:53","PGD","",NA
+2022,"66",4,"reis","04:18","GPSA","",NA
+2022,"66",4,"willians","04:49","PGD","",NA
+2022,"66",4,"reis","06:07","SUBA","",NA
+2022,"66",4,"reis","06:49","SUBA","",NA
+2022,"66",4,"willians","07:44","SUBA","",NA
+2022,"66",4,"reis","07:53","SUBA","",NA
+2022,"66",4,"reis","08:03","SUBA","",NA
+2022,"66",4,"willians","09:03","SWP","",NA
+2022,"66",4,"reis","09:13","PGD","",NA
+2022,"66",4,"willians","09:20","GPSA","",NA
+2022,"66",4,"reis","09:22","SWP","","2"
+2022,"66",4,"reis","10:19","BTKA","Reset",NA
+2022,"66",4,"reis","10:19","RST","Reset",NA
+2022,"66",4,"","10:21","CLI","",NA
+2022,"66",4,"willians","10:25","TKDA","",NA
+2022,"66",4,"willians","10:40","TKDA","",NA
+2022,"66",4,"reis","10:58","TKDA","",NA
+2022,"66",5,"","00:16","CLI","",NA
+2022,"66",5,"martinez","00:19","PGD","",NA
+2022,"66",5,"martinez","00:26","SWPA","",NA
+2022,"66",5,"martinez","00:45","PGD","",NA
+2022,"66",5,"martinez","01:06","SUBA","",NA
+2022,"66",5,"maciel","01:38","BTKA","",NA
+2022,"66",5,"martinez","01:43","SUBA","",NA
+2022,"66",5,"martinez","02:37","SUBA","Reset",NA
+2022,"66",5,"martinez","02:37","RST","Reset",NA
+2022,"66",5,"martinez","03:57","PGD","",NA
+2022,"66",5,"maciel","04:10","GPSA","",NA
+2022,"66",5,"martinez","04:23","SUBA","",NA
+2022,"66",5,"maciel","05:09","GPSA","",NA
+2022,"66",5,"martinez","05:19","PGD","",NA
+2022,"66",5,"maciel","05:36","GPSA","",NA
+2022,"66",5,"martinez","05:46","SUBA","",NA
+2022,"66",5,"maciel","05:47","SUBA","",NA
+2022,"66",5,"martinez","07:10","SWPA","",NA
+2022,"66",5,"martinez","07:16","PGD","",NA
+2022,"66",5,"maciel","07:18","GPSA","",NA
+2022,"66",5,"maciel","07:19","BTK","","3"
+2022,"66",5,"maciel","07:53","SUBA","",NA
+2022,"66",5,"maciel","08:51","SUB","",NA
+2022,"66",6,"pato","00:29","PGD","",NA
+2022,"66",6,"pato","01:13","SUBA","",NA
+2022,"66",6,"pato","01:28","SUBA","",NA
+2022,"66",6,"pato","01:42","PGD","",NA
+2022,"66",6,"pato","03:01","SUBA","",NA
+2022,"66",6,"pato","03:40","SUBA","",NA
+2022,"66",6,"pato","03:52","SUB","",NA
+2022,"66",7,"skinner","00:13","PGD","",NA
+2022,"66",7,"skinner","00:52","SWPA","",NA
+2022,"66",7,"skinner","00:56","PGD","",NA
+2022,"66",7,"skinner","02:05","SUBA","",NA
+2022,"66",7,"skinner","02:29","SUBA","",NA
+2022,"66",7,"agazarm","02:48","PGD","",NA
+2022,"66",7,"skinner","02:54","SUBA","Reset",NA
+2022,"66",7,"skinner","02:54","RST","Reset",NA
+2022,"66",7,"skinner","03:22","PGD","",NA
+2022,"66",7,"skinner","03:57","SWPA","",NA
+2022,"66",7,"skinner","04:00","PGD","",NA
+2022,"66",7,"skinner","04:05","SUBA","",NA
+2022,"66",7,"agazarm","04:43","PGD","",NA
+2022,"66",7,"skinner","06:17","SUBA","",NA
+2022,"66",7,"agazarm","07:51","GPSA","",NA
+2022,"66",7,"agazarm","07:52","SUBA","",NA
+2022,"66",7,"agazarm","08:22","BTKA","",NA
+2022,"66",7,"skinner","08:28","PGD","",NA
+2022,"66",7,"skinner","08:40","SWPA","",NA
+2022,"66",7,"skinner","08:50","BTKA","",NA
+2022,"66",7,"skinner","08:56","PGD","",NA
+2022,"66",7,"skinner","08:57","SUBA","",NA
+2022,"66",7,"skinner","09:04","SUBA","",NA
+2022,"66",7,"skinner","09:36","PGD","Reset",NA
+2022,"66",7,"skinner","09:36","RST","Reset",NA
+2022,"66",7,"agazarm","10:38","BTKA","Reset",NA
+2022,"66",7,"agazarm","10:38","RST","Reset",NA
+2022,"66",7,"agazarm","11:05","TKDA","",NA
+2022,"66",7,"skinner","11:07","BTKA","",NA
+2022,"66",7,"skinner","11:15","SUBA","",NA
+2022,"66",7,"skinner","12:00","BTKA","",NA
+2022,"66",7,"skinner","12:14","PGD","",NA
+2022,"66",7,"skinner","13:15","SUBA","",NA
+2022,"66",7,"skinner","14:07","PGD","",NA
+2022,"66",7,"agazarm","15:02","BTKA","",NA
+2022,"66",7,"skinner","15:06","SWPA","",NA
+2022,"66",7,"skinner","15:16","SUBA","",NA
+2022,"66",7,"agazarm","15:27","BTKA","",NA
+2022,"66",7,"agazarm","15:36","GPSA","",NA
+2022,"66",8,"","00:14","CLI","",NA
+2022,"66",8,"alvarenga","00:22","TKDA","",NA
+2022,"66",8,"sousa","00:27","TKDA","",NA
+2022,"66",8,"sousa","00:34","TKDA","",NA
+2022,"66",8,"sousa","00:38","TKDA","",NA
+2022,"66",8,"alvarenga","00:45","SUBA","Reset",NA
+2022,"66",8,"alvarenga","00:45","RST","Reset",NA
+2022,"66",8,"alvarenga","03:17","SUBA","",NA
+2022,"66",8,"alvarenga","03:40","PGD","Reset",NA
+2022,"66",8,"alvarenga","03:40","RST","Reset",NA
+2022,"66",8,"","04:05","CLI","",NA
+2022,"66",8,"sousa","04:49","TKDA","",NA
+2022,"66",8,"alvarenga","05:00","TKD","Reset",NA
+2022,"66",8,"alvarenga","05:00","RST","Reset",NA
+2022,"66",8,"","05:04","CLI","",NA
+2022,"66",8,"sousa","05:09","TKDA","",NA
+2022,"66",8,"sousa","05:14","TKD","",NA
+2022,"66",8,"alvarenga","05:16","PGD","",NA
+2022,"66",8,"sousa","05:33","GPSA","",NA
+2022,"66",8,"alvarenga","05:37","PGD","",NA
+2022,"66",8,"alvarenga","05:50","SWPA","Reset",NA
+2022,"66",8,"alvarenga","05:50","RST","Reset",NA
+2022,"66",8,"alvarenga","06:41","PGD","",NA
+2022,"66",8,"alvarenga","07:01","SWPA","",NA
+2022,"66",8,"alvarenga","07:09","SWPA","",NA
+2022,"66",8,"alvarenga","07:11","SUBA","",NA
+2022,"66",8,"alvarenga","07:16","PGD","",NA
+2022,"66",8,"sousa","07:31","GPSA","",NA
+2022,"66",8,"alvarenga","07:35","SWP","",NA
+2022,"66",8,"alvarenga","07:38","GPS","",NA
+2022,"66",8,"sousa","07:44","PGD","",NA
+2022,"66",8,"alvarenga","07:59","GPSA","",NA
+2022,"66",8,"sousa","08:00","PGD","",NA
+2022,"66",8,"sousa","08:51","SWPA","",NA
+2022,"66",8,"alvarenga","09:06","GPSA","",NA
+2022,"66",8,"sousa","09:07","SUBA","",NA
+2022,"66",8,"alvarenga","09:08","SUBA","",NA
+2022,"66",8,"sousa","09:10","SWPA","Reset",NA
+2022,"66",8,"sousa","09:10","RST","Reset",NA
+2022,"66",8,"","09:15","CLI","",NA
+2022,"66",8,"sousa","09:35","TKDA","",NA
+2022,"66",8,"alvarenga","09:41","TKDA","",NA
+2022,"66",8,"alvarenga","09:42","BTKA","",NA
+2022,"66",8,"sousa","09:47","TKDA","",NA
+2022,"66",8,"sousa","10:30","BTKA","",NA
+2022,"66",8,"sousa","10:41","BTKA","",NA
+2022,"66",8,"sousa","10:46","PGD","Reset",NA
+2022,"66",8,"sousa","10:46","RST","Reset",NA
+2022,"66",8,"","11:39","CLI","",NA
+2022,"66",8,"alvarenga","11:40","TKDA","",NA
+2022,"66",8,"sousa","11:55","TKD","","2"
+2022,"66",8,"alvarenga","11:56","SUBA","",NA
+2022,"66",8,"alvarenga","11:57","PGD","",NA
+2022,"66",8,"sousa","13:23","GPSA","",NA
+2022,"66",8,"alvarenga","13:26","PGD","",NA
+2022,"66",8,"alvarenga","13:31","SWPA","",NA
+2022,"66",8,"sousa","13:36","BTKA","",NA
+2022,"66",8,"sousa","13:46","BTK","","3"
+2022,"66",9,"","00:20","CLI","",NA
+2022,"66",9,"mcnally","00:22","PGD","",NA
+2022,"66",9,"mcnally","00:44","SWPA","",NA
+2022,"66",9,"mcnally","00:53","SWPA","",NA
+2022,"66",9,"mcnally","00:54","PGD","",NA
+2022,"66",9,"cisneros","02:25","SUBA","",NA
+2022,"66",9,"mcnally","02:51","SWP","",NA
+2022,"66",9,"cisneros","02:52","SUBA","Reset",NA
+2022,"66",9,"cisneros","02:52","RST","Reset",NA
+2022,"66",9,"","03:00","CLI","",NA
+2022,"66",9,"mcnally","03:02","PGD","",NA
+2022,"66",9,"cisneros","03:45","GPSA","",NA
+2022,"66",9,"mcnally","03:47","PGD","",NA
+2022,"66",9,"cisneros","04:16","SUBA","",NA
+2022,"66",9,"cisneros","04:25","PGD","",NA
+2022,"66",9,"cisneros","05:43","SWPA","Reset",NA
+2022,"66",9,"cisneros","05:43","RST","Reset",NA
+2022,"66",9,"","05:51","CLI","",NA
+2022,"66",9,"mcnally","06:17","TKDA","",NA
+2022,"66",9,"cisneros","06:39","TKDA","",NA
+2022,"66",9,"cisneros","06:44","BTKA","",NA
+2022,"66",9,"cisneros","06:50","SUBA","",NA
+2022,"66",9,"mcnally","06:52","SUBA","",NA
+2022,"66",9,"cisneros","06:54","BTKA","Reset",NA
+2022,"66",9,"cisneros","06:54","RST","Reset",NA
+2022,"66",9,"","07:11","CLI","",NA
+2022,"66",9,"mcnally","07:47","TKDA","",NA
+2022,"66",9,"mcnally","08:11","TKDA","",NA
+2022,"66",9,"cisneros","08:18","TKDA","",NA
+2022,"66",9,"cisneros","09:00","BTKA","",NA
+2022,"66",9,"mcnally","09:05","SUBA","Reset",NA
+2022,"66",9,"mcnally","09:05","RST","Reset",NA
+2022,"66",9,"","09:15","CLI","",NA
+2022,"66",9,"mcnally","09:23","TKDA","",NA
+2022,"66",9,"mcnally","09:33","PGD","",NA
+2022,"66",9,"cisneros","09:47","SUBA","",NA
+2022,"66",9,"cisneros","10:19","SUBA","Reset",NA
+2022,"66",9,"cisneros","10:19","RST","Reset",NA
+2022,"66",9,"","10:41","CLI","",NA
+2022,"66",9,"mcnally","11:12","TKDA","",NA
+2022,"66",9,"cisneros","11:13","BTKA","",NA
+2022,"66",9,"mcnally","11:15","BTKA","",NA
+2022,"66",9,"mcnally","11:20","PGD","",NA
+2022,"66",9,"cisneros","11:21","GPSA","",NA
+2022,"66",9,"mcnally","11:50","PGD","",NA
+2022,"66",9,"cisneros","13:21","GPSA","",NA
+2022,"66",9,"mcnally","13:41","PGD","",NA
+2022,"66",9,"mcnally","14:03","SWPA","",NA
+2022,"66",9,"mcnally","14:07","PGD","",NA
+2022,"66",9,"cisneros","14:30","GPSA","",NA
+2022,"66",9,"mcnally","14:33","SUBA","",NA
+2022,"66",9,"mcnally","14:34","BTKA","",NA
+2022,"66",9,"mcnally","15:13","PGD","",NA
+2022,"66",10,"reis","02:06","SUBA","",NA
+2022,"66",10,"andrey","02:07","PGD","",NA
+2022,"66",10,"reis","02:24","PGD","",NA
+2022,"66",10,"andrey","02:58","GPSA","",NA
+2022,"66",10,"reis","03:37","PGD","",NA
+2022,"66",10,"andrey","04:02","GPSA","",NA
+2022,"66",10,"reis","04:07","PGD","",NA
+2022,"66",10,"andrey","05:26","GPSA","",NA
+2022,"66",10,"andrey","05:56","GPSA","",NA
+2022,"66",10,"reis","06:01","PGD","",NA
+2022,"66",10,"andrey","06:02","GPSA","",NA
+2022,"66",10,"andrey","06:06","BTKA","",NA
+2022,"66",10,"reis","06:11","PGD","",NA
+2022,"66",10,"andrey","06:33","GPSA","",NA
+2022,"66",10,"reis","06:33","PGD","",NA
+2022,"66",10,"reis","06:37","SWPA","",NA
+2022,"66",10,"reis","06:42","PGD","",NA
+2022,"66",10,"reis","07:46","SWPA","",NA
+2022,"66",10,"reis","08:01","SWPA","",NA
+2022,"66",10,"reis","08:05","PGD","",NA
+2022,"66",10,"andrey","08:29","GPSA","",NA
+2022,"66",10,"reis","08:42","PGD","",NA
+2022,"66",10,"reis","09:02","SWPA","",NA
+2022,"66",10,"reis","09:10","PGD","",NA
+2022,"66",10,"andrey","09:16","GPSA","",NA
+2022,"66",10,"reis","09:21","PGD","",NA
+2022,"66",10,"andrey","09:23","GPSA","",NA
+2022,"66",10,"reis","09:25","PGD","Reset",NA
+2022,"66",10,"reis","09:25","RST","Reset",NA
+2022,"66",10,"","10:32","CLI","",NA
+2022,"66",10,"reis","10:38","TKDA","",NA
+2022,"66",10,"andrey","10:41","TKDA","",NA
+2022,"66",10,"andrey","10:48","BTKA","",NA
+2022,"66",10,"andrey","10:51","SUBA","Reset",NA
+2022,"66",10,"andrey","10:51","RST","Reset",NA
+2022,"66",10,"","11:16","CLI","",NA
+2022,"66",10,"reis","11:30","TKDA","",NA
+2022,"66",10,"reis","11:52","TKDA","Reset",NA
+2022,"66",10,"reis","11:52","RST","Reset",NA
+2022,"66",10,"","12:05","CLI","",NA
+2022,"66",10,"reis","12:19","TKDA","",NA
+2022,"66",10,"andrey","12:34","TKDA","",NA
+2022,"66",10,"reis","12:58","TKDA","",NA
+2022,"66",10,"andrey","13:29","TKDA","",NA
+2022,"66",10,"reis","13:50","TKDA","",NA
+2022,"66",10,"reis","13:55","BTKA","Reset",NA
+2022,"66",10,"reis","13:55","RST","Reset",NA
+2022,"66",10,"","14:52","CLI","",NA
+2022,"66",10,"andrey","15:06","TKDA","",NA
+2022,"66",10,"reis","15:13","TKDA","",NA
+2022,"66",10,"reis","15:15","BTKA","",NA
+2022,"66",11,"pato","00:16","PGD","",NA
+2022,"66",11,"maciel","00:29","SUBA","",NA
+2022,"66",11,"pato","00:38","PGD","",NA
+2022,"66",11,"pato","00:50","SUBA","",NA
+2022,"66",11,"pato","01:21","SUBA","",NA
+2022,"66",11,"pato","01:55","SUBA","",NA
+2022,"66",11,"pato","03:08","SUBA","",NA
+2022,"66",11,"pato","04:33","SUBA","",NA
+2022,"66",11,"pato","04:35","PGD","",NA
+2022,"66",11,"pato","05:50","SUBA","",NA
+2022,"66",11,"maciel","06:25","BTKA","",NA
+2022,"66",11,"pato","06:37","PGD","",NA
+2022,"66",11,"pato","07:22","SUBA","",NA
+2022,"66",11,"pato","08:02","SUB","",NA
+2022,"66",12,"skinner","00:23","PGD","",NA
+2022,"66",12,"sousa","00:26","GPSA","",NA
+2022,"66",12,"sousa","00:36","GPS","",NA
+2022,"66",12,"skinner","00:51","PGD","",NA
+2022,"66",12,"skinner","01:22","SUBA","",NA
+2022,"66",12,"sousa","01:37","GPS","",NA
+2022,"66",12,"sousa","02:23","GPS","",NA
+2022,"66",12,"sousa","02:33","GPS","",NA
+2022,"66",12,"sousa","02:43","GPS","",NA
+2022,"66",12,"sousa","02:52","GPS","",NA
+2022,"66",12,"sousa","03:01","GPS","",NA
+2022,"66",12,"sousa","04:02","SUBA","",NA
+2022,"66",12,"skinner","04:10","PGD","",NA
+2022,"66",12,"sousa","04:21","GPS","",NA
+2022,"66",12,"sousa","04:25","GPS","",NA
+2022,"66",12,"sousa","04:37","SUBA","",NA
+2022,"66",12,"sousa","05:59","SUB","",NA
+2022,"66",13,"","02:54","CLI","",NA
+2022,"66",13,"reis","03:25","TKDA","",NA
+2022,"66",13,"reis","03:34","TKDA","",NA
+2022,"66",13,"cisneros","03:46","TKDA","Reset",NA
+2022,"66",13,"cisneros","03:46","RST","Reset",NA
+2022,"66",13,"","04:16","CLI","",NA
+2022,"66",13,"reis","04:19","TKDA","",NA
+2022,"66",13,"reis","04:22","TKDA","",NA
+2022,"66",13,"reis","04:43","TKDA","Reset",NA
+2022,"66",13,"reis","04:43","RST","Reset",NA
+2022,"66",13,"","04:54","CLI","",NA
+2022,"66",13,"cisneros","04:59","TKDA","",NA
+2022,"66",13,"reis","05:06","TKDA","",NA
+2022,"66",13,"reis","05:08","BTKA","Reset",NA
+2022,"66",13,"reis","05:08","RST","Reset",NA
+2022,"66",13,"","05:20","CLI","",NA
+2022,"66",13,"reis","05:51","TKD","",NA
+2022,"66",13,"cisneros","05:52","PGD","",NA
+2022,"66",13,"cisneros","06:10","SWPA","Reset",NA
+2022,"66",13,"cisneros","06:10","RST","Reset",NA
+2022,"66",13,"","06:30","CLI","",NA
+2022,"66",13,"reis","06:54","TKDA","",NA
+2022,"66",13,"cisneros","06:59","TKDA","",NA
+2022,"66",13,"cisneros","07:48","TKD","",NA
+2022,"66",13,"reis","07:56","PGD","",NA
+2022,"66",13,"reis","08:24","SUBA","",NA
+2022,"66",13,"cisneros","08:44","BTKA","",NA
+2022,"66",13,"reis","09:04","PGD","",NA
+2022,"66",13,"reis","09:07","SWPA","Reset",NA
+2022,"66",13,"reis","09:07","RST","Reset",NA
+2022,"66",13,"","09:17","CLI","",NA
+2022,"66",13,"reis","09:44","TKD","","2"
+2022,"66",13,"cisneros","09:45","PGD","",NA
+2022,"66",13,"reis","10:08","PGD","",NA
+2022,"66",13,"reis","11:12","GPSA","",NA
+2022,"66",13,"cisneros","11:13","PGD","",NA
+2022,"66",13,"","11:33","CLI","",NA
+2022,"66",13,"cisneros","11:40","TKDA","",NA
+2022,"66",13,"reis","11:44","TKDA","",NA
+2022,"66",13,"cisneros","11:55","TKDA","",NA
+2022,"66",13,"reis","12:02","TKDA","",NA
+2022,"66",13,"cisneros","12:19","TKDA","",NA
+2022,"66",13,"cisneros","12:30","TKDA","",NA
+2022,"66",13,"reis","12:44","TKDA","",NA
+2022,"66",13,"cisneros","12:59","TKDA","",NA
+2022,"66",13,"reis","13:11","TKDA","",NA
+2022,"66",13,"cisneros","13:21","TKDA","",NA
+2022,"66",14,"pato","02:13","PGD","",NA
+2022,"66",14,"sousa","02:15","GPSA","",NA
+2022,"66",14,"pato","02:25","PGD","",NA
+2022,"66",14,"pato","02:45","SWPA","",NA
+2022,"66",14,"pato","03:23","PGD","",NA
+2022,"66",14,"sousa","04:33","GPSA","",NA
+2022,"66",14,"sousa","04:39","GPSA","",NA
+2022,"66",14,"sousa","05:16","GPSA","",NA
+2022,"66",14,"pato","05:28","SUBA","",NA
+2022,"66",14,"pato","05:39","PGD","",NA
+2022,"66",14,"sousa","06:03","GPSA","",NA
+2022,"66",14,"sousa","06:18","GPSA","",NA
+2022,"66",14,"pato","06:40","PGD","",NA
+2022,"66",14,"pato","06:51","SUBA","",NA
+2022,"66",14,"pato","07:06","SUBA","",NA
+2022,"66",14,"pato","07:22","PGD","",NA
+2022,"66",14,"pato","07:26","SWPA","",NA
+2022,"66",14,"pato","07:30","PGD","Reset",NA
+2022,"66",14,"pato","07:30","RST","Reset",NA
+2022,"66",14,"sousa","07:46","GPSA","",NA
+2022,"66",14,"pato","08:02","PGD","",NA
+2022,"66",14,"sousa","09:12","GPSA","",NA
+2022,"66",14,"pato","09:21","PGD","",NA
+2022,"66",14,"sousa","10:18","GPSA","",NA
+2022,"66",14,"pato","10:30","PGD","",NA
+2022,"66",14,"pato","11:15","SUBA","",NA
+2022,"66",14,"pato","11:16","PGD","",NA
+2022,"66",14,"sousa","12:08","GPSA","Reset",NA
+2022,"66",14,"sousa","12:08","RST","Reset",NA
+2022,"66",14,"","12:34","CLI","",NA
+2022,"66",14,"sousa","12:45","TKDA","",NA
+2022,"66",14,"sousa","12:48","BTKA","",NA
+2022,"66",14,"sousa","12:58","TKDA","",NA
+2022,"66",14,"sousa","13:06","TKDA","",NA
+2022,"66",14,"pato","13:08","SUBA","",NA
+2022,"66",14,"sousa","14:07","TKDA","Reset",NA
+2022,"66",14,"sousa","14:07","RST","Reset",NA
+2022,"66",14,"","14:54","CLI","",NA
+2022,"66",14,"sousa","14:59","TKDA","",NA
+2022,"66",14,"pato","15:10","TKDA","",NA
+2022,"66",14,"sousa","15:18","TKDA","",NA
+2022,"66",14,"sousa","15:25","BTKA","",NA
+2022,"66",14,"pato","15:33","PGD","",NA
+2022,"66",14,"sousa","15:46","GPSA","",NA
+2022,"66",14,"pato","15:51","PGD","Reset",NA
+2022,"66",14,"pato","15:51","RST","Reset",NA
+2022,"66",14,"pato","17:41","SUBA","",NA
+2022,"66",15,"","04:18","CLI","",NA
+2022,"66",15,"sousa","04:24","TKDA","",NA
+2022,"66",15,"reis","04:26","TKDA","",NA
+2022,"66",15,"reis","04:33","TKDA","Reset",NA
+2022,"66",15,"reis","04:33","RST","Reset",NA
+2022,"66",15,"","04:42","CLI","",NA
+2022,"66",15,"reis","05:06","TKDA","Reset",NA
+2022,"66",15,"reis","05:06","RST","Reset",NA
+2022,"66",15,"","05:14","CLI","",NA
+2022,"66",15,"reis","05:48","TKDA","",NA
+2022,"66",15,"sousa","06:20","TKDA","Reset",NA
+2022,"66",15,"sousa","06:20","RST","Reset",NA
+2022,"66",15,"","06:29","CLI","",NA
+2022,"66",15,"sousa","06:37","TKDA","",NA
+2022,"66",15,"reis","06:46","TKD","",NA
+2022,"66",15,"sousa","06:49","PGD","Reset",NA
+2022,"66",15,"sousa","06:49","RST","Reset",NA
+2022,"66",15,"sousa","07:32","SWPA","",NA
+2022,"66",15,"reis","07:33","PGD","",NA
+2022,"66",15,"reis","07:54","SUBA","",NA
+2022,"66",15,"sousa","07:55","SUBA","",NA
+2022,"66",15,"sousa","07:58","SWP","",NA
+2022,"66",15,"reis","07:59","PGD","",NA
+2022,"66",15,"reis","09:41","SWPA","Reset",NA
+2022,"66",15,"reis","09:41","RST","Reset",NA
+2022,"66",15,"","09:55","CLI","",NA
+2022,"66",15,"reis","10:07","TKDA","",NA
+2022,"66",15,"sousa","10:08","TKDA","",NA
+2022,"66",15,"reis","10:29","TKDA","",NA
+2022,"66",15,"reis","10:47","TKDA","",NA
+2022,"66",15,"sousa","10:57","TKDA","",NA
+2022,"66",15,"reis","11:00","BTKA","",NA
+2022,"66",15,"reis","11:16","PGD","",NA
+2022,"66",15,"sousa","11:31","GPSA","",NA
+2022,"66",15,"reis","11:47","SWPA","",NA
+2022,"66",15,"reis","11:52","PGD","Reset",NA
+2022,"66",15,"reis","11:52","RST","Reset",NA
+2022,"66",15,"sousa","13:04","GPSA","",NA
+2022,"66",15,"reis","13:13","PGD","",NA
+2022,"66",15,"sousa","13:50","GPSA","",NA
+2022,"66",15,"reis","13:58","PGD","",NA
+2022,"66",15,"sousa","14:23","SUBA","",NA
+2022,"66",15,"reis","14:24","SUBA","",NA
+2022,"66",15,"reis","14:30","SWP","Reset",NA
+2022,"66",15,"reis","14:30","RST","Reset",NA
+2022,"66",15,"sousa","14:52","PGD","",NA
+2022,"66",15,"reis","15:47","PGD","Reset",NA
+2022,"66",15,"reis","15:47","RST","Reset",NA
+2022,"66",15,"","16:13","CLI","",NA
+2022,"66",15,"reis","16:37","TKDA","",NA
+2022,"66",15,"reis","16:51","TKDA","",NA
+2022,"66",15,"reis","17:12","TKDA","",NA
+2022,"66",15,"sousa","17:25","TKDA","",NA
+2022,"66",15,"reis","17:33","TKDA","",NA
+2022,"66",15,"reis","17:59","TKDA","",NA
+2022,"66",15,"reis","18:03","BTK","","3"
+2022,"66",15,"reis","19:17","PGD","",NA
+2022,"66",15,"sousa","19:22","GPSA","",NA
+2022,"66",15,"reis","19:30","PGD","",NA
+2022,"66",15,"reis","20:26","SWPA","",NA
+2022,"66",15,"reis","20:54","PGD","",NA
+2022,"66",15,"sousa","20:56","GPSA","",NA
+2022,"66",15,"reis","21:05","SWPA","",NA
+2022,"66",15,"reis","21:07","PGD","",NA
+2022,"66",15,"reis","21:17","SUBA","",NA
+2022,"66",15,"reis","21:30","SUBA","",NA
+2022,"66",15,"reis","22:22","PGD","",NA
+2022,"66",15,"sousa","22:27","GPSA","",NA
+2022,"66",15,"reis","22:57","SUBA","",NA
+2022,"66",15,"reis ","23:25","PGD","",NA
+2022,"66",15,"sousa","23:33","GPSA","",NA
+2022,"66",15,"sousa","23:36","GPSA","",NA
+2022,"66",15,"reis","23:52","PGD","",NA
+2022,"66",15,"reis","24:11:00","PGD","",NA
+2022,"66",15,"sousa","24:23:00","GPSA","",NA
+2022,"66",15,"reis","24:26:00","SWPA","",NA
+2022,"66",15,"sousa","24:30:00","BTKA","",NA
+2022,"66",15,"reis","25:00:00","PGD","",NA
+2022,"77",16,"","00:14","CLI","",NA
+2022,"77",16,"iwamoto","00:49","TKDA","",NA
+2022,"77",16,"iwamoto","01:10","TKD","",NA
+2022,"77",16,"torres","01:11","PGD","",NA
+2022,"77",16,"iwamoto","01:23","SWPA","",NA
+2022,"77",16,"","01:24","CLI","",NA
+2022,"77",16,"iwamoto","01:27","TKDA","",NA
+2022,"77",16,"torres","01:28","PGD","",NA
+2022,"77",16,"iwamoto","02:08","GPSA","",NA
+2022,"77",16,"torres","02:12","PGD","",NA
+2022,"77",16,"iwamoto","03:11","PGD","",NA
+2022,"77",16,"torres","03:50","PGD","",NA
+2022,"77",16,"torres","03:57","SUBA","",NA
+2022,"77",16,"torres","04:03","SWPA","",NA
+2022,"77",16,"","04:10","CLI","",NA
+2022,"77",16,"iwamoto","05:33","TKDA","",NA
+2022,"77",16,"torres","05:37","BTKA","",NA
+2022,"77",16,"iwamoto","06:36","TKDA","",NA
+2022,"77",16,"iwamoto","07:14","TKDA","",NA
+2022,"77",16,"iwamoto","07:46","TKDA","",NA
+2022,"77",16,"iwamoto","07:47","TKDA","",NA
+2022,"77",16,"torres","07:56","TKDA","",NA
+2022,"77",16,"iwamoto","08:07","TKDA","",NA
+2022,"77",16,"iwamoto","08:18","TKDA","",NA
+2022,"77",16,"torres","08:22","BTKA","",NA
+2022,"77",16,"iwamoto","09:33","PGD","",NA
+2022,"77",16,"torres","09:39","BTKA","Reset",NA
+2022,"77",16,"torres","09:39","RST","Reset",NA
+2022,"77",16,"","10:36","CLI","",NA
+2022,"77",16,"iwamoto","10:52","TKDA","",NA
+2022,"77",16,"torres","10:58","BTKA","",NA
+2022,"77",16,"iwamoto","11:52","PGD","",NA
+2022,"77",16,"iwamoto","13:04","SUBA","",NA
+2022,"77",16,"iwamoto","13:19","PGD","",NA
+2022,"77",16,"torres","14:51","SUBA","",NA
+2022,"77",16,"torres","15:08","GPSA","",NA
+2022,"77",16,"torres","15:14","GPSA","",NA
+2022,"77",16,"torres","15:16","BTKA","",NA
+2022,"77",17,"langaker","00:14","PGD","",NA
+2022,"77",17,"barch","00:51","SUBA","",NA
+2022,"77",17,"langaker","01:37","PGD","",NA
+2022,"77",17,"barch","01:56","SUBA","",NA
+2022,"77",17,"langaker","01:57","PGD","",NA
+2022,"77",17,"barch","02:33","GPSA","",NA
+2022,"77",17,"barch","02:52","GPSA","",NA
+2022,"77",17,"barch","03:26","GPSA","",NA
+2022,"77",17,"langaker","03:27","SUBA","",NA
+2022,"77",17,"langaker","03:42","SUBA","",NA
+2022,"77",17,"langaker","04:21","PGD","Reset",NA
+2022,"77",17,"langaker","04:21","RST","Reset",NA
+2022,"77",17,"barch","06:20","GPSA","",NA
+2022,"77",17,"barch","07:02","GPSA","",NA
+2022,"77",17,"barch","07:15","GPSA","",NA
+2022,"77",17,"langaker","08:10","SWPA","",NA
+2022,"77",17,"langaker","08:15","SUBA","",NA
+2022,"77",17,"barch","08:20","TKDA","",NA
+2022,"77",17,"barch","08:25","BTKA","",NA
+2022,"77",17,"barch","08:58","BTK","","3"
+2022,"77",17,"barch","09:46","SUBA","",NA
+2022,"77",18,"giles","00:17","PGD","",NA
+2022,"77",18,"ruotolo","01:33","GPSA","",NA
+2022,"77",18,"giles","02:19","SUBA","",NA
+2022,"77",18,"ruotolo","03:56","SUBA","",NA
+2022,"77",18,"ruotolo","04:02","GPSA","",NA
+2022,"77",18,"ruotolo","04:42","GPSA","",NA
+2022,"77",18,"ruotolo","05:17","GPSA","",NA
+2022,"77",18,"ruotolo","05:28","GPSA","",NA
+2022,"77",18,"ruotolo","05:53","GPSA","",NA
+2022,"77",18,"giles","06:15","SUBA","",NA
+2022,"77",18,"ruotolo","06:31","GPSA","",NA
+2022,"77",18,"ruotolo","06:59","GPSA","",NA
+2022,"77",18,"ruotolo","07:23","GPSA","",NA
+2022,"77",18,"ruotolo","07:30","SUBA","",NA
+2022,"77",18,"ruotolo","07:46","GPSA","",NA
+2022,"77",18,"ruotolo","08:15","SUB","",NA
+2022,"77",19,"","00:21","CLI","",NA
+2022,"77",19,"varela","00:52","TKDA","",NA
+2022,"77",19,"varela","01:33","TKD","",NA
+2022,"77",19,"jimenez","01:44","PGD","",NA
+2022,"77",19,"jimenez","01:46","SUBA","Reset",NA
+2022,"77",19,"jimenez","01:46","RST","Reset",NA
+2022,"77",19,"","01:58","CLI","",NA
+2022,"77",19,"jimenez","02:33","TKDA","",NA
+2022,"77",19,"jimenez","03:23","TKDA","",NA
+2022,"77",19,"jimenez","03:29","BTKA","",NA
+2022,"77",19,"jimenez","03:30","PGD","",NA
+2022,"77",19,"jimenez","03:35","SWP","",NA
+2022,"77",19,"varela","03:38","SUBA","",NA
+2022,"77",19,"varela","03:39","PGD","",NA
+2022,"77",19,"jimenez","03:55","GPSA","",NA
+2022,"77",19,"jimenez","04:13","GPS","",NA
+2022,"77",19,"jimenez","04:22","BTKA","",NA
+2022,"77",19,"jimenez","04:28","BTK","",NA
+2022,"77",19,"jimenez","05:20","SUB","",NA
+2022,"77",20,"hage","00:29","PGD","",NA
+2022,"77",20,"leon","00:47","SUBA","",NA
+2022,"77",20,"leon","00:58","GPSA","",NA
+2022,"77",20,"hage","01:02","PGD","",NA
+2022,"77",20,"leon","02:01","GPSA","",NA
+2022,"77",20,"leon","02:55","GPS","",NA
+2022,"77",20,"leon","03:07","SUB","",NA
+2022,"77",21,"szczecinski","00:17","PGD","",NA
+2022,"77",21,"szczecinski","00:35","SUBA","",NA
+2022,"77",21,"szczecinski","01:13","SUBA","",NA
+2022,"77",21,"szczecinski","01:23","SUBA","",NA
+2022,"77",21,"tackett","01:33","SUBA","",NA
+2022,"77",21,"tackett","02:54","SUBA","",NA
+2022,"77",21,"szczecinski","02:55","SUBA","",NA
+2022,"77",21,"szczecinski","03:12","SUB","",NA
+2022,"77",22,"","00:27","CLI","",NA
+2022,"77",22,"taza","00:39","TKDA","",NA
+2022,"77",22,"taza","00:53","TKDA","",NA
+2022,"77",22,"taza","01:18","PGD","",NA
+2022,"77",22,"galvao","01:19","BTKA","",NA
+2022,"77",22,"galvao","01:40","PGD","",NA
+2022,"77",22,"galvao","01:43","SWP","",NA
+2022,"77",22,"taza","01:44","PGD","",NA
+2022,"77",22,"taza","03:41","SWPA","",NA
+2022,"77",22,"galvao","03:53","GPSA","",NA
+2022,"77",22,"galvao","04:04","BTKA","",NA
+2022,"77",22,"galvao","04:07","GPS","",NA
+2022,"77",22,"galvao","04:12","BTK","",NA
+2022,"77",22,"galvao","04:55","GPS","",NA
+2022,"77",22,"galvao","04:57","PGD","",NA
+2022,"77",22,"galvao","05:24","SWP","",NA
+2022,"77",22,"taza","06:01","PGD","",NA
+2022,"77",22,"galvao","06:35","GPSA","",NA
+2022,"77",22,"taza","06:40","PGD","Reset",NA
+2022,"77",22,"taza","06:40","RST","Reset",NA
+2022,"77",22,"","06:53","CLI","",NA
+2022,"77",22,"galvao","07:00","TKDA","Reset",NA
+2022,"77",22,"galvao","07:00","RST","Reset",NA
+2022,"77",22,"","07:09","CLI","",NA
+2022,"77",22,"galvao","08:01","TKDA","",NA
+2022,"77",22,"galvao","08:22","TKDA","",NA
+2022,"77",22,"galvao","09:21","TKD","","2"
+2022,"77",22,"taza","09:24","PGD","",NA
+2022,"77",22,"galvao","10:03","BTK","","3"
+2022,"77",22,"galvao","10:13","SUBA","",NA
+2022,"77",22,"galvao","10:35","SUBA","",NA
+2022,"77",22,"galvao","10:40","PGD","",NA
+2022,"77",23,"","00:15","CLI","",NA
+2022,"77",23,"ryan","01:11","TKDA","",NA
+2022,"77",23,"ryan","01:39","BTKA","",NA
+2022,"77",23,"ryan","02:18","GPS","",NA
+2022,"77",23,"ryan","02:44","GPS","",NA
+2022,"77",23,"ryan","02:51","GPS","",NA
+2022,"77",23,"ryan","03:13","BTKA","Reset",NA
+2022,"77",23,"ryan","03:13","RST","Reset",NA
+2022,"77",23,"","03:18","CLI","",NA
+2022,"77",23,"canuto","05:43","TKDA","",NA
+2022,"77",23,"canuto","07:15","TKDA","",NA
+2022,"77",23,"canuto","07:34","TKDA","",NA
+2022,"77",23,"ryan","08:21","TKDA","",NA
+2022,"77",23,"canuto","08:51","TKDA","",NA
+2022,"77",23,"canuto","10:03","TKDA","",NA
+2022,"77",23,"canuto","10:35","TKDA","",NA
+2022,"77",23,"canuto","10:56","TKD","","2"
+2022,"77",23,"canuto","11:14","BTK","","3"
+2022,"77",23,"canuto","11:20","SUBA","",NA
+2022,"77",24,"","00:17","CLI","",NA
+2022,"77",24,"barch","01:09","TKDA","",NA
+2022,"77",24,"torres","02:17","TKDA","",NA
+2022,"77",24,"barch","02:28","TKDA","Reset",NA
+2022,"77",24,"barch","02:28","RST","Reset",NA
+2022,"77",24,"","02:39","CLI","",NA
+2022,"77",24,"torres","02:52","TKDA","",NA
+2022,"77",24,"barch","04:04","TKDA","",NA
+2022,"77",24,"torres","04:10","TKD","",NA
+2022,"77",24,"barch","04:13","PGD","Reset",NA
+2022,"77",24,"barch","04:13","RST","Reset",NA
+2022,"77",24,"","04:51","CLI","",NA
+2022,"77",24,"torres","06:29","TKDA","",NA
+2022,"77",24,"barch","07:14","TKD","","4"
+2022,"77",24,"barch","07:15","GPS","Reset",NA
+2022,"77",24,"barch","07:15","RST","Reset",NA
+2022,"77",24,"","07:38","CLI","",NA
+2022,"77",24,"torres","07:40","TKDA","",NA
+2022,"77",24,"torres","08:06","TKDA","",NA
+2022,"77",24,"torres","08:32","TKDA","",NA
+2022,"77",24,"torres","08:40","TKDA","",NA
+2022,"77",24,"barch","08:49","BTKA","",NA
+2022,"77",24,"torres","08:54","PGD","",NA
+2022,"77",24,"torres","09:10","SUBA","",NA
+2022,"77",24,"torres","09:16","SWPA","Reset",NA
+2022,"77",24,"torres","09:16","RST","Reset",NA
+2022,"77",24,"","09:36","CLI","",NA
+2022,"77",24,"torres","09:47","TKDA","Reset",NA
+2022,"77",24,"torres","09:47","RST","Reset",NA
+2022,"77",24,"","09:59","CLI","",NA
+2022,"77",24,"torres","10:32","TKDA","",NA
+2022,"77",25,"","00:29","CLI","",NA
+2022,"77",25,"ruotolo","01:12","TKDA","",NA
+2022,"77",25,"jimenez","01:37","TKDA","",NA
+2022,"77",25,"ruotolo","01:46","TKDA","",NA
+2022,"77",25,"ruotolo","01:52","GPSA","",NA
+2022,"77",25,"jimenez","01:53","GPS","",NA
+2022,"77",25,"jimenez","02:10","BTKA","",NA
+2022,"77",25,"ruotolo","02:19","SWP","",NA
+2022,"77",25,"jimenez","02:20","PGD","",NA
+2022,"77",25,"ruotolo","02:27","SUB","",NA
+2022,"77",26,"","00:14","CLI","",NA
+2022,"77",26,"szczecinski","00:16","PGD","",NA
+2022,"77",26,"szczecinski","00:27","SUBA","",NA
+2022,"77",26,"szczecinski","00:33","PGD","",NA
+2022,"77",26,"szczecinski","01:08","SUBA","",NA
+2022,"77",26,"szczecinski","01:20","PGD","",NA
+2022,"77",26,"leon","03:12","GPSA","",NA
+2022,"77",26,"szczecinski","03:13","PGD","",NA
+2022,"77",26,"leon","04:51","GPSA","",NA
+2022,"77",26,"leon","05:05","GPSA","",NA
+2022,"77",26,"szczecinski","05:08","PGD","",NA
+2022,"77",26,"leon","05:51","GPSA","",NA
+2022,"77",26,"szczecinski","05:55","PGD","",NA
+2022,"77",26,"leon","06:56","GPSA","",NA
+2022,"77",26,"szczecinski","06:59","PGD","",NA
+2022,"77",26,"szczecinski","07:20","SWPA","",NA
+2022,"77",26,"szczecinski","08:31","PGD","Reset",NA
+2022,"77",26,"szczecinski","08:31","RST","Reset",NA
+2022,"77",26,"szczecinski","10:06","BTKA","",NA
+2022,"77",26,"leon","10:17","GPSA","Reset",NA
+2022,"77",26,"leon","10:17","RST","Reset",NA
+2022,"77",26,"","10:55","CLI","",NA
+2022,"77",26,"szczecinski","11:00","TKDA","",NA
+2022,"77",26,"leon","11:04","BTKA","",NA
+2022,"77",26,"leon","12:03","SUBA","",NA
+2022,"77",26,"leon","12:24","BTKA","",NA
+2022,"77",26,"leon","14:00","BTKA","",NA
+2022,"77",26,"szczecinski","14:11","BTKA","",NA
+2022,"77",26,"leon","14:14","PGD","",NA
+2022,"77",26,"szczecinski","14:15","SUBA","",NA
+2022,"77",26,"szczecinski","14:20","PGD","",NA
+2022,"77",26,"szczecinski","15:34","SWPA","",NA
+2022,"77",26,"leon","15:37","GPSA","",NA
+2022,"77",27,"","00:17","CLI","",NA
+2022,"77",27,"galvao","00:28","TKDA","",NA
+2022,"77",27,"galvao","00:49","TKDA","",NA
+2022,"77",27,"galvao","00:51","BTKA","",NA
+2022,"77",27,"galvao","01:01","PGD","",NA
+2022,"77",27,"galvao","01:25","SUBA","Reset",NA
+2022,"77",27,"galvao","01:25","RST","Reset",NA
+2022,"77",27,"galvao","01:51","PGD","",NA
+2022,"77",27,"canuto","02:03","GPSA","",NA
+2022,"77",27,"canuto","02:16","GPSA","",NA
+2022,"77",27,"galvao","02:20","SUB","",NA
+2022,"77",28,"","02:51","CLI","",NA
+2022,"77",28,"ruotolo","02:56","TKDA","",NA
+2022,"77",28,"ruotolo","03:30","TKDA","",NA
+2022,"77",28,"ruotolo","03:55","TKDA","",NA
+2022,"77",28,"barch","04:07","TKDA","",NA
+2022,"77",28,"ruotolo","04:27","TKDA","",NA
+2022,"77",28,"","04:54","CLI","",NA
+2022,"77",28,"barch","05:00","TKDA","",NA
+2022,"77",28,"ruotolo","05:37","TKDA","",NA
+2022,"77",28,"","06:11","CLI","",NA
+2022,"77",28,"barch","06:21","TKDA","",NA
+2022,"77",28,"ruotolo","06:43","TKDA","",NA
+2022,"77",28,"ruotolo","08:04","TKDA","",NA
+2022,"77",28,"","08:14","CLI","",NA
+2022,"77",28,"ruotolo","08:43","TKDA","",NA
+2022,"77",28,"ruotolo","08:57","TKDA","",NA
+2022,"77",28,"ruotolo","09:05","TKDA","",NA
+2022,"77",28,"barch","09:06","TKDA","",NA
+2022,"77",28,"barch","09:10","SUBA","Reset",NA
+2022,"77",28,"barch","09:10","RST","Reset",NA
+2022,"77",28,"","09:26","CLI","",NA
+2022,"77",28,"ruotolo","09:46","TKDA","",NA
+2022,"77",28,"barch","09:56","TKDA","",NA
+2022,"77",28,"barch","10:03","BTKA","",NA
+2022,"77",28,"barch","11:24","BTKA","",NA
+2022,"77",28,"ruotolo","11:44","PGD","",NA
+2022,"77",28,"barch","11:48","BTKA","",NA
+2022,"77",28,"ruotolo","12:00","TKDA","",NA
+2022,"77",28,"barch","12:04","BTKA","",NA
+2022,"77",28,"ruotolo","12:13","SUB","",NA
+2022,"77",29,"","02:08","CLI","",NA
+2022,"77",29,"galvao","02:19","TKDA","",NA
+2022,"77",29,"leon","02:20","SUBA","",NA
+2022,"77",29,"galvao","02:22","TKD","",NA
+2022,"77",29,"galvao","02:24","GPS","",NA
+2022,"77",29,"galvao","03:23","BTKA","",NA
+2022,"77",29,"galvao","04:25","BTKA","",NA
+2022,"77",29,"leon","04:27","PGD","",NA
+2022,"77",29,"galvao","05:49","GPSA","",NA
+2022,"77",29,"leon","05:56","PGD","",NA
+2022,"77",29,"galvao","06:34","GPSA","",NA
+2022,"77",29,"leon","06:38","PGD","",NA
+2022,"77",29,"leon","06:53","SWPA","",NA
+2022,"77",29,"leon","07:02","BTKA","",NA
+2022,"77",29,"galvao","07:08","BTKA","",NA
+2022,"77",29,"leon","07:10","PGD","",NA
+2022,"77",29,"leon","07:25","SWPA","",NA
+2022,"77",29,"leon","08:24","SUBA","",NA
+2022,"77",29,"leon","08:42","SWPA","",NA
+2022,"77",29,"galvao","09:04","GPSA","",NA
+2022,"77",29,"galvao","10:01","PGD","",NA
+2022,"77",29,"leon","10:03","PGD","",NA
+2022,"77",29,"galvao","11:25","GPSA","",NA
+2022,"77",29,"leon","11:33","SWPA","Reset",NA
+2022,"77",29,"leon","11:33","RST","Reset",NA
+2022,"77",29,"","11:35","CLI","Reset",NA
+2022,"77",29,"","11:35","RST","Reset",NA
+2022,"77",29,"","12:16","CLI","",NA
+2022,"77",29,"galvao","12:29","TKDA","",NA
+2022,"77",29,"leon","12:30","SUBA","Reset",NA
+2022,"77",29,"leon","12:30","RST","Reset",NA
+2022,"77",29,"","12:41","CLI","",NA
+2022,"77",29,"galvao","13:05","TKDA","",NA
+2022,"77",29,"galvao","13:13","TKDA","",NA
+2022,"77",29,"leon","13:17","SUBA","",NA
+2022,"77",29,"leon","13:20","BTKA","",NA
+2022,"77",29,"galvao","13:26","TKD","","2"
+2022,"77",29,"leon","13:27","PGD","",NA
+2022,"77",29,"galvao","15:39","GPSA","",NA
+2022,"77",29,"leon","15:40","PGD","",NA
+2022,"77",29,"leon","16:12","SUBA","Reset",NA
+2022,"77",29,"leon","16:12","RST","Reset",NA
+2022,"77",29,"","16:17","CLI","",NA
+2022,"77",29,"leon","16:32","TKDA","",NA
+2022,"77",29,"leon","16:36","BTKA","",NA
+2022,"77",29,"galvao","16:48","PGD","",NA
+2022,"77",29,"leon","17:03","GPSA","Reset",NA
+2022,"77",29,"leon","17:03","RST","Reset",NA
+2022,"77",29,"galvao","17:39","PGD","",NA
+2022,"77",30,"","03:02","CLI","",NA
+2022,"77",30,"ruotolo","04:02","TKDA","",NA
+2022,"77",30,"galvao","04:10","TKDA","",NA
+2022,"77",30,"galvao","04:27","TKDA","Reset",NA
+2022,"77",30,"galvao","04:27","RST","Reset",NA
+2022,"77",30,"","04:39","CLI","",NA
+2022,"77",30,"galvao","04:42","TKDA","",NA
+2022,"77",30,"galvao","04:50","TKDA","",NA
+2022,"77",30,"ruotolo","05:05","TKD","",NA
+2022,"77",30,"galvao","05:07","PGD","",NA
+2022,"77",30,"galvao","05:53","SWPA","",NA
+2022,"77",30,"galvao","05:55","PGD","",NA
+2022,"77",30,"ruotolo","06:11","BTKA","",NA
+2022,"77",30,"galvao","06:13","SWPA","",NA
+2022,"77",30,"galvao","06:14","PGD","",NA
+2022,"77",30,"galvao","06:46","SWPA","",NA
+2022,"77",30,"galvao","06:50","PGD","",NA
+2022,"77",30,"ruotolo","06:57","GPSA","",NA
+2022,"77",30,"galvao","07:50","PGD","",NA
+2022,"77",30,"galvao","07:53","SWPA","",NA
+2022,"77",30,"galvao","07:58","PGD","",NA
+2022,"77",30,"ruotolo","08:51","SUBA","",NA
+2022,"77",30,"galvao","10:00","SUBA","",NA
+2022,"77",30,"ruotolo","10:10","SUBA","",NA
+2022,"77",30,"galvao","10:43","SWPA","",NA
+2022,"77",30,"galvao","10:50","PGD","",NA
+2022,"77",30,"ruotolo","11:03","GPSA","",NA
+2022,"77",30,"ruotolo","11:48","SUBA","",NA
+2022,"77",30,"galvao","11:56","PGD","",NA
+2022,"77",30,"galvao","12:02","SUBA","",NA
+2022,"77",30,"galvao","12:16","SUBA","",NA
+2022,"77",30,"galvao","12:48","PGD","",NA
+2022,"77",30,"galvao","13:33","PGD","",NA
+2022,"77",30,"ruotolo","14:01","SUBA","",NA
+2022,"77",30,"ruotolo","14:05","GPSA","",NA
+2022,"77",30,"ruotolo","14:09","GPSA","",NA
+2022,"77",30,"galvao","15:20","PGD","",NA
+2022,"77",30,"ruotolo","15:31","SUB","",NA
+2022,"88",31,"","00:28","CLI","",NA
+2022,"88",31,"frias","00:58","SUBA","",NA
+2022,"88",31,"frias","01:16","TKDA","",NA
+2022,"88",31,"frias","01:41","TKDA","",NA
+2022,"88",31,"frias","01:43","TKDA","",NA
+2022,"88",31,"diniz","02:00","TKDA","Reset",NA
+2022,"88",31,"diniz","02:00","RST","Reset",NA
+2022,"88",31,"","02:07","CLI","",NA
+2022,"88",31,"diniz","02:08","TKD","",NA
+2022,"88",31,"frias","02:09","SUBA","",NA
+2022,"88",31,"diniz","02:22","GPS","",NA
+2022,"88",31,"frias","02:41","PGD","",NA
+2022,"88",31,"frias","03:22","SUBA","",NA
+2022,"88",31,"frias","03:49","PGD","",NA
+2022,"88",31,"diniz","03:51","GPSA","",NA
+2022,"88",31,"frias","03:55","PGD","",NA
+2022,"88",31,"frias","04:24","SWPA","",NA
+2022,"88",31,"frias","04:50","SUBA","",NA
+2022,"88",31,"frias","04:54","PGD","",NA
+2022,"88",31,"frias","05:34","SWPA","",NA
+2022,"88",31,"diniz","05:38","BTKA","",NA
+2022,"88",31,"frias","05:39","PGD","",NA
+2022,"88",31,"frias","06:42","SWPA","",NA
+2022,"88",31,"frias","06:43","SWPA","",NA
+2022,"88",31,"frias","07:21","SUBA","Reset",NA
+2022,"88",31,"frias","07:21","RST","Reset",NA
+2022,"88",31,"","07:35","CLI","",NA
+2022,"88",31,"diniz","08:03","TKDA","",NA
+2022,"88",31,"diniz","08:05","BTKA","",NA
+2022,"88",31,"diniz","08:24","SUBA","",NA
+2022,"88",31,"","08:31","CLI","",NA
+2022,"88",31,"frias","08:53","TKDA","",NA
+2022,"88",31,"frias","09:16","TKDA","",NA
+2022,"88",31,"frias","09:37","TKDA","",NA
+2022,"88",31,"diniz","10:05","TKDA","Reset",NA
+2022,"88",31,"diniz","10:05","RST","Reset",NA
+2022,"88",31,"","10:18","CLI","",NA
+2022,"88",31,"frias","10:23","TKDA","",NA
+2022,"88",31,"diniz","10:46","TKDA","",NA
+2022,"88",31,"diniz","11:03","BTK","","3"
+2022,"88",32,"","00:12","CLI","",NA
+2022,"88",32,"bodoni","00:18","TKDA","",NA
+2022,"88",32,"bahiense","01:11","TKDA","Reset",NA
+2022,"88",32,"bahiense","01:11","RST","Reset",NA
+2022,"88",32,"","01:19","CLI","",NA
+2022,"88",32,"bahiense","01:25","TKDA","",NA
+2022,"88",32,"bodoni","01:45","PGD","",NA
+2022,"88",32,"bodoni","02:13","SWPA","",NA
+2022,"88",32,"bodoni","02:18","SUBA","",NA
+2022,"88",32,"bodoni","02:22","PGD","",NA
+2022,"88",32,"bodoni","02:44","SWPA","",NA
+2022,"88",32,"bodoni","03:21","SUBA","",NA
+2022,"88",32,"bodoni","03:32","PGD","",NA
+2022,"88",32,"bodoni","03:53","SWPA","",NA
+2022,"88",32,"bodoni","03:57","PGD","",NA
+2022,"88",32,"bodoni","04:00","SWPA","",NA
+2022,"88",32,"bodoni","04:04","PGD","",NA
+2022,"88",32,"bodoni","04:54","SUBA","",NA
+2022,"88",32,"bodoni","05:02","SUBA","",NA
+2022,"88",32,"bahiense","05:10","SUBA","",NA
+2022,"88",32,"bodoni","05:27","PGD","",NA
+2022,"88",32,"bahiense","07:10","PGD","",NA
+2022,"88",32,"bodoni","07:26","BTKA","",NA
+2022,"88",32,"bodoni","08:30","BTK","","3"
+2022,"88",32,"bodoni","08:36","SUBA","",NA
+2022,"88",32,"bodoni","09:05","BTK","","3"
+2022,"88",32,"bodoni","10:01","SUBA","",NA
+2022,"88",32,"bodoni","10:43","SUBA","",NA
+2022,"88",33,"o'flanagan","00:14","PGD","",NA
+2022,"88",33,"o'flanagan","00:24","SWPA","",NA
+2022,"88",33,"ribeiro","00:31","GPSA","",NA
+2022,"88",33,"o'flanagan","00:54","PGD","",NA
+2022,"88",33,"o'flanagan","01:24","SUBA","",NA
+2022,"88",33,"o'flanagan","01:38","PGD","",NA
+2022,"88",33,"o'flanagan","03:04","SWPA","",NA
+2022,"88",33,"o'flanagan","03:07","PGD","",NA
+2022,"88",33,"o'flanagan","03:11","SWP","",NA
+2022,"88",33,"ribeiro","03:13","PGD","",NA
+2022,"88",33,"o'flanagan","04:15","PGD","",NA
+2022,"88",33,"ribeiro","04:32","SWP","",NA
+2022,"88",33,"o'flanagan","04:43","PGD","",NA
+2022,"88",33,"ribeiro","05:25","GPSA","",NA
+2022,"88",33,"o'flanagan","05:26","PGD","",NA
+2022,"88",33,"ribeiro","05:51","GPSA","",NA
+2022,"88",33,"o'flanagan","05:53","PGD","",NA
+2022,"88",33,"o'flanagan","06:25","SWPA","",NA
+2022,"88",33,"o'flanagan","06:27","PGD","",NA
+2022,"88",33,"o'flanagan","06:47","SWPA","",NA
+2022,"88",33,"ribeiro","06:55","GPSA","",NA
+2022,"88",33,"o'flanagan","06:56","PGD","",NA
+2022,"88",33,"o'flanagan","09:35","SWPA","",NA
+2022,"88",33,"o'flanagan","09:46","PGD","Reset",NA
+2022,"88",33,"o'flanagan","09:46","RST","Reset",NA
+2022,"88",33,"","10:42","CLI","Reset",NA
+2022,"88",33,"","10:42","RST","Reset",NA
+2022,"88",33,"","11:06","CLI","",NA
+2022,"88",33,"o'flanagan","11:23","TKDA","",NA
+2022,"88",33,"o'flanagan","11:35","TKDA","Reset",NA
+2022,"88",33,"o'flanagan","11:35","RST","Reset",NA
+2022,"88",33,"","12:15","CLI","",NA
+2022,"88",33,"ribeiro","12:22","TKDA","",NA
+2022,"88",33,"ribeiro","12:33","TKDA","",NA
+2022,"88",33,"o'flanagan","12:35","SUBA","",NA
+2022,"88",33,"o'flanagan","12:43","BTK","Reset","3"
+2022,"88",33,"o'flanagan","12:43","RST","Reset",NA
+2022,"88",33,"","13:08","PGD","",NA
+2022,"88",33,"ribeiro","13:22","GPSA","",NA
+2022,"88",33,"o'flanagan","13:31","PGD","",NA
+2022,"88",33,"ribeiro","14:10","GPSA","",NA
+2022,"88",33,"o'flanagan","14:18","PGD","",NA
+2022,"88",33,"ribeiro","14:30","GPSA","",NA
+2022,"88",33,"o'flanagan","14:31","PGD","",NA
+2022,"88",33,"o'flanagan","15:48","BTKA","",NA
+2022,"88",34,"","00:19","CLI","",NA
+2022,"88",34,"robinho","02:20","TKDA","",NA
+2022,"88",34,"fowler","02:41","PGD","",NA
+2022,"88",34,"fowler","02:44","SUBA","",NA
+2022,"88",34,"fowler","02:46","PGD","Reset",NA
+2022,"88",34,"fowler","02:46","RST","Reset",NA
+2022,"88",34,"","03:13","CLI","",NA
+2022,"88",34,"fowler","03:46","TKDA","",NA
+2022,"88",34,"fowler","03:59","TKDA","Reset",NA
+2022,"88",34,"fowler","03:59","RST","Reset",NA
+2022,"88",34,"","04:09","CLI","",NA
+2022,"88",34,"robinho","04:34","PGD","Reset",NA
+2022,"88",34,"robinho","04:34","RST","Reset",NA
+2022,"88",34,"","04:38","CLI","",NA
+2022,"88",34,"fowler","05:01","SUBA","",NA
+2022,"88",34,"fowler","05:08","TKD","",NA
+2022,"88",34,"robinho","05:12","PGD","",NA
+2022,"88",34,"fowler","05:21","SUBA","",NA
+2022,"88",34,"fowler","05:26","PGD","",NA
+2022,"88",34,"fowler","06:07","SWPA","",NA
+2022,"88",34,"fowler","06:10","BTKA","",NA
+2022,"88",34,"fowler","06:14","PGD","Reset",NA
+2022,"88",34,"fowler","06:14","RST","Reset",NA
+2022,"88",34,"","06:20","CLI","",NA
+2022,"88",34,"fowler","06:44","TKDA","",NA
+2022,"88",34,"robinho","06:49","TKDA","",NA
+2022,"88",34,"robinho","06:52","BTKA","",NA
+2022,"88",34,"fowler","07:03","TKD","","2"
+2022,"88",34,"robinho","07:04","PGD","",NA
+2022,"88",34,"fowler","07:09","GPSA","",NA
+2022,"88",34,"robinho","07:17","SWPA","",NA
+2022,"88",34,"fowler","07:27","SUB","",NA
+2022,"88",35,"","00:14","CLI","",NA
+2022,"88",35,"barbosa","00:23","TKDA","",NA
+2022,"88",35,"barbosa","01:06","TKD","",NA
+2022,"88",35,"barbosa","01:08","BTKA","",NA
+2022,"88",35,"barbosa","01:16","SUBA","Reset",NA
+2022,"88",35,"barbosa","01:16","RST","Reset",NA
+2022,"88",35,"","02:06","CLI","",NA
+2022,"88",35,"ilius","03:06","TKDA","",NA
+2022,"88",35,"ilius","03:31","TKDA","",NA
+2022,"88",35,"barbosa","03:43","TKDA","",NA
+2022,"88",35,"barbosa","04:36","TKDA","",NA
+2022,"88",35,"barbosa","05:04","TKD","",NA
+2022,"88",35,"ilius","05:05","PGD","",NA
+2022,"88",35,"ilius","06:36","SWPA","",NA
+2022,"88",35,"barbosa","06:44","BTKA","",NA
+2022,"88",35,"barbosa","06:56","SUBA","",NA
+2022,"88",35,"barbosa","07:00","BTK","","3"
+2022,"88",35,"barbosa","07:06","SUBA","",NA
+2022,"88",35,"barbosa","07:35","SUBA","",NA
+2022,"88",35,"barbosa","09:34","SUBA","",NA
+2022,"88",36,"","00:35","CLI","",NA
+2022,"88",36,"ruotolo","00:39","TKDA","",NA
+2022,"88",36,"ruotolo","01:44","TKDA","",NA
+2022,"88",36,"hinger","01:58","TKDA","",NA
+2022,"88",36,"ruotolo","02:09","TKDA","",NA
+2022,"88",36,"ruotolo","02:24","TKD","",NA
+2022,"88",36,"ruotolo","02:28","GPS","",NA
+2022,"88",36,"hinger","02:41","PGD","",NA
+2022,"88",36,"ruotolo","03:40","SUBA","",NA
+2022,"88",36,"ruotolo","05:13","SUBA","",NA
+2022,"88",36,"ruotolo","06:07","SUBA","",NA
+2022,"88",36,"hinger","06:11","PGD","",NA
+2022,"88",36,"ruotolo","06:15","BTKA","Reset",NA
+2022,"88",36,"ruotolo","06:15","RST","Reset",NA
+2022,"88",36,"","06:45","CLI","",NA
+2022,"88",36,"ruotolo","08:09","TKDA","",NA
+2022,"88",36,"hinger","08:10","SUBA","",NA
+2022,"88",36,"hinger","08:35","BTKA","",NA
+2022,"88",36,"ruotolo","08:46","PGD","",NA
+2022,"88",36,"ruotolo","08:50","SUBA","",NA
+2022,"88",36,"ruotolo","09:54","SWPA","",NA
+2022,"88",36,"ruotolo","10:22","BTKA","Reset",NA
+2022,"88",36,"ruotolo","10:22","RST","Reset",NA
+2022,"88",36,"","11:10","CLI","",NA
+2022,"88",36,"ruotolo","11:42","TKD","","2"
+2022,"88",36,"hinger","11:44","PGD","",NA
+2022,"88",36,"hinger","11:47","SWPA","",NA
+2022,"88",36,"hinger","12:20","SUBA","",NA
+2022,"88",36,"hinger","13:09","BTKA","",NA
+2022,"88",36,"hinger","13:29","BTK","","3"
+2022,"88",36,"hinger","14:04","SUBA","",NA
+2022,"88",36,"hinger","14:21","SUBA","",NA
+2022,"88",36,"hinger","16:19","PGD","",NA
+2022,"88",36,"ruotolo","16:32","GPSA","",NA
+2022,"88",36,"ruotolo","16:38","SUBA","",NA
+2022,"88",37,"","00:25","CLI","",NA
+2022,"88",37,"michell","00:58","TKDA","Reset",NA
+2022,"88",37,"michell","00:58","RST","Reset",NA
+2022,"88",37,"","01:11","CLI","",NA
+2022,"88",37,"michell","02:01","TKDA","Reset",NA
+2022,"88",37,"","02:21","CLI","",NA
+2022,"88",37,"michell","03:02","TKDA","",NA
+2022,"88",37,"michell","03:47","TKDA","",NA
+2022,"88",37,"michell","03:48","SUBA","",NA
+2022,"88",37,"rocha","03:50","TKDA","Reset",NA
+2022,"88",37,"rocha","03:50","RST","Reset",NA
+2022,"88",37,"","04:10","CLI","",NA
+2022,"88",37,"rocha","04:48","TKDA","",NA
+2022,"88",37,"rocha","05:29","TKDA","",NA
+2022,"88",37,"michell","05:38","TKDA","",NA
+2022,"88",37,"michell","06:38","TKDA","",NA
+2022,"88",37,"rocha","06:45","TKDA","",NA
+2022,"88",37,"rocha","06:49","BTKA","",NA
+2022,"88",37,"michell","07:07","PGD","Reset",NA
+2022,"88",37,"michell","07:07","RST","Reset",NA
+2022,"88",37,"","07:12","CLI","",NA
+2022,"88",37,"michell","07:15","TKDA","",NA
+2022,"88",37,"michell","07:19","TKDA","",NA
+2022,"88",37,"rocha","07:36","SUBA","",NA
+2022,"88",37,"michell","07:38","BTKA","",NA
+2022,"88",37,"michell","10:22","PGD","",NA
+2022,"88",37,"michell","10:59","SWPA","Reset",NA
+2022,"88",37,"michell","10:59","RST","Reset",NA
+2022,"88",37,"","11:09","CLI","",NA
+2022,"88",37,"michell","11:14","TKDA","",NA
+2022,"88",37,"michell","11:19","BTKA","Reset",NA
+2022,"88",37,"michell","11:19","RST","Reset",NA
+2022,"88",37,"","11:47","CLI","",NA
+2022,"88",37,"rocha","11:56","TKDA","",NA
+2022,"88",37,"michell","11:58","SUBA","",NA
+2022,"88",37,"rocha","12:07","BTKA","",NA
+2022,"88",37,"michell","14:28","PGD","",NA
+2022,"88",37,"michell","14:44","SWPA","",NA
+2022,"88",37,"michell","14:52","PGD","",NA
+2022,"88",37,"rocha","15:00","BTKA","",NA
+2022,"88",37,"michell","15:42","BTKA","",NA
+2022,"88",37,"rocha","15:56","PGD","",NA
+2022,"88",37,"rocha","15:17","SUBA","",NA
+2022,"88",37,"michell","16:21","BTKA","",NA
+2022,"88",37,"michell","16:25","SUBA","",NA
+2022,"88",37,"rocha","16:29","BTKA","Reset",NA
+2022,"88",37,"rocha","16:29","RST","Reset",NA
+2022,"88",37,"","16:39","CLI","",NA
+2022,"88",37,"michell","16:47","TKDA","",NA
+2022,"88",37,"rocha","16:56","TKDA","",NA
+2022,"88",37,"michell","16:57","SUBA","Reset",NA
+2022,"88",37,"michell","16:57","RST","Reset",NA
+2022,"88",37,"","17:10","CLI","Reset",NA
+2022,"88",37,"","17:10","RST","Reset",NA
+2022,"88",37,"","17:34","CLI","",NA
+2022,"88",38,"","00:15","CLI","",NA
+2022,"88",38,"rodriguez","00:30","TKDA","",NA
+2022,"88",38,"marinho","00:37","TKDA","",NA
+2022,"88",38,"marinho","01:25","SUBA","",NA
+2022,"88",38,"marinho","01:34","PGD","Reset",NA
+2022,"88",38,"marinho","01:34","RST","Reset",NA
+2022,"88",38,"","01:37","CLI","",NA
+2022,"88",38,"rodriguez","02:04","TKDA","",NA
+2022,"88",38,"marinho","02:08","TKDA","",NA
+2022,"88",38,"marinho","02:20","TKDA","Reset",NA
+2022,"88",38,"marinho","02:20","RST","Reset",NA
+2022,"88",38,"","02:37","CLI","",NA
+2022,"88",38,"rodriguez","02:47","TKDA","",NA
+2022,"88",38,"rodriguez","03:05","BTKA","Reset",NA
+2022,"88",38,"rodriguez","03:05","RST","Reset",NA
+2022,"88",38,"","03:20","CLI","",NA
+2022,"88",38,"rodriguez","03:39","TKDA","",NA
+2022,"88",38,"marinho","03:40","SUBA","",NA
+2022,"88",38,"marinho","03:43","PGD","Reset",NA
+2022,"88",38,"marinho","03:43","RST","Reset",NA
+2022,"88",38,"","04:26","CLI","",NA
+2022,"88",38,"marinho","06:01","TKDA","",NA
+2022,"88",38,"rodriguez","06:47","TKDA","",NA
+2022,"88",38,"marinho","06:50","TKDA","",NA
+2022,"88",38,"marinho","07:13","TKDA","",NA
+2022,"88",38,"rodriguez","07:30","TKDA","",NA
+2022,"88",38,"rodriguez","07:34","BTKA","",NA
+2022,"88",38,"rodriguez","07:40","PGD","",NA
+2022,"88",38,"marinho","08:27","GPSA","",NA
+2022,"88",38,"rodriguez","08:28","SUBA","",NA
+2022,"88",38,"rodriguez","08:39","PGD","",NA
+2022,"88",38,"marinho","09:06","GPS","Reset","3"
+2022,"88",38,"marinho","09:06","RST","Reset",NA
+2022,"88",38,"","09:21","CLI","",NA
+2022,"88",38,"rodriguez","09:37","TKDA","",NA
+2022,"88",38,"marinho","09:41","SUBA","Reset",NA
+2022,"88",38,"marinho","09:41","RST","Reset",NA
+2022,"88",38,"","10:11","CLI","",NA
+2022,"88",38,"rodriguez","10:15","TKDA","",NA
+2022,"88",38,"rodriguez","10:52","TKD","","2"
+2022,"88",38,"marinho","10:53","PGD","",NA
+2022,"88",39,"","00:16","CLI","",NA
+2022,"88",39,"bodoni","00:47","TKD","",NA
+2022,"88",39,"diniz","00:50","PGD","",NA
+2022,"88",39,"bodoni","01:15","GPSA","",NA
+2022,"88",39,"diniz","01:19","SWPA","",NA
+2022,"88",39,"diniz","01:27","PGD","",NA
+2022,"88",39,"bodoni","01:46","GPSA","",NA
+2022,"88",39,"diniz","01:55","PGD","",NA
+2022,"88",39,"bodoni","02:59","GPS","",NA
+2022,"88",39,"diniz","03:45","PGD","",NA
+2022,"88",39,"diniz","03:49","SWP","",NA
+2022,"88",39,"bodoni","03:51","PGD","Reset",NA
+2022,"88",39,"bodoni","03:51","RST","Reset",NA
+2022,"88",39,"diniz","04:06","TKDA","",NA
+2022,"88",39,"bodoni","04:08","SUBA","",NA
+2022,"88",39,"bodoni","04:11","TKD","",NA
+2022,"88",39,"diniz","04:15","PGD","",NA
+2022,"88",39,"diniz","06:51","SWPA","",NA
+2022,"88",39,"diniz","06:52","PGD","",NA
+2022,"88",39,"bodoni","07:02","GPSA","",NA
+2022,"88",39,"diniz","07:04","PGD","",NA
+2022,"88",39,"diniz","07:37","SWPA","Reset",NA
+2022,"88",39,"diniz","07:37","RST","Reset",NA
+2022,"88",39,"","07:42","CLI","",NA
+2022,"88",39,"diniz","07:54","TKDA","",NA
+2022,"88",39,"bodoni","08:01","TKDA","",NA
+2022,"88",39,"bodoni","08:06","TKDA","",NA
+2022,"88",39,"diniz","08:10","TKDA","",NA
+2022,"88",39,"diniz","08:13","BTKA","",NA
+2022,"88",39,"bodoni","08:47","TKDA","",NA
+2022,"88",39,"bodoni","09:01","TKD","","4"
+2022,"88",39,"bodoni","09:03","GPS","",NA
+2022,"88",39,"bodoni","09:21","GPS","",NA
+2022,"88",39,"bodoni","09:47","GPS","",NA
+2022,"88",39,"diniz","10:08","PGD","",NA
+2022,"88",39,"bodoni","10:36","SUB","",NA
+2022,"88",40,"o'flanagan","00:13","PGD","",NA
+2022,"88",40,"fowler","01:46","GPSA","",NA
+2022,"88",40,"o'flanagan","02:04","PGD","",NA
+2022,"88",40,"o'flanagan","02:10","SWPA","",NA
+2022,"88",40,"o'flanagan","02:12","PGD","",NA
+2022,"88",40,"fowler","03:42","GPSA","",NA
+2022,"88",40,"o'flanagan","03:46","PGD","",NA
+2022,"88",40,"fowler","04:37","GPSA","",NA
+2022,"88",40,"o'flanagan","04:38","PGD","",NA
+2022,"88",40,"o'flanagan","04:56","SWPA","",NA
+2022,"88",40,"fowler","05:03","GPSA","",NA
+2022,"88",40,"o'flanagan","05:07","PGD","",NA
+2022,"88",40,"fowler","05:14","GPSA","",NA
+2022,"88",40,"o'flanagan","05:17","PGD","",NA
+2022,"88",40,"fowler","06:23","SUBA","",NA
+2022,"88",40,"o'flanagan","06:33","SUB","",NA
+2022,"88",41,"","00:28","CLI","",NA
+2022,"88",41,"barbosa","04:01","TKDA","",NA
+2022,"88",41,"barbosa","05:03","TKDA","",NA
+2022,"88",41,"hinger","06:11","TKDA","Reset",NA
+2022,"88",41,"hinger","06:11","RST","Reset",NA
+2022,"88",41,"","06:21","CLI","",NA
+2022,"88",41,"barbosa","06:42","TKDA","",NA
+2022,"88",41,"barbosa","06:57","BTKA","",NA
+2022,"88",41,"hinger","07:30","PGD","",NA
+2022,"88",41,"barbosa","07:41","GPSA","",NA
+2022,"88",41,"hinger","07:42","PGD","",NA
+2022,"88",41,"barbosa","08:02","GPS","","3"
+2022,"88",41,"barbosa","08:51","GPS","","2"
+2022,"88",41,"barbosa","09:09","GPS","",NA
+2022,"88",41,"barbosa","09:14","GPS","",NA
+2022,"88",41,"barbosa","09:28","GPS","","2"
+2022,"88",41,"barbosa","10:27","SUBA","",NA
+2022,"88",41,"hinger","11:01","PGD","",NA
+2022,"88",42,"","00:23","CLI","",NA
+2022,"88",42,"marinho","00:46","TKDA","",NA
+2022,"88",42,"marinho","01:14","TKDA","Reset",NA
+2022,"88",42,"marinho","01:14","RST","Reset",NA
+2022,"88",42,"","01:40","CLI","",NA
+2022,"88",42,"marinho","02:49","TKDA","",NA
+2022,"88",42,"marinho","03:05","TKDA","",NA
+2022,"88",42,"rocha","03:39","TKDA","",NA
+2022,"88",42,"marinho","04:00","TKDA","Reset",NA
+2022,"88",42,"marinho","04:00","RST","Reset",NA
+2022,"88",42,"","04:10","CLI","",NA
+2022,"88",42,"marinho","04:38","TKDA","",NA
+2022,"88",42,"rocha","05:14","TKDA","",NA
+2022,"88",42,"marinho","05:25","TKDA","",NA
+2022,"88",42,"marinho","05:56","TKDA","",NA
+2022,"88",42,"marinho","06:09","TKDA","",NA
+2022,"88",42,"marinho","06:27","TKDA","Reset",NA
+2022,"88",42,"marinho","06:27","RST","Reset",NA
+2022,"88",42,"","06:45","CLI","",NA
+2022,"88",42,"rocha","06:57","TKDA","",NA
+2022,"88",42,"marinho","07:05","TKDA","",NA
+2022,"88",42,"rocha","07:27","TKDA","",NA
+2022,"88",42,"marinho","08:19","TKDA","",NA
+2022,"88",42,"marinho","08:20","SUBA","",NA
+2022,"88",42,"rocha","08:34","BTKA","",NA
+2022,"88",42,"marinho","08:37","SUBA","Reset",NA
+2022,"88",42,"marinho","08:37","RST","Reset",NA
+2022,"88",42,"","09:07","CLI","",NA
+2022,"88",42,"rocha","09:51","TKDA","Reset",NA
+2022,"88",42,"rocha","09:51","RST","Reset",NA
+2022,"88",42,"","10:02","CLI","Reset",NA
+2022,"88",42,"","10:02","RST","Reset",NA
+2022,"88",42,"","11:20","CLI","",NA
+2022,"88",42,"marinho","11:25","TKDA","",NA
+2022,"88",42,"marinho","11:57","TKDA","",NA
+2022,"88",42,"rocha","12:09","TKDA","",NA
+2022,"88",42,"rocha","12:31","TKDA","",NA
+2022,"88",42,"marinho","12:32","SUBA","Reset",NA
+2022,"88",42,"marinho","12:32","RST","Reset",NA
+2022,"88",42,"","12:56","CLI","",NA
+2022,"88",42,"marinho","13:23","TKDA","",NA
+2022,"88",42,"rocha","13:37","TKDA","",NA
+2022,"88",42,"marinho","14:09","TKDA","",NA
+2022,"88",42,"marinho","14:24","TKDA","",NA
+2022,"88",42,"marinho","15:36","TKDA","",NA
+2022,"88",42,"marinho","15:40","TKDA","",NA
+2022,"88",42,"marinho","16:13","TKDA","",NA
+2022,"88",42,"marinho","16:23","TKDA","",NA
+2022,"88",43,"o'flanagan","02:00","PGD","",NA
+2022,"88",43,"bodoni","03:08","GPSA","",NA
+2022,"88",43,"o'flanagan","03:17","PGD","",NA
+2022,"88",43,"bodoni","03:38","GPSA","",NA
+2022,"88",43,"o'flanagan","03:41","PGD","",NA
+2022,"88",43,"bodoni","03:48","GPSA","",NA
+2022,"88",43,"o'flanagan","04:00","PGD","",NA
+2022,"88",43,"bodoni","04:16","SUB","",NA
+2022,"88",44,"","02:42","CLI","",NA
+2022,"88",44,"barbosa","02:50","TKDA","",NA
+2022,"88",44,"barbosa","03:04","TKDA","",NA
+2022,"88",44,"barbosa","03:18","TKDA","",NA
+2022,"88",44,"barbosa","03:30","TKD","",NA
+2022,"88",44,"rocha","03:37","PGD","",NA
+2022,"88",44,"rocha","06:26","SWPA","",NA
+2022,"88",44,"rocha","06:30","PGD","",NA
+2022,"88",44,"barbosa","10:03","GPSA","",NA
+2022,"88",44,"barbosa","10:06","BTKA","",NA
+2022,"88",44,"barbosa","12:40","PGD","Reset",NA
+2022,"88",44,"barbosa","12:40","RST","Reset",NA
+2022,"88",44,"","13:46","CLI","",NA
+2022,"88",44,"rocha","14:11","TKDA","",NA
+2022,"88",44,"rocha","14:47","TKDA","Reset",NA
+2022,"88",44,"rocha","14:47","RST","Reset",NA
+2022,"88",44,"","15:03","CLI","",NA
+2022,"88",44,"rocha","15:17","TKDA","",NA
+2022,"88",44,"barbosa","15:49","TKDA","",NA
+2022,"88",44,"barbosa","16:02","TKDA","",NA
+2022,"88",44,"barbosa","16:33","TKDA","",NA
+2022,"88",44,"rocha","17:01","TKDA","",NA
+2022,"88",44,"barbosa","17:05","TKDA","Reset",NA
+2022,"88",44,"barbosa","17:05","RST","Reset",NA
+2022,"88",44,"","17:12","CLI","",NA
+2022,"88",44,"rocha","17:13","TKDA","Reset",NA
+2022,"88",44,"rocha","17:13","RST","Reset",NA
+2022,"88",44,"","17:22","CLI","",NA
+2022,"88",44,"rocha","17:23","TKDA","",NA
+2022,"88",44,"barbosa","17:26","TKDA","",NA
+2022,"88",44,"barbosa","17:39","TKDA","",NA
+2022,"88",44,"barbosa","18:05","TKDA","",NA
+2022,"88",44,"rocha","18:15","SUBA","Reset",NA
+2022,"88",44,"rocha","18:15","RST","Reset",NA
+2022,"88",44,"","19:55","CLI","",NA
+2022,"88",44,"rocha","19:56","TKDA","",NA
+2022,"88",44,"rocha","20:11","TKDA","",NA
+2022,"88",44,"rocha","20:17","BTKA","",NA
+2022,"88",45,"","03:52","CLI","",NA
+2022,"88",45,"bodoni","04:16","TKDA","",NA
+2022,"88",45,"bodoni","04:35","TKDA","",NA
+2022,"88",45,"barbosa","06:08","TKDA","",NA
+2022,"88",45,"bodoni","06:14","SUBA","",NA
+2022,"88",45,"bodoni","06:19","TKDA","",NA
+2022,"88",45,"bodoni","06:20","PGD","",NA
+2022,"88",45,"barbosa","06:57","GPSA","",NA
+2022,"88",45,"bodoni","06:59","PGD","",NA
+2022,"88",45,"bodoni","07:38","SWPA","",NA
+2022,"88",45,"bodoni","07:42","PGD","",NA
+2022,"88",45,"barbosa","08:06","GPSA","",NA
+2022,"88",45,"bodoni","08:08","PGD","",NA
+2022,"88",45,"bodoni","08:40","SWPA","",NA
+2022,"88",45,"barbosa","08:43","BTKA","",NA
+2022,"88",45,"bodoni","08:49","PGD","",NA
+2022,"88",45,"barbosa","08:50","GPSA","",NA
+2022,"88",45,"barbosa","09:05","SUBA","",NA
+2022,"88",45,"bodoni","09:06","PGD","",NA
+2022,"88",45,"barbosa","09:30","GPSA","",NA
+2022,"88",45,"barbosa","09:33","BTKA","Reset",NA
+2022,"88",45,"barbosa","09:33","RST","Reset",NA
+2022,"88",45,"","09:37","CLI","Reset",NA
+2022,"88",45,"","09:37","RST","Reset",NA
+2022,"88",45,"","09:47","CLI","",NA
+2022,"88",45,"bodoni","11:15","TKDA","",NA
+2022,"88",45,"bodoni","11:45","TKD","",NA
+2022,"88",45,"barbosa","11:48","PGD","Reset",NA
+2022,"88",45,"barbosa","11:48","RST","Reset",NA
+2022,"88",45,"","12:56","CLI","",NA
+2022,"88",45,"barbosa","14:00","TKDA","",NA
+2022,"88",45,"barbosa","14:34","TKDA","",NA
+2022,"88",45,"barbosa","14:55","TKDA","",NA
+2022,"88",45,"bodoni","14:58","TKDA","Reset",NA
+2022,"88",45,"bodoni","14:58","RST","Reset",NA
+2022,"88",45,"","15:21","CLI","",NA
+2022,"88",45,"bodoni","15:51","TKDA","",NA
+2022,"88",45,"bodoni","15:55","TKDA","",NA
+2022,"88",45,"bodoni","16:01","BTKA","",NA
+2022,"88",45,"bodoni","16:06","BTK","","3"
+2022,"88",45,"bodoni","16:15","SUBA","",NA
+2022,"88",45,"bodoni","16:45","BTK","","3"
+2022,"88",45,"bodoni","18:14","BTK","","3"
+2022,"88",45,"bodoni","18:31","SUB","",NA
+2022,"-99",46,"","00:17","CLI","",NA
+2022,"-99",46,"duarte","00:44","PGD","",NA
+2022,"-99",46,"duarte","00:55","SWP","",NA
+2022,"-99",46,"livesey","00:56","PGD","",NA
+2022,"-99",46,"duarte","01:03","GPSA","",NA
+2022,"-99",46,"livesey","01:08","PGD","Reset",NA
+2022,"-99",46,"livesey","01:08","RST","Reset",NA
+2022,"-99",46,"","01:17","CLI","",NA
+2022,"-99",46,"duarte","01:25","PGD","",NA
+2022,"-99",46,"duarte","02:33","SWPA","",NA
+2022,"-99",46,"duarte","02:35","SUBA","Reset",NA
+2022,"-99",46,"duarte","02:35","RST","Reset",NA
+2022,"-99",46,"","03:08","CLI","",NA
+2022,"-99",46,"livesey","03:11","TKDA","",NA
+2022,"-99",46,"duarte","03:29","PGD","",NA
+2022,"-99",46,"livesey","03:35","GPSA","Reset",NA
+2022,"-99",46,"livesey","03:35","RST","Reset",NA
+2022,"-99",46,"","03:42","CLI","",NA
+2022,"-99",46,"livesey","03:51","TKDA","Reset",NA
+2022,"-99",46,"livesey","03:51","RST","Reset",NA
+2022,"-99",46,"","03:59","CLI","",NA
+2022,"-99",46,"duarte","04:09","PGD","",NA
+2022,"-99",46,"duarte","06:19","SWPA","",NA
+2022,"-99",46,"duarte","07:06","PGD","",NA
+2022,"-99",46,"duarte","07:14","SWP","","2"
+2022,"-99",46,"livesey","07:17","PGD","",NA
+2022,"-99",46,"duarte","07:34","GPS","","3"
+2022,"-99",46,"duarte","07:56","BTKA","",NA
+2022,"-99",46,"livesey","08:02","PGD","",NA
+2022,"-99",46,"duarte","08:44","GPS","","3"
+2022,"-99",46,"livesey","08:57","PGD","",NA
+2022,"-99",47,"","00:13","CLI","",NA
+2022,"-99",47,"gaudio","00:35","PGD","",NA
+2022,"-99",47,"cruz","00:41","GPSA","",NA
+2022,"-99",47,"gaudio","00:45","PGD","",NA
+2022,"-99",47,"gaudio","01:24","BTKA","Reset",NA
+2022,"-99",47,"gaudio","01:24","RST","Reset",NA
+2022,"-99",47,"","01:32","CLI","",NA
+2022,"-99",47,"gaudio","01:46","PGD","",NA
+2022,"-99",47,"cruz","01:53","GPSA","",NA
+2022,"-99",47,"gaudio","02:12","PGD","",NA
+2022,"-99",47,"gaudio","03:10","SWPA","",NA
+2022,"-99",47,"gaudio","03:12","PGD","",NA
+2022,"-99",47,"cruz","03:33","GPSA","",NA
+2022,"-99",47,"gaudio","03:35","PGD","",NA
+2022,"-99",47,"cruz","07:28","GPSA","",NA
+2022,"-99",47,"gaudio","07:30","PGD","",NA
+2022,"-99",47,"cruz","07:58","GPSA","",NA
+2022,"-99",47,"gaudio","07:59","PGD","",NA
+2022,"-99",47,"cruz","08:40","GPSA","",NA
+2022,"-99",47,"gaudio","08:42","PGD","Reset",NA
+2022,"-99",47,"gaudio","08:42","RST","Reset",NA
+2022,"-99",47,"","09:20","CLI","",NA
+2022,"-99",47,"cruz","09:32","TKDA","Reset",NA
+2022,"-99",47,"cruz","09:32","RST","Reset",NA
+2022,"-99",47,"","10:48","CLI","",NA
+2022,"-99",47,"cruz","10:49","TKDA","",NA
+2022,"-99",47,"cruz","11:27","TKDA","",NA
+2022,"-99",47,"cruz","12:33","TKDA","Reset",NA
+2022,"-99",47,"cruz","12:33","RST","Reset",NA
+2022,"-99",47,"","13:17","CLI","",NA
+2022,"-99",47,"cruz","13:37","TKDA","",NA
+2022,"-99",47,"cruz","13:57","TKDA","Reset",NA
+2022,"-99",47,"cruz","13:57","RST","Reset",NA
+2022,"-99",47,"","14:11","CLI","",NA
+2022,"-99",47,"gaudio","14:29","TKDA","",NA
+2022,"-99",47,"gaudio","14:31","TKDA","",NA
+2022,"-99",47,"cruz","14:45","TKDA","",NA
+2022,"-99",47,"gaudio","14:48","TKDA","",NA
+2022,"-99",47,"gaudio","15:01","TKDA","",NA
+2022,"-99",47,"gaudio","15:31","TKDA","",NA
+2022,"-99",47,"cruz","15:45","TKDA","",NA
+2022,"-99",48,"","00:27","CLI","Reset",NA
+2022,"-99",48,"","00:27","RST","Reset",NA
+2022,"-99",48,"","01:50","CLI","",NA
+2022,"-99",48,"lovato","02:06","TKDA","",NA
+2022,"-99",48,"lovato","02:22","TKDA","",NA
+2022,"-99",48,"lovato","03:06","TKDA","",NA
+2022,"-99",48,"tepponen","03:08","SUBA","Reset",NA
+2022,"-99",48,"tepponen","03:08","RST","Reset",NA
+2022,"-99",48,"","03:26","CLI","",NA
+2022,"-99",48,"lovato","03:35","PGD","",NA
+2022,"-99",48,"lovato","05:01","SWPA","",NA
+2022,"-99",48,"lovato","05:03","PGD","",NA
+2022,"-99",48,"lovato","06:06","SWPA","",NA
+2022,"-99",48,"tepponen","06:07","BTKA","",NA
+2022,"-99",48,"lovato","06:13","PGD","",NA
+2022,"-99",48,"lovato","08:09","SWPA","",NA
+2022,"-99",48,"lovato","08:12","BTKA","",NA
+2022,"-99",48,"tepponen","08:25","PGD","",NA
+2022,"-99",48,"tepponen","09:55","SWPA","",NA
+2022,"-99",48,"tepponen","09:56","PGD","",NA
+2022,"-99",48,"lovato","10:15","GPSA","",NA
+2022,"-99",48,"lovato","10:20","BTKA","",NA
+2022,"-99",48,"tepponen","10:25","PGD","",NA
+2022,"-99",48,"lovato","10:30","GPSA","",NA
+2022,"-99",48,"lovato","10:33","BTKA","Reset",NA
+2022,"-99",48,"lovato","10:33","RST","Reset",NA
+2022,"-99",48,"","11:29","CLI","Reset",NA
+2022,"-99",48,"","11:29","RST","Reset",NA
+2022,"-99",48,"","12:23","CLI","",NA
+2022,"-99",48,"tepponen","12:35","TKDA","",NA
+2022,"-99",48,"lovato","12:46","TKDA","",NA
+2022,"-99",48,"lovato","12:48","BTKA","",NA
+2022,"-99",48,"lovato","12:54","SUBA","",NA
+2022,"-99",48,"tepponen","12:59","PGD","",NA
+2022,"-99",48,"lovato","13:24","BTKA","",NA
+2022,"-99",48,"lovato","13:33","BTK","","3"
+2022,"-99",48,"lovato","13:46","SUB","",NA
+2022,"-99",49,"ardila","00:24","PGD","",NA
+2022,"-99",49,"ferreira","01:32","GPSA","",NA
+2022,"-99",49,"ardila","01:49","PGD","Reset",NA
+2022,"-99",49,"ardila","01:49","RST","Reset",NA
+2022,"-99",49,"ferreira","03:08","PGD","",NA
+2022,"-99",49,"ferreira","03:23","SWP","",NA
+2022,"-99",49,"ardila","03:24","PGD","",NA
+2022,"-99",49,"ferreira","04:20","PGD","",NA
+2022,"-99",49,"ardila","04:26","SWP","",NA
+2022,"-99",49,"ferreira","04:28","PGD","",NA
+2022,"-99",49,"ardila","05:12","PGD","",NA
+2022,"-99",49,"ferreira","09:57","PGD","",NA
+2022,"-99",49,"ferreira","10:13","SWPA","",NA
+2022,"-99",49,"ferreira","10:16","PGD","",NA
+2022,"-99",49,"ferreira","10:32","SWPA","",NA
+2022,"-99",49,"","10:34","BTKA","Reset",NA
+2022,"-99",49,"","10:34","RST","Reset",NA
+2022,"-99",49,"","11:10","CLI","Reset",NA
+2022,"-99",49,"","11:10","RST","Reset",NA
+2022,"-99",49,"","11:46","CLI","Reset",NA
+2022,"-99",49,"","11:46","RST","Reset",NA
+2022,"-99",49,"","12:33","CLI","",NA
+2022,"-99",49,"ferreira","12:38","TKDA","",NA
+2022,"-99",49,"ferreira","12:38","RST","",NA
+2022,"-99",49,"ferreira","12:49","TKDA","Reset",NA
+2022,"-99",49,"ferreira","12:49","RST","Reset",NA
+2022,"-99",49,"","13:09","CLI","",NA
+2022,"-99",49,"ardila","13:41","TKDA","Reset",NA
+2022,"-99",49,"ardila","13:41","RST","Reset",NA
+2022,"-99",49,"","14:22","CLI","",NA
+2022,"-99",49,"ferreira","14:54","TKDA","",NA
+2022,"-99",49,"ferreira","15:09","TKDA","",NA
+2022,"-99",49,"ardila","16:12","TKDA","",NA
+2022,"-99",49,"ferreira","16:18","SUBA","",NA
+2022,"-99",50,"jones","00:19","PGD","",NA
+2022,"-99",50,"jones","00:32","SUB","",NA
+2022,"-99",51,"boehm","00:11","PGD","",NA
+2022,"-99",51,"johnson","00:31","GPSA","",NA
+2022,"-99",51,"boehm","00:37","PGD","",NA
+2022,"-99",51,"johnson","03:32","GPSA","",NA
+2022,"-99",51,"boehm","03:33","PGD","",NA
+2022,"-99",51,"johnson","04:20","GPSA","",NA
+2022,"-99",51,"boehm","04:23","PGD","",NA
+2022,"-99",51,"boehm","06:55","PGD","",NA
+2022,"-99",51,"boehm","07:12","PGD","",NA
+2022,"-99",51,"boehm","09:42","PGD","",NA
+2022,"-99",51,"boehm","10:26","SWPA","Reset",NA
+2022,"-99",51,"boehm","10:26","RST","Reset",NA
+2022,"-99",51,"","10:55","CLI","Reset",NA
+2022,"-99",51,"","10:55","RST","Reset",NA
+2022,"-99",51,"","12:35","CLI","",NA
+2022,"-99",51,"johnson","13:55","TKDA","Reset",NA
+2022,"-99",51,"johnson","13:55","RST","Reset",NA
+2022,"-99",51,"","14:30","CLI","",NA
+2022,"-99",51,"boehm","14:52","TKDA","",NA
+2022,"-99",51,"johnson","14:55","TKDA","",NA
+2022,"-99",51,"johnson","15:00","TKDA","Reset",NA
+2022,"-99",51,"johnson","15:00","RST","Reset",NA
+2022,"-99",51,"","15:10","CLI","",NA
+2022,"-99",51,"johnson","16:10","TKDA","",NA
+2022,"-99",51,"johnson","16:50","TKDA","",NA
+2022,"-99",52,"","00:13","CLI","",NA
+2022,"-99",52,"griffith","01:09","TKDA","",NA
+2022,"-99",52,"griffith","01:41","TKDA","",NA
+2022,"-99",52,"simoes","01:56","TKDA","Reset",NA
+2022,"-99",52,"simoes","01:56","RST","Reset",NA
+2022,"-99",52,"","02:50","CLI","",NA
+2022,"-99",52,"griffith","03:33","TKDA","",NA
+2022,"-99",52,"griffith","03:46","PGD","",NA
+2022,"-99",52,"simoes","04:20","GPSA","",NA
+2022,"-99",52,"griffith","04:29","PGD","",NA
+2022,"-99",52,"simoes","05:40","GPSA","",NA
+2022,"-99",52,"simoes","05:45","BTKA","",NA
+2022,"-99",52,"simoes","06:06","BTKA","",NA
+2022,"-99",52,"simoes","06:47","PGD","",NA
+2022,"-99",52,"griffith","07:15","GPSA","",NA
+2022,"-99",52,"griffith","07:19","BTKA","",NA
+2022,"-99",52,"simoes","07:26","SWPA","Reset",NA
+2022,"-99",52,"simoes","07:26","RST","Reset",NA
+2022,"-99",52,"","07:31","CLI","",NA
+2022,"-99",52,"simoes","08:55","TKDA","",NA
+2022,"-99",52,"griffith","09:42","TKDA","",NA
+2022,"-99",52,"simoes","09:44","SUBA","Reset",NA
+2022,"-99",52,"simoes","09:44","RST","Reset",NA
+2022,"-99",52,"","10:40","CLI","",NA
+2022,"-99",52,"griffith","14:27","TKDA","",NA
+2022,"-99",52,"simoes","14:29","BTKA","Reset",NA
+2022,"-99",52,"simoes","14:29","RST","Reset",NA
+2022,"-99",52,"","14:43","CLI","",NA
+2022,"-99",53,"","00:27","CLI","Reset",NA
+2022,"-99",53,"","00:27","RST","Reset",NA
+2022,"-99",53,"","00:53","CLI","",NA
+2022,"-99",53,"ceconi","00:58","TKDA","",NA
+2022,"-99",53,"ceconi","01:00","BTKA","Reset",NA
+2022,"-99",53,"ceconi","01:00","RST","Reset",NA
+2022,"-99",53,"","01:25","CLI","",NA
+2022,"-99",53,"ceconi","01:48","TKDA","",NA
+2022,"-99",53,"meregali","01:52","TKD","",NA
+2022,"-99",53,"ceconi","01:54","PGD","",NA
+2022,"-99",53,"ceconi","02:28","SWPA","Reset",NA
+2022,"-99",53,"ceconi","02:28","RST","Reset",NA
+2022,"-99",53,"","02:50","CLI","",NA
+2022,"-99",53,"meregali","03:48","TKDA","",NA
+2022,"-99",53,"meregali","04:03","BTKA","",NA
+2022,"-99",53,"ceconi","04:08","PGD","",NA
+2022,"-99",53,"meregali","05:09","GPSA","",NA
+2022,"-99",53,"ceconi","05:11","SWPA","Reset",NA
+2022,"-99",53,"ceconi","05:11","RST","Reset",NA
+2022,"-99",53,"","05:27","CLI","",NA
+2022,"-99",53,"ceconi","06:03","TKDA","",NA
+2022,"-99",53,"meregali","06:20","SUB","",NA
+2022,"-99",54,"","00:19","CLI","",NA
+2022,"-99",54,"duarte","00:22","TKDA","",NA
+2022,"-99",54,"duarte","00:41","TKD","",NA
+2022,"-99",54,"cruz","00:42","PGD","",NA
+2022,"-99",54,"cruz","00:46","SWPA","Reset",NA
+2022,"-99",54,"cruz","00:46","RST","Reset",NA
+2022,"-99",54,"","00:55","CLI","",NA
+2022,"-99",54,"duarte","00:57","PGD","Reset",NA
+2022,"-99",54,"duarte","00:57","RST","Reset",NA
+2022,"-99",54,"","02:04","CLI","",NA
+2022,"-99",54,"duarte","2:09","TKDA","",NA
+2022,"-99",54,"duarte","02:19","PGD","Reset",NA
+2022,"-99",54,"duarte","02:19","RST","Reset",NA
+2022,"-99",54,"","02:37","CLI","Reset",NA
+2022,"-99",54,"","03:42","CLI","",NA
+2022,"-99",54,"duarte","04:21","TKDA","Reset",NA
+2022,"-99",54,"duarte","04:21","RST","Reset",NA
+2022,"-99",54,"","04:46","CLI","",NA
+2022,"-99",54,"duarte","05:00","PGD","",NA
+2022,"-99",54,"cruz","05:28","GPSA","",NA
+2022,"-99",54,"duarte","05:31","PGD","Reset",NA
+2022,"-99",54,"duarte","05:31","RST","Reset",NA
+2022,"-99",54,"","06:49","CLI","",NA
+2022,"-99",54,"cruz","07:01","TKDA","",NA
+2022,"-99",54,"duarte","07:27","BTKA","",NA
+2022,"-99",54,"duarte","08:02","BTK","","3"
+2022,"-99",54,"duarte","08:33","GPS","","2"
+2022,"-99",54,"cruz","08:49","SWP","","2"
+2022,"-99",54,"duarte","08:50","PGD","Reset",NA
+2022,"-99",54,"duarte","08:50","RST","Reset",NA
+2022,"-99",54,"","09:09","CLI","",NA
+2022,"-99",54,"cruz","09:28","TKDA","",NA
+2022,"-99",54,"cruz","09:38","TKDA","Reset",NA
+2022,"-99",54,"cruz","09:38","RST","Reset",NA
+2022,"-99",54,"","09:48","CLI","",NA
+2022,"-99",54,"cruz","09:51","TKDA","",NA
+2022,"-99",55,"","00:17","CLI","",NA
+2022,"-99",55,"ferreira","00:21","PGD","",NA
+2022,"-99",55,"lovato","00:26","GPSA","",NA
+2022,"-99",55,"ferreira","00:30","PGD","",NA
+2022,"-99",55,"ferreira","01:51","SWPA","",NA
+2022,"-99",55,"ferreira","01:53","PGD","",NA
+2022,"-99",55,"lovato","02:18","BTKA","",NA
+2022,"-99",55,"ferreira","02:25","PGD","",NA
+2022,"-99",55,"ferreira","02:56","SWP","",NA
+2022,"-99",55,"lovato","02:58","PGD","",NA
+2022,"-99",55,"lovato","04:24","SUBA","",NA
+2022,"-99",55,"lovato","04:25","PGD","",NA
+2022,"-99",55,"lovato","04:42","SWP","",NA
+2022,"-99",55,"ferreira","04:43","PGD","",NA
+2022,"-99",55,"ferreira","05:32","SWPA","",NA
+2022,"-99",55,"ferreira","05:35","PGD","",NA
+2022,"-99",55,"ferreira","05:37","SWPA","",NA
+2022,"-99",55,"ferreira","06:02","PGD","",NA
+2022,"-99",55,"ferreira","07:28","SWPA","",NA
+2022,"-99",55,"ferreira","07:34","BTKA","",NA
+2022,"-99",55,"ferreira","08:00","PGD","",NA
+2022,"-99",55,"ferreira","08:34","SWPA","",NA
+2022,"-99",55,"ferreira","08:37","PGD","",NA
+2022,"-99",55,"lovato","08:53","GPSA","",NA
+2022,"-99",55,"ferreira","09:23","PGD","",NA
+2022,"-99",55,"lovato","09:31","GPSA","",NA
+2022,"-99",55,"ferreira","09:35","BTKA","",NA
+2022,"-99",55,"","09:47","CLI","",NA
+2022,"-99",55,"lovato","09:58","TKD","","2"
+2022,"-99",55,"ferreira","10:02","PGD","",NA
+2022,"-99",55,"lovato","10:48","GPSA","",NA
+2022,"-99",55,"lovato","10:50","BTKA","",NA
+2022,"-99",55,"ferreira","10:52","PGD","",NA
+2022,"-99",55,"ferreira","11:18","SWPA","",NA
+2022,"-99",55,"ferreira","11:21","PGD","",NA
+2022,"-99",56,"boehm","00:29","PGD","",NA
+2022,"-99",56,"jones","01:25","GPSA","",NA
+2022,"-99",56,"boehm","01:29","PGD","",NA
+2022,"-99",56,"jones","01:59","GPSA","",NA
+2022,"-99",56,"boehm","02:21","PGD","",NA
+2022,"-99",56,"jones","03:07","GPSA","",NA
+2022,"-99",56,"boehm","03:14","PGD","",NA
+2022,"-99",56,"jones","03:37","GPS","",NA
+2022,"-99",56,"boehm","03:58","PGD","",NA
+2022,"-99",56,"boehm","04:35","SWPA","Reset",NA
+2022,"-99",56,"boehm","04:35","RST","Reset",NA
+2022,"-99",56,"","04:39","CLI","",NA
+2022,"-99",56,"boehm","06:56","TKDA","",NA
+2022,"-99",56,"jones","07:01","SUB","",NA
+2022,"-99",57,"","00:11","CLI","Reset",NA
+2022,"-99",57,"","00:11","RST","Reset",NA
+2022,"-99",57,"","01:14","CLI","",NA
+2022,"-99",57,"meregali","02:33","TKDA","",NA
+2022,"-99",57,"simoes","02:35","TKDA","",NA
+2022,"-99",57,"meregali","03:17","TKDA","Reset",NA
+2022,"-99",57,"meregali","03:17","RST","Reset",NA
+2022,"-99",57,"","03:44","CLI","",NA
+2022,"-99",57,"meregali","04:01","TKDA","",NA
+2022,"-99",57,"meregali","04:07","TKDA","",NA
+2022,"-99",57,"meregali","04:28","TKDA","",NA
+2022,"-99",57,"meregali","05:23","TKDA","",NA
+2022,"-99",57,"meregali","05:33","PGD","Reset",NA
+2022,"-99",57,"meregali","05:33","RST","Reset",NA
+2022,"-99",57,"","10:52","CLI","",NA
+2022,"-99",57,"simoes","11:09","TKDA","",NA
+2022,"-99",57,"meregali","11:49","TKDA","",NA
+2022,"-99",57,"meregali","11:57","TKDA","",NA
+2022,"-99",57,"simoes","12:00","TKDA","Reset",NA
+2022,"-99",57,"simoes","12:00","RST","Reset",NA
+2022,"-99",57,"","12:58","CLI","",NA
+2022,"-99",57,"meregali","13:01","TKDA","",NA
+2022,"-99",57,"simoes","13:42","TKDA","Reset",NA
+2022,"-99",57,"simoes","13:42","RST","Reset",NA
+2022,"-99",57,"","13:52","CLI","",NA
+2022,"-99",57,"simoes","14:12","TKDA","",NA
+2022,"-99",57,"simoes","14:53","TKDA","",NA
+2022,"-99",57,"meregali","15:03","TKDA","",NA
+2022,"-99",57,"simoes","15:24","TKDA","",NA
+2022,"-99",57,"meregali","15:35","TKDA","",NA
+2022,"-99",57,"meregali","15:58","TKDA","",NA
+2022,"-99",58,"","04:09","CLI","",NA
+2022,"-99",58,"duarte","04:34","TKDA","",NA
+2022,"-99",58,"duarte","04:44","TKD","",NA
+2022,"-99",58,"lovato","04:46","PGD","",NA
+2022,"-99",58,"lovato","08:08","SUBA","",NA
+2022,"-99",58,"lovato","8:09","PGD","Reset",NA
+2022,"-99",58,"lovato","8:09","RST","Reset",NA
+2022,"-99",58,"","14:33","CLI","",NA
+2022,"-99",58,"duarte","14:47","TKDA","",NA
+2022,"-99",58,"duarte","15:25","TKDA","",NA
+2022,"-99",58,"lovato","15:36","SUBA","Reset",NA
+2022,"-99",58,"lovato","15:36","RST","Reset",NA
+2022,"-99",58,"","16:10","CLI","",NA
+2022,"-99",58,"duarte","16:54","TKDA","",NA
+2022,"-99",58,"lovato","17:43","TKDA","Reset",NA
+2022,"-99",58,"lovato","17:43","RST","Reset",NA
+2022,"-99",58,"","17:52","CLI","",NA
+2022,"-99",58,"lovato","18:38","TKDA","",NA
+2022,"-99",58,"duarte","18:51","TKDA","",NA
+2022,"-99",58,"duarte","18:53","BTKA","",NA
+2022,"-99",58,"lovato","19:00","PGD","Reset",NA
+2022,"-99",58,"lovato","19:00","RST","Reset",NA
+2022,"-99",58,"","19:30","CLI","",NA
+2022,"-99",58,"lovato","19:31","TKDA","",NA
+2022,"-99",59,"jones","03:39","PGD","",NA
+2022,"-99",59,"meregali","03:41","GPSA","",NA
+2022,"-99",59,"jones","03:46","PGD","",NA
+2022,"-99",59,"jones","04:09","SWP","",NA
+2022,"-99",59,"meregali","04:10","PGD","",NA
+2022,"-99",59,"meregali","04:47","SWP","",NA
+2022,"-99",59,"jones","04:48","PGD","",NA
+2022,"-99",59,"jones","05:56","SUBA","Reset",NA
+2022,"-99",59,"jones","05:56","RST","Reset",NA
+2022,"-99",59,"","06:10","CLI","",NA
+2022,"-99",59,"meregali","07:17","TKDA","",NA
+2022,"-99",59,"meregali","07:24","TKDA","",NA
+2022,"-99",59,"meregali","08:17","PGD","",NA
+2022,"-99",59,"meregali","12:10","SWPA","Reset",NA
+2022,"-99",59,"meregali","12:10","RST","Reset",NA
+2022,"-99",59,"","12:27","CLI","",NA
+2022,"-99",59,"jones","13:16","TKDA","Reset",NA
+2022,"-99",59,"jones","13:16","RST","Reset",NA
+2022,"-99",59,"","14:00","CLI","",NA
+2022,"-99",59,"meregali","14:20","TKDA","Reset",NA
+2022,"-99",59,"meregali","14:20","RST","Reset",NA
+2022,"-99",59,"","14:28","CLI","",NA
+2022,"-99",59,"meregali","15:11","TKDA","",NA
+2022,"-99",59,"meregali","16:04","TKDA","",NA
+2022,"-99",59,"meregali","16:35","TKDA","",NA
+2022,"-99",59,"jones","17:26","TKDA","",NA
+2022,"-99",59,"jones","17:30","BTKA","Reset",NA
+2022,"-99",59,"jones","17:30","RST","Reset",NA
+2022,"-99",59,"","17:36","CLI","",NA
+2022,"-99",59,"meregali","18:14","TKDA","",NA
+2022,"-99",59,"jones","18:17","SUBA","",NA
+2022,"-99",59,"meregali","18:53","TKDA","",NA
+2022,"-99",60,"","03:59","CLI","",NA
+2022,"-99",60,"duarte","04:53","TKDA","",NA
+2022,"-99",60,"duarte","05:51","TKD","",NA
+2022,"-99",60,"jones","05:53","PGD","",NA
+2022,"-99",60,"jones","13:33","SUBA","",NA
+2022,"-99",60,"duarte","13:40","GPS","",NA
+2022,"-99",60,"jones","14:05","SUBA","",NA
+2022,"-99",60,"duarte","14:12","GPS","","2"
+2022,"-99",60,"duarte","14:26","GPS","","2"
+2022,"-99",60,"jones","15:11","SUBA","",NA
+2022,"-99",60,"jones","16:16","PGD","",NA
+2022,"-99",60,"duarte","16:24","GPS","","3"
+2022,"-99",60,"jones","17:02","PGD","",NA
+2022,"-99",60,"jones","20:54","SUBA","",NA
+2022,"-99",60,"jones","21:00","PGD","",NA
+2022,"-99",60,"jones","21:32","SWPA","",NA
+2022,"-99",60,"duarte","22:38","GPS","Reset","3"
+2022,"-99",60,"duarte","22:38","RST","Reset","3"
+2022,"-99",60,"","23:15","CLI","",NA
+2022,"-99",60,"duarte","23:50","TKD","","2"
+2022,"-99",60,"jones","23:51","PGD","",NA
+2022,"99",61,"","00:27","CLI","",NA
+2022,"99",61,"ryan","00:29","PGD","",NA
+2022,"99",61,"ryan","00:57","BTKA","",NA
+2022,"99",61,"ryan","02:03","BTK","",NA
+2022,"99",61,"ryan","02:29","BTK","",NA
+2022,"99",61,"jussila","5:20","PGD","",NA
+2022,"99",61,"ryan","05:32","GPS","",NA
+2022,"99",61,"ryan","05:56","BTK","",NA
+2022,"99",61,"ryan","06:13","SUB","",NA
+2022,"99",62,"manasoiu","00:18","PGD","",NA
+2022,"99",62,"manasoiu","00:52","SWPA","",NA
+2022,"99",62,"manasoiu","00:53","PGD","",NA
+2022,"99",62,"hugo","01:00","GPSA","",NA
+2022,"99",62,"manasoiu","01:02","PGD","",NA
+2022,"99",62,"manasoiu","02:09","SWP","",NA
+2022,"99",62,"hugo","02:10","PGD","",NA
+2022,"99",62,"manasoiu","02:29","GPSA","",NA
+2022,"99",62,"hugo","02:41","PGD","",NA
+2022,"99",62,"manasoiu","02:43","SUBA","",NA
+2022,"99",62,"manasoiu","02:46","PGD","",NA
+2022,"99",62,"manasoiu","02:55","SWP","",NA
+2022,"99",62,"hugo","03:00","PGD","",NA
+2022,"99",62,"hugo","03:45","SWP","",NA
+2022,"99",62,"manasoiu","03:47","PGD","",NA
+2022,"99",62,"manasoiu","03:57","SWPA","",NA
+2022,"99",62,"manasoiu","03:59","PGD","",NA
+2022,"99",62,"manasoiu","04:26","SWP","",NA
+2022,"99",62,"hugo","04:30","PGD","",NA
+2022,"99",62,"hugo","04:41","SWPA","",NA
+2022,"99",62,"manasoiu","04:46","SUBA","",NA
+2022,"99",62,"hugo","04:55","PGD","",NA
+2022,"99",62,"hugo","05:22","SWP","",NA
+2022,"99",62,"manasoiu","05:23","PGD","",NA
+2022,"99",62,"hugo","06:25","SUBA","",NA
+2022,"99",62,"hugo","06:34","PGD","",NA
+2022,"99",62,"manasoiu","06:40","GPSA","",NA
+2022,"99",62,"hugo","06:44","PGD","",NA
+2022,"99",62,"hugo","08:49","SUBA","",NA
+2022,"99",62,"hugo","08:51","PGD","",NA
+2022,"99",62,"manasoiu","09:59","SUBA","",NA
+2022,"99",62,"manasoiu","10:19","SUBA","",NA
+2022,"99",62,"hugo","10:21","SWPA","",NA
+2022,"99",62,"hugo","10:31","BTK","","3"
+2022,"99",63,"","00:19","CLI","",NA
+2022,"99",63,"abreu","01:12","TKDA","",NA
+2022,"99",63,"rida","01:26","SUB","",NA
+2022,"99",64,"","00:21","CLI","",NA
+2022,"99",65,"rocha","02:28","TKDA","",NA
+2022,"99",65,"sousa","02:44","TKD","",NA
+2022,"99",65,"rocha","02:46","PGD","Reset",NA
+2022,"99",65,"rocha","02:46","RST","Reset",NA
+2022,"99",65,"","03:10","CLI","Reset",NA
+2022,"99",65,"","03:10","RST","Reset",NA
+2022,"99",65,"","06:52","CLI","",NA
+2022,"99",65,"rocha","07:14","TKDA","",NA
+2022,"99",65,"sousa","07:21","PGD","",NA
+2022,"99",65,"sousa","07:24","SUB","",NA
+2022,"99",66,"pena","00:16","PGD","",NA
+2022,"99",66,"pena","01:23","SWPA","",NA
+2022,"99",66,"pena","01:28","PGD","",NA
+2022,"99",66,"pena","01:40","SWP","",NA
+2022,"99",66,"sanders","01:42","PGD","Reset",NA
+2022,"99",66,"sanders","01:42","RST","Reset",NA
+2022,"99",66,"pena","02:39","PGD","",NA
+2022,"99",66,"pena","03:53","SWPA","",NA
+2022,"99",66,"pena","03:56","PGD","",NA
+2022,"99",66,"pena","06:03","SWP","","2"
+2022,"99",66,"sanders","06:07","PGD","",NA
+2022,"99",66,"pena","08:33","GPSA","",NA
+2022,"99",66,"pena","08:36","BTKA","",NA
+2022,"99",66,"pena","09:27","BTK","","3"
+2022,"99",66,"sanders","09:40","PGD","",NA
+2022,"99",66,"pena","10:07","GPS","","3"
+2022,"99",66,"sanders","10:16","PGD","",NA
+2022,"99",67,"","00:37","CLI","Reset",NA
+2022,"99",67,"","00:37","RST","Reset",NA
+2022,"99",67,"","00:56","CLI","",NA
+2022,"99",67,"gimenis","01:25","TKDA","Reset",NA
+2022,"99",67,"gimenis","01:25","RST","Reset",NA
+2022,"99",67,"","01:42","CLI","Reset",NA
+2022,"99",67,"","01:42","RST","Reset",NA
+2022,"99",67,"","02:10","CLI","Reset",NA
+2022,"99",67,"","02:10","RST","Reset",NA
+2022,"99",67,"","03:06","CLI","",NA
+2022,"99",67,"gimenis","03:50","TKDA","",NA
+2022,"99",67,"gimenis","04:11","TKDA","",NA
+2022,"99",67,"gimenis","04:36","TKDA","",NA
+2022,"99",67,"gimenis","04:40","BTKA","",NA
+2022,"99",67,"gimenis","06:11","BTKA","Reset",NA
+2022,"99",67,"gimenis","06:11","RST","Reset",NA
+2022,"99",67,"","07:01","CLI","Reset",NA
+2022,"99",67,"","07:01","RST","Reset",NA
+2022,"99",67,"","07:33","CLI","Reset",NA
+2022,"99",67,"","07:33","RST","Reset",NA
+2022,"99",67,"","08:40","CLI","Reset",NA
+2022,"99",67,"","08:40","RST","Reset",NA
+2022,"99",67,"","09:21","CLI","Reset",NA
+2022,"99",67,"","09:21","RST","Reset",NA
+2022,"99",67,"","10:12","CLI","",NA
+2022,"99",67,"gimenis","10:14","TKDA","",NA
+2022,"99",67,"sanchez","10:17","TKDA","Reset",NA
+2022,"99",67,"sanchez","10:17","RST","Reset",NA
+2022,"99",67,"","10:41","CLI","",NA
+2022,"99",67,"gimenis","11:09","TKD","","2"
+2022,"99",67,"sanchez","11:11","PGD","Reset",NA
+2022,"99",67,"sanchez","11:11","RST","Reset",NA
+2022,"99",67,"gimenis","13:37","SUB","",NA
+2022,"99",68,"","00:12","CLI","",NA
+2022,"99",68,"rodriguez","00:41","TKDA","Reset",NA
+2022,"99",68,"rodriguez","00:41","RST","Reset",NA
+2022,"99",68,"","02:33","CLI","",NA
+2022,"99",68,"ramos","02:50","TKDA","",NA
+2022,"99",68,"ramos","03:07","TKDA","",NA
+2022,"99",68,"ramos","03:40","TKDA","",NA
+2022,"99",68,"rodriguez","03:54","PGD","",NA
+2022,"99",68,"ramos","04:35","TKDA","",NA
+2022,"99",68,"rodriguez","05:30","BTKA","",NA
+2022,"99",68,"rodriguez","05:44","GPS","",NA
+2022,"99",68,"ramos","06:30","PGD","",NA
+2022,"99",68,"rodriguez","06:35","GPS","","3"
+2022,"99",68,"ramos","07:32","PGD","",NA
+2022,"99",68,"rodriguez","07:38","GPSA","",NA
+2022,"99",68,"ramos","07:42","PGD","",NA
+2022,"99",68,"rodriguez","08:17","GPS","","3"
+2022,"99",68,"ramos","08:35","PGD","Reset",NA
+2022,"99",68,"ramos","08:35","RST","Reset",NA
+2022,"99",68,"","08:57","CLI","",NA
+2022,"99",68,"ramos","09:33","TKDA","",NA
+2022,"99",68,"rodriguez","09:44","BTKA","Reset",NA
+2022,"99",68,"rodriguez","09:44","RST","Reset",NA
+2022,"99",68,"","10:34","CLI","",NA
+2022,"99",68,"rodriguez","10:46","TKD","","2"
+2022,"99",68,"ramos","10:48","PGD","",NA
+2022,"99",69,"hansen","00:17","PGD","",NA
+2022,"99",69,"hansen","00:35","SWP","",NA
+2022,"99",69,"magalhaes","01:01","PGD","",NA
+2022,"99",69,"hansen","01:51","GPSA","",NA
+2022,"99",69,"magalhaes","01:54","PGD","",NA
+2022,"99",69,"hansen","02:40","GPSA","",NA
+2022,"99",69,"magalhaes","02:47","PGD","",NA
+2022,"99",69,"hansen","03:46","GPS","","3"
+2022,"99",69,"hansen","03:48","SUB","",NA
+2022,"99",70,"","00:28","CLI","",NA
+2022,"99",70,"ryan","00:50","TKDA","",NA
+2022,"99",70,"hugo","01:15","TKDA","",NA
+2022,"99",70,"hugo","01:41","PGD","",NA
+2022,"99",70,"hugo","01:45","SUBA","",NA
+2022,"99",70,"hugo","01:57","PGD","",NA
+2022,"99",70,"ryan","03:00","GPS","",NA
+2022,"99",70,"hugo","04:26","PGD","",NA
+2022,"99",70,"ryan","05:57","GPSA","",NA
+2022,"99",70,"ryan","06:07","BTKA","",NA
+2022,"99",70,"ryan","06:20","GPS","","3"
+2022,"99",70,"hugo","06:39","PGD","",NA
+2022,"99",70,"ryan","07:11","GPS","Reset","3"
+2022,"99",70,"ryan","07:11","RST","Reset",NA
+2022,"99",70,"","07:42","CLI","",NA
+2022,"99",70,"ryan","07:52","TKD","","2"
+2022,"99",70,"hugo","07:54","PGD","",NA
+2022,"99",70,"ryan","08:37","SUBA","",NA
+2022,"99",70,"ryan","08:50","GPSA","",NA
+2022,"99",70,"hugo","08:51","PGD","",NA
+2022,"99",70,"ryan","10:00","SUBA","",NA
+2022,"99",70,"ryan","10:10","PGD","",NA
+2022,"99",70,"hugo","10:28","SUBA","",NA
+2022,"99",71,"","00:17","CLI","",NA
+2022,"99",71,"sousa","01:55","TKDA","",NA
+2022,"99",71,"rida","03:22","TKDA","",NA
+2022,"99",71,"sousa","04:33","PGD","",NA
+2022,"99",71,"rida","04:52","GPSA","",NA
+2022,"99",71,"sousa","04:55","PGD","Reset",NA
+2022,"99",71,"sousa","04:55","RST","Reset",NA
+2022,"99",71,"","05:01","CLI","",NA
+2022,"99",71,"sousa","06:37","TKD","","2"
+2022,"99",71,"rida","06:48","PGD","Reset",NA
+2022,"99",71,"rida","06:48","RST","Reset",NA
+2022,"99",71,"","09:01","CLI","",NA
+2022,"99",71,"rida","09:34","TKDA","",NA
+2022,"99",72,"pena","00:19","PGD","",NA
+2022,"99",72,"pena","05:46","SWPA","",NA
+2022,"99",72,"pena","05:49","PGD","",NA
+2022,"99",72,"gimenis","06:12","GPSA","",NA
+2022,"99",72,"pena","06:15","PGD","",NA
+2022,"99",72,"pena","06:38","SWPA","",NA
+2022,"99",72,"pena","06:40","PGD","",NA
+2022,"99",72,"gimenis","09:08","GPSA","",NA
+2022,"99",72,"pena","09:12","SWPA","",NA
+2022,"99",72,"pena","09:18","BTKA","",NA
+2022,"99",72,"gimenis","09:23","PGD","",NA
+2022,"99",72,"pena","09:37","BTKA","",NA
+2022,"99",72,"pena","10:00","SUB","",NA
+2022,"99",73,"hansen","00:15","PGD","",NA
+2022,"99",73,"hansen","00:45","SWPA","",NA
+2022,"99",73,"hansen","00:46","PGD","",NA
+2022,"99",73,"hansen","01:05","SWPA","Reset",NA
+2022,"99",73,"hansen","01:05","RST","Reset",NA
+2022,"99",73,"hansen","01:24","PGD","",NA
+2022,"99",73,"rodriguez","03:48","GPS","",NA
+2022,"99",73,"rodriguez","05:48","BTKA","",NA
+2022,"99",73,"hansen","07:50","PGD","",NA
+2022,"99",73,"rodriguez","08:00","BTKA","",NA
+2022,"99",73,"rodriguez","08:13","SUBA","",NA
+2022,"99",73,"rodriguez","08:21","BTK","","3"
+2022,"99",73,"rodriguez","08:22","SUB","",NA
+2022,"99",74,"","00:20","CLI","",NA
+2022,"99",74,"ryan","00:23","PGD","",NA
+2022,"99",74,"ryan","00:26","SUB","",NA
+2022,"99",75,"pena","00:16","PGD","",NA
+2022,"99",75,"pena","05:51","SUBA","",NA
+2022,"99",75,"pena","06:34","PGD","",NA
+2022,"99",75,"rodriguez","06:41","GPS","Reset","3"
+2022,"99",75,"rodriguez","06:41","RST","Reset",NA
+2022,"99",75,"","07:10","CLI","Reset",NA
+2022,"99",75,"","07:10","RST","Reset",NA
+2022,"99",75,"","08:13","CLI","",NA
+2022,"99",75,"rodriguez","08:42","TKDA","",NA
+2022,"99",75,"pena","08:59","TKDA","Reset",NA
+2022,"99",75,"pena","08:59","RST","Reset",NA
+2022,"99",75,"","09:21","CLI","",NA
+2022,"99",75,"pena","09:51","PGD","",NA
+2022,"99",75,"pena","09:52","SUBA","Reset",NA
+2022,"99",75,"pena","09:52","RST","Reset",NA
+2022,"99",75,"","10:01","CLI","",NA
+2022,"99",76,"","04:52","CLI","",NA
+2022,"99",76,"rodriguez","04:58","TKD","",NA
+2022,"99",76,"ryan","04:59","PGD","",NA
+2022,"99",76,"ryan","07:05","SUB","",NA
